@@ -25,10 +25,7 @@ const Header = () => {
           </nav>
           
           {/* CTA Button */}
-          <div className="flex items-center space-x-4">
-            <Button variant="ghost" className="hidden sm:inline-flex">
-              Sign In
-            </Button>
+          <div>
             <Button>
               {content.hero.buttons.primary}
             </Button>

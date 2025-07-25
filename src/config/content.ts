@@ -197,7 +197,7 @@ export const content: Content = {
   },
 
   showcase: {
-    title: "Meet Our Success Stories",
+    title: "Read Our Success Stories",
     subtitle: "Our graduates are working at the world's leading AI companies, building the future of technology.",
     imageLabels: {
       graduation: {
@@ -295,7 +295,7 @@ export const content: Content = {
   footer: {
     description: "Transform your career with our intensive AI program. Learn machine learning, deep learning, and cutting-edge AI technologies from industry experts.",
     location: "📍 Taipei & Los Angeles",
-    copyright: "© 2024 AI Jedi. All rights reserved.",
+    copyright: "© 2025 AI Jedi. All rights reserved.",
     links: {
       privacy: "Privacy Policy",
       terms: "Terms of Service"

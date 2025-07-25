@@ -37,16 +37,8 @@ const Footer = () => {
         
         <Separator className="my-8" />
         
-        <div className="flex flex-col md:flex-row justify-between items-center text-sm text-muted-foreground">
+        <div className="text-center text-sm text-muted-foreground">
           <p>{content.footer.copyright}</p>
-          <div className="flex space-x-6 mt-4 md:mt-0">
-            <a href="#" className="hover:text-primary transition-colors">
-              {content.footer.links.privacy}
-            </a>
-            <a href="#" className="hover:text-primary transition-colors">
-              {content.footer.links.terms}
-            </a>
-          </div>
         </div>
       </div>
     </footer>
