@@ -1,5 +1,8 @@
 import { Button } from "@/components/ui/button";
 import studentsWorking from "@/assets/students-working.jpg";
+import studentCoding from "@/assets/student-coding.jpg";
+import studentsCollaborating from "@/assets/students-collaborating.jpg";
+import womanAiWork from "@/assets/woman-ai-work.jpg";
 
 const Hero = () => {
   return (
@@ -7,46 +10,96 @@ const Hero = () => {
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-hero"></div>
       
-      {/* Background image with overlay */}
-      <div className="absolute inset-0 opacity-20">
-        <img 
-          src={studentsWorking} 
-          alt="Students working together" 
-          className="w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-background/80"></div>
-      </div>
-
-      <div className="relative z-10 container mx-auto px-4 text-center">
-        <div className="max-w-4xl mx-auto">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-primary bg-clip-text text-transparent leading-tight">
-            Master AI in 12 Weeks
-          </h1>
-          <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Transform your career with our intensive AI bootcamp. Learn machine learning, deep learning, and cutting-edge AI technologies from industry experts.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button variant="hero" size="lg" className="text-lg px-8 py-4">
-              Apply Now
-            </Button>
-            <Button variant="outline" size="lg" className="text-lg px-8 py-4">
-              Learn More
-            </Button>
+      {/* Main content */}
+      <div className="relative z-10 container mx-auto px-4">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          {/* Left side - Text content */}
+          <div className="text-center lg:text-left">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 bg-gradient-primary bg-clip-text text-transparent leading-tight">
+              Master AI in 12 Weeks
+            </h1>
+            <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-lg">
+              Transform your career with our intensive AI bootcamp. Learn machine learning, deep learning, and cutting-edge AI technologies from industry experts.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center mb-12">
+              <Button variant="hero" size="lg" className="text-lg px-8 py-4 animate-fade-in">
+                Apply Now
+              </Button>
+              <Button variant="outline" size="lg" className="text-lg px-8 py-4 animate-fade-in">
+                Learn More
+              </Button>
+            </div>
+            
+            {/* Stats */}
+            <div className="grid grid-cols-3 gap-4 pt-8 border-t border-border">
+              <div className="text-center lg:text-left">
+                <div className="text-2xl md:text-3xl font-bold text-primary mb-1">95%</div>
+                <div className="text-sm text-muted-foreground">Job Placement</div>
+              </div>
+              <div className="text-center lg:text-left">
+                <div className="text-2xl md:text-3xl font-bold text-primary mb-1">$120K+</div>
+                <div className="text-sm text-muted-foreground">Avg Salary</div>
+              </div>
+              <div className="text-center lg:text-left">
+                <div className="text-2xl md:text-3xl font-bold text-primary mb-1">500+</div>
+                <div className="text-sm text-muted-foreground">Graduates</div>
+              </div>
+            </div>
           </div>
-          
-          {/* Stats */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16 pt-16 border-t border-border">
-            <div className="text-center">
-              <div className="text-4xl font-bold text-primary mb-2">95%</div>
-              <div className="text-muted-foreground">Job Placement Rate</div>
+
+          {/* Right side - Image showcase */}
+          <div className="relative">
+            {/* Main large image */}
+            <div className="relative group mb-6">
+              <img 
+                src={studentsWorking} 
+                alt="Students working together in AI bootcamp" 
+                className="w-full h-80 md:h-96 object-cover rounded-lg shadow-card group-hover:shadow-glow transition-all duration-300 animate-scale-in"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent rounded-lg"></div>
+              <div className="absolute bottom-4 left-4 text-white">
+                <h3 className="text-lg font-bold">Live Coding Session</h3>
+                <p className="text-sm opacity-90">Students building AI models together</p>
+              </div>
             </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-primary mb-2">$120K+</div>
-              <div className="text-muted-foreground">Average Starting Salary</div>
+
+            {/* Grid of smaller images */}
+            <div className="grid grid-cols-2 gap-4">
+              <div className="relative group overflow-hidden rounded-lg">
+                <img 
+                  src={studentCoding} 
+                  alt="Student coding AI algorithms" 
+                  className="w-full h-32 md:h-40 object-cover transition-transform duration-300 group-hover:scale-110 animate-fade-in"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent"></div>
+                <div className="absolute bottom-2 left-2 text-white">
+                  <p className="text-xs font-medium">Neural Networks</p>
+                </div>
+              </div>
+              
+              <div className="relative group overflow-hidden rounded-lg">
+                <img 
+                  src={womanAiWork} 
+                  alt="Student working on machine learning project" 
+                  className="w-full h-32 md:h-40 object-cover transition-transform duration-300 group-hover:scale-110 animate-fade-in"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent"></div>
+                <div className="absolute bottom-2 left-2 text-white">
+                  <p className="text-xs font-medium">Deep Learning</p>
+                </div>
+              </div>
             </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-primary mb-2">500+</div>
-              <div className="text-muted-foreground">Graduates Placed</div>
+
+            {/* Floating collaboration image */}
+            <div className="absolute -top-8 -right-4 w-32 h-32 hidden lg:block">
+              <div className="relative group">
+                <img 
+                  src={studentsCollaborating} 
+                  alt="Students collaborating" 
+                  className="w-full h-full object-cover rounded-full border-4 border-primary shadow-glow transition-transform duration-300 group-hover:scale-105 animate-scale-in hover-scale"
+                />
+                <div className="absolute inset-0 bg-gradient-primary opacity-0 group-hover:opacity-20 transition-opacity duration-300 rounded-full"></div>
+              </div>
             </div>
           </div>
         </div>
