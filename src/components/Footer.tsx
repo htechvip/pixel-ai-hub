@@ -10,7 +10,7 @@ const Footer = () => {
               Pixel AI Hub
             </h3>
             <p className="text-muted-foreground mb-4 max-w-md">
-              The premier AI bootcamp preparing the next generation of machine learning engineers and data scientists.
+              The premier AI Jedi program preparing the next generation of machine learning engineers and data scientists.
             </p>
             <div className="text-sm text-muted-foreground">
               <p>📍 123 Tech Street, San Francisco, CA 94105</p>

@@ -19,31 +19,15 @@ const Hero = () => {
               Master AI in 12 Weeks
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-lg">
-              Transform your career with our intensive AI bootcamp. Learn machine learning, deep learning, and cutting-edge AI technologies from industry experts.
+              Transform your career with our intensive AI Jedi program. Learn machine learning, deep learning, and cutting-edge AI technologies from industry experts.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center mb-12">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center">
               <Button variant="hero" size="lg" className="text-lg px-8 py-4 animate-fade-in">
                 Apply Now
               </Button>
               <Button variant="outline" size="lg" className="text-lg px-8 py-4 animate-fade-in">
                 Learn More
               </Button>
-            </div>
-            
-            {/* Stats */}
-            <div className="grid grid-cols-3 gap-4 pt-8 border-t border-border">
-              <div className="text-center lg:text-left">
-                <div className="text-2xl md:text-3xl font-bold text-primary mb-1">95%</div>
-                <div className="text-sm text-muted-foreground">Job Placement</div>
-              </div>
-              <div className="text-center lg:text-left">
-                <div className="text-2xl md:text-3xl font-bold text-primary mb-1">$120K+</div>
-                <div className="text-sm text-muted-foreground">Avg Salary</div>
-              </div>
-              <div className="text-center lg:text-left">
-                <div className="text-2xl md:text-3xl font-bold text-primary mb-1">500+</div>
-                <div className="text-sm text-muted-foreground">Graduates</div>
-              </div>
             </div>
           </div>
 
@@ -53,7 +37,7 @@ const Hero = () => {
             <div className="relative group mb-6">
               <img 
                 src={studentsWorking} 
-                alt="Students working together in AI bootcamp" 
+                alt="Students working together at AI Jedi" 
                 className="w-full h-80 md:h-96 object-cover rounded-lg shadow-card group-hover:shadow-glow transition-all duration-300 animate-scale-in"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent rounded-lg"></div>

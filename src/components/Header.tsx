@@ -7,7 +7,7 @@ const Header = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center">
-            <h1 className="text-xl font-bold text-foreground">AI Bootcamp</h1>
+            <h1 className="text-xl font-bold text-foreground">AI Jedi</h1>
           </div>
           
           {/* Navigation */}
