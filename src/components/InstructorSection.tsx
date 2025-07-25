@@ -2,6 +2,7 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { LinkedInLogoIcon, GitHubLogoIcon } from "@radix-ui/react-icons";
 import { content } from "@/config/content";
+import instructorImage from "@/assets/cable co talk.jpg";
 
 const InstructorSection = () => {
   return (
@@ -16,15 +17,12 @@ const InstructorSection = () => {
             <div className="flex flex-col md:flex-row gap-8 items-start">
               {/* Instructor Image */}
               <div className="w-full md:w-1/3">
-                <div className="aspect-square rounded-2xl overflow-hidden bg-gradient-to-br from-primary/20 to-primary/10">
+                <div className="rounded-2xl overflow-hidden bg-gradient-to-br from-primary/20 to-primary/10" style={{ maxHeight: '400px' }}>
                   <img 
-                    src="/placeholder.svg" 
+                    src={instructorImage}
                     alt={content.instructor.name}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-contain"
                   />
-                </div>
-                <div className="mt-2 text-center text-sm text-muted-foreground">
-                  Photo coming soon
                 </div>
               </div>
 

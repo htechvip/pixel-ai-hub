@@ -3,7 +3,6 @@ import { content } from "@/config/content";
 import pasadenaClass from "@/assets/pasadenaclass.jpg";
 import aiTalkVilla from "@/assets/ai talk villa.jpeg";
 import fridayMorningCoffee from "@/assets/friday morning coffee - villa staff.jpeg";
-import pasadenaCohort from "@/assets/pasadenacohort.jpg";
 
 const Hero = () => {
   return (
@@ -72,18 +71,6 @@ const Hero = () => {
                 <div className="absolute bottom-2 left-2 text-white">
                   <p className="text-xs font-medium">Community</p>
                 </div>
-              </div>
-            </div>
-
-            {/* Floating collaboration image */}
-            <div className="absolute -top-8 -right-4 w-32 h-32 hidden lg:block">
-              <div className="relative group">
-                <img 
-                  src={pasadenaCohort} 
-                  alt="Pasadena cohort" 
-                  className="w-full h-full object-cover rounded-full border-4 border-primary shadow-glow transition-transform duration-300 group-hover:scale-105 animate-scale-in hover-scale"
-                />
-                <div className="absolute inset-0 bg-gradient-primary opacity-0 group-hover:opacity-20 transition-opacity duration-300 rounded-full"></div>
               </div>
             </div>
           </div>

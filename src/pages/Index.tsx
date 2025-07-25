@@ -1,8 +1,9 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import WhyJoinSection from "@/components/WhyJoinSection";
-import InstructorSection from "@/components/InstructorSection";
 import ProgramOverview from "@/components/ProgramOverview";
+import VibeCodingWebApps from "@/components/VibeCodingWebApps";
+import InstructorSection from "@/components/InstructorSection";
 import StudentShowcase from "@/components/StudentShowcase";
 import CallToAction from "@/components/CallToAction";
 import FAQSection from "@/components/FAQSection";
@@ -19,6 +20,7 @@ const Index = () => {
       <Hero />
       <WhyJoinSection />
       <ProgramOverview />
+      <VibeCodingWebApps />
       <InstructorSection />
       <StudentShowcase />
       <CallToAction />

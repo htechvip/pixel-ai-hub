@@ -1,8 +1,8 @@
 import { content } from "@/config/content";
 import studentCoding from "@/assets/student-coding.jpg";
-import graduationCelebration from "@/assets/graduation-celebration.jpg";
+import pasadenaCohort from "@/assets/pasadenacohort.jpg";
 import studentPresenting from "@/assets/student-presenting.jpg";
-import studentsCollaborating from "@/assets/students-collaborating.jpg";
+import panel from "@/assets/panel.jpg";
 import womanAiWork from "@/assets/woman-ai-work.jpg";
 
 const StudentShowcase = () => {
@@ -28,27 +28,27 @@ const StudentShowcase = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
           <div className="relative group overflow-hidden rounded-lg">
             <img 
-              src={graduationCelebration} 
-              alt="Graduation celebration" 
+              src={pasadenaCohort} 
+              alt="Pasadena Cohort" 
               className="w-full h-80 object-cover transition-transform duration-300 group-hover:scale-105"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent"></div>
             <div className="absolute bottom-4 left-4 text-white">
-              <h3 className="text-xl font-bold">{content.showcase.imageLabels.graduation.title}</h3>
-              <p className="text-sm opacity-90">{content.showcase.imageLabels.graduation.subtitle}</p>
+              <h3 className="text-xl font-bold">Pasadena Cohort</h3>
+              <p className="text-sm opacity-90">Building the future of AI together</p>
             </div>
           </div>
           
           <div className="relative group overflow-hidden rounded-lg">
             <img 
-              src={studentsCollaborating} 
-              alt="Students collaborating" 
+              src={panel} 
+              alt="AI Industry Panel" 
               className="w-full h-80 object-cover transition-transform duration-300 group-hover:scale-105"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent"></div>
             <div className="absolute bottom-4 left-4 text-white">
-              <h3 className="text-xl font-bold">{content.showcase.imageLabels.collaboration.title}</h3>
-              <p className="text-sm opacity-90">{content.showcase.imageLabels.collaboration.subtitle}</p>
+              <h3 className="text-xl font-bold">Industry Insights</h3>
+              <p className="text-sm opacity-90">Learning from industry experts</p>
             </div>
           </div>
         </div>
