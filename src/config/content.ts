@@ -1,3 +1,5 @@
+type ButtonVariant = "cta" | "outline" | "link" | "default" | "destructive" | "secondary" | "ghost" | "hero";
+
 type Content = {
   header: {
     logo: string;
@@ -69,22 +71,16 @@ type Content = {
   callToAction: {
     title: string;
     subtitle: string;
-    features: Array<{
-      icon: string;
-      title: string;
-      description: string;
-    }>;
     buttons: {
       primary: {
         text: string;
-        variant: string;
+        variant: ButtonVariant;
       };
       secondary: {
         text: string;
-        variant: string;
+        variant: ButtonVariant;
       };
     };
-    pricing: string;
   };
   faq: {
     title: string;
@@ -121,8 +117,8 @@ export const content: Content = {
     title: "Master AI in 12 Weeks",
     description: "Transform your career with our intensive AI Jedi program. Learn machine learning, deep learning, and cutting-edge AI technologies from industry experts.",
     buttons: {
-      primary: "Apply Now",
-      secondary: "Learn More"
+      primary: "Sign up for Cohort",
+      secondary: "Join Waitlist"
     }
   },
 
@@ -261,35 +257,17 @@ export const content: Content = {
 
   callToAction: {
     title: "Ready to Start Your AI Journey?",
-    subtitle: "Join the next cohort of AI professionals. Limited spots available for our next 12-week intensive program.",
-    features: [
-      {
-        icon: "Clock",
-        title: "Next Cohort",
-        description: "Starts March 15, 2024"
-      },
-      {
-        icon: "Users",
-        title: "Class Size",
-        description: "Limited to 24 students"
-      },
-      {
-        icon: "Award",
-        title: "Certification",
-        description: "Industry-recognized credential"
-      }
-    ],
+    subtitle: "Join the next cohort of AI professionals. Limited spots available.",
     buttons: {
       primary: {
-        text: "Apply Now - $2,500 Early Bird",
-        variant: "cta"
+        text: "Sign up for Cohort",
+        variant: "hero"
       },
       secondary: {
-        text: "Schedule Info Session",
+        text: "Join Waitlist",
         variant: "outline"
       }
-    },
-    pricing: "Regular price: $4,500. Early bird pricing ends February 1st."
+    }
   },
 
   footer: {
