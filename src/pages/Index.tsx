@@ -7,8 +7,12 @@ import StudentShowcase from "@/components/StudentShowcase";
 import CallToAction from "@/components/CallToAction";
 import FAQSection from "@/components/FAQSection";
 import Footer from "@/components/Footer";
+import { content } from "@/config/content";
 
 const Index = () => {
+  console.log("Content configuration:", content);
+  console.log("Rendering Index page");
+
   return (
     <div className="min-h-screen">
       <Header />

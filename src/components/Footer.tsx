@@ -1,14 +1,7 @@
 import { Separator } from "@/components/ui/separator";
+import { content } from "@/config/content";
 
 const Footer = () => {
-  const navLinks = [
-    { href: "#why-join", label: "Why Join" },
-    { href: "#program", label: "What you will learn" },
-    { href: "#instructor", label: "Instructor" },
-    { href: "#showcase", label: "Success Stories" },
-    { href: "#faq", label: "FAQ" }
-  ];
-
   return (
     <footer className="bg-background border-t border-border py-12">
       <div className="container mx-auto px-4">
@@ -16,26 +9,26 @@ const Footer = () => {
           {/* Left side - Brand and Info */}
           <div>
             <h3 className="text-2xl font-bold bg-gradient-primary bg-clip-text text-transparent mb-4">
-              AI Jedi
+              {content.header.logo}
             </h3>
             <p className="text-muted-foreground mb-4 max-w-md">
-              Transform your career with our intensive AI program. Learn machine learning, deep learning, and cutting-edge AI technologies from industry experts.
+              {content.footer.description}
             </p>
             <p className="text-sm text-muted-foreground">
-              📍 Taipei & Los Angeles
+              {content.footer.location}
             </p>
           </div>
           
           {/* Right side - Navigation */}
           <div className="grid grid-cols-1 gap-4">
             <nav className="flex flex-wrap gap-4">
-              {navLinks.map((link) => (
+              {content.header.navigation.map((item) => (
                 <a
-                  key={link.href}
-                  href={link.href}
+                  key={item.href}
+                  href={item.href}
                   className="text-muted-foreground hover:text-primary transition-colors"
                 >
-                  {link.label}
+                  {item.label}
                 </a>
               ))}
             </nav>
@@ -45,10 +38,14 @@ const Footer = () => {
         <Separator className="my-8" />
         
         <div className="flex flex-col md:flex-row justify-between items-center text-sm text-muted-foreground">
-          <p>&copy; 2024 AI Jedi. All rights reserved.</p>
+          <p>{content.footer.copyright}</p>
           <div className="flex space-x-6 mt-4 md:mt-0">
-            <a href="#" className="hover:text-primary transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-primary transition-colors">Terms of Service</a>
+            <a href="#" className="hover:text-primary transition-colors">
+              {content.footer.links.privacy}
+            </a>
+            <a href="#" className="hover:text-primary transition-colors">
+              {content.footer.links.terms}
+            </a>
           </div>
         </div>
       </div>

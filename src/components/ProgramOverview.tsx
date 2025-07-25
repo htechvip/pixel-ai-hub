@@ -1,45 +1,33 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Brain, Code, Database, TrendingUp } from "lucide-react";
+import { content } from "@/config/content";
 
 const ProgramOverview = () => {
-  const features = [
-    {
-      icon: Brain,
-      title: "Machine Learning Fundamentals",
-      description: "Master supervised and unsupervised learning algorithms, neural networks, and model optimization techniques."
-    },
-    {
-      icon: Code,
-      title: "Deep Learning & AI",
-      description: "Build sophisticated neural networks using TensorFlow, PyTorch, and implement computer vision and NLP projects."
-    },
-    {
-      icon: Database,
-      title: "Data Engineering",
-      description: "Learn to work with big data, data pipelines, and cloud platforms for scalable AI solutions."
-    },
-    {
-      icon: TrendingUp,
-      title: "Industry Projects",
-      description: "Work on real-world AI projects with industry partners and build a portfolio that gets you hired."
-    }
-  ];
+  // Add default icon in case title doesn't match
+  const defaultIcon = Brain;
+  
+  const icons = {
+    "Speedy Prototyping using AI": Brain,
+    "Deep Learning & AI": Code,
+    "Data Engineering": Database,
+    "Industry Projects": TrendingUp
+  };
 
   return (
     <section id="program" className="py-20 bg-secondary/50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            What you will learn
+            {content.program.title}
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Our 12-week intensive program covers everything you need to become an AI engineer, from fundamentals to advanced applications.
+            {content.program.subtitle}
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {features.map((feature, index) => {
-            const Icon = feature.icon;
+          {content.program.features.map((feature, index) => {
+            const Icon = icons[feature.title] || defaultIcon;
             return (
               <Card key={index} className="bg-card/50 backdrop-blur-sm hover:shadow-card transition-all duration-300 group">
                 <CardHeader className="text-center">

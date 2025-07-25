@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { content } from "@/config/content";
 
 const Header = () => {
   return (
@@ -7,26 +8,20 @@ const Header = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center">
-            <h1 className="text-xl font-bold text-foreground">AI Jedi</h1>
+            <h1 className="text-xl font-bold text-foreground">{content.header.logo}</h1>
           </div>
           
           {/* Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            <a href="#why-join" className="text-muted-foreground hover:text-foreground transition-colors">
-              Why Join
-            </a>
-            <a href="#program" className="text-muted-foreground hover:text-foreground transition-colors">
-              What you will learn
-            </a>
-            <a href="#instructor" className="text-muted-foreground hover:text-foreground transition-colors">
-              Instructor
-            </a>
-            <a href="#showcase" className="text-muted-foreground hover:text-foreground transition-colors">
-              Success Stories
-            </a>
-            <a href="#faq" className="text-muted-foreground hover:text-foreground transition-colors">
-              FAQ
-            </a>
+            {content.header.navigation.map((item) => (
+              <a 
+                key={item.href}
+                href={item.href} 
+                className="text-muted-foreground hover:text-foreground transition-colors"
+              >
+                {item.label}
+              </a>
+            ))}
           </nav>
           
           {/* CTA Button */}
@@ -35,7 +30,7 @@ const Header = () => {
               Sign In
             </Button>
             <Button>
-              Apply Now
+              {content.hero.buttons.primary}
             </Button>
           </div>
         </div>

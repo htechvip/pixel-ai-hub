@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { content } from "@/config/content";
 import studentsWorking from "@/assets/students-working.jpg";
 import studentCoding from "@/assets/student-coding.jpg";
 import studentsCollaborating from "@/assets/students-collaborating.jpg";
@@ -16,17 +17,17 @@ const Hero = () => {
           {/* Left side - Text content */}
           <div className="text-center lg:text-left">
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 bg-gradient-primary bg-clip-text text-transparent leading-tight">
-              Master AI in 12 Weeks
+              {content.hero.title}
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-lg">
-              Transform your career with our intensive AI Jedi program. Learn machine learning, deep learning, and cutting-edge AI technologies from industry experts.
+              {content.hero.description}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center">
               <Button variant="hero" size="lg" className="text-lg px-8 py-4 animate-fade-in">
-                Apply Now
+                {content.hero.buttons.primary}
               </Button>
               <Button variant="outline" size="lg" className="text-lg px-8 py-4 animate-fade-in">
-                Learn More
+                {content.hero.buttons.secondary}
               </Button>
             </div>
           </div>
