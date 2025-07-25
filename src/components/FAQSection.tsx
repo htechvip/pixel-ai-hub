@@ -35,10 +35,10 @@ const FAQSection = () => {
   ];
 
   return (
-    <section className="py-24 bg-background">
+    <section id="faq" className="py-24 bg-background">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-6 bg-gradient-primary bg-clip-text text-transparent">
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-6 bg-gradient-primary bg-clip-text text-transparent">
             Frequently Asked Questions
           </h2>
           <p className="text-xl text-center text-muted-foreground mb-12">
@@ -59,16 +59,6 @@ const FAQSection = () => {
               ))}
             </Accordion>
           </Card>
-
-          <div className="mt-12 text-center">
-            <p className="text-muted-foreground">
-              Still have questions? {" "}
-              <a href="#contact" className="text-primary hover:underline">
-                Contact us
-              </a>
-              {" "} and we'll be happy to help!
-            </p>
-          </div>
         </div>
       </div>
     </section>

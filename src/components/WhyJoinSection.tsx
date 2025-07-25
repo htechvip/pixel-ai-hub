@@ -3,10 +3,10 @@ import { Card } from "@/components/ui/card";
 
 const WhyJoinSection = () => {
   return (
-    <section className="py-24 bg-gradient-to-b from-background to-background/80">
+    <section id="why-join" className="py-24 bg-gradient-to-b from-background to-background/80">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center mb-12">
-          <h2 className="text-4xl font-bold mb-6 bg-gradient-primary bg-clip-text text-transparent">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-primary bg-clip-text text-transparent">
             Why Join AI Jedi
           </h2>
           <p className="text-xl text-muted-foreground mb-8">

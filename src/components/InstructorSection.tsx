@@ -3,11 +3,19 @@ import { Button } from "@/components/ui/button";
 import { LinkedInLogoIcon, GitHubLogoIcon } from "@radix-ui/react-icons";
 
 const InstructorSection = () => {
+  const companies = [
+    { name: "GOOGLE" },
+    { name: "META" },
+    { name: "AMAZON" },
+    { name: "MICROSOFT" },
+    { name: "APPLE" }
+  ];
+
   return (
-    <section className="py-24 bg-background">
+    <section id="instructor" className="py-24 bg-background">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-6 bg-gradient-primary bg-clip-text text-transparent">
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-6 bg-gradient-primary bg-clip-text text-transparent">
             Meet Your Instructor
           </h2>
           
@@ -74,6 +82,22 @@ const InstructorSection = () => {
               </div>
             </div>
           </Card>
+
+          {/* Company Logos Section */}
+          <div className="mt-16 text-center">
+            <h3 className="text-xl font-medium text-muted-foreground mb-8">
+              Many people mentored by Cho-Nan work at leading tech companies
+            </h3>
+            <div className="grid grid-cols-2 md:grid-cols-5 gap-8 items-center">
+              {companies.map((company) => (
+                <div key={company.name} className="flex items-center justify-center">
+                  <span className="text-xl font-bold text-muted-foreground/50 hover:text-muted-foreground/75 transition-colors tracking-wider">
+                    {company.name}
+                  </span>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </section>

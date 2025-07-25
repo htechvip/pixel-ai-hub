@@ -12,17 +12,20 @@ const Header = () => {
           
           {/* Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
+            <a href="#why-join" className="text-muted-foreground hover:text-foreground transition-colors">
+              Why Join
+            </a>
             <a href="#program" className="text-muted-foreground hover:text-foreground transition-colors">
-              Program
+              What you will learn
+            </a>
+            <a href="#instructor" className="text-muted-foreground hover:text-foreground transition-colors">
+              Instructor
             </a>
             <a href="#showcase" className="text-muted-foreground hover:text-foreground transition-colors">
-              Students
+              Success Stories
             </a>
-            <a href="#about" className="text-muted-foreground hover:text-foreground transition-colors">
-              About
-            </a>
-            <a href="#contact" className="text-muted-foreground hover:text-foreground transition-colors">
-              Contact
+            <a href="#faq" className="text-muted-foreground hover:text-foreground transition-colors">
+              FAQ
             </a>
           </nav>
           

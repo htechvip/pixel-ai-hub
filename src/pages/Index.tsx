@@ -14,8 +14,8 @@ const Index = () => {
       <Header />
       <Hero />
       <WhyJoinSection />
-      <InstructorSection />
       <ProgramOverview />
+      <InstructorSection />
       <StudentShowcase />
       <CallToAction />
       <FAQSection />
