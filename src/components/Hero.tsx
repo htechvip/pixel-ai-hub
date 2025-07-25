@@ -1,9 +1,9 @@
 import { Button } from "@/components/ui/button";
 import { content } from "@/config/content";
-import studentsWorking from "@/assets/students-working.jpg";
-import studentCoding from "@/assets/student-coding.jpg";
-import studentsCollaborating from "@/assets/students-collaborating.jpg";
-import womanAiWork from "@/assets/woman-ai-work.jpg";
+import pasadenaClass from "@/assets/pasadenaclass.jpg";
+import aiTalkVilla from "@/assets/ai talk villa.jpeg";
+import fridayMorningCoffee from "@/assets/friday morning coffee - villa staff.jpeg";
+import pasadenaCohort from "@/assets/pasadenacohort.jpg";
 
 const Hero = () => {
   return (
@@ -37,14 +37,14 @@ const Hero = () => {
             {/* Main large image */}
             <div className="relative group mb-6">
               <img 
-                src={studentsWorking} 
-                alt="Students working together at AI Jedi" 
+                src={pasadenaClass} 
+                alt="AI Jedi class in session" 
                 className="w-full h-80 md:h-96 object-cover rounded-lg shadow-card group-hover:shadow-glow transition-all duration-300 animate-scale-in"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent rounded-lg"></div>
               <div className="absolute bottom-4 left-4 text-white">
-                <h3 className="text-lg font-bold">Live Coding Session</h3>
-                <p className="text-sm opacity-90">Students building AI models together</p>
+                <h3 className="text-lg font-bold">AI Jedi Class</h3>
+                <p className="text-sm opacity-90">Learning and building together</p>
               </div>
             </div>
 
@@ -52,25 +52,25 @@ const Hero = () => {
             <div className="grid grid-cols-2 gap-4">
               <div className="relative group overflow-hidden rounded-lg">
                 <img 
-                  src={studentCoding} 
-                  alt="Student coding AI algorithms" 
+                  src={aiTalkVilla} 
+                  alt="AI talk at Villa" 
                   className="w-full h-32 md:h-40 object-cover transition-transform duration-300 group-hover:scale-110 animate-fade-in"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent"></div>
                 <div className="absolute bottom-2 left-2 text-white">
-                  <p className="text-xs font-medium">Neural Networks</p>
+                  <p className="text-xs font-medium">AI Talks</p>
                 </div>
               </div>
               
               <div className="relative group overflow-hidden rounded-lg">
                 <img 
-                  src={womanAiWork} 
-                  alt="Student working on machine learning project" 
+                  src={fridayMorningCoffee} 
+                  alt="Friday morning coffee with staff" 
                   className="w-full h-32 md:h-40 object-cover transition-transform duration-300 group-hover:scale-110 animate-fade-in"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent"></div>
                 <div className="absolute bottom-2 left-2 text-white">
-                  <p className="text-xs font-medium">Deep Learning</p>
+                  <p className="text-xs font-medium">Community</p>
                 </div>
               </div>
             </div>
@@ -79,8 +79,8 @@ const Hero = () => {
             <div className="absolute -top-8 -right-4 w-32 h-32 hidden lg:block">
               <div className="relative group">
                 <img 
-                  src={studentsCollaborating} 
-                  alt="Students collaborating" 
+                  src={pasadenaCohort} 
+                  alt="Pasadena cohort" 
                   className="w-full h-full object-cover rounded-full border-4 border-primary shadow-glow transition-transform duration-300 group-hover:scale-105 animate-scale-in hover-scale"
                 />
                 <div className="absolute inset-0 bg-gradient-primary opacity-0 group-hover:opacity-20 transition-opacity duration-300 rounded-full"></div>
