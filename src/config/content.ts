@@ -156,15 +156,15 @@ export const content: Content = {
     features: [
       {
         title: "Speedy Prototyping using AI",
-        description: "Master supervised and unsupervised learning algorithms, neural networks, and model optimization techniques."
+        description: "Go straight implementation. Learn the pros and cons of each vibe coding tools. Focus on the best in class to use."
       },
       {
-        title: "Deep Learning & AI",
-        description: "Build sophisticated neural networks using TensorFlow, PyTorch, and implement computer vision and NLP projects."
+        title: "Full stack AI dev",
+        description: "Go from zero to deploying a real web app using Next.js and Supabase. Build both frontend and backend, and actually ship something you can use."
       },
       {
-        title: "Data Engineering",
-        description: "Learn to work with big data, data pipelines, and cloud platforms for scalable AI solutions."
+        title: "Launch real products",
+        description: "Execute using AI on real world products and solve real problems."
       },
       {
         title: "Industry Projects",
@@ -176,20 +176,20 @@ export const content: Content = {
   instructor: {
     title: "Meet Your Instructor",
     name: "Cho-Nan Tsai",
-    role: "Lead AI Instructor & Tech Entrepreneur",
+    role: "Founder & Lead Instructor",
     bio: [
-      "With over a decade of experience in software development and AI, Cho-Nan has been at the forefront of technological innovation, helping companies leverage AI to solve complex problems.",
-      "Previously a senior engineer at leading tech companies, Cho-Nan has developed and deployed AI solutions that have impacted millions of users. His passion for teaching stems from his belief that AI should be accessible to everyone who wants to learn.",
-      "As the founder of AI Jedi, he has designed a curriculum that combines practical, hands-on experience with cutting-edge AI tools and methodologies. His teaching approach focuses on building real-world applications while ensuring students understand the fundamental concepts behind AI technology."
+      "With over a decade of experience in software development and AI, Cho-Nan Tsai has been at the forefront of technological innovation, helping companies leverage AI to solve complex problems. He currently serves as an adjunct professor teaching AI at USC, where he shares his expertise with the next generation of technologists.",
+      "Throughout his career, Cho-Nan Tsai has served as founding CTO on three separate occasions, bringing deep technical leadership and strategic vision to early-stage companies. Previously a senior engineer at leading tech companies, he has developed and deployed AI solutions that have impacted millions of users.",
+      "His passion for teaching stems from his belief that AI should be accessible to everyone who wants to learn. As the founder of AI Jedi, he has designed a curriculum that combines practical, hands-on experience with cutting-edge AI tools and methodologies. His teaching approach focuses on building real-world applications while ensuring students understand the fundamental concepts behind AI technology."
     ],
     stats: [
-      { value: "10+", label: "Years in Tech" },
-      { value: "500+", label: "Students Mentored" },
-      { value: "50+", label: "AI Projects" }
+      { value: "27+", label: "Years of Experience" },
+      { value: "3x", label: "Founding CTO" },
+      { value: "500+", label: "Students Mentored" }
     ],
     companies: {
       title: "Many people mentored by Cho-Nan work at leading tech companies",
-      logos: ["GOOGLE", "META", "AMAZON", "MICROSOFT", "APPLE"]
+      logos: []  // Now using actual logo images in the component
     }
   },
 

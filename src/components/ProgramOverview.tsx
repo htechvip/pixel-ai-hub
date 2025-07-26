@@ -1,5 +1,5 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Brain, Code, Database, TrendingUp } from "lucide-react";
+import { Brain, Code, Database } from "lucide-react";
 import { content } from "@/config/content";
 
 const ProgramOverview = () => {
@@ -9,8 +9,7 @@ const ProgramOverview = () => {
   const icons = {
     "Speedy Prototyping using AI": Brain,
     "Deep Learning & AI": Code,
-    "Data Engineering": Database,
-    "Industry Projects": TrendingUp
+    "Data Engineering": Database
   };
 
   return (
@@ -25,8 +24,8 @@ const ProgramOverview = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {content.program.features.map((feature, index) => {
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {content.program.features.slice(0, 3).map((feature, index) => {
             const Icon = icons[feature.title] || defaultIcon;
             return (
               <Card key={index} className="bg-card/50 backdrop-blur-sm hover:shadow-card transition-all duration-300 group">
