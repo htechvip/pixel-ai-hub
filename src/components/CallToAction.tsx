@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 import { content } from "@/config/content";
 
 const CallToAction = () => {
@@ -17,9 +18,11 @@ const CallToAction = () => {
             <Button 
               variant={content.callToAction.buttons.primary.variant}
               size="lg" 
-              className="text-lg px-8 py-4 animate-fade-in"
+              className="text-lg px-8 py-4 animate-fade-in" asChild
             >
-              {content.callToAction.buttons.primary.text}
+              <Link to="/signup">
+                {content.callToAction.buttons.primary.text}
+              </Link>
             </Button>
             <Button 
               variant={content.callToAction.buttons.secondary.variant}

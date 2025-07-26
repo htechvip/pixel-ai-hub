@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 import { content } from "@/config/content";
 import pasadenaClass from "@/assets/pasadenaclass.jpg";
 import aiTalkVilla from "@/assets/ai talk villa.jpeg";
@@ -22,8 +23,10 @@ const Hero = () => {
               {content.hero.description}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center">
-              <Button variant="hero" size="lg" className="text-lg px-8 py-4 animate-fade-in">
-                {content.hero.buttons.primary}
+              <Button variant="hero" size="lg" className="text-lg px-8 py-4 animate-fade-in" asChild>
+                <Link to="/signup">
+                  {content.hero.buttons.primary}
+                </Link>
               </Button>
               <Button variant="outline" size="lg" className="text-lg px-8 py-4 animate-fade-in" asChild>
                 <a href="https://forms.gle/UEqKeNwjD67odXhS7" target="_blank" rel="noopener noreferrer">

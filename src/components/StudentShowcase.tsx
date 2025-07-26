@@ -20,12 +20,12 @@ const StudentShowcase = () => {
           <div className="relative group overflow-hidden rounded-lg">
             <img 
               src={pasadenaCohort} 
-              alt="Pasadena Cohort" 
+              alt="Los Angeles Cohort" 
               className="w-full h-80 object-cover transition-transform duration-300 group-hover:scale-105"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent"></div>
             <div className="absolute bottom-4 left-4 text-white">
-              <h3 className="text-xl font-bold">Pasadena Cohort</h3>
+              <h3 className="text-xl font-bold">Los Angeles Cohort</h3>
               <p className="text-sm opacity-90">Building the future of AI together</p>
             </div>
           </div>
