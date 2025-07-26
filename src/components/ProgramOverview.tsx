@@ -2,7 +2,11 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Brain, Code, Database } from "lucide-react";
 import { content } from "@/config/content";
 
-const ProgramOverview = () => {
+interface ProgramOverviewProps {
+  minimal?: boolean;
+}
+
+const ProgramOverview = ({ minimal = false }: ProgramOverviewProps) => {
   // Add default icon in case title doesn't match
   const defaultIcon = Brain;
   
@@ -13,7 +17,14 @@ const ProgramOverview = () => {
   };
 
   return (
-    <section id="program" className="py-20 bg-secondary/50">
+    <section
+      id="program"
+      className={
+        minimal
+          ? "py-20 border border-border rounded-lg"
+          : "py-20 bg-secondary/50"
+      }
+    >
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">

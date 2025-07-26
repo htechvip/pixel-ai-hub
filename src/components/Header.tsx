@@ -32,8 +32,8 @@ const Header = () => {
           
           {/* CTA Button */}
           <div>
-            <Button>
-              {content.hero.buttons.primary}
+            <Button asChild>
+              <Link to="/signup">{content.hero.buttons.primary}</Link>
             </Button>
           </div>
         </div>

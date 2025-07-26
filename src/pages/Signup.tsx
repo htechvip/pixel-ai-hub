@@ -3,6 +3,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { CalendarDays, Clock, MapPin, Users } from "lucide-react";
 import Header from "@/components/Header";
+import ProgramOverview from "@/components/ProgramOverview";
 
 const Signup = () => {
   return (
@@ -225,6 +226,45 @@ const Signup = () => {
             </a>
           </Button>
         </Card>
+
+        {/* Important Information Section */}
+        <Card className="max-w-3xl mx-auto p-8 mt-24 bg-card/50 backdrop-blur-sm">
+          <h3 className="text-2xl font-bold mb-6 flex items-center gap-2 justify-center">
+            <span role="img" aria-label="info">ℹ️</span>
+            Important Information
+          </h3>
+          <div className="space-y-6 text-left text-muted-foreground">
+            <div className="flex items-start gap-3">
+              <span className="text-xl" role="img" aria-label="in-person">🧑‍🤝‍🧑</span>
+              <p>
+                <strong>In-Person Only:</strong> This is a fully hands-on workshop held on-site. Remote attendance isn’t offered.
+              </p>
+            </div>
+            <div className="flex items-start gap-3">
+              <span className="text-xl" role="img" aria-label="payment">💳</span>
+              <p>
+                <strong>Registration & Payment:</strong> Your seat is secured once payment has been successfully completed.
+              </p>
+            </div>
+            <div className="flex items-start gap-3">
+              <span className="text-xl" role="img" aria-label="capacity">📈</span>
+              <p>
+                <strong>Limited Capacity:</strong> Spots are capped to keep the class intimate—register early to avoid missing out.
+              </p>
+            </div>
+            <div className="flex items-start gap-3">
+              <span className="text-xl" role="img" aria-label="laptop">💻</span>
+              <p>
+                <strong>What to Bring:</strong> Bring your laptop. Pre-class we’ll email you any software to install.
+              </p>
+            </div>
+          </div>
+        </Card>
+
+        {/* What You Will Learn */}
+        <div className="mt-24 max-w-3xl mx-auto">
+          <ProgramOverview minimal />
+        </div>
       </main>
     </>
   );

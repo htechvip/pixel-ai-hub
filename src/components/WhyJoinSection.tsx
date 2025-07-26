@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 import { Card } from "@/components/ui/card";
 import { content } from "@/config/content";
 
@@ -34,8 +35,8 @@ const WhyJoinSection = () => {
             </div>
 
             <div className="text-center mt-12">
-              <Button size="lg" variant="hero" className="text-lg px-8">
-                {content.whyJoin.cta}
+              <Button size="lg" variant="hero" className="text-lg px-8" asChild>
+                <Link to="/signup">{content.whyJoin.cta}</Link>
               </Button>
             </div>
           </div>

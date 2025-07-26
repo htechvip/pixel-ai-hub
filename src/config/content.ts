@@ -160,7 +160,7 @@ export const content: Content = {
       },
       {
         title: "Full stack AI dev",
-        description: "Go from zero to deploying a real web app using Lovable, Cursor and Supabase. Build both frontend and backend, and actually ship something you can use."
+        description: "Go from zero to deploying a real web app using React.js and Supabase. Build both frontend and backend, and actually ship something you can use."
       },
       {
         title: "Launch real products",
@@ -255,7 +255,7 @@ export const content: Content = {
       },
       {
         question: "How can I enroll?",
-        answer: "Simply add your name to our waitlist using the link at the page top. We'll send you enrollment details via email!"
+        answer: "Simply click on Sign Up for Cohort. We'll send you enrollment details!"
       }
     ]
   },
