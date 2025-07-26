@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { content } from "@/config/content";
 import htechLogo from "@/assets/logo-htech-whitebg.png";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
@@ -8,10 +9,10 @@ const Header = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <div className="flex items-center">
-            <img src={htechLogo} alt="HTech Logo" className="h-6 w-auto mr-2" />
+          <Link to="/" className="flex items-center hover:opacity-90 transition-opacity">
+            <img src={htechLogo} alt="Hyperonsoft AI Jedi" className="h-6 w-auto mr-2" />
             <h1 className="text-xl font-bold text-foreground">{content.header.logo}</h1>
-          </div>
+          </Link>
           
           {/* Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
