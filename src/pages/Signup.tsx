@@ -14,14 +14,14 @@ const Signup = () => {
           <Badge className="px-4 py-2 text-sm font-medium" variant="secondary">
             <div className="flex items-center gap-2">
               <CalendarDays className="w-4 h-4" />
-              August 2025 Cohorts - Taipei
+              August 2025 Cohorts
             </div>
           </Badge>
         </div>
 
         {/* Heading & Description */}
         <h1 className="text-center text-4xl md:text-6xl font-extrabold mb-4">
-          August Cohorts
+          August Cohorts - Taipei
         </h1>
         <p className="text-center text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
           Join our intensive in-person 2-day workshop and learn to build full-stack applications with AI as your coding partner.
@@ -210,6 +210,19 @@ const Signup = () => {
 
           <Button disabled variant="secondary" size="lg" className="mt-4 w-full cursor-not-allowed">
             Course Fully Booked
+          </Button>
+        </Card>
+
+        {/* Waitlist Section */}
+        <Card className="max-w-3xl mx-auto p-8 mt-24 text-center bg-card/50 backdrop-blur-sm">
+          <h3 className="text-2xl font-bold mb-4">Not in LA or Taipei / Can't make the dates?</h3>
+          <p className="text-muted-foreground mb-6">
+            Join our waitlist for updates and future cohorts
+          </p>
+          <Button variant="hero" size="lg" asChild>
+            <a href="https://forms.gle/UEqKeNwjD67odXhS7" target="_blank" rel="noopener noreferrer">
+              Join Waitlist
+            </a>
           </Button>
         </Card>
       </main>
