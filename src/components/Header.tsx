@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { content } from "@/config/content";
+import htechLogo from "@/assets/logo-htech-whitebg.png";
 
 const Header = () => {
   return (
@@ -8,6 +9,7 @@ const Header = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center">
+            <img src={htechLogo} alt="HTech Logo" className="h-6 w-auto mr-2" />
             <h1 className="text-xl font-bold text-foreground">{content.header.logo}</h1>
           </div>
           

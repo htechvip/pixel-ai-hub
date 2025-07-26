@@ -230,28 +230,32 @@ export const content: Content = {
     subtitle: "Everything you need to know about the AI Jedi program",
     questions: [
       {
-        question: "What prerequisites do I need for the AI Jedi program?",
-        answer: "Our program is designed for beginners with basic programming knowledge. While prior experience with Python or JavaScript is helpful, it's not required. We provide pre-course materials to help you get up to speed with the basics before the program starts."
+        question: "Who should take this course?",
+        answer: "This course is perfect for anyone eager to create and launch real web applications quickly, whether you're a complete beginner or a product professional with no coding background."
       },
       {
-        question: "How long is the program and what's the time commitment?",
-        answer: "The core program runs for 12 weeks, with approximately 20-25 hours per week of commitment including live sessions, project work, and self-paced learning. We offer both part-time (evenings/weekends) and full-time options to accommodate different schedules."
+        question: "Do I need programming knowledge?",
+        answer: "Not at all! We've built this course specifically for people starting from zero. AI tools will guide your learning process as you create your projects."
       },
       {
-        question: "What technologies and tools will I learn?",
-        answer: "You'll learn cutting-edge AI tools and frameworks including OpenAI's GPT models, Cursor IDE, Next.js, Supabase, and various AI-powered development tools. The curriculum is constantly updated to include the latest advancements in AI technology."
+        question: "What kind of project will I create?",
+        answer: "You'll develop and launch a fully functional, professional-grade web application that you can proudly showcase. Previous participants have created diverse projects ranging from interactive learning games to AI-enhanced product demonstrations."
       },
       {
-        question: "Do you offer job placement assistance?",
-        answer: "Yes! We have a dedicated career services team that provides resume reviews, interview preparation, and connections to our network of hiring partners. Our program includes career workshops and 1-on-1 coaching sessions to help you transition into an AI role."
+        question: "How is the course delivered?",
+        answer: "We offer both formats! Currently running hands-on workshops in Los Angeles and Taipei, with an online version launching soon. Sign up for our waitlist to get priority access."
       },
       {
-        question: "What kind of projects will I build during the program?",
-        answer: "You'll build several real-world projects including AI-powered web applications, chatbots, and automation tools. All projects are production-ready and can be added to your portfolio. You'll also work on a capstone project that solves a real business problem."
+        question: "Which technologies and platforms do you cover?",
+        answer: "We focus on practical skills for transforming concepts, prompts, or product requirements into working applications using modern tools like Lovable and Cursor. Your final project will be built with Next.js and Supabase."
       },
       {
-        question: "Is there a payment plan or financing available?",
-        answer: "We offer flexible payment options including monthly installments and income share agreements (ISA). We also partner with various financing providers to make the program accessible to everyone. Scholarships are available for underrepresented groups in tech."
+        question: "What support is available if I encounter problems?",
+        answer: "You'll receive personalized guidance from our instructors plus support from fellow participants. Our approach emphasizes hands-on problem-solving and successful deployment, not passive learning."
+      },
+      {
+        question: "How can I enroll?",
+        answer: "Simply add your name to our waitlist using the link at the page top. We'll send you enrollment details via email!"
       }
     ]
   },
