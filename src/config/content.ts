@@ -114,8 +114,9 @@ export const content: Content = {
   },
 
   hero: {
-    title: "Master AI in 12 Weeks",
-    description: "Transform your career with our intensive AI Jedi program. Learn machine learning, deep learning, and cutting-edge AI technologies from industry experts.",
+    title: "Idea to Product in just hours",
+    description: "Skip months of development hell. Our AI-powered platform transforms your raw ideas into working prototypes, MVPs, and test-ready products in just hours, not months. No coding required.",
+    
     buttons: {
       primary: "Sign up for Cohort",
       secondary: "Join Waitlist"
@@ -123,11 +124,11 @@ export const content: Content = {
   },
 
   whyJoin: {
-    title: "Why Join AI Jedi",
+    title: "Why Join AI Jedi Vibe Coding Camp",
     subtitle: "Empowering the next generation of AI builders",
     mainText: [
       "Product creation shouldn't require a computer science degree or years of coding experience. With breakthrough AI tools like Cursor and Lovable, the game has completely changed. If you can articulate your vision, you can bring it to life.",
-      "This hands-on course is built for complete beginners and product thinkers ready to go from concept to launch. No passive learning—you'll build real products from day one. In just one weekend, you'll ship a fully functional app that's ready for users. We'll walk you through every step using Next.js, Supabase, and cutting-edge AI development workflows."
+      "This hands-on course is built for complete beginners and product thinkers ready to go from concept to launch. No passive learning—you'll build real products from day one. In just one weekend, you'll ship a fully functional app that's ready for users. We'll walk you through every step using Cursor, Lovable, Supabase, and cutting-edge AI development workflows."
     ],
     features: [
       {

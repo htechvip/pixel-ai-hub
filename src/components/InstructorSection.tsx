@@ -3,8 +3,35 @@ import { Button } from "@/components/ui/button";
 import { LinkedInLogoIcon, GitHubLogoIcon } from "@radix-ui/react-icons";
 import { content } from "@/config/content";
 import instructorImage from "@/assets/cable co talk.jpg";
+import googleLogo from "@/assets/google_logo.jpeg";
+import abnormalLogo from "@/assets/abnormal_ai_logo.jpeg";
+import alleviateLogo from "@/assets/alleviate_financial_logo.jpeg";
+import alticeLogo from "@/assets/altice_usa_logo.jpeg";
+import caminoLogo from "@/assets/camino_financial_logo.jpeg";
+import dbtLogo from "@/assets/dbtlabs_logo.jpeg";
+import dropboxLogo from "@/assets/dropbox_logo.jpeg";
+import eabLogo from "@/assets/eab__logo.jpeg";
+import nbcLogo from "@/assets/nbcuniversal_inc__logo.jpeg";
+import objectSecurityLogo from "@/assets/objectsecurity_logo.jpeg";
+import redBullLogo from "@/assets/red_bull_logo.jpeg";
+import taboolaLogo from "@/assets/taboola_logo.jpeg";
 
 const InstructorSection = () => {
+  const companyLogos = [
+    { src: googleLogo, alt: "Google" },
+    { src: abnormalLogo, alt: "Abnormal Security" },
+    { src: dropboxLogo, alt: "Dropbox" },
+    { src: nbcLogo, alt: "NBCUniversal" },
+    { src: dbtLogo, alt: "dbt Labs" },
+    { src: alticeLogo, alt: "Altice USA" },
+    { src: taboolaLogo, alt: "Taboola" },
+    { src: redBullLogo, alt: "Red Bull" },
+    { src: alleviateLogo, alt: "Alleviate Financial" },
+    { src: caminoLogo, alt: "Camino Financial" },
+    { src: objectSecurityLogo, alt: "Object Security" },
+    { src: eabLogo, alt: "EAB" }
+  ];
+
   return (
     <section id="instructor" className="py-24 bg-background">
       <div className="container mx-auto px-4">
@@ -63,16 +90,18 @@ const InstructorSection = () => {
           </Card>
 
           {/* Company Logos Section */}
-          <div className="mt-16 text-center">
-            <h3 className="text-xl font-medium text-muted-foreground mb-8">
-              {content.instructor.companies.title}
+          <div className="mt-16">
+            <h3 className="text-xl font-medium text-center text-muted-foreground mb-8">
+              Many people mentored by Cho-Nan work at leading tech companies
             </h3>
-            <div className="grid grid-cols-2 md:grid-cols-5 gap-8 items-center">
-              {content.instructor.companies.logos.map((company) => (
-                <div key={company} className="flex items-center justify-center">
-                  <span className="text-xl font-bold text-muted-foreground/50 hover:text-muted-foreground/75 transition-colors tracking-wider">
-                    {company}
-                  </span>
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8 items-center">
+              {companyLogos.map((logo, index) => (
+                <div key={index} className="flex items-center justify-center p-4 bg-white/5 rounded-lg hover:bg-white/10 transition-colors">
+                  <img 
+                    src={logo.src} 
+                    alt={logo.alt}
+                    className="max-h-12 w-auto object-contain filter grayscale hover:grayscale-0 transition-all duration-300"
+                  />
                 </div>
               ))}
             </div>
