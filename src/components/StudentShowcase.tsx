@@ -1,17 +1,8 @@
 import { content } from "@/config/content";
-import studentCoding from "@/assets/student-coding.jpg";
 import pasadenaCohort from "@/assets/pasadenacohort.jpg";
-import studentPresenting from "@/assets/student-presenting.jpg";
 import panel from "@/assets/panel.jpg";
-import womanAiWork from "@/assets/woman-ai-work.jpg";
 
 const StudentShowcase = () => {
-  const studentImages = {
-    "Sarah Chen": studentCoding,
-    "Maria Rodriguez": womanAiWork,
-    "James Wilson": studentPresenting
-  };
-
   return (
     <section id="showcase" className="py-20">
       <div className="container mx-auto px-4">
@@ -56,15 +47,7 @@ const StudentShowcase = () => {
         {/* Student testimonials */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {content.showcase.testimonials.map((student, index) => (
-            <div key={index} className="text-center group">
-              <div className="relative mb-6 mx-auto w-32 h-32 overflow-hidden rounded-full">
-                <img 
-                  src={studentImages[student.name as keyof typeof studentImages]} 
-                  alt={student.name}
-                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-gradient-primary opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
-              </div>
+            <div key={index} className="text-center p-6 bg-card/50 backdrop-blur-sm rounded-lg hover:shadow-card transition-all duration-300">
               <h3 className="text-xl font-bold mb-2">{student.name}</h3>
               <p className="text-primary font-medium mb-4">{student.role}</p>
               <blockquote className="text-muted-foreground italic">

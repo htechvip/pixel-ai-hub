@@ -1,6 +1,6 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { LinkedInLogoIcon, GitHubLogoIcon } from "@radix-ui/react-icons";
+import { LinkedInLogoIcon } from "@radix-ui/react-icons";
 import { content } from "@/config/content";
 import instructorImage from "@/assets/cable co talk.jpg";
 import googleLogo from "@/assets/google_logo.jpeg";
@@ -66,13 +66,11 @@ const InstructorSection = () => {
                   ))}
 
                   <div className="flex flex-wrap gap-4">
-                    <Button variant="outline" className="gap-2">
-                      <LinkedInLogoIcon className="w-4 h-4" />
-                      LinkedIn
-                    </Button>
-                    <Button variant="outline" className="gap-2">
-                      <GitHubLogoIcon className="w-4 h-4" />
-                      GitHub
+                    <Button variant="outline" className="gap-2" asChild>
+                      <a href="https://www.linkedin.com/in/chonantsai/" target="_blank" rel="noopener noreferrer">
+                        <LinkedInLogoIcon className="w-4 h-4" />
+                        LinkedIn
+                      </a>
                     </Button>
                   </div>
 

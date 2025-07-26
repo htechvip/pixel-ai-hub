@@ -115,7 +115,7 @@ export const content: Content = {
 
   hero: {
     title: "Idea to Product in just hours",
-    description: "Skip months of development hell. Our AI-powered platform transforms your raw ideas into working prototypes, MVPs, and test-ready products in just hours, not months. No coding required.",
+    description: "Skip months of development hell. Our intensive workshop transforms your raw ideas into working prototypes, MVPs, and test-ready products in just hours, not months. No coding required.",
     
     buttons: {
       primary: "Sign up for Cohort",
@@ -160,7 +160,7 @@ export const content: Content = {
       },
       {
         title: "Full stack AI dev",
-        description: "Go from zero to deploying a real web app using Next.js and Supabase. Build both frontend and backend, and actually ship something you can use."
+        description: "Go from zero to deploying a real web app using Lovable, Cursor and Supabase. Build both frontend and backend, and actually ship something you can use."
       },
       {
         title: "Launch real products",
@@ -208,19 +208,19 @@ export const content: Content = {
     },
     testimonials: [
       {
-        name: "Sarah Chen",
-        role: "ML Engineer at Google",
-        quote: "The bootcamp transformed my career. I went from zero AI knowledge to landing my dream job at Google."
+        name: "Richard Lieu",
+        role: "Director of Engineering at Simplexam",
+        quote: "Cho-Nan is a great leader and instructor. You can't go wrong with him."
       },
       {
-        name: "Maria Rodriguez",
-        role: "Data Scientist at Meta",
+        name: "Saravana Moorthi",
+        role: "Software Engineering Lead at Federal Reserve Bank of San Francisco",
         quote: "The hands-on projects and industry mentorship made all the difference in my learning journey."
       },
       {
-        name: "James Wilson",
-        role: "AI Researcher at OpenAI",
-        quote: "The program's depth and practical approach prepared me for the most challenging AI roles."
+        name: "Supratik Mukherjee",
+        role: "Director of Product at Quantum",
+        quote: "Cho-Nan knows product, AI and engineering. His influence certainly prepared me for the most challenging roles in my career."
       }
     ]
   },
