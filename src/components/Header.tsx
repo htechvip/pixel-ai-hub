@@ -15,15 +15,18 @@ const Header = () => {
           
           {/* Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            {content.header.navigation.map((item) => (
-              <a 
-                key={item.href}
-                href={item.href} 
-                className="text-muted-foreground hover:text-foreground transition-colors"
-              >
-                {item.label}
-              </a>
-            ))}
+            {content.header.navigation.map((item) => {
+              const link = item.href.startsWith("#") ? `/${item.href}` : item.href;
+              return (
+                <a
+                  key={item.href}
+                  href={link}
+                  className="text-muted-foreground hover:text-foreground transition-colors"
+                >
+                  {item.label}
+                </a>
+              );
+            })}
           </nav>
           
           {/* CTA Button */}
