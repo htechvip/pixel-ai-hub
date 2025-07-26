@@ -25,8 +25,10 @@ const Hero = () => {
               <Button variant="hero" size="lg" className="text-lg px-8 py-4 animate-fade-in">
                 {content.hero.buttons.primary}
               </Button>
-              <Button variant="outline" size="lg" className="text-lg px-8 py-4 animate-fade-in">
-                {content.hero.buttons.secondary}
+              <Button variant="outline" size="lg" className="text-lg px-8 py-4 animate-fade-in" asChild>
+                <a href="https://forms.gle/UEqKeNwjD67odXhS7" target="_blank" rel="noopener noreferrer">
+                  {content.hero.buttons.secondary}
+                </a>
               </Button>
             </div>
           </div>

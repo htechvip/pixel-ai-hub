@@ -24,9 +24,11 @@ const CallToAction = () => {
             <Button 
               variant={content.callToAction.buttons.secondary.variant}
               size="lg" 
-              className="text-lg px-8 py-4 animate-fade-in"
+              className="text-lg px-8 py-4 animate-fade-in" asChild
             >
-              {content.callToAction.buttons.secondary.text}
+              <a href="https://forms.gle/UEqKeNwjD67odXhS7" target="_blank" rel="noopener noreferrer">
+                {content.callToAction.buttons.secondary.text}
+              </a>
             </Button>
           </div>
         </div>
