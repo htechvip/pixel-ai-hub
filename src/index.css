@@ -112,6 +112,13 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground overflow-x-hidden;
+  }
+
+  /* Prevent carousel mobile overflow */
+  @media (max-width: 639px) {
+    #previous-lectures .embla__viewport {
+      overflow-x: clip;
+    }
   }
 }

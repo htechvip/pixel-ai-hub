@@ -21,7 +21,7 @@ const images = [
 
 const PreviousLectures = () => {
   return (
-    <section className="py-24">
+    <section id="previous-lectures" className="py-24">
       <div className="container mx-auto px-4">
         <h2 className="text-4xl md:text-5xl font-bold text-center mb-12">
           Previous AI Lectures & Talks
@@ -29,7 +29,7 @@ const PreviousLectures = () => {
         <Carousel className="w-full max-w-4xl mx-auto">
           <CarouselContent>
             {images.map((img, idx) => (
-              <CarouselItem key={idx} className="basis-[80%] sm:basis-1/2 lg:basis-1/3 pe-4">
+              <CarouselItem key={idx} className="basis-[75%] sm:basis-1/2 lg:basis-1/3 pr-2">
                 <Card className="overflow-hidden">
                   <img
                     src={img.src}
@@ -43,8 +43,8 @@ const PreviousLectures = () => {
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious />
-          <CarouselNext />
+          <CarouselPrevious className="hidden sm:block" />
+          <CarouselNext className="hidden sm:block" />
         </Carousel>
       </div>
     </section>
