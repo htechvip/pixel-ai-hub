@@ -4,6 +4,7 @@ import WhyJoinSection from "@/components/WhyJoinSection";
 import ProgramOverview from "@/components/ProgramOverview";
 import VibeCodingWebApps from "@/components/VibeCodingWebApps";
 import InstructorSection from "@/components/InstructorSection";
+import PreviousLectures from "@/components/PreviousLectures";
 import StudentShowcase from "@/components/StudentShowcase";
 import CallToAction from "@/components/CallToAction";
 import FAQSection from "@/components/FAQSection";
@@ -22,6 +23,7 @@ const Index = () => {
       <ProgramOverview />
       <VibeCodingWebApps />
       <InstructorSection />
+      <PreviousLectures />
       <StudentShowcase />
       <CallToAction />
       <FAQSection />

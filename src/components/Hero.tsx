@@ -46,7 +46,7 @@ const Hero = () => {
                 className="w-full h-80 md:h-96 object-cover rounded-lg shadow-card group-hover:shadow-glow transition-all duration-300 animate-scale-in"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent rounded-lg"></div>
-              <div className="absolute bottom-4 left-4 text-white">
+              <div className="absolute bottom-4 left-4 text-foreground">
                 <h3 className="text-lg font-bold">AI Jedi Class</h3>
                 <p className="text-sm opacity-90">Learning and building together</p>
               </div>
@@ -61,7 +61,7 @@ const Hero = () => {
                   className="w-full h-32 md:h-40 object-cover transition-transform duration-300 group-hover:scale-110 animate-fade-in"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent"></div>
-                <div className="absolute bottom-2 left-2 text-white">
+                <div className="absolute bottom-2 left-2 text-foreground">
                   <p className="text-xs font-medium">AI Talks</p>
                 </div>
               </div>
@@ -73,7 +73,7 @@ const Hero = () => {
                   className="w-full h-32 md:h-40 object-cover transition-transform duration-300 group-hover:scale-110 animate-fade-in"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent"></div>
-                <div className="absolute bottom-2 left-2 text-white">
+                <div className="absolute bottom-2 left-2 text-foreground">
                   <p className="text-xs font-medium">Community</p>
                 </div>
               </div>

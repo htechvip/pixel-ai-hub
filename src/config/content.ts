@@ -115,7 +115,7 @@ export const content: Content = {
 
   hero: {
     title: "Idea to Product in just hours",
-    description: "Skip months of development hell. Our intensive workshop transforms your raw ideas into working prototypes, MVPs, and test-ready products in just hours, not months. No coding required.",
+    description: "Skip months of development hell. Our intensive workshop transforms your raw ideas into working prototypes, MVPs, and real-world products in just hours, not months. No coding required.",
     
     buttons: {
       primary: "Sign up for Cohort",
@@ -156,7 +156,7 @@ export const content: Content = {
     features: [
       {
         title: "Speedy Prototyping using AI",
-        description: "Go straight implementation. Learn the pros and cons of each vibe coding tools. Focus on the best in class to use."
+        description: "Go straight implementation. Learn the pros and cons of each vibe coding tools. Focus on the best in class software to use."
       },
       {
         title: "Full stack AI dev",
@@ -196,7 +196,7 @@ export const content: Content = {
 
   showcase: {
     title: "Read Our Success Stories",
-    subtitle: "Our graduates are working at the world's leading AI companies, building the future of technology.",
+    subtitle: "Our alumni are working at the world's leading AI companies, building the future of technology.",
     imageLabels: {
       graduation: {
         title: "Graduation Day 2024",

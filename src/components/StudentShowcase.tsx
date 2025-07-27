@@ -24,7 +24,7 @@ const StudentShowcase = () => {
               className="w-full h-80 object-cover transition-transform duration-300 group-hover:scale-105"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent"></div>
-            <div className="absolute bottom-4 left-4 text-white">
+            <div className="absolute bottom-4 left-4 text-foreground">
               <h3 className="text-xl font-bold">Los Angeles Cohort</h3>
               <p className="text-sm opacity-90">Building the future of AI together</p>
             </div>
@@ -37,7 +37,7 @@ const StudentShowcase = () => {
               className="w-full h-80 object-cover transition-transform duration-300 group-hover:scale-105"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent"></div>
-            <div className="absolute bottom-4 left-4 text-white">
+            <div className="absolute bottom-4 left-4 text-foreground">
               <h3 className="text-xl font-bold">Industry Insights</h3>
               <p className="text-sm opacity-90">Learning from industry experts</p>
             </div>
