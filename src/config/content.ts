@@ -178,9 +178,10 @@ export const content: Content = {
     name: "Cho-Nan Tsai",
     role: "Founder & Lead Instructor",
     bio: [
-      "With over a decade of experience in software development and AI, Cho-Nan Tsai has been at the forefront of technological innovation, helping companies leverage AI to solve complex problems. He currently serves as an adjunct professor teaching AI at USC, where he shares his expertise with the next generation of technologists.",
-      "Throughout his career, Cho-Nan Tsai has served as founding CTO on three separate occasions, bringing deep technical leadership and strategic vision to early-stage companies. Previously a senior engineer at leading tech companies, he has developed and deployed AI solutions that have impacted millions of users.",
-      "His passion for teaching stems from his belief that AI should be accessible to everyone who wants to learn. As the founder of AI Jedi, he has designed a curriculum that combines practical, hands-on experience with cutting-edge AI tools and methodologies. His teaching approach focuses on building real-world applications while ensuring students understand the fundamental concepts behind AI technology."
+      "Cho-Nan Tsai is a technology entrepreneur and educator with over two decades of experience in AI, machine learning, and fintech. He currently serves as an adjunct professor teaching AI at USC and as CEO of Hyperionsoft, an AI consulting firm.",
+      "Cho-Nan has served as founding CTO three times and successfully raised millions for multiple startups, scaling them exponentially through innovative AI solutions. His corporate experience includes managing tech projects at Fortune 500 companies such as Sony, Ricoh, and McKinsey & Company. He has developed and deployed AI solutions impacting millions of users across data analytics, digital advertising, and lending platforms.",
+      "As founder of AI Jedi, Cho-Nan has designed curriculum combining hands-on experience with cutting-edge AI tools and methodologies. His teaching philosophy centers on building real-world applications while ensuring students grasp fundamental AI concepts, driven by his belief that AI should be accessible to all learners.",
+      "He holds a B.S. in Computer Engineering from Columbia University and an M.S. in Computer Science from UCLA."      
     ],
     stats: [
       { value: "27+", label: "Years of Experience" },
