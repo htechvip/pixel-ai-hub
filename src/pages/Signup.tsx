@@ -5,6 +5,7 @@ import { CalendarDays, Clock, MapPin, Users } from "lucide-react";
 import Header from "@/components/Header";
 import ProgramOverview from "@/components/ProgramOverview";
 import { useEffect } from "react";
+import { Helmet } from "react-helmet";
 
 const Signup = () => {
   // Scroll to top when this page loads
@@ -13,6 +14,19 @@ const Signup = () => {
   }, []);
   return (
     <>
+      <Helmet>
+        <title>AI Jedi Cohort Registration – Taipei & LA</title>
+        <meta name="description" content="Secure your seat for the next AI Jedi weekend bootcamp. Limited spots available." />
+        <link rel="canonical" href="https://aijedi.hyperionsoft.com/signup" />
+        <meta property="og:title" content="AI Jedi Cohort Registration" />
+        <meta property="og:description" content="Register for our upcoming AI bootcamp cohorts in Taipei and Los Angeles." />
+        <meta property="og:url" content="https://aijedi.hyperionsoft.com/signup" />
+        <meta property="og:image" content="/ai%20jedi%20class.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="AI Jedi Cohort Registration" />
+        <meta name="twitter:description" content="Register for our upcoming AI bootcamp cohorts in Taipei and Los Angeles." />
+        <meta name="twitter:image" content="/ai%20jedi%20class.png" />
+      </Helmet>
       <Header />
       <main className="min-h-screen pt-24 pb-32 container mx-auto px-4">
         {/* Top Badge */}
@@ -164,39 +178,6 @@ const Signup = () => {
             <div className="flex items-center gap-3">
               <CalendarDays className="w-5 h-5" />
               September 6-7, 2025
-            </div>
-            <div className="flex items-center gap-3">
-              <Clock className="w-5 h-5" />
-              Sat & Sun, 9:30 AM – 1:30 PM
-            </div>
-            <div className="flex items-center gap-3">
-              <MapPin className="w-5 h-5" />
-              In-person workshop (location TBA)
-            </div>
-          </div>
-
-          <div className="mt-8 flex items-center gap-4">
-            <span className="text-destructive font-medium flex items-center gap-2">
-              <Users className="w-4 h-4" /> Sold Out
-            </span>
-          </div>
-
-          <Button disabled variant="secondary" size="lg" className="mt-4 w-full cursor-not-allowed">
-            Course Fully Booked
-          </Button>
-        </Card>
-
-        {/* September Cohort 2 */}
-        <Card className="max-w-3xl mx-auto p-8 relative mt-12">
-          <span className="absolute top-4 right-4 bg-primary text-primary-foreground w-8 h-8 flex items-center justify-center rounded-full text-sm font-semibold">
-            4
-          </span>
-          <h2 className="text-2xl font-bold mb-1">Weekend Intensive</h2>
-
-          <div className="space-y-4 text-muted-foreground">
-            <div className="flex items-center gap-3">
-              <CalendarDays className="w-5 h-5" />
-              September 13-14, 2025
             </div>
             <div className="flex items-center gap-3">
               <Clock className="w-5 h-5" />
