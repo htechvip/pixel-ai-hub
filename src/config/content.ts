@@ -124,7 +124,7 @@ export const content: Content = {
   },
 
   whyJoin: {
-    title: "Why Join AI Jedi Vibe Coding Camp",
+    title: "Why Join AI Jedi Vibe Coding Bootcamp",
     subtitle: "Empowering the next generation of AI builders",
     mainText: [
       "Product creation shouldn't require a computer science degree or years of coding experience. With breakthrough AI tools like Cursor and Lovable, the game has completely changed. If you can articulate your vision, you can bring it to life.",
