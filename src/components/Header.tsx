@@ -31,7 +31,7 @@ const Header = () => {
           </nav>
           
           {/* CTA Button */}
-          <div>
+          <div className="pr-4 sm:pr-0">
             <Button asChild>
               <Link to="/signup">{content.hero.buttons.primary}</Link>
             </Button>

@@ -29,7 +29,7 @@ const PreviousLectures = () => {
         <Carousel className="w-full max-w-4xl mx-auto">
           <CarouselContent>
             {images.map((img, idx) => (
-              <CarouselItem key={idx} className="basis-full md:basis-1/2 lg:basis-1/3 p-4">
+              <CarouselItem key={idx} className="basis-[80%] sm:basis-1/2 lg:basis-1/3 pe-4">
                 <Card className="overflow-hidden">
                   <img
                     src={img.src}
