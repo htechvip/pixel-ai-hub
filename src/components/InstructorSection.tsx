@@ -15,6 +15,13 @@ import nbcLogo from "@/assets/nbcuniversal_inc__logo.jpeg";
 import objectSecurityLogo from "@/assets/objectsecurity_logo.jpeg";
 import redBullLogo from "@/assets/red_bull_logo.jpeg";
 import taboolaLogo from "@/assets/taboola_logo.jpeg";
+// Affiliation logos
+import uscLogo from "@/assets/Block-USC_on_black.png";
+import uclaLogo from "@/assets/ucla.png";
+import columbiaLogo from "@/assets/columbia.jpg";
+import sonyLogo from "@/assets/sony.jpg";
+import ricohLogo from "@/assets/ricoh.png";
+import mckinseyLogo from "@/assets/mckinsey.png";
 
 const InstructorSection = () => {
   const companyLogos = [
@@ -56,7 +63,21 @@ const InstructorSection = () => {
               {/* Instructor Info */}
               <div className="w-full md:w-2/3">
                 <h3 className="text-2xl font-bold mb-2">{content.instructor.name}</h3>
-                <p className="text-lg text-primary mb-4">{content.instructor.role}</p>
+                <p className="text-lg text-primary mb-6">{content.instructor.role}</p>
+                {/* Affiliation Logos below name */}
+                <div className="grid grid-cols-3 gap-4 mb-6">
+                  {[uscLogo, uclaLogo, columbiaLogo, sonyLogo, ricohLogo, mckinseyLogo].map((logo, idx) => {
+                    const sizeClass = logo === uclaLogo || logo === columbiaLogo ? "h-12" : "h-10";
+                    return (
+                      <img
+                        key={idx}
+                        src={logo}
+                        alt="affiliation logo"
+                        className={`${sizeClass} w-auto object-contain opacity-80 hover:opacity-100 transition-opacity`}
+                      />
+                    );
+                  })}
+                </div>
                 
                 <div className="prose prose-lg dark:prose-invert">
                   {content.instructor.bio.map((paragraph, index) => (
@@ -82,6 +103,8 @@ const InstructorSection = () => {
                       </div>
                     ))}
                   </div>
+
+                  {/* Removed bottom logos */}
                 </div>
               </div>
             </div>
