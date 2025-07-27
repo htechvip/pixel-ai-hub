@@ -4,8 +4,13 @@ import { Button } from "@/components/ui/button";
 import { CalendarDays, Clock, MapPin, Users } from "lucide-react";
 import Header from "@/components/Header";
 import ProgramOverview from "@/components/ProgramOverview";
+import { useEffect } from "react";
 
 const Signup = () => {
+  // Scroll to top when this page loads
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+  }, []);
   return (
     <>
       <Header />

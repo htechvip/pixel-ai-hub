@@ -128,7 +128,7 @@ export const content: Content = {
     subtitle: "Empowering the next generation of AI builders",
     mainText: [
       "Product creation shouldn't require a computer science degree or years of coding experience. With breakthrough AI tools like Cursor and Lovable, the game has completely changed. If you can articulate your vision, you can bring it to life.",
-      "This hands-on course is built for complete beginners and product thinkers ready to go from concept to launch. No passive learning—you'll build real products from day one. In just one weekend, you'll ship a fully functional app that's ready for users. We'll walk you through every step using Cursor, Lovable, Supabase, and cutting-edge AI development workflows."
+      "This hands-on course is built for complete beginners and product thinkers ready to go from concept to launch. No passive learning—you'll build real products from day one. In just one weekend, you'll ship a fully functional app that's ready for users. We'll walk you through every step using vibe coding toolsand cutting-edge AI development workflows."
     ],
     features: [
       {
@@ -160,7 +160,7 @@ export const content: Content = {
       },
       {
         title: "Full stack AI dev",
-        description: "Go from zero to deploying a real web app using React.js and Supabase. Build both frontend and backend, and actually ship something you can use."
+        description: "Go from zero to deploying a real web app using vibe coding tools. Build both frontend and backend, and actually ship something you can use."
       },
       {
         title: "Launch real products",
@@ -247,7 +247,7 @@ export const content: Content = {
       },
       {
         question: "Which technologies and platforms do you cover?",
-        answer: "We focus on practical skills for transforming concepts, prompts, or product requirements into working applications using modern tools like Lovable and Cursor. Your final project will be built with Next.js and Supabase."
+        answer: "We focus on practical skills for transforming concepts, prompts, or product requirements into working applications using modern tools like Lovable and Cursor. Your final project will be built with vibe coding tools."
       },
       {
         question: "What support is available if I encounter problems?",
