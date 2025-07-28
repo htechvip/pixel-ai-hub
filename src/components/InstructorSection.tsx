@@ -55,6 +55,7 @@ const InstructorSection = () => {
                   <img 
                     src={instructorImage}
                     alt={content.instructor.name}
+                    loading="lazy"
                     className="w-full h-full object-contain"
                   />
                 </div>

@@ -19,6 +19,7 @@ const VibeCodingWebApps = () => {
                 <img 
                   src={sampleSites} 
                   alt="Sample AI Generated Websites"
+                  loading="lazy"
                   className="w-full object-contain"
                   style={{ maxHeight: '600px' }}
                 />

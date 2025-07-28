@@ -58,6 +58,7 @@ const Hero = () => {
                 <img 
                   src={aiTalkVilla} 
                   alt="AI talk at Villa" 
+                  loading="lazy"
                   className="w-full h-32 md:h-40 object-cover transition-transform duration-300 group-hover:scale-110 animate-fade-in"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent"></div>
@@ -70,6 +71,7 @@ const Hero = () => {
                 <img 
                   src={fridayMorningCoffee} 
                   alt="Friday morning coffee with staff" 
+                  loading="lazy"
                   className="w-full h-32 md:h-40 object-cover transition-transform duration-300 group-hover:scale-110 animate-fade-in"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent"></div>

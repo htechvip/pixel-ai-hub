@@ -34,6 +34,7 @@ const PreviousLectures = () => {
                   <img
                     src={img.src}
                     alt={img.label}
+                    loading="lazy"
                     className={`h-56 w-full object-cover ${img.label.includes('Rotary') ? 'object-top' : ''}`}
                   />
                   <div className="p-4 text-center text-sm font-medium text-foreground">

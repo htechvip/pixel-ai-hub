@@ -21,6 +21,7 @@ const StudentShowcase = () => {
             <img 
               src={pasadenaCohort} 
               alt="Los Angeles Cohort" 
+              loading="lazy"
               className="w-full h-80 object-cover transition-transform duration-300 group-hover:scale-105"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent"></div>
@@ -34,6 +35,7 @@ const StudentShowcase = () => {
             <img 
               src={panel} 
               alt="AI Industry Panel" 
+              loading="lazy"
               className="w-full h-80 object-cover transition-transform duration-300 group-hover:scale-105"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent"></div>
