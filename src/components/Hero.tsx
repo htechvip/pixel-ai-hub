@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { content } from "@/config/content";
-import pasadenaClass from "@/assets/pasadenaclass.jpg";
+import pasadenaClass from "@/assets/pasadenaclass_optimized.jpg";
 import aiTalkVilla from "@/assets/ai talk villa.jpeg";
 import fridayMorningCoffee from "@/assets/friday morning coffee - villa staff.jpeg";
 
