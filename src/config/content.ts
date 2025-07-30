@@ -128,7 +128,7 @@ export const content: Content = {
     subtitle: "Empowering the next generation of AI builders",
     mainText: [
       "Product creation shouldn't require a computer science degree or years of coding experience. With breakthrough AI tools like Cursor and Lovable, the game has completely changed. If you can articulate your vision, you can bring it to life.",
-      "This hands-on course is built for complete beginners and product thinkers ready to go from concept to launch. No passive learning—you'll build real products from day one. In just one weekend, you'll ship a fully functional app that's ready for users. We'll walk you through every step using vibe coding toolsand cutting-edge AI development workflows."
+      "This hands-on course is built for complete beginners and product thinkers ready to go from concept to launch. No passive learning—you'll build real products from day one. In just one weekend, you'll ship a fully functional app that's ready for users. We'll walk you through every step using vibe coding tools and cutting-edge AI development workflows."
     ],
     features: [
       {
