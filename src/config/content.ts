@@ -101,7 +101,7 @@ type Content = {
   };
 };
 
-export const content: Content = {
+const englishContent: Content = {
   header: {
     logo: "AI Jedi",
     navigation: [
@@ -285,4 +285,205 @@ export const content: Content = {
       terms: "Terms of Service"
     }
   }
-} as const; 
+} as const;
+
+// Traditional Chinese (zh-TW) content override
+const zhContent: Content = {
+  ...englishContent,
+
+  header: {
+    logo: "AI Jedi",
+    navigation: [
+      { href: "#why-join", label: "為何加入" },
+      { href: "#program", label: "你將學到什麼" },
+      { href: "#instructor", label: "講師" },
+      { href: "#showcase", label: "成功案例" },
+      { href: "#faq", label: "常見問題" }
+    ]
+  },
+
+  hero: {
+    ...englishContent.hero,
+    title: "從想法到產品只需數小時",
+    description: "跳過數月的開發痛苦。我們的密集工作坊可在數小時內將你的想法轉化為可運作的原型、MVP 與真實產品，完全不需要程式背景。",
+    buttons: {
+      primary: "報名梯次",
+      secondary: "加入候補名單"
+    }
+  },
+
+  whyJoin: {
+    ...englishContent.whyJoin,
+    title: "為何加入 AI Jedi Vibe Coding Bootcamp",
+    subtitle: "賦能下一代 AI 創造者",
+    mainText: [
+      "產品創造不該需要電腦科學學位或多年程式經驗。隨著 Cursor 與 Lovable 等突破性 AI 工具問世，遊戲規則已徹底改變。只要能清楚描述你的願景，你就能將它實現。",
+      "這是一堂為零基礎學員及產品思考者打造的實戰課程，從第一天起就動手打造真實產品；沒有被動學習——你將從零開始，在短短一週末內完成可上線使用的 App。我們將帶你一步步使用 vibe coding 工具與最前沿的 AI 開發流程。"
+    ],
+    features: [
+      {
+        icon: "🚀",
+        title: "以做中學",
+        description: "從第一天起就透過真實專案獲得實戰經驗"
+      },
+      {
+        icon: "🤖",
+        title: "AI 優先思維",
+        description: "掌握最新 AI 工具與工作流程"
+      },
+      {
+        icon: "💡",
+        title: "快速推出原型",
+        description: "快速迭代想法並產出原型"
+      }
+    ],
+    cta: "報名梯次"
+  },
+
+  program: {
+    ...englishContent.program,
+    title: "你將學到什麼",
+    subtitle: "從想法到產品的最快途徑。以下是你在一個週末將學到的內容：",
+    features: [
+      {
+        title: "運用 AI 迅速原型開發",
+        description: "直接進入實作。了解每款 vibe coding 工具的優缺點，專注於業界最佳解。"
+      },
+      {
+        title: "全端 AI 開發",
+        description: "從零開始，使用 vibe coding 工具建置並部署完整的 Web App，前後端一次搞定，確實交付可用作品。"
+      },
+      {
+        title: "推出真實產品",
+        description: "以 AI 解決真實世界問題並推出產品。"
+      },
+      {
+        title: "產業專案",
+        description: "與企業合作的真實 AI 專案，建立能助你就業的作品集。"
+      }
+    ]
+  },
+
+  instructor: {
+    ...englishContent.instructor,
+    title: "認識你的講師",
+    name: "蔡仲男（Cho-Nan Tsai）",
+    role: "創辦人兼首席講師",
+    bio: [
+      "蔡仲男（Cho-Nan Tsai）是一位擁有二十年以上 AI、機器學習與金融科技經驗的科技企業家與教育者，現任 USC 兼任教授教授 AI，同時也是 AI 顧問公司 Hyperionsoft 的執行長。",
+      "蔡仲男曾三度擔任創辦 CTO，成功為多家新創募資數百萬美元，並透過創新 AI 解決方案將其業務大幅擴張。他也曾在 Sony、Ricoh、McKinsey & Company 等《財星》500 大企業領導科技專案，部署影響數百萬使用者的 AI 解決方案，涵蓋資料分析、數位廣告與貸款平台。",
+      "作為 AI Jedi 的創辦人，蔡仲男設計的課程融合實戰經驗與最前沿的 AI 工具與方法論。他的教學理念著重於在打造真實應用的同時，讓學生理解 AI 基礎，並堅信 AI 應對所有學習者開放。",
+      "他畢業於哥倫比亞大學電腦工程學士與 UCLA 電腦科學碩士。"
+    ],
+    stats: [
+      { value: "27+", label: "年業界經驗" },
+      { value: "3x", label: "創辦 CTO 次數" },
+      { value: "500+", label: "指導學生" }
+    ],
+    companies: {
+      ...englishContent.instructor.companies,
+      title: "Cho-Nan 指導過的學生任職於以下頂尖科技公司"
+    }
+  },
+
+  showcase: {
+    ...englishContent.showcase,
+    title: "閱讀我們的成功案例",
+    subtitle: "我們的校友在世界頂尖 AI 公司工作，正打造科技未來。",
+    imageLabels: {
+      graduation: {
+        title: "2024 畢業典禮",
+        subtitle: "95% 的畢業生在 3 個月內獲得工作機會"
+      },
+      collaboration: {
+        title: "協作式學習",
+        subtitle: "在真實產業專案中進行團隊合作"
+      }
+    },
+    testimonials: [
+      {
+        name: "Richard Lieu",
+        role: "Simplexam 工程總監",
+        quote: "Cho-Nan 是位出色的領導者與講師，跟著他準沒錯。"
+      },
+      {
+        name: "Saravana Moorthi",
+        role: "舊金山聯邦儲備銀行軟體工程主管",
+        quote: "動手專案與業界導師的指導讓我的學習歷程大不相同。"
+      },
+      {
+        name: "Supratik Mukherjee",
+        role: "Quantum 產品總監",
+        quote: "Cho-Nan 精通產品、AI 與工程，他的影響確實讓我準備好面對職涯中最具挑戰的角色。"
+      }
+    ]
+  },
+
+  faq: {
+    ...englishContent.faq,
+    title: "常見問題",
+    subtitle: "關於 AI Jedi 計畫，你需要知道的一切",
+    questions: [
+      {
+        question: "誰適合參加此課程？",
+        answer: "此課程適合任何渴望快速打造並上線 Web 應用的人，無論你是零基礎新手或無程式背景的產品專業人士。"
+      },
+      {
+        question: "需要程式基礎嗎？",
+        answer: "完全不需要！我們特別為零基礎學員設計此課程，AI 工具將在你創建專案的過程中引導你。"
+      },
+      {
+        question: "我將會打造什麼樣的專案？",
+        answer: "你將開發並上線一個功能完整、達到專業水準的 Web 應用，可作為你的作品展示。過去學員曾打造互動學習遊戲到 AI 強化產品示範等多元專案。"
+      },
+      {
+        question: "課程如何進行？",
+        answer: "我們同時提供兩種形式！目前在洛杉磯與台北舉辦實體工作坊，線上版本即將推出。加入候補名單即可優先取得資訊。"
+      },
+      {
+        question: "課程涵蓋哪些技術與平台？",
+        answer: "我們聚焦於將概念、提示或產品需求轉化為可運作應用所需的實戰技能，使用如 Lovable 與 Cursor 的現代工具。你最終的專案將以 vibe coding 工具打造。"
+      },
+      {
+        question: "遇到問題時有什麼支援？",
+        answer: "你將獲得講師的一對一指導以及同儕支持。我們的重點是實際解決問題並成功部署，而非被動學習。"
+      },
+      {
+        question: "如何報名？",
+        answer: "只要點擊「報名梯次」按鈕，我們會寄送報名資訊給你！"
+      }
+    ]
+  },
+
+  callToAction: {
+    ...englishContent.callToAction,
+    title: "準備好展開你的 AI 旅程？",
+    subtitle: "加入下一梯次 AI 專業人才養成班，名額有限。",
+    buttons: {
+      primary: {
+        ...englishContent.callToAction.buttons.primary,
+        text: "報名梯次"
+      },
+      secondary: {
+        ...englishContent.callToAction.buttons.secondary,
+        text: "加入候補名單"
+      }
+    }
+  },
+
+  footer: {
+    description: "透過我們的密集 AI 計劃，改變你的職涯。向業界專家學習機器學習、深度學習與最前沿的 AI 技術。",
+    location: "📍 台北 & 洛杉磯",
+    copyright: "© 2025 AI Jedi。保留所有權利。",
+    links: {
+      privacy: "隱私政策",
+      terms: "服務條款"
+    }
+  }
+} as const;
+
+// Export the appropriate content based on the URL locale prefix
+export const content: Content =
+  typeof window !== "undefined" && window.location.pathname.startsWith("/zh-tw")
+    ? zhContent
+    : englishContent; 

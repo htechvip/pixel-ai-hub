@@ -23,6 +23,9 @@ const App = () => {
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/signup" element={<Signup />} />
+            {/* Traditional Chinese routes */}
+            <Route path="/zh-tw" element={<Index />} />
+            <Route path="/zh-tw/signup" element={<Signup />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
