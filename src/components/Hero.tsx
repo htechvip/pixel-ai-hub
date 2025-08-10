@@ -6,6 +6,7 @@ import aiTalkVilla from "@/assets/ai talk villa.jpeg";
 import fridayMorningCoffee from "@/assets/friday morning coffee - villa staff.jpeg";
 
 const Hero = () => {
+  const signupPath = window.location.pathname.startsWith("/zh-tw") ? "/zh-tw/signup" : "/signup";
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
       {/* Background gradient */}
@@ -24,7 +25,7 @@ const Hero = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center">
               <Button variant="hero" size="lg" className="text-lg px-8 py-4 animate-fade-in" asChild>
-                <Link to="/signup">
+                <Link to={signupPath}>
                   {content.hero.buttons.primary}
                 </Link>
               </Button>

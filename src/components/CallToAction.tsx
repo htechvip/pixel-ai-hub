@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { content } from "@/config/content";
 
 const CallToAction = () => {
+  const signupPath = window.location.pathname.startsWith("/zh-tw") ? "/zh-tw/signup" : "/signup";
   return (
     <section className="py-20 bg-gradient-secondary">
       <div className="container mx-auto px-4">
@@ -20,7 +21,7 @@ const CallToAction = () => {
               size="lg" 
               className="text-lg px-8 py-4 animate-fade-in" asChild
             >
-              <Link to="/signup">
+              <Link to={signupPath}>
                 {content.callToAction.buttons.primary.text}
               </Link>
             </Button>

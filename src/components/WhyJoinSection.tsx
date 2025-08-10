@@ -4,6 +4,7 @@ import { Card } from "@/components/ui/card";
 import { content } from "@/config/content";
 
 const WhyJoinSection = () => {
+  const signupPath = window.location.pathname.startsWith("/zh-tw") ? "/zh-tw/signup" : "/signup";
   return (
     <section id="why-join" className="py-24 bg-gradient-to-b from-background to-background/80">
       <div className="container mx-auto px-4">
@@ -36,7 +37,7 @@ const WhyJoinSection = () => {
 
             <div className="text-center mt-12">
               <Button size="lg" variant="hero" className="text-lg px-8" asChild>
-                <Link to="/signup">{content.whyJoin.cta}</Link>
+                <Link to={signupPath}>{content.whyJoin.cta}</Link>
               </Button>
             </div>
           </div>

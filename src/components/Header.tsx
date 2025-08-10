@@ -4,6 +4,7 @@ import htechLogo from "@/assets/logo-htech-whitebg.png";
 import { Link } from "react-router-dom";
 
 const Header = () => {
+  const signupPath = window.location.pathname.startsWith("/zh-tw") ? "/zh-tw/signup" : "/signup";
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-b border-border">
       <div className="container mx-auto px-4">
@@ -33,7 +34,7 @@ const Header = () => {
           {/* CTA Button */}
           <div>
             <Button asChild className="mr-2 sm:mr-0">
-              <Link to="/signup">{content.hero.buttons.primary}</Link>
+              <Link to={signupPath}>{content.hero.buttons.primary}</Link>
             </Button>
           </div>
         </div>
