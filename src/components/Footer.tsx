@@ -17,6 +17,17 @@ const Footer = () => {
             <p className="text-sm text-muted-foreground">
               {content.footer.location}
             </p>
+
+            {/* Co-Organizers */}
+            <div className="mt-6 space-y-2">
+              <p className="text-sm font-medium">Co-Organizers</p>
+              <div className="flex items-center gap-6 flex-wrap">
+                <img src="/GTB+%20accel.png" alt="GTB+ Accelerator" className="h-10" />
+                <img src="/gbtspace.png" alt="GTB Plaza" className="h-10" />
+                <img src="/linkou.png" alt="Startup Terrace" className="h-10" />
+                <span className="text-sm font-medium">Hyperionsoft Consulting</span>
+              </div>
+            </div>
           </div>
           
           {/* Right side - Navigation */}
