@@ -133,6 +133,39 @@ const SignupZh = () => {
           </Button>
         </Card>
 
+        {/* Cohort Card 3 */}
+        <Card className="max-w-3xl mx-auto p-8 relative mt-12">
+          <span className="absolute top-4 right-4 bg-primary text-primary-foreground w-8 h-8 flex items-center justify-center rounded-full text-sm font-semibold">
+            3
+          </span>
+          <h2 className="text-2xl font-bold mb-1">週末密集班</h2>
+
+          <div className="space-y-4 text-muted-foreground">
+            <div className="flex items-center gap-3">
+              <CalendarDays className="w-5 h-5" />
+              2025/8/23-24
+            </div>
+            <div className="flex items-center gap-3">
+              <Clock className="w-5 h-5" />
+              週六 & 週日, 9:30 AM – 1:30 PM
+            </div>
+            <div className="flex items-center gap-3">
+              <MapPin className="w-5 h-5" />
+              實體工作坊（地點待定）
+            </div>
+          </div>
+
+          <div className="mt-8 flex items-center gap-4">
+            <span className="text-destructive font-medium flex items-center gap-2">
+              <Users className="w-4 h-4" /> 已售罄
+            </span>
+          </div>
+
+          <Button disabled variant="secondary" size="lg" className="mt-4 w-full cursor-not-allowed">
+            名額已滿
+          </Button>
+        </Card>
+
         {/* ---------------- September Cohorts ---------------- */}
 
         {/* September Badge */}
@@ -171,7 +204,7 @@ const SignupZh = () => {
         {/* September Cohort 1 */}
         <Card className="max-w-3xl mx-auto p-8 relative">
           <span className="absolute top-4 right-4 bg-primary text-primary-foreground w-8 h-8 flex items-center justify-center rounded-full text-sm font-semibold">
-            3
+            4
           </span>
           <h2 className="text-2xl font-bold mb-1">週末密集班</h2>
 
