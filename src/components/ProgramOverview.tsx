@@ -38,7 +38,7 @@ const ProgramOverview = ({ minimal = false }: ProgramOverviewProps) => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {content.program.features.map((feature, index) => {
             const Icon = icons[feature.title] || defaultIcon;
             return (
