@@ -30,9 +30,9 @@ const Hero = () => {
                 </Link>
               </Button>
               <Button variant="outline" size="lg" className="text-lg px-8 py-4 animate-fade-in" asChild>
-                <a href="https://forms.gle/UEqKeNwjD67odXhS7" target="_blank" rel="noopener noreferrer">
+                <Link to={signupPath}>
                   {content.hero.buttons.secondary}
-                </a>
+                </Link>
               </Button>
             </div>
           </div>

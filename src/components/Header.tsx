@@ -2,6 +2,14 @@ import { Button } from "@/components/ui/button";
 import { content } from "@/config/content";
 import htechLogo from "@/assets/logo-htech-whitebg.png";
 import { Link, useLocation } from "react-router-dom";
+import {
+  NavigationMenu,
+  NavigationMenuList,
+  NavigationMenuItem,
+  NavigationMenuTrigger,
+  NavigationMenuContent,
+  NavigationMenuLink,
+} from "@/components/ui/navigation-menu";
 
 const Header = () => {
   const location = useLocation();
@@ -25,20 +33,45 @@ const Header = () => {
           </Link>
           
           {/* Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
-            {content.header.navigation.map((item) => {
-              const link = item.href.startsWith("#") ? `${basePath}${item.href}` : item.href;
-              return (
-                <a
-                  key={item.href}
-                  href={link}
-                  className="text-muted-foreground hover:text-foreground transition-colors"
-                >
-                  {item.label}
-                </a>
-              );
-            })}
-          </nav>
+          <div className="hidden md:flex items-center">
+            <NavigationMenu>
+              <NavigationMenuList>
+                {content.header.navigation.map((item) => {
+                  const link = item.href.startsWith("#") ? `${basePath}${item.href}` : item.href;
+                  if (item.children && item.children.length > 0) {
+                    return (
+                      <NavigationMenuItem key={item.label}>
+                        <NavigationMenuTrigger>{item.label}</NavigationMenuTrigger>
+                        <NavigationMenuContent>
+                          <div className="grid gap-2 p-4 w-[260px]">
+                            {item.children.map((child) => {
+                              const childLink = child.href.startsWith("#") ? `${basePath}${child.href}` : child.href;
+                              return (
+                                <NavigationMenuLink key={child.label} asChild>
+                                  <a href={childLink} className="text-sm text-muted-foreground hover:text-foreground">
+                                    {child.label}
+                                  </a>
+                                </NavigationMenuLink>
+                              );
+                            })}
+                          </div>
+                        </NavigationMenuContent>
+                      </NavigationMenuItem>
+                    );
+                  }
+                  return (
+                    <NavigationMenuItem key={item.label}>
+                      <NavigationMenuLink asChild>
+                        <a href={link} className="px-4 py-2 text-sm text-muted-foreground hover:text-foreground">
+                          {item.label}
+                        </a>
+                      </NavigationMenuLink>
+                    </NavigationMenuItem>
+                  );
+                })}
+              </NavigationMenuList>
+            </NavigationMenu>
+          </div>
           
           {/* CTA & Language Switch */}
           <div className="flex items-center gap-2">

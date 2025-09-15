@@ -6,6 +6,10 @@ type Content = {
     navigation: Array<{
       href: string;
       label: string;
+      children?: Array<{
+        href: string;
+        label: string;
+      }>;
     }>;
   };
   hero: {
@@ -106,7 +110,17 @@ const englishContent: Content = {
     logo: "AI Jedi",
     navigation: [
       { href: "#why-join", label: "Why Join" },
-      { href: "#program", label: "What you will learn" },
+      {
+        href: "#online-courses",
+        label: "Online Courses",
+        children: [
+          { href: "#courses-customer-engagement", label: "Customer Engagement" },
+          { href: "#courses-marketing-content", label: "Marketing Content" },
+          { href: "#courses-operations-forecasting", label: "Operations & Forecasting" },
+          { href: "#courses-data-insights", label: "Data Insights" }
+        ]
+      },
+      { href: "#in-person", label: "In-Person Cohort" },
       { href: "#instructor", label: "Instructor" },
       { href: "#showcase", label: "Success Stories" },
       { href: "#faq", label: "FAQ" }
@@ -114,40 +128,40 @@ const englishContent: Content = {
   },
 
   hero: {
-    title: "Idea to Product in just hours",
-    description: "Skip months of development hell. Our intensive workshop transforms your raw ideas into working prototypes, MVPs, and real-world products in just hours, not months. No coding required.",
+    title: "AI Skills for Busy Professionals — Bring Your Ideas to Life",
+    description: "Hands-on online courses designed for managers and specialists at mid-sized companies. Learn how to use AI tools to automate tasks, make better decisions, and drive business results — no coding required.",
     
     buttons: {
-      primary: "Sign up for Cohort",
-      secondary: "Join Waitlist"
+      primary: "Explore Online Courses",
+      secondary: "Attend Our In-Person Cohort"
     }
   },
 
   whyJoin: {
-    title: "Why Join AI Jedi Vibe Coding Bootcamp",
-    subtitle: "Empowering the next generation of AI builders",
+    title: "Why Join Our AI Career Accelerator",
+    subtitle: "Empowering the next generation of professionals to thrive with AI",
     mainText: [
-      "Product creation shouldn't require a computer science degree or years of coding experience. With breakthrough AI tools like Cursor and Lovable, the game has completely changed. If you can articulate your vision, you can bring it to life.",
-      "This hands-on course is built for complete beginners and product thinkers ready to go from concept to launch. No passive learning—you'll build real products from day one. In just one weekend, you'll ship a fully functional app that's ready for users. We'll walk you through every step using vibe coding tools and cutting-edge AI development workflows."
+      "You don't need a computer science degree to start using AI at work. With today's powerful no-code AI tools, you can automate tasks, streamline workflows, and create new opportunities — even without a technical background. If you can describe what you want, you can make it happen.",
+      "This hands-on program is built for non-technical professionals who want to advance their careers by applying AI in practical ways. No passive learning — you'll be practicing from day one. In just one weekend you'll design and implement AI workflows you can immediately use in your job or business. We guide you step-by-step with proven no-code tools and cutting-edge AI practices."
     ],
     features: [
       {
         icon: "🚀",
-        title: "Learn by Building",
-        description: "Hands-on experience with real projects from day one"
+        title: "Learn by Doing",
+        description: "Gain real-world experience applying AI to everyday work challenges."
       },
       {
         icon: "🤖",
-        title: "AI-First Approach",
-        description: "Master the latest AI tools and workflows"
+        title: "AI-First Workflows",
+        description: "Master the latest no-code AI tools for text, images, video, and data — no programming required."
       },
       {
         icon: "💡",
-        title: "Ship Prototypes Fast",
-        description: "Iterate on ideas and create prototypes quickly"
+        title: "Deliver Results Fast",
+        description: "Design and launch an AI workflow you can take back to your job by the end of the program."
       }
     ],
-    cta: "Sign up for Cohort"
+    cta: "Explore Online Courses"
   },
 
   program: {
