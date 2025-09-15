@@ -1,7 +1,11 @@
 import { Separator } from "@/components/ui/separator";
 import { content } from "@/config/content";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
+  const isZh = window.location.pathname.startsWith("/zh-tw");
+  const mainPagePath = isZh ? "/zh-tw" : "/";
+
   return (
     <footer className="bg-background border-t border-border py-12">
       <div className="container mx-auto px-4">
@@ -33,15 +37,20 @@ const Footer = () => {
           {/* Right side - Navigation */}
           <div className="grid grid-cols-1 gap-4">
             <nav className="flex flex-wrap gap-4">
-              {content.header.navigation.map((item) => (
-                <a
-                  key={item.href}
-                  href={item.href}
-                  className="text-muted-foreground hover:text-primary transition-colors"
-                >
-                  {item.label}
-                </a>
-              ))}
+              {content.header.navigation.map((item) => {
+                // Always link to main page sections, never current page
+                const link = `${mainPagePath}${item.href}`;
+                
+                return (
+                  <a
+                    key={item.href}
+                    href={link}
+                    className="text-muted-foreground hover:text-primary transition-colors"
+                  >
+                    {item.label}
+                  </a>
+                );
+              })}
             </nav>
           </div>
         </div>
