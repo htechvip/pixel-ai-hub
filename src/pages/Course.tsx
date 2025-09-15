@@ -108,32 +108,58 @@ const Course = () => {
       {/* Course Header */}
       <div className="bg-gradient-to-r from-primary/10 to-secondary/10 py-8 pt-24">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
+          <div className="max-w-6xl mx-auto">
             <div className="flex items-center gap-2 mb-4">
               <Link to={isZh ? "/zh-tw" : "/"} className="text-primary hover:underline">
                 ← Back to Courses
               </Link>
             </div>
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">{courseData.title}</h1>
-            <p className="text-xl text-muted-foreground mb-6">{courseData.description}</p>
             
-            <div className="flex flex-wrap items-center gap-4 mb-6">
-              <div className="flex items-center gap-1">
-                <Star className="w-5 h-5 fill-yellow-400 text-yellow-400" />
-                <span className="font-semibold">{courseData.rating}</span>
-                <span className="text-muted-foreground">(1,247 ratings)</span>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+              {/* Left side - Course Info */}
+              <div>
+                <h1 className="text-4xl md:text-5xl font-bold mb-4">{courseData.title}</h1>
+                <p className="text-xl text-muted-foreground mb-6">{courseData.description}</p>
+                
+                <div className="flex flex-wrap items-center gap-4 mb-6">
+                  <div className="flex items-center gap-1">
+                    <Star className="w-5 h-5 fill-yellow-400 text-yellow-400" />
+                    <span className="font-semibold">{courseData.rating}</span>
+                    <span className="text-muted-foreground">(1,247 ratings)</span>
+                  </div>
+                  <div className="flex items-center gap-1">
+                    <Users className="w-5 h-5 text-muted-foreground" />
+                    <span>{courseData.students.toLocaleString()} students</span>
+                  </div>
+                  <div className="flex items-center gap-1">
+                    <Clock className="w-5 h-5 text-muted-foreground" />
+                    <span>{courseData.duration}</span>
+                  </div>
+                  <Badge variant="secondary">{courseData.level}</Badge>
+                </div>
               </div>
-              <div className="flex items-center gap-1">
-                <Users className="w-5 h-5 text-muted-foreground" />
-                <span>{courseData.students.toLocaleString()} students</span>
-              </div>
-              <div className="flex items-center gap-1">
-                <Clock className="w-5 h-5 text-muted-foreground" />
-                <span>{courseData.duration}</span>
-              </div>
-              <Badge variant="secondary">{courseData.level}</Badge>
-            </div>
 
+              {/* Right side - Video Preview */}
+              <div className="relative">
+                <div className="aspect-video bg-muted rounded-lg overflow-hidden shadow-lg">
+                  <div className="w-full h-full bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center">
+                    <div className="text-center">
+                      <div className="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <PlayCircle className="w-8 h-8 text-primary" />
+                      </div>
+                      <h3 className="text-lg font-semibold mb-2">Course Preview</h3>
+                      <p className="text-sm text-muted-foreground">Watch this video to see what you'll learn</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="absolute inset-0 bg-black/20 rounded-lg flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
+                  <Button size="lg" className="bg-white/90 text-black hover:bg-white">
+                    <PlayCircle className="w-5 h-5 mr-2" />
+                    Play Preview
+                  </Button>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -256,12 +282,152 @@ const Course = () => {
                 </div>
               </CardContent>
             </Card>
+
+            {/* Course Reviews */}
+            <Card>
+              <CardHeader>
+                <CardTitle>Student Reviews</CardTitle>
+                <div className="flex items-center gap-4 mb-4">
+                  <div className="flex items-center gap-2">
+                    <div className="flex items-center">
+                      {[1, 2, 3, 4, 5].map((star) => (
+                        <Star
+                          key={star}
+                          className={`w-5 h-5 ${
+                            star <= Math.floor(courseData.rating)
+                              ? "fill-yellow-400 text-yellow-400"
+                              : "text-gray-300"
+                          }`}
+                        />
+                      ))}
+                    </div>
+                    <span className="text-2xl font-bold">{courseData.rating}</span>
+                    <span className="text-muted-foreground">({courseData.students.toLocaleString()} ratings)</span>
+                  </div>
+                </div>
+              </CardHeader>
+              <CardContent>
+                <div className="space-y-6">
+                  {/* Review 1 */}
+                  <div className="border-b border-border pb-4">
+                    <div className="flex items-start justify-between mb-2">
+                      <div className="flex items-center gap-3">
+                        <img 
+                          src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=40&h=40&fit=crop&crop=face&auto=format&q=80" 
+                          alt="Sarah Martinez" 
+                          className="w-10 h-10 rounded-full object-cover"
+                        />
+                        <div>
+                          <h4 className="font-semibold">Sarah Martinez</h4>
+                          <div className="flex items-center gap-1">
+                            {[1, 2, 3, 4, 5].map((star) => (
+                              <Star
+                                key={star}
+                                className="w-4 h-4 fill-yellow-400 text-yellow-400"
+                              />
+                            ))}
+                          </div>
+                        </div>
+                      </div>
+                      <span className="text-sm text-muted-foreground">2 days ago</span>
+                    </div>
+                    <p className="text-muted-foreground">
+                      "This course completely transformed how I approach my work. The AI tools I learned here save me 3-4 hours every day. The instructor explains everything clearly and the hands-on projects are exactly what I needed."
+                    </p>
+                  </div>
+
+                  {/* Review 2 */}
+                  <div className="border-b border-border pb-4">
+                    <div className="flex items-start justify-between mb-2">
+                      <div className="flex items-center gap-3">
+                        <img 
+                          src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=40&h=40&fit=crop&crop=face&auto=format&q=80" 
+                          alt="David Johnson" 
+                          className="w-10 h-10 rounded-full object-cover"
+                        />
+                        <div>
+                          <h4 className="font-semibold">David Johnson</h4>
+                          <div className="flex items-center gap-1">
+                            {[1, 2, 3, 4, 5].map((star) => (
+                              <Star
+                                key={star}
+                                className="w-4 h-4 fill-yellow-400 text-yellow-400"
+                              />
+                            ))}
+                          </div>
+                        </div>
+                      </div>
+                      <span className="text-sm text-muted-foreground">1 week ago</span>
+                    </div>
+                    <p className="text-muted-foreground">
+                      "As someone with zero AI experience, I was skeptical at first. But this course made everything so accessible. I'm now using AI for content creation, data analysis, and even automating my email responses."
+                    </p>
+                  </div>
+
+                  {/* Review 3 */}
+                  <div className="border-b border-border pb-4">
+                    <div className="flex items-start justify-between mb-2">
+                      <div className="flex items-center gap-3">
+                        <img 
+                          src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=40&h=40&fit=crop&crop=face&auto=format&q=80" 
+                          alt="Lisa Chen" 
+                          className="w-10 h-10 rounded-full object-cover"
+                        />
+                        <div>
+                          <h4 className="font-semibold">Lisa Chen</h4>
+                          <div className="flex items-center gap-1">
+                            {[1, 2, 3, 4, 5].map((star) => (
+                              <Star
+                                key={star}
+                                className="w-4 h-4 fill-yellow-400 text-yellow-400"
+                              />
+                            ))}
+                          </div>
+                        </div>
+                      </div>
+                      <span className="text-sm text-muted-foreground">2 weeks ago</span>
+                    </div>
+                    <p className="text-muted-foreground">
+                      "The practical approach is what makes this course special. You're not just learning theory - you're building real workflows you can use immediately. Highly recommend for any professional looking to boost productivity."
+                    </p>
+                  </div>
+
+                  {/* Review 4 */}
+                  <div>
+                    <div className="flex items-start justify-between mb-2">
+                      <div className="flex items-center gap-3">
+                        <img 
+                          src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=40&h=40&fit=crop&crop=face&auto=format&q=80" 
+                          alt="Michael Rodriguez" 
+                          className="w-10 h-10 rounded-full object-cover"
+                        />
+                        <div>
+                          <h4 className="font-semibold">Michael Rodriguez</h4>
+                          <div className="flex items-center gap-1">
+                            {[1, 2, 3, 4, 5].map((star) => (
+                              <Star
+                                key={star}
+                                className="w-4 h-4 fill-yellow-400 text-yellow-400"
+                              />
+                            ))}
+                          </div>
+                        </div>
+                      </div>
+                      <span className="text-sm text-muted-foreground">3 weeks ago</span>
+                    </div>
+                    <p className="text-muted-foreground">
+                      "Excellent course! The instructor's industry experience really shows. I've implemented several AI workflows in my company and the ROI has been incredible. Worth every penny."
+                    </p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
           </div>
 
           {/* Sidebar */}
           <div className="space-y-6">
             {/* Course Card */}
-            <Card className="sticky top-8">
+            <Card className="sticky top-24">
               <CardContent className="p-6">
                 <div className="text-center mb-6">
                   <div className="text-3xl font-bold text-primary mb-2">{courseData.price}</div>
