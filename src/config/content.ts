@@ -117,7 +117,9 @@ const englishContent: Content = {
           { href: "#courses-customer-engagement", label: "Customer Engagement" },
           { href: "#courses-marketing-content", label: "Marketing Content" },
           { href: "#courses-operations-forecasting", label: "Operations & Forecasting" },
-          { href: "#courses-data-insights", label: "Data Insights" }
+          { href: "#courses-data-insights", label: "Data Insights" },
+          { href: "#courses-human-resources", label: "Human Resources" },
+          { href: "#courses-vibe-coding", label: "Vibe Coding" }
         ]
       },
       { href: "#in-person", label: "In-Person Cohort" },
@@ -165,24 +167,32 @@ const englishContent: Content = {
   },
 
   program: {
-    title: "What you will learn",
-    subtitle: "The fastest way to go from idea to product. Here is what you will learn over a weekend:",
+    title: "Explore AI Courses",
+    subtitle: "Practical, no‑code AI tracks designed for business impact.",
     features: [
       {
-        title: "Speedy Prototyping using AI",
-        description: "Go straight implementation. Learn the pros and cons of each vibe coding tools. Focus on the best in class software to use."
+        title: "Customer Engagement",
+        description: "Automate support, qualify leads, and scale personalized responses with AI copilots."
       },
       {
-        title: "Full stack AI dev",
-        description: "Go from zero to deploying a real web app using vibe coding tools. Build both frontend and backend, and actually ship something you can use."
+        title: "Marketing Content",
+        description: "Produce on-brand copy, visuals, and campaigns faster with review-ready outputs."
       },
       {
-        title: "Launch real products",
-        description: "Execute using AI on real world products and solve real problems."
+        title: "Operations & Forecasting",
+        description: "Streamline workflows, build SOP agents, and improve planning with AI-driven forecasts."
       },
       {
-        title: "Industry Projects",
-        description: "Work on real-world AI projects with industry partners and build a portfolio that gets you hired."
+        title: "Data Insights",
+        description: "Turn messy data into dashboards, summaries, and decisions without writing code."
+      },
+      {
+        title: "Human Resources",
+        description: "Draft policies, streamline recruiting, and automate employee communications with AI."
+      },
+      {
+        title: "Vibe Coding",
+        description: "Build simple apps and automations by describing what you want—no coding required."
       }
     ]
   },
