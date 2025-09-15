@@ -1,6 +1,8 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Brain, Code, Database, Users, PieChart, MessageSquare } from "lucide-react";
 import { content } from "@/config/content";
+import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 interface ProgramOverviewProps {
   minimal?: boolean;
@@ -9,6 +11,7 @@ interface ProgramOverviewProps {
 const ProgramOverview = ({ minimal = false }: ProgramOverviewProps) => {
   // Add default icon in case title doesn't match
   const defaultIcon = Brain;
+  const signupPath = window.location.pathname.startsWith("/zh-tw") ? "/zh-tw/signup" : "/signup";
   
   const icons = {
     "Customer Engagement": MessageSquare,
@@ -42,7 +45,11 @@ const ProgramOverview = ({ minimal = false }: ProgramOverviewProps) => {
           {content.program.features.map((feature, index) => {
             const Icon = icons[feature.title] || defaultIcon;
             return (
-              <Card key={index} id={`courses-${feature.title.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "")}`} className="bg-card/50 backdrop-blur-sm hover:shadow-card transition-all duration-300 group">
+              <Card
+                key={index}
+                id={`courses-${feature.title.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "")}`}
+                className="relative overflow-hidden bg-card/50 backdrop-blur-sm hover:shadow-card transition-all duration-300 group"
+              >
                 <CardHeader className="text-center">
                   <div className="w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center mx-auto mb-4 group-hover:shadow-glow transition-all duration-300">
                     <Icon className="w-8 h-8 text-primary-foreground" />
@@ -54,6 +61,18 @@ const ProgramOverview = ({ minimal = false }: ProgramOverviewProps) => {
                     {feature.description}
                   </CardDescription>
                 </CardContent>
+
+                {/* Desktop hover overlay */}
+                <div className="hidden md:flex absolute inset-0 items-center justify-center bg-background/80 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <div className="p-6 text-center space-y-4 max-w-xs">
+                    <p className="text-sm text-muted-foreground">{feature.description}</p>
+                    <Button asChild variant="hero">
+                      <Link to={`${window.location.pathname.startsWith("/zh-tw") ? "/zh-tw" : ""}/course/${feature.title.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "")}`}>
+                        Start Course
+                      </Link>
+                    </Button>
+                  </div>
+                </div>
               </Card>
             );
           })}

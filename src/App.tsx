@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import Signup from "./pages/Signup";
 import SignupZh from "./pages/SignupZh";
+import Course from "./pages/Course";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -24,9 +25,11 @@ const App = () => {
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/signup" element={<Signup />} />
+            <Route path="/course/:courseId" element={<Course />} />
             {/* Traditional Chinese routes */}
             <Route path="/zh-tw" element={<Index />} />
             <Route path="/zh-tw/signup" element={<SignupZh />} />
+            <Route path="/zh-tw/course/:courseId" element={<Course />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
