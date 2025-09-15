@@ -41,7 +41,9 @@ const Header = () => {
                   if (item.children && item.children.length > 0) {
                     return (
                       <NavigationMenuItem key={item.label}>
-                        <NavigationMenuTrigger>{item.label}</NavigationMenuTrigger>
+                        <NavigationMenuTrigger className="bg-transparent hover:bg-transparent focus:bg-transparent data-[active]:bg-transparent data-[state=open]:bg-transparent px-4 py-2 text-sm text-muted-foreground hover:text-foreground">
+                          {item.label}
+                        </NavigationMenuTrigger>
                         <NavigationMenuContent>
                           <div className="grid gap-2 p-4 w-[260px]">
                             {item.children.map((child) => {

@@ -112,7 +112,7 @@ const englishContent: Content = {
       { href: "#why-join", label: "Why Join" },
       {
         href: "#online-courses",
-        label: "Online Courses",
+        label: "AI Courses",
         children: [
           { href: "#courses-customer-engagement", label: "Customer Engagement" },
           { href: "#courses-marketing-content", label: "Marketing Content" },
@@ -132,8 +132,8 @@ const englishContent: Content = {
     description: "Hands-on online courses designed for managers and specialists at mid-sized companies. Learn how to use AI tools to automate tasks, make better decisions, and drive business results — no coding required.",
     
     buttons: {
-      primary: "Explore Online Courses",
-      secondary: "Attend Our In-Person Cohort"
+      primary: "Learn AI Online",
+      secondary: "Learn AI In-Person"
     }
   },
 
