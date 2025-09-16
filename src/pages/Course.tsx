@@ -31,12 +31,10 @@ const Course = () => {
     window.scrollTo(0, 0);
   }, []);
 
-  // Find the course from the program features
-  const course = content.program.features.find(feature => 
-    feature.title.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "") === courseId
-  );
+  // Find the course from the courses data
+  const courseData = content.courses[courseId as keyof typeof content.courses];
 
-  if (!course) {
+  if (!courseData) {
     return (
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
@@ -48,60 +46,6 @@ const Course = () => {
       </div>
     );
   }
-
-  const courseData = {
-    title: course.title,
-    description: course.description,
-    instructor: "Cho-Nan Tsai",
-    rating: 4.9,
-    students: 1247,
-    duration: "4 hours",
-    level: "Beginner",
-    price: "$199",
-    originalPrice: "$399",
-    lastUpdated: "December 2024",
-    language: "English",
-    features: [
-      "No coding experience required",
-      "Hands-on projects included",
-      "Certificate of completion",
-      "Lifetime access",
-      "Mobile and desktop access"
-    ],
-    whatYouWillLearn: [
-      "Master AI tools for your specific domain",
-      "Build practical workflows you can use immediately",
-      "Automate repetitive tasks and processes",
-      "Create professional-quality outputs",
-      "Scale your productivity with AI assistance"
-    ],
-    curriculum: [
-      {
-        section: "Getting Started",
-        lessons: [
-          { title: "Welcome to AI-Powered Workflows", duration: "15 min", type: "video" },
-          { title: "Setting Up Your AI Toolkit", duration: "20 min", type: "video" },
-          { title: "Understanding AI Capabilities", duration: "25 min", type: "video" }
-        ]
-      },
-      {
-        section: "Core Concepts",
-        lessons: [
-          { title: "Prompt Engineering Fundamentals", duration: "30 min", type: "video" },
-          { title: "Workflow Design Principles", duration: "25 min", type: "video" },
-          { title: "Quality Control and Review", duration: "20 min", type: "video" }
-        ]
-      },
-      {
-        section: "Hands-On Projects",
-        lessons: [
-          { title: "Project 1: Build Your First Workflow", duration: "45 min", type: "project" },
-          { title: "Project 2: Advanced Automation", duration: "50 min", type: "project" },
-          { title: "Project 3: Real-World Application", duration: "60 min", type: "project" }
-        ]
-      }
-    ]
-  };
 
   return (
     <div className="min-h-screen bg-background">
@@ -126,7 +70,7 @@ const Course = () => {
                   <div className="flex items-center gap-1">
                     <Star className="w-5 h-5 fill-yellow-400 text-yellow-400" />
                     <span className="font-semibold">{courseData.rating}</span>
-                    <span className="text-muted-foreground">(1,247 ratings)</span>
+                    <span className="text-muted-foreground">({courseData.ratingNum.toLocaleString()} ratings)</span>
                   </div>
                   <div className="flex items-center gap-1">
                     <Users className="w-5 h-5 text-muted-foreground" />
@@ -305,7 +249,7 @@ const Course = () => {
                       ))}
                     </div>
                     <span className="text-2xl font-bold">{courseData.rating}</span>
-                    <span className="text-muted-foreground">({courseData.students.toLocaleString()} ratings)</span>
+                    <span className="text-muted-foreground">({courseData.ratingNum.toLocaleString()} ratings)</span>
                   </div>
                 </div>
               </CardHeader>

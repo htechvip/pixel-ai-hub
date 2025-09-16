@@ -39,6 +39,32 @@ type Content = {
       description: string;
     }>;
   };
+  courses: {
+    [key: string]: {
+      title: string;
+      description: string;
+      instructor: string;
+      rating: number;
+      ratingNum: number;
+      students: number;
+      duration: string;
+      level: string;
+      price: string;
+      originalPrice: string;
+      lastUpdated: string;
+      language: string;
+      features: string[];
+      whatYouWillLearn: string[];
+      curriculum: Array<{
+        section: string;
+        lessons: Array<{
+          title: string;
+          duration: string;
+          type: string;
+        }>;
+      }>;
+    };
+  };
   instructor: {
     title: string;
     name: string;
@@ -195,6 +221,285 @@ const englishContent: Content = {
         description: "Build simple apps and automations by describing what you want—no coding required."
       }
     ]
+  },
+
+  courses: {
+    "ai-for-customer-engagement": {
+      title: "AI for Customer Engagement",
+      description: "Automate support, qualify leads, and scale personalized responses with AI copilots.",
+      instructor: "Cho-Nan Tsai",
+      rating: 4.9,
+      ratingNum: 1247,
+      students: 1247,
+      duration: "4 hours",
+      level: "Intermediate",
+      price: "$299",
+      originalPrice: "$599",
+      lastUpdated: "December 2024",
+      language: "English",
+      features: [
+        "No coding experience required",
+        "Hands-on projects included",
+        "Certificate of completion",
+        "Lifetime access",
+        "Mobile and desktop access"
+      ],
+      whatYouWillLearn: [
+        "Master ChatGPT and Claude for customer interactions",
+        "Build automated response systems",
+        "Create personalized customer journeys",
+        "Implement sentiment analysis",
+        "Scale customer support operations"
+      ],
+      curriculum: [
+        {
+          section: "Customer Engagement Fundamentals",
+          lessons: [
+            { title: "Understanding Customer AI Tools", duration: "20 min", type: "video" },
+            { title: "Setting Up Your AI Workspace", duration: "15 min", type: "video" },
+            { title: "Prompt Engineering for Support", duration: "25 min", type: "video" }
+          ]
+        },
+        {
+          section: "Advanced Automation",
+          lessons: [
+            { title: "Building Response Templates", duration: "30 min", type: "video" },
+            { title: "Creating Workflow Automations", duration: "35 min", type: "video" },
+            { title: "Project: Complete Support System", duration: "45 min", type: "project" }
+          ]
+        }
+      ]
+    },
+    "ai-in-marketing-content": {
+      title: "AI in Marketing Content",
+      description: "Produce on-brand copy, visuals, and campaigns faster with review-ready outputs.",
+      instructor: "Cho-Nan Tsai",
+      rating: 4.8,
+      ratingNum: 892,
+      students: 892,
+      duration: "3 hours",
+      level: "Beginner",
+      price: "$199",
+      originalPrice: "$399",
+      lastUpdated: "December 2024",
+      language: "English",
+      features: [
+        "No coding experience required",
+        "Hands-on projects included",
+        "Certificate of completion",
+        "Lifetime access",
+        "Mobile and desktop access"
+      ],
+      whatYouWillLearn: [
+        "Create compelling marketing copy with AI",
+        "Generate visual content and graphics",
+        "Develop campaign strategies",
+        "Automate content workflows",
+        "Maintain brand consistency"
+      ],
+      curriculum: [
+        {
+          section: "Content Creation Basics",
+          lessons: [
+            { title: "AI Writing Tools Overview", duration: "15 min", type: "video" },
+            { title: "Brand Voice and Tone", duration: "20 min", type: "video" },
+            { title: "Creating Effective Prompts", duration: "25 min", type: "video" }
+          ]
+        },
+        {
+          section: "Visual Content & Campaigns",
+          lessons: [
+            { title: "Image Generation with DALL-E", duration: "30 min", type: "video" },
+            { title: "Campaign Strategy Development", duration: "35 min", type: "video" },
+            { title: "Project: Complete Marketing Campaign", duration: "40 min", type: "project" }
+          ]
+        }
+      ]
+    },
+    "ai-in-operations-forecasting": {
+      title: "AI in Operations & Forecasting",
+      description: "Streamline workflows, build SOP agents, and improve planning with AI-driven forecasts.",
+      instructor: "Cho-Nan Tsai",
+      rating: 4.9,
+      ratingNum: 634,
+      students: 634,
+      duration: "5 hours",
+      level: "Advanced",
+      price: "$399",
+      originalPrice: "$799",
+      lastUpdated: "December 2024",
+      language: "English",
+      features: [
+        "No coding experience required",
+        "Hands-on projects included",
+        "Certificate of completion",
+        "Lifetime access",
+        "Mobile and desktop access"
+      ],
+      whatYouWillLearn: [
+        "Build intelligent workflow automations",
+        "Create SOP (Standard Operating Procedure) agents",
+        "Develop forecasting models",
+        "Optimize business processes",
+        "Implement predictive analytics"
+      ],
+      curriculum: [
+        {
+          section: "Operations Intelligence",
+          lessons: [
+            { title: "AI for Process Optimization", duration: "25 min", type: "video" },
+            { title: "Building SOP Agents", duration: "30 min", type: "video" },
+            { title: "Workflow Automation Design", duration: "35 min", type: "video" }
+          ]
+        },
+        {
+          section: "Forecasting & Analytics",
+          lessons: [
+            { title: "Predictive Analytics with AI", duration: "40 min", type: "video" },
+            { title: "Data Visualization and Insights", duration: "35 min", type: "video" },
+            { title: "Project: Complete Operations Dashboard", duration: "50 min", type: "project" }
+          ]
+        }
+      ]
+    },
+    "ai-in-sales": {
+      title: "AI in Sales",
+      description: "Turn messy data into dashboards, summaries, and decisions without writing code.",
+      instructor: "Cho-Nan Tsai",
+      rating: 4.7,
+      ratingNum: 1156,
+      students: 1156,
+      duration: "3.5 hours",
+      level: "Intermediate",
+      price: "$249",
+      originalPrice: "$499",
+      lastUpdated: "December 2024",
+      language: "English",
+      features: [
+        "No coding experience required",
+        "Hands-on projects included",
+        "Certificate of completion",
+        "Lifetime access",
+        "Mobile and desktop access"
+      ],
+      whatYouWillLearn: [
+        "Transform sales data into actionable insights",
+        "Create automated reporting systems",
+        "Build lead scoring models",
+        "Develop sales forecasting tools",
+        "Optimize sales processes with AI"
+      ],
+      curriculum: [
+        {
+          section: "Sales Data Intelligence",
+          lessons: [
+            { title: "AI for Sales Analytics", duration: "20 min", type: "video" },
+            { title: "Lead Scoring with AI", duration: "25 min", type: "video" },
+            { title: "Sales Forecasting Models", duration: "30 min", type: "video" }
+          ]
+        },
+        {
+          section: "Automation & Optimization",
+          lessons: [
+            { title: "Automated Sales Reporting", duration: "35 min", type: "video" },
+            { title: "CRM Integration and AI", duration: "30 min", type: "video" },
+            { title: "Project: Complete Sales Dashboard", duration: "45 min", type: "project" }
+          ]
+        }
+      ]
+    },
+    "ai-in-human-resources": {
+      title: "AI in Human Resources",
+      description: "Draft policies, streamline recruiting, and automate employee communications with AI.",
+      instructor: "Cho-Nan Tsai",
+      rating: 4.6,
+      ratingNum: 743,
+      students: 743,
+      duration: "2.5 hours",
+      level: "Beginner",
+      price: "$179",
+      originalPrice: "$359",
+      lastUpdated: "December 2024",
+      language: "English",
+      features: [
+        "No coding experience required",
+        "Hands-on projects included",
+        "Certificate of completion",
+        "Lifetime access",
+        "Mobile and desktop access"
+      ],
+      whatYouWillLearn: [
+        "Automate HR document creation",
+        "Streamline recruitment processes",
+        "Build employee communication systems",
+        "Create policy templates",
+        "Implement HR analytics"
+      ],
+      curriculum: [
+        {
+          section: "HR Automation Basics",
+          lessons: [
+            { title: "AI for HR Documentation", duration: "15 min", type: "video" },
+            { title: "Recruitment Process Automation", duration: "20 min", type: "video" },
+            { title: "Employee Communication Tools", duration: "25 min", type: "video" }
+          ]
+        },
+        {
+          section: "Advanced HR Systems",
+          lessons: [
+            { title: "Policy Template Creation", duration: "30 min", type: "video" },
+            { title: "HR Analytics and Insights", duration: "25 min", type: "video" },
+            { title: "Project: Complete HR System", duration: "35 min", type: "project" }
+          ]
+        }
+      ]
+    },
+    "vibe-coding": {
+      title: "Vibe Coding",
+      description: "Build simple apps and automations by describing what you want—no coding required.",
+      instructor: "Cho-Nan Tsai",
+      rating: 4.9,
+      ratingNum: 2156,
+      students: 2156,
+      duration: "6 hours",
+      level: "Beginner",
+      price: "$149",
+      originalPrice: "$299",
+      lastUpdated: "December 2024",
+      language: "English",
+      features: [
+        "No coding experience required",
+        "Hands-on projects included",
+        "Certificate of completion",
+        "Lifetime access",
+        "Mobile and desktop access"
+      ],
+      whatYouWillLearn: [
+        "Build web applications with natural language",
+        "Create automation workflows",
+        "Develop simple mobile apps",
+        "Integrate APIs and services",
+        "Deploy applications to the cloud"
+      ],
+      curriculum: [
+        {
+          section: "Vibe Coding Fundamentals",
+          lessons: [
+            { title: "Introduction to Vibe Coding", duration: "30 min", type: "video" },
+            { title: "Natural Language to Code", duration: "35 min", type: "video" },
+            { title: "Building Your First App", duration: "40 min", type: "video" }
+          ]
+        },
+        {
+          section: "Advanced Applications",
+          lessons: [
+            { title: "API Integration and Automation", duration: "45 min", type: "video" },
+            { title: "Mobile App Development", duration: "50 min", type: "video" },
+            { title: "Project: Complete Web Application", duration: "60 min", type: "project" }
+          ]
+        }
+      ]
+    }
   },
 
   instructor: {
