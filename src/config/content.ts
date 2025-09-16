@@ -114,11 +114,11 @@ const englishContent: Content = {
         href: "#online-courses",
         label: "AI Courses",
         children: [
-          { href: "#courses-customer-engagement", label: "Customer Engagement" },
-          { href: "#courses-marketing-content", label: "Marketing Content" },
-          { href: "#courses-operations-forecasting", label: "Operations & Forecasting" },
-          { href: "#courses-data-insights", label: "Data Insights" },
-          { href: "#courses-human-resources", label: "Human Resources" },
+          { href: "#courses-customer-engagement", label: "AI for Customer Engagement" },
+          { href: "#courses-marketing-content", label: "AI in Marketing Content" },
+          { href: "#courses-operations-forecasting", label: "AI in Operations & Forecasting" },
+          { href: "#courses-data-insights", label: "AI in Sales" },
+          { href: "#courses-human-resources", label: "AI in Human Resources" },
           { href: "#courses-vibe-coding", label: "Vibe Coding" }
         ]
       },
@@ -171,23 +171,23 @@ const englishContent: Content = {
     subtitle: "Practical, no‑code AI tracks designed for business impact.",
     features: [
       {
-        title: "Customer Engagement",
+        title: "AI for Customer Engagement",
         description: "Automate support, qualify leads, and scale personalized responses with AI copilots."
       },
       {
-        title: "Marketing Content",
+        title: "AI in Marketing Content",
         description: "Produce on-brand copy, visuals, and campaigns faster with review-ready outputs."
       },
       {
-        title: "Operations & Forecasting",
+        title: "AI in Operations & Forecasting",
         description: "Streamline workflows, build SOP agents, and improve planning with AI-driven forecasts."
       },
       {
-        title: "Data Insights",
+        title: "AI in Sales",
         description: "Turn messy data into dashboards, summaries, and decisions without writing code."
       },
       {
-        title: "Human Resources",
+        title: "AI in Human Resources",
         description: "Draft policies, streamline recruiting, and automate employee communications with AI."
       },
       {
@@ -287,7 +287,7 @@ const englishContent: Content = {
 
   callToAction: {
     title: "Ready to Start Your AI Journey?",
-    subtitle: "Join the next cohort of AI professionals. Limited spots available.",
+    subtitle: "Join the next cohort of AI professionals.",
     buttons: {
       primary: {
         text: "Sign up for Cohort",

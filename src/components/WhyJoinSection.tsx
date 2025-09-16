@@ -35,11 +35,6 @@ const WhyJoinSection = () => {
               ))}
             </div>
 
-            <div className="text-center mt-12">
-              <Button size="lg" variant="hero" className="text-lg px-8" asChild>
-                <Link to={signupPath}>{content.whyJoin.cta}</Link>
-              </Button>
-            </div>
           </div>
         </Card>
       </div>
