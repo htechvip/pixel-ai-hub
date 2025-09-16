@@ -148,7 +148,6 @@ const englishContent: Content = {
           { href: "#courses-vibe-coding", label: "Vibe Coding" }
         ]
       },
-      { href: "#in-person", label: "In-Person Cohort" },
       { href: "#instructor", label: "Instructor" },
       { href: "#showcase", label: "Success Stories" },
       { href: "#faq", label: "FAQ" }

@@ -58,7 +58,15 @@ const Header = () => {
                         <NavigationMenuContent>
                           <div className="grid gap-2 p-4 w-[260px]">
                             {item.children.map((child) => {
-                              const childLink = child.href.startsWith("#") ? `${basePath}${child.href}` : child.href;
+                              // For AI Courses, generate course page URLs
+                              let childLink;
+                              if (item.label === "AI Courses") {
+                                const courseId = child.label.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
+                                childLink = `${basePath}/course/${courseId}`;
+                              } else {
+                                childLink = child.href.startsWith("#") ? `${basePath}${child.href}` : child.href;
+                              }
+                              
                               return (
                                 <NavigationMenuLink key={child.label} asChild>
                                   <a href={childLink} className="text-sm text-muted-foreground hover:text-foreground">
