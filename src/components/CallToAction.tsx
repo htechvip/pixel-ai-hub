@@ -15,23 +15,14 @@ const CallToAction = () => {
             {content.callToAction.subtitle}
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <div className="flex justify-center items-center">
             <Button 
               variant={content.callToAction.buttons.primary.variant}
               size="lg" 
               className="text-lg px-8 py-4 animate-fade-in" asChild
             >
-              <Link to={signupPath}>
+              <a href="#online-courses">
                 {content.callToAction.buttons.primary.text}
-              </Link>
-            </Button>
-            <Button 
-              variant={content.callToAction.buttons.secondary.variant}
-              size="lg" 
-              className="text-lg px-8 py-4 animate-fade-in" asChild
-            >
-              <a href="https://forms.gle/UEqKeNwjD67odXhS7" target="_blank" rel="noopener noreferrer">
-                {content.callToAction.buttons.secondary.text}
               </a>
             </Button>
           </div>

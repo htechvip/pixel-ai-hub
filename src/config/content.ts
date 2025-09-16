@@ -80,7 +80,7 @@ type Content = {
         text: string;
         variant: ButtonVariant;
       };
-      secondary: {
+      secondary?: {
         text: string;
         variant: ButtonVariant;
       };
@@ -290,12 +290,8 @@ const englishContent: Content = {
     subtitle: "Join the next cohort of AI professionals.",
     buttons: {
       primary: {
-        text: "Sign up for Cohort",
+        text: "Learn AI Online",
         variant: "hero"
-      },
-      secondary: {
-        text: "Join Waitlist",
-        variant: "outline"
       }
     }
   },

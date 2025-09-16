@@ -25,9 +25,9 @@ const Hero = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center">
               <Button variant="hero" size="lg" className="text-lg px-8 py-4 animate-fade-in" asChild>
-                <Link to={signupPath}>
+                <a href="#online-courses">
                   {content.hero.buttons.primary}
-                </Link>
+                </a>
               </Button>
               <Button variant="outline" size="lg" className="text-lg px-8 py-4 animate-fade-in" asChild>
                 <Link to={signupPath}>
