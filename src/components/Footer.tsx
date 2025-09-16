@@ -36,7 +36,7 @@ const Footer = () => {
           
           {/* Right side - Navigation */}
           <div className="grid grid-cols-1 gap-4">
-            <nav className="flex flex-wrap gap-4">
+            <nav className="flex flex-col gap-2">
               {content.header.navigation.map((item) => {
                 // Always link to main page sections, never current page
                 const link = `${mainPagePath}${item.href}`;

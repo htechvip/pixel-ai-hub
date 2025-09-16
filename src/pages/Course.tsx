@@ -19,6 +19,7 @@ import { content } from "@/config/content";
 import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import cntColor from "@/assets/cnt-color.jpeg";
 
 const Course = () => {
   const { courseId } = useParams();
@@ -271,9 +272,11 @@ const Course = () => {
               </CardHeader>
               <CardContent>
                 <div className="flex items-start gap-4">
-                  <div className="w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center">
-                    <span className="text-xl font-bold text-primary-foreground">CT</span>
-                  </div>
+                  <img 
+                    src={cntColor} 
+                    alt={content.instructor.name} 
+                    className="w-16 h-16 rounded-full object-cover"
+                  />
                   <div>
                     <h4 className="font-semibold text-lg">{content.instructor.name}</h4>
                     <p className="text-muted-foreground mb-2">{content.instructor.role}</p>
