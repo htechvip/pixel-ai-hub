@@ -267,117 +267,84 @@ const Course = () => {
               </CardHeader>
               <CardContent>
                 <div className="space-y-6">
-                  {/* Review 1 */}
-                  <div className="border-b border-border pb-4">
-                    <div className="flex items-start justify-between mb-2">
-                      <div className="flex items-center gap-3">
-                        <img 
-                          src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=40&h=40&fit=crop&crop=face&auto=format&q=80" 
-                          alt="Sarah Martinez" 
-                          className="w-10 h-10 rounded-full object-cover"
-                        />
-                        <div>
-                          <h4 className="font-semibold">Sarah Martinez</h4>
-                          <div className="flex items-center gap-1">
-                            {[1, 2, 3, 4, 5].map((star) => (
-                              <Star
-                                key={star}
-                                className="w-4 h-4 fill-yellow-400 text-yellow-400"
-                              />
-                            ))}
-                          </div>
-                        </div>
-                      </div>
-                      <span className="text-sm text-muted-foreground">2 days ago</span>
-                    </div>
-                    <p className="text-muted-foreground">
-                      "This course completely transformed how I approach my work. The AI tools I learned here save me 3-4 hours every day. The instructor explains everything clearly and the hands-on projects are exactly what I needed."
-                    </p>
-                  </div>
+                  {courseData.reviews?.map((review, index) => {
+                    // Global unique avatar assignment for all reviewers
+                    const getAvatarUrl = (name: string) => {
+                      // Predefined mapping of specific reviewer names to unique avatars
+                      const reviewerAvatars: { [key: string]: string } = {
+                        // AI for Customer Engagement (Course 1)
+                        'Sarah Martinez': 'https://images.unsplash.com/photo-1494790108755-2616b612b786?w=100&h=100&fit=crop&crop=face&auto=format&q=80',
+                        'Mike Chen': 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face&auto=format&q=80',
+                        'Emily Rodriguez': 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&crop=face&auto=format&q=80',
+                        'David Kim': 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face&auto=format&q=80',
+                        
+                        // AI in Marketing Content (Course 2)
+                        'Jessica Wu': 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&h=100&fit=crop&crop=face&auto=format&q=80',
+                        'Alex Thompson': 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop&crop=face&auto=format&q=80',
+                        'Maria Santos': 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=100&h=100&fit=crop&crop=face&auto=format&q=80',
+                        'Tom Wilson': 'https://images.unsplash.com/photo-1633332755192-727a05c4013d?w=100&h=100&fit=crop&crop=face&auto=format&q=80',
+                        
+                        // AI in Operations & Forecasting (Course 3)
+                        'Robert Johnson': 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=100&h=100&fit=crop&crop=face&auto=format&q=80',
+                        'Linda Chang': 'https://images.unsplash.com/photo-1544725176-7c40e5a71c5e?w=100&h=100&fit=crop&crop=face&auto=format&q=80',
+                        'Carlos Rivera': 'https://images.unsplash.com/photo-1557862921-37829c790f19?w=100&h=100&fit=crop&crop=face&auto=format&q=80',
+                        'Anna Petrov': 'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=100&h=100&fit=crop&crop=face&auto=format&q=80',
+                        
+                        // AI in Sales (Course 4)
+                        'Jennifer Adams': 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=100&h=100&fit=crop&crop=face&auto=format&q=80',
+                        'Marcus Brown': 'https://images.unsplash.com/photo-1614289371518-722f2615943d?w=100&h=100&fit=crop&crop=face&auto=format&q=80',
+                        'Rachel Green': 'https://images.unsplash.com/photo-1541101767792-f9b2b1c4f127?w=100&h=100&fit=crop&crop=face&auto=format&q=80',
+                        'Kevin Park': 'https://images.unsplash.com/photo-1607746882042-944635dfe10e?w=100&h=100&fit=crop&crop=face&auto=format&q=80',
+                        
+                        // AI in Human Resources (Course 5)
+                        'Patricia Davis': 'https://images.unsplash.com/photo-1619946794135-5bc917a27793?w=100&h=100&fit=crop&crop=face&auto=format&q=80',
+                        'Steven Miller': 'https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?w=100&h=100&fit=crop&crop=face&auto=format&q=80',
+                        'Diana Lopez': 'https://images.unsplash.com/photo-1582750433449-648ed127bb54?w=100&h=100&fit=crop&crop=face&auto=format&q=80',
+                        'Brian Taylor': 'https://images.unsplash.com/photo-1547425260-76bcadfb4f2c?w=100&h=100&fit=crop&crop=face&auto=format&q=80',
+                        
+                        // Vibe Coding (Course 6)
+                        'Amanda Foster': 'https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=100&h=100&fit=crop&crop=face&auto=format&q=80',
+                        'James Rodriguez': 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=100&h=100&fit=crop&crop=face&auto=format&q=80',
+                        'Sophie Chen': 'https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?w=100&h=100&fit=crop&crop=face&auto=format&q=80',
+                        'Michael Johnson': 'https://images.unsplash.com/photo-1552058544-f2b08422138a?w=100&h=100&fit=crop&crop=face&auto=format&q=80'
+                      };
+                      
+                      return reviewerAvatars[name] || 'https://images.unsplash.com/photo-1566492031773-4f4e44671d66?w=100&h=100&fit=crop&crop=face&auto=format&q=80'; // fallback
+                    };
 
-                  {/* Review 2 */}
-                  <div className="border-b border-border pb-4">
-                    <div className="flex items-start justify-between mb-2">
-                      <div className="flex items-center gap-3">
-                        <img 
-                          src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=40&h=40&fit=crop&crop=face&auto=format&q=80" 
-                          alt="David Johnson" 
-                          className="w-10 h-10 rounded-full object-cover"
-                        />
-                        <div>
-                          <h4 className="font-semibold">David Johnson</h4>
-                          <div className="flex items-center gap-1">
-                            {[1, 2, 3, 4, 5].map((star) => (
-                              <Star
-                                key={star}
-                                className="w-4 h-4 fill-yellow-400 text-yellow-400"
-                              />
-                            ))}
+                    return (
+                    <div key={index} className={index < courseData.reviews!.length - 1 ? "border-b border-border pb-4" : ""}>
+                      <div className="flex items-start justify-between mb-2">
+                        <div className="flex items-center gap-3">
+                          <img 
+                            src={getAvatarUrl(review.name)} 
+                            alt={review.name} 
+                            className="w-10 h-10 rounded-full object-cover"
+                          />
+                          <div>
+                            <h4 className="font-semibold">{review.name}</h4>
+                            <div className="flex items-center gap-1">
+                              {[1, 2, 3, 4, 5].map((star) => (
+                                <Star
+                                  key={star}
+                                  className={`w-4 h-4 ${
+                                    star <= review.rating
+                                      ? "fill-yellow-400 text-yellow-400"
+                                      : "text-gray-300"
+                                  }`}
+                                />
+                              ))}
+                            </div>
                           </div>
                         </div>
+                        <span className="text-sm text-muted-foreground">{review.timeAgo}</span>
                       </div>
-                      <span className="text-sm text-muted-foreground">1 week ago</span>
+                      <p className="text-muted-foreground">
+                        "{review.comment}"
+                      </p>
                     </div>
-                    <p className="text-muted-foreground">
-                      "As someone with zero AI experience, I was skeptical at first. But this course made everything so accessible. I'm now using AI for content creation, data analysis, and even automating my email responses."
-                    </p>
-                  </div>
-
-                  {/* Review 3 */}
-                  <div className="border-b border-border pb-4">
-                    <div className="flex items-start justify-between mb-2">
-                      <div className="flex items-center gap-3">
-                        <img 
-                          src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=40&h=40&fit=crop&crop=face&auto=format&q=80" 
-                          alt="Lisa Chen" 
-                          className="w-10 h-10 rounded-full object-cover"
-                        />
-                        <div>
-                          <h4 className="font-semibold">Lisa Chen</h4>
-                          <div className="flex items-center gap-1">
-                            {[1, 2, 3, 4, 5].map((star) => (
-                              <Star
-                                key={star}
-                                className="w-4 h-4 fill-yellow-400 text-yellow-400"
-                              />
-                            ))}
-                          </div>
-                        </div>
-                      </div>
-                      <span className="text-sm text-muted-foreground">2 weeks ago</span>
-                    </div>
-                    <p className="text-muted-foreground">
-                      "The practical approach is what makes this course special. You're not just learning theory - you're building real workflows you can use immediately. Highly recommend for any professional looking to boost productivity."
-                    </p>
-                  </div>
-
-                  {/* Review 4 */}
-                  <div>
-                    <div className="flex items-start justify-between mb-2">
-                      <div className="flex items-center gap-3">
-                        <img 
-                          src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=40&h=40&fit=crop&crop=face&auto=format&q=80" 
-                          alt="Michael Rodriguez" 
-                          className="w-10 h-10 rounded-full object-cover"
-                        />
-                        <div>
-                          <h4 className="font-semibold">Michael Rodriguez</h4>
-                          <div className="flex items-center gap-1">
-                            {[1, 2, 3, 4, 5].map((star) => (
-                              <Star
-                                key={star}
-                                className="w-4 h-4 fill-yellow-400 text-yellow-400"
-                              />
-                            ))}
-                          </div>
-                        </div>
-                      </div>
-                      <span className="text-sm text-muted-foreground">3 weeks ago</span>
-                    </div>
-                    <p className="text-muted-foreground">
-                      "Excellent course! The instructor's industry experience really shows. I've implemented several AI workflows in my company and the ROI has been incredible. Worth every penny."
-                    </p>
-                  </div>
+                    );
+                  })}
                 </div>
               </CardContent>
             </Card>

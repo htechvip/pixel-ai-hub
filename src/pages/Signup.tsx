@@ -233,6 +233,208 @@ const Signup = () => {
           </Button>
         </Card>
 
+        {/* ---------------- October Cohorts ---------------- */}
+
+        {/* October Badge */}
+        <div className="flex justify-center mt-24 mb-6">
+          <Badge className="px-4 py-2 text-sm font-medium" variant="secondary">
+            <div className="flex items-center gap-2">
+              <CalendarDays className="w-4 h-4" />
+              October 2024 Cohorts
+            </div>
+          </Badge>
+        </div>
+
+        {/* October Heading */}
+        <h2 className="text-center text-4xl md:text-5xl font-extrabold mb-4">
+          October Cohorts - Taipei & Los Angeles
+        </h2>
+
+        {/* October Stats Row */}
+        <div className="flex flex-wrap justify-center gap-6 mb-12 text-muted-foreground">
+          <div className="flex items-center gap-2">
+            <Clock className="w-5 h-5" />
+            <span>2 Days Intensive</span>
+          </div>
+          <span className="hidden md:inline">•</span>
+          <div className="flex items-center gap-2">
+            <MapPin className="w-5 h-5" />
+            <span>In-Person Workshop</span>
+          </div>
+          <span className="hidden md:inline">•</span>
+          <div className="flex items-center gap-2">
+            <Users className="w-5 h-5" />
+            <span>All Spots Filled</span>
+          </div>
+        </div>
+
+        {/* October Cohort 1 - Taipei */}
+        <Card className="max-w-3xl mx-auto p-8 relative">
+          <span className="absolute top-4 right-4 bg-primary text-primary-foreground w-8 h-8 flex items-center justify-center rounded-full text-sm font-semibold">
+            5
+          </span>
+          <h2 className="text-2xl font-bold mb-1">Weekend Intensive - Taipei</h2>
+
+          <div className="space-y-4 text-muted-foreground">
+            <div className="flex items-center gap-3">
+              <CalendarDays className="w-5 h-5" />
+              October 5-6, 2024
+            </div>
+            <div className="flex items-center gap-3">
+              <Clock className="w-5 h-5" />
+              Sat & Sun, 9:30 AM – 1:30 PM
+            </div>
+            <div className="flex items-center gap-3">
+              <MapPin className="w-5 h-5" />
+              In-person workshop (location TBA)
+            </div>
+          </div>
+
+          <div className="mt-8 flex items-center gap-4">
+            <span className="text-destructive font-medium flex items-center gap-2">
+              <Users className="w-4 h-4" /> Sold Out
+            </span>
+          </div>
+
+          <Button disabled variant="secondary" size="lg" className="mt-4 w-full cursor-not-allowed">
+            Course Fully Booked
+          </Button>
+        </Card>
+
+        {/* October Cohort 2 - Los Angeles */}
+        <Card className="max-w-3xl mx-auto p-8 relative mt-12">
+          <span className="absolute top-4 right-4 bg-primary text-primary-foreground w-8 h-8 flex items-center justify-center rounded-full text-sm font-semibold">
+            6
+          </span>
+          <h2 className="text-2xl font-bold mb-1">Weekend Intensive - Los Angeles</h2>
+
+          <div className="space-y-4 text-muted-foreground">
+            <div className="flex items-center gap-3">
+              <CalendarDays className="w-5 h-5" />
+              October 19-20, 2024
+            </div>
+            <div className="flex items-center gap-3">
+              <Clock className="w-5 h-5" />
+              Sat & Sun, 9:30 AM – 1:30 PM
+            </div>
+            <div className="flex items-center gap-3">
+              <MapPin className="w-5 h-5" />
+              In-person workshop (location TBA)
+            </div>
+          </div>
+
+          <div className="mt-8 flex items-center gap-4">
+            <span className="text-destructive font-medium flex items-center gap-2">
+              <Users className="w-4 h-4" /> Sold Out
+            </span>
+          </div>
+
+          <Button disabled variant="secondary" size="lg" className="mt-4 w-full cursor-not-allowed">
+            Course Fully Booked
+          </Button>
+        </Card>
+
+        {/* ---------------- November Cohorts ---------------- */}
+
+        {/* November Badge */}
+        <div className="flex justify-center mt-24 mb-6">
+          <Badge className="px-4 py-2 text-sm font-medium" variant="secondary">
+            <div className="flex items-center gap-2">
+              <CalendarDays className="w-4 h-4" />
+              November 2024 Cohorts
+            </div>
+          </Badge>
+        </div>
+
+        {/* November Heading */}
+        <h2 className="text-center text-4xl md:text-5xl font-extrabold mb-4">
+          November Cohorts - Taipei & Los Angeles
+        </h2>
+
+        {/* November Stats Row */}
+        <div className="flex flex-wrap justify-center gap-6 mb-12 text-muted-foreground">
+          <div className="flex items-center gap-2">
+            <Clock className="w-5 h-5" />
+            <span>2 Days Intensive</span>
+          </div>
+          <span className="hidden md:inline">•</span>
+          <div className="flex items-center gap-2">
+            <MapPin className="w-5 h-5" />
+            <span>In-Person Workshop</span>
+          </div>
+          <span className="hidden md:inline">•</span>
+          <div className="flex items-center gap-2">
+            <Users className="w-5 h-5" />
+            <span>All Spots Filled</span>
+          </div>
+        </div>
+
+        {/* November Cohort 1 - Taipei */}
+        <Card className="max-w-3xl mx-auto p-8 relative">
+          <span className="absolute top-4 right-4 bg-primary text-primary-foreground w-8 h-8 flex items-center justify-center rounded-full text-sm font-semibold">
+            7
+          </span>
+          <h2 className="text-2xl font-bold mb-1">Weekend Intensive - Taipei</h2>
+
+          <div className="space-y-4 text-muted-foreground">
+            <div className="flex items-center gap-3">
+              <CalendarDays className="w-5 h-5" />
+              November 2-3, 2024
+            </div>
+            <div className="flex items-center gap-3">
+              <Clock className="w-5 h-5" />
+              Sat & Sun, 9:30 AM – 1:30 PM
+            </div>
+            <div className="flex items-center gap-3">
+              <MapPin className="w-5 h-5" />
+              In-person workshop (location TBA)
+            </div>
+          </div>
+
+          <div className="mt-8 flex items-center gap-4">
+            <span className="text-destructive font-medium flex items-center gap-2">
+              <Users className="w-4 h-4" /> Sold Out
+            </span>
+          </div>
+
+          <Button disabled variant="secondary" size="lg" className="mt-4 w-full cursor-not-allowed">
+            Course Fully Booked
+          </Button>
+        </Card>
+
+        {/* November Cohort 2 - Los Angeles */}
+        <Card className="max-w-3xl mx-auto p-8 relative mt-12">
+          <span className="absolute top-4 right-4 bg-primary text-primary-foreground w-8 h-8 flex items-center justify-center rounded-full text-sm font-semibold">
+            8
+          </span>
+          <h2 className="text-2xl font-bold mb-1">Weekend Intensive - Los Angeles</h2>
+
+          <div className="space-y-4 text-muted-foreground">
+            <div className="flex items-center gap-3">
+              <CalendarDays className="w-5 h-5" />
+              November 16-17, 2024
+            </div>
+            <div className="flex items-center gap-3">
+              <Clock className="w-5 h-5" />
+              Sat & Sun, 9:30 AM – 1:30 PM
+            </div>
+            <div className="flex items-center gap-3">
+              <MapPin className="w-5 h-5" />
+              In-person workshop (location TBA)
+            </div>
+          </div>
+
+          <div className="mt-8 flex items-center gap-4">
+            <span className="text-destructive font-medium flex items-center gap-2">
+              <Users className="w-4 h-4" /> Sold Out
+            </span>
+          </div>
+
+          <Button disabled variant="secondary" size="lg" className="mt-4 w-full cursor-not-allowed">
+            Course Fully Booked
+          </Button>
+        </Card>
+
         {/* Waitlist Section */}
         <Card className="max-w-3xl mx-auto p-8 mt-24 text-center bg-card/50 backdrop-blur-sm">
           <h3 className="text-2xl font-bold mb-4">Not in LA or Taipei / Can't make the dates?</h3>

@@ -64,6 +64,12 @@ type Content = {
           type: string;
         }>;
       }>;
+      reviews?: Array<{
+        name: string;
+        rating: number;
+        comment: string;
+        timeAgo: string;
+      }>;
     };
   };
   instructor: {
@@ -269,6 +275,32 @@ const englishContent: Content = {
             { title: "Project: Complete Support System", duration: "45 min", type: "project" }
           ]
         }
+      ],
+      reviews: [
+        {
+          name: "Sarah Martinez",
+          rating: 5,
+          comment: "This course completely transformed how I handle customer inquiries. The ChatGPT templates alone saved me 15 hours per week. Now I can respond to complex customer issues in minutes instead of hours.",
+          timeAgo: "2 weeks ago"
+        },
+        {
+          name: "Mike Chen",
+          rating: 5,
+          comment: "As a customer success manager, I was drowning in support tickets. This course taught me to build automated workflows that handle 80% of our common questions. My team's response time improved by 300%!",
+          timeAgo: "1 month ago"
+        },
+        {
+          name: "Emily Rodriguez",
+          rating: 4,
+          comment: "Great practical examples for customer engagement. The sentiment analysis section was particularly useful for prioritizing urgent customer issues. Wish there was more on handling negative feedback.",
+          timeAgo: "3 weeks ago"
+        },
+        {
+          name: "David Kim",
+          rating: 5,
+          comment: "I implemented the personalized customer journey system from this course and our customer satisfaction scores increased by 40%. The AI copilot approach is brilliant for scaling support operations.",
+          timeAgo: "1 week ago"
+        }
       ]
     },
     "ai-in-marketing-content": {
@@ -307,16 +339,42 @@ const englishContent: Content = {
             { title: "Creating Effective Prompts", duration: "25 min", type: "video" }
           ]
         },
-        {
-          section: "Visual Content & Campaigns",
-          lessons: [
-            { title: "Image Generation with DALL-E", duration: "30 min", type: "video" },
-            { title: "Campaign Strategy Development", duration: "35 min", type: "video" },
-            { title: "Project: Complete Marketing Campaign", duration: "40 min", type: "project" }
-          ]
-        }
-      ]
-    },
+          {
+            section: "Visual Content & Campaigns",
+            lessons: [
+              { title: "Image Generation with DALL-E", duration: "30 min", type: "video" },
+              { title: "Campaign Strategy Development", duration: "35 min", type: "video" },
+              { title: "Project: Complete Marketing Campaign", duration: "40 min", type: "project" }
+            ]
+          }
+        ],
+        reviews: [
+          {
+            name: "Jessica Wu",
+            rating: 5,
+            comment: "Amazing course for marketers! I went from spending days on campaign copy to creating compelling content in hours. The brand voice consistency techniques are game-changing. Our engagement rates increased by 60%.",
+            timeAgo: "1 week ago"
+          },
+          {
+            name: "Alex Thompson",
+            rating: 5,
+            comment: "As a small business owner, I couldn't afford a marketing team. This course taught me to create professional-quality visuals and copy using AI. My social media following grew 200% in just 2 months!",
+            timeAgo: "3 weeks ago"
+          },
+          {
+            name: "Maria Santos",
+            rating: 4,
+            comment: "Excellent practical approach to AI marketing. The DALL-E section was incredibly useful for creating unique visuals. Only wish there was more content on video marketing with AI tools.",
+            timeAgo: "2 weeks ago"
+          },
+          {
+            name: "Tom Wilson",
+            rating: 5,
+            comment: "This course paid for itself in the first week! The automated content workflows I built save me 20 hours monthly. My clients love the consistent, high-quality output I can now deliver.",
+            timeAgo: "1 month ago"
+          }
+        ]
+      },
     "ai-in-operations-forecasting": {
       title: "AI in Operations & Forecasting",
       description: "Streamline workflows, build SOP agents, and improve planning with AI-driven forecasts.",
@@ -360,6 +418,32 @@ const englishContent: Content = {
             { title: "Data Visualization and Insights", duration: "35 min", type: "video" },
             { title: "Project: Complete Operations Dashboard", duration: "50 min", type: "project" }
           ]
+        }
+      ],
+      reviews: [
+        {
+          name: "Robert Johnson",
+          rating: 5,
+          comment: "This advanced course revolutionized our supply chain operations. The SOP agents we built reduced manual processes by 70%. The forecasting models helped us avoid $200K in inventory waste this quarter.",
+          timeAgo: "2 weeks ago"
+        },
+        {
+          name: "Linda Chang",
+          rating: 5,
+          comment: "As an operations director, I was skeptical about AI forecasting. This course proved me wrong! Our demand prediction accuracy improved from 65% to 92%. The ROI was immediate and substantial.",
+          timeAgo: "1 month ago"
+        },
+        {
+          name: "Carlos Rivera",
+          rating: 4,
+          comment: "Comprehensive coverage of operations AI. The workflow automation section saved our team countless hours. The predictive analytics models are sophisticated yet easy to implement. Challenging but rewarding.",
+          timeAgo: "3 weeks ago"
+        },
+        {
+          name: "Anna Petrov",
+          rating: 5,
+          comment: "Best investment for operations professionals! The SOP agents handle routine decisions automatically, freeing up my team for strategic work. Our operational efficiency increased by 45%.",
+          timeAgo: "1 week ago"
         }
       ]
     },
@@ -407,6 +491,32 @@ const englishContent: Content = {
             { title: "Project: Complete Sales Dashboard", duration: "45 min", type: "project" }
           ]
         }
+      ],
+      reviews: [
+        {
+          name: "Jennifer Adams",
+          rating: 5,
+          comment: "Game-changer for sales analytics! I transformed our messy CRM data into beautiful dashboards that actually drive decisions. My conversion rate increased 35% using the lead scoring models from this course.",
+          timeAgo: "1 week ago"
+        },
+        {
+          name: "Marcus Brown",
+          rating: 4,
+          comment: "Solid course for sales professionals. The automated reporting saved me 10 hours weekly. The forecasting tools helped me exceed my quarterly targets by 20%. Could use more advanced CRM integrations.",
+          timeAgo: "2 weeks ago"
+        },
+        {
+          name: "Rachel Green",
+          rating: 5,
+          comment: "As a sales director, this course was invaluable. The AI-powered insights helped identify our best prospects and optimize our sales funnel. Team productivity improved dramatically across the board.",
+          timeAgo: "3 weeks ago"
+        },
+        {
+          name: "Kevin Park",
+          rating: 5,
+          comment: "Excellent practical approach to sales data. The no-code solutions made it easy to implement immediately. Our sales team now makes data-driven decisions instead of relying on gut feelings.",
+          timeAgo: "1 month ago"
+        }
       ]
     },
     "ai-in-human-resources": {
@@ -453,6 +563,32 @@ const englishContent: Content = {
             { title: "Project: Complete HR System", duration: "35 min", type: "project" }
           ]
         }
+      ],
+      reviews: [
+        {
+          name: "Patricia Davis",
+          rating: 5,
+          comment: "Perfect for HR professionals! This course streamlined our entire recruitment process. The AI-powered candidate screening saves us 15 hours per position. Our hiring quality has improved significantly.",
+          timeAgo: "2 weeks ago"
+        },
+        {
+          name: "Steven Miller",
+          rating: 4,
+          comment: "Great practical HR applications. The policy drafting templates are incredibly useful - what used to take days now takes hours. The employee communication automation is a game-changer for our team.",
+          timeAgo: "1 month ago"
+        },
+        {
+          name: "Diana Lopez",
+          rating: 5,
+          comment: "As an HR director at a growing startup, this course was exactly what I needed. The automated onboarding workflows and performance review templates scaled our HR operations beautifully.",
+          timeAgo: "3 weeks ago"
+        },
+        {
+          name: "Brian Taylor",
+          rating: 4,
+          comment: "Solid foundation for HR automation. The analytics section helped us identify retention patterns we never noticed before. Implementation was straightforward even for non-technical HR staff.",
+          timeAgo: "1 week ago"
+        }
       ]
     },
     "vibe-coding": {
@@ -498,6 +634,32 @@ const englishContent: Content = {
             { title: "Mobile App Development", duration: "50 min", type: "video" },
             { title: "Project: Complete Web Application", duration: "60 min", type: "project" }
           ]
+        }
+      ],
+      reviews: [
+        {
+          name: "Amanda Foster",
+          rating: 5,
+          comment: "Mind-blowing course! I built my first web app in just 2 hours without writing a single line of code. The natural language approach makes app development accessible to everyone. This is the future!",
+          timeAgo: "1 week ago"
+        },
+        {
+          name: "James Rodriguez",
+          rating: 5,
+          comment: "As a non-technical founder, this course was a revelation. I can now prototype ideas instantly and build functional apps for my business. The API integration section opened up endless possibilities.",
+          timeAgo: "2 weeks ago"
+        },
+        {
+          name: "Sophie Chen",
+          rating: 4,
+          comment: "Incredible technology! The course makes app development feel like having a conversation. I created automation tools that save my team hours daily. Some advanced features could be explained more clearly.",
+          timeAgo: "3 weeks ago"
+        },
+        {
+          name: "Michael Johnson",
+          rating: 5,
+          comment: "Revolutionary approach to coding! I went from idea to deployed application in one weekend. The mobile app development section was particularly impressive. This democratizes software development.",
+          timeAgo: "1 month ago"
         }
       ]
     }
