@@ -87,22 +87,34 @@ const Course = () => {
               {/* Right side - Video Preview */}
               <div className="relative">
                 <div className="aspect-video bg-muted rounded-lg overflow-hidden shadow-lg">
-                  <div className="w-full h-full bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center">
-                    <div className="text-center">
-                      <div className="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <PlayCircle className="w-8 h-8 text-primary" />
+                  {courseData.video ? (
+                    <video 
+                      controls 
+                      className="w-full h-full object-cover"
+                    >
+                      <source src={`/${courseData.video}`} type="video/mp4" />
+                      Your browser does not support the video tag.
+                    </video>
+                  ) : (
+                    <div className="w-full h-full bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center">
+                      <div className="text-center">
+                        <div className="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                          <PlayCircle className="w-8 h-8 text-primary" />
+                        </div>
+                        <h3 className="text-lg font-semibold mb-2">Course Preview</h3>
+                        <p className="text-sm text-muted-foreground">Watch this video to see what you'll learn</p>
                       </div>
-                      <h3 className="text-lg font-semibold mb-2">Course Preview</h3>
-                      <p className="text-sm text-muted-foreground">Watch this video to see what you'll learn</p>
                     </div>
+                  )}
+                </div>
+                {!courseData.video && (
+                  <div className="absolute inset-0 bg-black/20 rounded-lg flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
+                    <Button size="lg" className="bg-white/90 text-black hover:bg-white">
+                      <PlayCircle className="w-5 h-5 mr-2" />
+                      Play Preview
+                    </Button>
                   </div>
-                </div>
-                <div className="absolute inset-0 bg-black/20 rounded-lg flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
-                  <Button size="lg" className="bg-white/90 text-black hover:bg-white">
-                    <PlayCircle className="w-5 h-5 mr-2" />
-                    Play Preview
-                  </Button>
-                </div>
+                )}
               </div>
             </div>
           </div>

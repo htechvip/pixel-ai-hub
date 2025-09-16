@@ -48,7 +48,8 @@ const Header = () => {
             <NavigationMenu>
               <NavigationMenuList>
                 {content.header.navigation.map((item) => {
-                  const link = item.href.startsWith("#") ? `${basePath}${item.href}` : item.href;
+                  // For hash links, always go to main page with hash
+                  const link = item.href.startsWith("#") ? `${isZh ? "/zh-tw" : "/"}${item.href}` : item.href;
                   if (item.children && item.children.length > 0) {
                     return (
                       <NavigationMenuItem key={item.label}>
@@ -64,7 +65,8 @@ const Header = () => {
                                 const courseId = child.label.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
                                 childLink = `${basePath}/course/${courseId}`;
                               } else {
-                                childLink = child.href.startsWith("#") ? `${basePath}${child.href}` : child.href;
+                                // For hash links, always go to main page with hash
+                                childLink = child.href.startsWith("#") ? `${isZh ? "/zh-tw" : "/"}${child.href}` : child.href;
                               }
                               
                               return (

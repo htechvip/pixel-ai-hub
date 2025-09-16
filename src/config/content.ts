@@ -53,6 +53,7 @@ type Content = {
       originalPrice: string;
       lastUpdated: string;
       language: string;
+      video?: string;
       features: string[];
       whatYouWillLearn: string[];
       curriculum: Array<{
@@ -236,6 +237,7 @@ const englishContent: Content = {
       originalPrice: "$599",
       lastUpdated: "December 2024",
       language: "English",
+      video: "intro.mp4",
       features: [
         "No coding experience required",
         "Hands-on projects included",
