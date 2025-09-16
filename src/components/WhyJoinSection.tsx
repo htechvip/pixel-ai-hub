@@ -21,7 +21,14 @@ const WhyJoinSection = () => {
           <div className="prose prose-lg dark:prose-invert mx-auto">
             {content.whyJoin.mainText.map((text, index) => (
               <p key={index} className="text-lg leading-relaxed mb-6">
-                {text}
+                {text.includes("But here's what you won't find anywhere else:") ? (
+                  <>
+                    <strong className="font-bold text-primary">But here's what you won't find anywhere else:</strong>
+                    {text.replace("But here's what you won't find anywhere else:", "")}
+                  </>
+                ) : (
+                  text
+                )}
               </p>
             ))}
 

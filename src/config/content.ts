@@ -176,7 +176,10 @@ const englishContent: Content = {
     subtitle: "Empowering the next generation of professionals to thrive with AI",
     mainText: [
       "You don't need a computer science degree to start using AI at work. With today's powerful no-code AI tools, you can automate tasks, streamline workflows, and create new opportunities — even without a technical background. If you can describe what you want, you can make it happen.",
-      "This hands-on program is built for non-technical professionals who want to advance their careers by applying AI in practical ways. No passive learning — you'll be practicing from day one. In just one weekend you'll design and implement AI workflows you can immediately use in your job or business. We guide you step-by-step with proven no-code tools and cutting-edge AI practices."
+      "But here's what you won't find anywhere else: This program is built on nearly three decades of real-world AI implementations across Fortune 200 companies and startups that got acquired. Every example, every workflow, every strategy comes from actual business battles — not theoretical classroom scenarios.",
+      "This hands-on program is designed for non-technical professionals who want to advance their careers by applying AI that actually works in the real world. Zero passive learning. You'll be building with battle-tested frameworks from day one, using the exact same approaches that drove millions in revenue and operational savings at major corporations.",
+      "In just one weekend, you'll design and implement AI workflows you can immediately deploy in your job or business — workflows proven in high-stakes corporate environments. We guide you step-by-step with the no-code tools and cutting-edge AI practices that survived the crucible of Fortune 200 boardrooms and startup scaling challenges.",
+      "The bottom line: You're not just learning AI — you're learning AI that's been forged in the real world and proven to deliver results where it matters most."
     ],
     features: [
       {
