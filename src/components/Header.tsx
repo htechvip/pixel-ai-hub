@@ -27,10 +27,21 @@ const Header = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link to={isZh ? "/zh-tw" : "/"} className="flex items-center hover:opacity-90 transition-opacity">
+          <a 
+            href={isZh ? "/zh-tw" : "/"} 
+            className="flex items-center hover:opacity-90 transition-opacity" 
+            onClick={(e) => { 
+              // If we're on the main page, scroll to top instead of navigating
+              if (pathname === "/" || pathname === "/zh-tw") {
+                e.preventDefault(); 
+                window.scrollTo(0, 0); 
+              }
+              // Otherwise, let the default navigation happen
+            }}
+          >
             <img src={htechLogo} alt="Hyperonsoft AI Jedi" className="h-6 w-auto mr-2" />
             <h1 className="text-xl font-bold text-foreground">{content.header.logo}</h1>
-          </Link>
+          </a>
           
           {/* Navigation */}
           <div className="hidden md:flex items-center">
