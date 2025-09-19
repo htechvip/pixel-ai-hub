@@ -147,12 +147,12 @@ const englishContent: Content = {
         href: "#online-courses",
         label: "AI Courses",
         children: [
-          { href: "#courses-customer-engagement", label: "AI for Customer Engagement" },
-          { href: "#courses-marketing-content", label: "AI in Marketing Content" },
-          { href: "#courses-operations-forecasting", label: "AI in Operations & Forecasting" },
-          { href: "#courses-data-insights", label: "AI in Sales" },
-          { href: "#courses-human-resources", label: "AI in Human Resources" },
-          { href: "#courses-vibe-coding", label: "Vibe Coding" }
+          { href: "#courses-finance-professionals", label: "AI for Finance Professionals" },
+          { href: "#courses-marketing-professionals", label: "AI for Marketing Professionals" },
+          { href: "#courses-software-developers", label: "AI for Software Developers" },
+          { href: "#courses-business-leaders", label: "AI for Business Leaders" },
+          { href: "#courses-healthcare-professionals", label: "AI for Healthcare Professionals" },
+          { href: "#courses-product-managers", label: "AI for Product Managers - Vibe Coding 101" }
         ]
       },
       { href: "#instructor", label: "Instructor" },
@@ -206,36 +206,36 @@ const englishContent: Content = {
     subtitle: "Practical, no‑code AI tracks designed for business impact.",
     features: [
       {
-        title: "AI for Customer Engagement",
-        description: "Automate support, qualify leads, and scale personalized responses with AI copilots."
+        title: "AI for Finance Professionals",
+        description: "Automate financial analysis, reporting, and decision-making with AI-powered tools."
       },
       {
-        title: "AI in Marketing Content",
+        title: "AI for Marketing Professionals",
         description: "Produce on-brand copy, visuals, and campaigns faster with review-ready outputs."
       },
       {
-        title: "AI in Operations & Forecasting",
-        description: "Streamline workflows, build SOP agents, and improve planning with AI-driven forecasts."
+        title: "AI for Software Developers",
+        description: "Streamline development workflows, automate testing, and accelerate code delivery."
       },
       {
-        title: "AI in Sales",
-        description: "Turn messy data into dashboards, summaries, and decisions without writing code."
+        title: "AI for Business Leaders",
+        description: "Turn complex data into strategic insights and make data-driven decisions with confidence."
       },
       {
-        title: "AI in Human Resources",
-        description: "Draft policies, streamline recruiting, and automate employee communications with AI."
+        title: "AI for Healthcare Professionals",
+        description: "Optimize patient care, streamline documentation, and improve healthcare operations with AI."
       },
       {
-        title: "Vibe Coding",
-        description: "Build simple apps and automations by describing what you want—no coding required."
+        title: "AI for Product Managers - Vibe Coding 101",
+        description: "Build product prototypes and automations by describing what you want—no coding required."
       }
     ]
   },
 
   courses: {
-    "ai-for-customer-engagement": {
-      title: "AI for Customer Engagement",
-      description: "Automate support, qualify leads, and scale personalized responses with AI copilots.",
+    "ai-for-finance-professionals": {
+      title: "AI for Finance Professionals",
+      description: "Automate financial analysis, reporting, and decision-making with AI-powered tools.",
       instructor: "Cho-Nan Tsai",
       rating: 4.9,
       ratingNum: 1247,
@@ -306,8 +306,8 @@ const englishContent: Content = {
         }
       ]
     },
-    "ai-in-marketing-content": {
-      title: "AI in Marketing Content",
+    "ai-for-marketing-professionals": {
+      title: "AI for Marketing Professionals",
       description: "Produce on-brand copy, visuals, and campaigns faster with review-ready outputs.",
       instructor: "Cho-Nan Tsai",
       rating: 4.8,
@@ -378,9 +378,9 @@ const englishContent: Content = {
           }
         ]
       },
-    "ai-in-operations-forecasting": {
-      title: "AI in Operations & Forecasting",
-      description: "Streamline workflows, build SOP agents, and improve planning with AI-driven forecasts.",
+    "ai-for-software-developers": {
+      title: "AI for Software Developers",
+      description: "Streamline development workflows, automate testing, and accelerate code delivery.",
       instructor: "Cho-Nan Tsai",
       rating: 4.9,
       ratingNum: 634,
@@ -450,9 +450,9 @@ const englishContent: Content = {
         }
       ]
     },
-    "ai-in-sales": {
-      title: "AI in Sales",
-      description: "Turn messy data into dashboards, summaries, and decisions without writing code.",
+    "ai-for-business-leaders": {
+      title: "AI for Business Leaders",
+      description: "Turn complex data into strategic insights and make data-driven decisions with confidence.",
       instructor: "Cho-Nan Tsai",
       rating: 4.7,
       ratingNum: 1156,
@@ -522,9 +522,9 @@ const englishContent: Content = {
         }
       ]
     },
-    "ai-in-human-resources": {
-      title: "AI in Human Resources",
-      description: "Draft policies, streamline recruiting, and automate employee communications with AI.",
+    "ai-for-healthcare-professionals": {
+      title: "AI for Healthcare Professionals",
+      description: "Optimize patient care, streamline documentation, and improve healthcare operations with AI.",
       instructor: "Cho-Nan Tsai",
       rating: 4.6,
       ratingNum: 743,
@@ -594,9 +594,9 @@ const englishContent: Content = {
         }
       ]
     },
-    "vibe-coding": {
-      title: "Vibe Coding",
-      description: "Build simple apps and automations by describing what you want—no coding required.",
+    "ai-for-product-managers-vibe-coding-101": {
+      title: "AI for Product Managers - Vibe Coding 101",
+      description: "Build product prototypes and automations by describing what you want—no coding required.",
       instructor: "Cho-Nan Tsai",
       rating: 4.9,
       ratingNum: 2156,

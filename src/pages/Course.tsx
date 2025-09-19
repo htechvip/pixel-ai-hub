@@ -278,37 +278,37 @@ const Course = () => {
                     const getAvatarUrl = (name: string) => {
                       // Predefined mapping of specific reviewer names to unique avatars
                       const reviewerAvatars: { [key: string]: string } = {
-                        // AI for Customer Engagement (Course 1)
+                        // AI for Finance Professionals (Course 1)
                         'Sarah Martinez': 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=100&h=100&fit=crop&crop=face&auto=format&q=80',
                         'Mike Chen': 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face&auto=format&q=80',
                         'Emily Rodriguez': 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&crop=face&auto=format&q=80',
                         'David Kim': 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face&auto=format&q=80',
                         
-                        // AI in Marketing Content (Course 2)
+                        // AI for Marketing Professionals (Course 2)
                         'Jessica Wu': 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&h=100&fit=crop&crop=face&auto=format&q=80',
                         'Alex Thompson': 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop&crop=face&auto=format&q=80',
                         'Maria Santos': 'https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=100&h=100&fit=crop&crop=face&auto=format&q=80',
                         'Tom Wilson': 'https://images.unsplash.com/photo-1633332755192-727a05c4013d?w=100&h=100&fit=crop&crop=face&auto=format&q=80',
                         
-                        // AI in Operations & Forecasting (Course 3)
+                        // AI for Software Developers (Course 3)
                         'Robert Johnson': 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=100&h=100&fit=crop&crop=face&auto=format&q=80',
                         'Linda Chang': 'https://images.unsplash.com/photo-1544725176-7c40e5a71c5e?w=100&h=100&fit=crop&crop=face&auto=format&q=80',
                         'Carlos Rivera': 'https://images.unsplash.com/photo-1557862921-37829c790f19?w=100&h=100&fit=crop&crop=face&auto=format&q=80',
                         'Anna Petrov': 'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=100&h=100&fit=crop&crop=face&auto=format&q=80',
                         
-                        // AI in Sales (Course 4)
+                        // AI for Business Leaders (Course 4)
                         'Jennifer Adams': 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=100&h=100&fit=crop&crop=face&auto=format&q=80',
                         'Marcus Brown': 'https://images.unsplash.com/photo-1614289371518-722f2615943d?w=100&h=100&fit=crop&crop=face&auto=format&q=80',
                         'Rachel Green': 'https://images.unsplash.com/photo-1541101767792-f9b2b1c4f127?w=100&h=100&fit=crop&crop=face&auto=format&q=80',
                         'Kevin Park': 'https://images.unsplash.com/photo-1607746882042-944635dfe10e?w=100&h=100&fit=crop&crop=face&auto=format&q=80',
                         
-                        // AI in Human Resources (Course 5)
+                        // AI for Healthcare Professionals (Course 5)
                         'Patricia Davis': 'https://images.unsplash.com/photo-1619946794135-5bc917a27793?w=100&h=100&fit=crop&crop=face&auto=format&q=80',
                         'Steven Miller': 'https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?w=100&h=100&fit=crop&crop=face&auto=format&q=80',
                         'Diana Lopez': 'https://images.unsplash.com/photo-1582750433449-648ed127bb54?w=100&h=100&fit=crop&crop=face&auto=format&q=80',
                         'Brian Taylor': 'https://images.unsplash.com/photo-1547425260-76bcadfb4f2c?w=100&h=100&fit=crop&crop=face&auto=format&q=80',
                         
-                        // Vibe Coding (Course 6)
+                        // AI for Product Managers - Vibe Coding 101 (Course 6)
                         'Amanda Foster': 'https://images.unsplash.com/photo-1494790108755-2616b612b786?w=100&h=100&fit=crop&crop=face&auto=format&q=80',
                         'James Rodriguez': 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=100&h=100&fit=crop&crop=face&auto=format&q=80',
                         'Sophie Chen': 'https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?w=100&h=100&fit=crop&crop=face&auto=format&q=80',
