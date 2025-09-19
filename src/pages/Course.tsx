@@ -55,9 +55,15 @@ const Course = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="flex items-center gap-2 mb-4">
-              <Link to={isZh ? "/zh-tw" : "/"} className="text-primary hover:underline">
+              <button 
+                className="text-primary hover:underline bg-transparent border-none cursor-pointer"
+                onClick={() => {
+                  // Use window.location.assign for better hash handling
+                  window.location.assign(`${isZh ? "/zh-tw" : "/"}#online-courses`);
+                }}
+              >
                 ← Back to Courses
-              </Link>
+              </button>
             </div>
             
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">

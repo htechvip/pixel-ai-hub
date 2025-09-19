@@ -11,10 +11,25 @@ import CallToAction from "@/components/CallToAction";
 import FAQSection from "@/components/FAQSection";
 import Footer from "@/components/Footer";
 import { content } from "@/config/content";
+import { useEffect } from "react";
 
 const Index = () => {
   console.log("Content configuration:", content);
   console.log("Rendering Index page");
+
+  // Handle hash scrolling on page load
+  useEffect(() => {
+    const hash = window.location.hash;
+    if (hash) {
+      // Wait for components to render, then scroll
+      setTimeout(() => {
+        const element = document.getElementById(hash.substring(1));
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
+    }
+  }, []);
 
   return (
     <div className="min-h-screen">
