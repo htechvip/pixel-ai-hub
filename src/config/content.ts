@@ -235,47 +235,84 @@ const englishContent: Content = {
   courses: {
     "ai-for-finance-professionals": {
       title: "AI for Finance Professionals",
-      description: "Automate financial analysis, reporting, and decision-making with AI-powered tools.",
+      description: "Discover how AI can transform your finance workflows without writing a single line of code. This course introduces finance professionals to practical AI applications in forecasting, reporting, and automation. Learn how to leverage off-the-shelf AI tools to save time, reduce errors, and make smarter decisions.",
       instructor: "Cho-Nan Tsai",
       rating: 4.9,
       ratingNum: 1247,
       students: 1247,
-      duration: "4 hours",
-      level: "Intermediate",
+      duration: "2 hours",
+      level: "Beginner",
       price: "$299",
       originalPrice: "$599",
       lastUpdated: "December 2024",
       language: "English",
       video: "intro.mp4",
       features: [
-        "No coding experience required",
-        "Hands-on projects included",
-        "Certificate of completion",
-        "Lifetime access",
-        "Mobile and desktop access"
+        "4-8 minute lessons for easy learning",
+        "Quizzes after each major module",
+        "Downloadable resources: workflow checklist, prompt library, AI tool guide",
+        "Certificate of Completion: AI-Ready Finance Professional",
+        "No coding or technical background required"
       ],
       whatYouWillLearn: [
-        "Master ChatGPT and Claude for customer interactions",
-        "Build automated response systems",
-        "Create personalized customer journeys",
-        "Implement sentiment analysis",
-        "Scale customer support operations"
+        "Understand the basics of AI, machine learning, and generative AI",
+        "Identify finance tasks that can be automated with AI",
+        "Use simple AI tools for forecasting, report writing, and analysis",
+        "Communicate effectively with AI or data teams",
+        "Apply practical AI skills immediately in your role"
       ],
       curriculum: [
         {
-          section: "Customer Engagement Fundamentals",
+          section: "Module 1: Introduction to AI in Finance",
           lessons: [
-            { title: "Understanding Customer AI Tools", duration: "20 min", type: "video" },
-            { title: "Setting Up Your AI Workspace", duration: "15 min", type: "video" },
-            { title: "Prompt Engineering for Support", duration: "25 min", type: "video" }
+            { title: "What is AI?", duration: "5 min", type: "video" },
+            { title: "Why AI matters in finance", duration: "5 min", type: "video" },
+            { title: "Real-world examples: FP&A, reporting, and fraud detection", duration: "5 min", type: "video" }
           ]
         },
         {
-          section: "Advanced Automation",
+          section: "Module 2: AI Fundamentals for Finance Professionals",
           lessons: [
-            { title: "Building Response Templates", duration: "30 min", type: "video" },
-            { title: "Creating Workflow Automations", duration: "35 min", type: "video" },
-            { title: "Project: Complete Support System", duration: "45 min", type: "project" }
+            { title: "Key concepts: models, predictions, and data", duration: "6 min", type: "video" },
+            { title: "AI vs traditional analytics", duration: "5 min", type: "video" },
+            { title: "Ethics, compliance, and bias", duration: "6 min", type: "video" },
+            { title: "Quiz: Spot the AI use case", duration: "4 min", type: "quiz" }
+          ]
+        },
+        {
+          section: "Module 3: Automating Repetitive Finance Tasks",
+          lessons: [
+            { title: "Identifying tasks to automate", duration: "5 min", type: "video" },
+            { title: "Using AI for invoice processing and reconciliation", duration: "6 min", type: "video" },
+            { title: "Automating reporting and dashboards", duration: "6 min", type: "video" },
+            { title: "Hands-on exercise: Map one task you could automate", duration: "7 min", type: "exercise" },
+            { title: "Quick wins recap", duration: "6 min", type: "video" }
+          ]
+        },
+        {
+          section: "Module 4: AI for Forecasting & Analysis",
+          lessons: [
+            { title: "Introduction to AI forecasting", duration: "6 min", type: "video" },
+            { title: "Using no-code AI tools for scenario analysis", duration: "6 min", type: "video" },
+            { title: "Interpreting results & dashboards", duration: "6 min", type: "video" },
+            { title: "Exercise: Build a simple forecast from your own data", duration: "7 min", type: "exercise" },
+            { title: "Tips for actionable insights", duration: "5 min", type: "video" }
+          ]
+        },
+        {
+          section: "Module 5: AI for Communication & Reporting",
+          lessons: [
+            { title: "Drafting board decks and investor memos", duration: "5 min", type: "video" },
+            { title: "Using AI to summarize financial reports", duration: "5 min", type: "video" },
+            { title: "Hands-on exercise: Turn raw data into a narrative", duration: "6 min", type: "exercise" },
+            { title: "Recap & next steps", duration: "4 min", type: "video" }
+          ]
+        },
+        {
+          section: "Final Assessment / Wrap-Up",
+          lessons: [
+            { title: "Mini-project: Identify 2 finance tasks in your role that could benefit from AI", duration: "6 min", type: "project" },
+            { title: "Course summary & recommended next steps", duration: "4 min", type: "video" }
           ]
         }
       ],
@@ -283,25 +320,25 @@ const englishContent: Content = {
         {
           name: "Sarah Martinez",
           rating: 5,
-          comment: "This course completely transformed how I handle customer inquiries. The ChatGPT templates alone saved me 15 hours per week. Now I can respond to complex customer issues in minutes instead of hours.",
+          comment: "This course completely transformed how I approach financial analysis. The AI tools we learned have saved me 15 hours per week on routine reporting tasks. The instructor's real-world examples made everything click.",
           timeAgo: "2 weeks ago"
         },
         {
           name: "Mike Chen",
           rating: 5,
-          comment: "As a customer success manager, I was drowning in support tickets. This course taught me to build automated workflows that handle 80% of our common questions. My team's response time improved by 300%!",
+          comment: "As a CFO, I was skeptical about AI in finance. This course showed me practical applications that don't require technical expertise. Our forecasting accuracy improved by 30% using the techniques taught here.",
           timeAgo: "1 month ago"
         },
         {
           name: "Emily Rodriguez",
           rating: 4,
-          comment: "Great practical examples for customer engagement. The sentiment analysis section was particularly useful for prioritizing urgent customer issues. Wish there was more on handling negative feedback.",
+          comment: "The hands-on exercises were excellent. I implemented the automated reporting system and my team loves the real-time dashboards. The course material is well-structured and easy to follow.",
           timeAgo: "3 weeks ago"
         },
         {
           name: "David Kim",
           rating: 5,
-          comment: "I implemented the personalized customer journey system from this course and our customer satisfaction scores increased by 40%. The AI copilot approach is brilliant for scaling support operations.",
+          comment: "Perfect for finance professionals who want to stay ahead. The 4-8 minute lessons fit perfectly into my busy schedule, and I could immediately apply what I learned to automate our monthly reporting process.",
           timeAgo: "1 week ago"
         }
       ]

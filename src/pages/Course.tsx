@@ -161,7 +161,7 @@ const Course = () => {
                       <h4 className="font-semibold mb-2">{section.section}</h4>
                       <div className="space-y-2">
                         {section.lessons.map((lesson, lessonIndex) => (
-                          <div key={lessonIndex} className="flex items-center justify-between p-3 bg-muted/50 rounded-lg">
+                          <div key={lessonIndex} className="flex items-center p-3 bg-muted/50 rounded-lg">
                             <div className="flex items-center gap-3">
                               {lesson.type === 'video' ? (
                                 <PlayCircle className="w-5 h-5 text-primary" />
@@ -170,7 +170,6 @@ const Course = () => {
                               )}
                               <span>{lesson.title}</span>
                             </div>
-                            <span className="text-sm text-muted-foreground">{lesson.duration}</span>
                           </div>
                         ))}
                       </div>
@@ -193,7 +192,7 @@ const Course = () => {
                   </li>
                   <li className="flex items-start gap-2">
                     <CheckCircle className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" />
-                    <span>Basic computer skills (email, web browsing)</span>
+                    <span>Basic computer skills (email, web browsing, Excel)</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <CheckCircle className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" />
