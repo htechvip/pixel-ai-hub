@@ -1,0 +1,139 @@
+---
+description: Frontend development rules for AI Jedi - React/TypeScript project with Tailwind CSS
+globs: ["**/*.tsx", "**/*.ts", "**/*.css"]
+alwaysApply: true
+---
+
+# AI Jedi Frontend Project Rules
+
+## Project Architecture
+- **Framework**: React 18 with TypeScript
+- **Styling**: Tailwind CSS with custom design system
+- **UI Components**: Radix UI + shadcn/ui components
+- **Routing**: React Router for client-side navigation
+- **Content Management**: Centralized in `src/config/content.ts`
+
+## Code Standards
+
+### TypeScript
+- Use strict typing - avoid `any` types
+- Define proper interfaces for all data structures
+- Use `const assertions` for content objects: `as const`
+
+### React Components
+- Use functional components with hooks
+- Prefer `const` declarations: `const Component = () => {}`
+- Use proper TypeScript props interfaces
+- Import types separately: `import type { ComponentProps } from 'react'`
+
+### File Organization
+```
+src/
+├── components/           # Reusable UI components
+├── pages/               # Route components (Index, Course, Signup)
+├── config/              # Content configuration
+├── hooks/               # Custom React hooks
+├── lib/                 # Utility functions
+└── assets/              # Images and static files
+```
+
+## Styling Guidelines
+
+### Tailwind CSS
+- Use design system classes: `bg-primary`, `text-muted-foreground`
+- Responsive design: `md:`, `lg:` prefixes
+- Custom gradients: `bg-gradient-primary`
+- Consistent spacing: `py-20`, `px-4`, `mb-6`
+
+### Component Styling Patterns
+```tsx
+// Card components
+<Card className="bg-card/50 backdrop-blur-sm hover:shadow-card transition-all duration-300">
+
+// Buttons
+<Button variant="hero" size="lg" className="text-lg px-8 py-4">
+
+// Responsive grids
+<div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+```
+
+## Content Management
+
+### Content Structure
+- All text content in `src/config/content.ts`
+- Support for English (`englishContent`) and Chinese (`zhContent`)
+- Dynamic content selection based on URL path (`/zh-tw`)
+
+### Course Data Pattern
+```typescript
+courses: {
+  "course-id": {
+    title: string;
+    description: string;
+    instructor: string;
+    rating: number;
+    ratingNum: number;
+    duration: string;
+    level: "Beginner" | "Intermediate" | "Advanced";
+    features: string[];
+    whatYouWillLearn: string[];
+    curriculum: CurriculumSection[];
+    reviews?: Review[];
+    video?: string;
+  }
+}
+```
+
+## Navigation Patterns
+
+### Course URLs
+- English: `/course/ai-for-finance-professionals`
+- Chinese: `/zh-tw/course/ai-for-finance-professionals`
+- Hash links for main page sections: `#why-join`, `#online-courses`
+
+### Link Handling
+- Use `<a href="">` for hash links and external navigation
+- Use `<Link to="">` for React Router navigation
+- Use `window.location.assign()` for forced navigation with hash
+
+## Component Patterns
+
+### SEO with React Helmet
+```tsx
+<Helmet>
+  <title>{dynamicTitle}</title>
+  <meta name="description" content={dynamicDescription} />
+  <link rel="canonical" href={canonicalUrl} />
+</Helmet>
+```
+
+### Responsive Design
+- Mobile-first approach
+- Use `hidden md:flex` for desktop-only elements
+- Use `flex-col sm:flex-row` for responsive layouts
+
+### Animations
+- Use `transition-all duration-300` for smooth transitions
+- Use `group` and `group-hover:` for hover effects
+- Use `animate-fade-in` for entrance animations
+
+## Performance Guidelines
+- Lazy load images with proper alt text
+- Use `backdrop-blur-sm` for glassmorphism effects
+- Optimize images: use appropriate sizes and formats
+- Use `useEffect` for side effects like scrolling
+
+## Accessibility
+- Proper semantic HTML structure
+- Alt text for all images
+- Keyboard navigation support
+- Screen reader friendly text
+- Proper heading hierarchy (h1 → h2 → h3)
+
+## Internationalization
+- Chinese content inherits from English: `...englishContent`
+- Override specific fields for Chinese translations
+- Maintain same data structure for both languages
+- Use proper Chinese typography and spacing
+- Files for Chinese content goes under /zh-tw
+- Every Chinese page must have a corresponding English page
