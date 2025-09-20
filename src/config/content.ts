@@ -570,46 +570,83 @@ const englishContent: Content = {
     },
     "ai-for-business-leaders": {
       title: "AI for Business Leaders",
-      description: "Turn complex data into strategic insights and make data-driven decisions with confidence.",
+      description: "This course introduces non-technical business leaders to artificial intelligence, its applications in strategy and operations, and practical ways to start using AI responsibly within an organization. It blends concise lectures with hands-on exercises and real-world examples so learners can immediately apply insights to their own context.",
       instructor: "Cho-Nan Tsai",
       rating: 4.7,
       ratingNum: 1156,
       students: 1156,
-      duration: "3.5 hours",
-      level: "Intermediate",
+      duration: "2 hours",
+      level: "Beginner",
       price: "$249",
       originalPrice: "$499",
       lastUpdated: "December 2024",
       language: "English",
       features: [
-        "No coding experience required",
-        "Hands-on projects included",
-        "Certificate of completion",
-        "Lifetime access",
-        "Mobile and desktop access"
+        "Concise lectures with hands-on exercises and real-world examples",
+        "No-code AI tools demonstrations and practice sessions",
+        "Strategic frameworks and templates for AI implementation",
+        "Ethical AI guidelines and policy templates",
+        "30-Day AI Leadership Action Plan template",
+        "Certificate of completion for business leaders"
       ],
       whatYouWillLearn: [
-        "Transform sales data into actionable insights",
-        "Create automated reporting systems",
-        "Build lead scoring models",
-        "Develop sales forecasting tools",
-        "Optimize sales processes with AI"
+        "Understand core AI concepts relevant to business leadership",
+        "Identify and prioritize AI opportunities aligned with business strategy",
+        "Manage AI initiatives and teams more effectively",
+        "Navigate ethical, legal, and risk considerations of AI deployment",
+        "Experiment hands-on with no-code AI tools for immediate productivity gains"
       ],
       curriculum: [
         {
-          section: "Sales Data Intelligence",
+          section: "Module 1: Understanding AI & Its Strategic Value",
           lessons: [
-            { title: "AI for Sales Analytics", duration: "20 min", type: "video" },
-            { title: "Lead Scoring with AI", duration: "25 min", type: "video" },
-            { title: "Sales Forecasting Models", duration: "30 min", type: "video" }
+            { title: "What AI Really Is (and Isn't) for Business", duration: "8 min", type: "video" },
+            { title: "Key AI Concepts Every Leader Should Know (ML, NLP, Generative AI, Automation)", duration: "10 min", type: "video" },
+            { title: "The Competitive Advantage of AI: Case Studies Across Industries", duration: "12 min", type: "video" },
+            { title: "Exercise: Identify AI Opportunities in Your Organization", duration: "10 min", type: "exercise" }
           ]
         },
         {
-          section: "Automation & Optimization",
+          section: "Module 2: Integrating AI into Business Strategy",
           lessons: [
-            { title: "Automated Sales Reporting", duration: "35 min", type: "video" },
-            { title: "CRM Integration and AI", duration: "30 min", type: "video" },
-            { title: "Project: Complete Sales Dashboard", duration: "45 min", type: "project" }
+            { title: "AI and Digital Transformation – Aligning with Business Goals", duration: "10 min", type: "video" },
+            { title: "Building a Data-Driven Culture", duration: "8 min", type: "video" },
+            { title: "Selecting the Right AI Use Cases: Cost, ROI, and Risk", duration: "12 min", type: "video" },
+            { title: "Exercise: Draft a Simple AI Opportunity Matrix for Your Company", duration: "10 min", type: "exercise" }
+          ]
+        },
+        {
+          section: "Module 3: Managing AI Projects and Teams",
+          lessons: [
+            { title: "How AI Projects Differ from Traditional IT Projects", duration: "8 min", type: "video" },
+            { title: "Partnering with Data Scientists and Vendors", duration: "10 min", type: "video" },
+            { title: "Budgeting & Timeline Basics for AI Initiatives", duration: "8 min", type: "video" },
+            { title: "Exercise: Map Stakeholders for a Hypothetical AI Initiative", duration: "8 min", type: "exercise" }
+          ]
+        },
+        {
+          section: "Module 4: Ethical, Legal, and Risk Considerations",
+          lessons: [
+            { title: "Responsible AI: Bias, Fairness, and Transparency", duration: "10 min", type: "video" },
+            { title: "Regulatory Landscape and Governance (GDPR, AI Act, etc.)", duration: "8 min", type: "video" },
+            { title: "Creating an Internal AI Policy or Framework", duration: "8 min", type: "video" },
+            { title: "Exercise: Draft 3 Key Principles for Your Company's AI Policy", duration: "8 min", type: "exercise" }
+          ]
+        },
+        {
+          section: "Module 5: Hands-On with AI Tools for Leaders",
+          lessons: [
+            { title: "Quick Demo of No-Code AI Tools (text analysis, dashboards, or AI writing assistants)", duration: "12 min", type: "video" },
+            { title: "Prompt Engineering Basics for Leaders", duration: "8 min", type: "video" },
+            { title: "Exercise: Use a No-Code AI Tool to Summarize a Report or Build a Quick Insight", duration: "15 min", type: "exercise" }
+          ]
+        },
+        {
+          section: "Module 6: The Future of AI in Business Leadership",
+          lessons: [
+            { title: "Emerging Trends (Agentic AI, Model Context Protocol, Autonomous Decisioning)", duration: "10 min", type: "video" },
+            { title: "Building Long-Term AI Readiness and Capabilities", duration: "8 min", type: "video" },
+            { title: "Final Reflection: Your 30-Day AI Leadership Action Plan", duration: "12 min", type: "exercise" }
           ]
         }
       ],
@@ -617,25 +654,25 @@ const englishContent: Content = {
         {
           name: "Jennifer Adams",
           rating: 5,
-          comment: "Game-changer for sales analytics! I transformed our messy CRM data into beautiful dashboards that actually drive decisions. My conversion rate increased 35% using the lead scoring models from this course.",
+          comment: "Perfect for non-technical executives! This course demystified AI for me and my leadership team. The strategic frameworks helped us identify 5 high-impact AI opportunities. We're now confidently leading our digital transformation.",
           timeAgo: "1 week ago"
         },
         {
           name: "Marcus Brown",
           rating: 4,
-          comment: "Solid course for sales professionals. The automated reporting saved me 10 hours weekly. The forecasting tools helped me exceed my quarterly targets by 20%. Could use more advanced CRM integrations.",
+          comment: "Excellent strategic perspective on AI implementation. The ethical considerations module was particularly valuable. I now feel equipped to guide AI initiatives and work effectively with our technical teams.",
           timeAgo: "2 weeks ago"
         },
         {
           name: "Rachel Green",
           rating: 5,
-          comment: "As a sales director, this course was invaluable. The AI-powered insights helped identify our best prospects and optimize our sales funnel. Team productivity improved dramatically across the board.",
+          comment: "As a CEO, this course was invaluable for understanding AI's business impact. The hands-on exercises with no-code tools showed immediate productivity gains. My 30-day action plan is already delivering results.",
           timeAgo: "3 weeks ago"
         },
         {
           name: "Kevin Park",
           rating: 5,
-          comment: "Excellent practical approach to sales data. The no-code solutions made it easy to implement immediately. Our sales team now makes data-driven decisions instead of relying on gut feelings.",
+          comment: "Game-changer for business leadership! The course helped me build our company's AI policy and select the right vendors. Our AI initiatives are now aligned with business strategy and delivering measurable ROI.",
           timeAgo: "1 month ago"
         }
       ]
