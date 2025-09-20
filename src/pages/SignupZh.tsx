@@ -16,16 +16,16 @@ const SignupZh = () => {
   return (
     <>
       <Helmet>
-        <title>AI Jedi 梯次報名 – 台北 & 洛杉磯</title>
-        <meta name="description" content="立即搶先預約 AI Jedi 週末工作坊名額，名額有限。" />
+        <title>AI 職場培訓報名 – 專業人士實戰案例學習</title>
+        <meta name="description" content="加入我們專為職場專業人士設計的AI培訓課程。透過金融、行銷、醫療保健和商業營運的實際案例學習AI技能。" />
         <link rel="canonical" href="https://aijedi.hyperionsoft.com/zh-tw/signup" />
-        <meta property="og:title" content="AI Jedi 梯次報名" />
-        <meta property="og:description" content="報名我們即將舉辦的台北與洛杉磯 AI 週末工作坊。" />
+        <meta property="og:title" content="AI 職場培訓報名 – 專業人士實戰案例學習" />
+        <meta property="og:description" content="加入我們專為職場專業人士設計的AI培訓課程。透過金融、行銷、醫療保健和商業營運的實際案例學習AI技能。" />
         <meta property="og:url" content="https://aijedi.hyperionsoft.com/zh-tw/signup" />
         <meta property="og:image" content="/ai%20jedi%20class.png" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="AI Jedi 梯次報名" />
-        <meta name="twitter:description" content="報名我們即將舉辦的台北與洛杉磯 AI 週末工作坊。" />
+        <meta name="twitter:title" content="AI 職場培訓報名 – 專業人士實戰案例學習" />
+        <meta name="twitter:description" content="加入我們專為職場專業人士設計的AI培訓課程。透過金融、行銷、醫療保健和商業營運的實際案例學習AI技能。" />
         <meta name="twitter:image" content="/ai%20jedi%20class.png" />
       </Helmet>
 

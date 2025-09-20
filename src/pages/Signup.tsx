@@ -15,16 +15,16 @@ const Signup = () => {
   return (
     <>
       <Helmet>
-        <title>AI Jedi Cohort Registration – Taipei & LA</title>
-        <meta name="description" content="Secure your seat for the next AI Jedi weekend bootcamp. Limited spots available." />
+        <title>AI Training Registration – Hands-On Case Studies for Career Professionals</title>
+        <meta name="description" content="Join our intensive AI training program designed for career professionals. Learn through real-world case studies in finance, marketing, healthcare, and business operations." />
         <link rel="canonical" href="https://aijedi.hyperionsoft.com/signup" />
-        <meta property="og:title" content="AI Jedi Cohort Registration" />
-        <meta property="og:description" content="Register for our upcoming AI bootcamp cohorts in Taipei and Los Angeles." />
+        <meta property="og:title" content="AI Training Registration – Hands-On Case Studies for Career Professionals" />
+        <meta property="og:description" content="Join our intensive AI training program designed for career professionals. Learn through real-world case studies in finance, marketing, healthcare, and business operations." />
         <meta property="og:url" content="https://aijedi.hyperionsoft.com/signup" />
         <meta property="og:image" content="/ai%20jedi%20class.png" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="AI Jedi Cohort Registration" />
-        <meta name="twitter:description" content="Register for our upcoming AI bootcamp cohorts in Taipei and Los Angeles." />
+        <meta name="twitter:title" content="AI Training Registration – Hands-On Case Studies for Career Professionals" />
+        <meta name="twitter:description" content="Join our intensive AI training program designed for career professionals. Learn through real-world case studies in finance, marketing, healthcare, and business operations." />
         <meta name="twitter:image" content="/ai%20jedi%20class.png" />
       </Helmet>
       <Header />

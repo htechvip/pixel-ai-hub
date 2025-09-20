@@ -162,8 +162,8 @@ const englishContent: Content = {
   },
 
   hero: {
-    title: "AI Skills for Career Professionals — skip the grind and get ahead",
-    description: "Hands-on online courses designed for managers and specialists. Learn how to use AI tools to automate tasks, make better decisions, and drive business results — no coding required.",
+    title: "Master AI through hands-on case studies",
+    description: "Hands-on online courses designed for career professionals. Learn how to use AI tools to automate tasks, make better decisions, and drive business results — no coding required.",
     
     buttons: {
       primary: "Learn AI Online",

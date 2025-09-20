@@ -20,6 +20,7 @@ import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import cntColor from "@/assets/cnt-color.jpeg";
+import { Helmet } from "react-helmet";
 
 const Course = () => {
   const { courseId } = useParams();
@@ -49,6 +50,19 @@ const Course = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <Helmet>
+        <title>{courseData.title} – Learn AI Through Hands-On Case Studies</title>
+        <meta name="description" content={`${courseData.description} Master practical AI skills for career professionals through real-world case studies.`} />
+        <link rel="canonical" href={`https://aijedi.hyperionsoft.com${isZh ? '/zh-tw' : ''}/course/${courseId}`} />
+        <meta property="og:title" content={`${courseData.title} – Learn AI Through Hands-On Case Studies`} />
+        <meta property="og:description" content={`${courseData.description} Master practical AI skills for career professionals through real-world case studies.`} />
+        <meta property="og:url" content={`https://aijedi.hyperionsoft.com${isZh ? '/zh-tw' : ''}/course/${courseId}`} />
+        <meta property="og:image" content="/ai%20jedi%20class.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={`${courseData.title} – Learn AI Through Hands-On Case Studies`} />
+        <meta name="twitter:description" content={`${courseData.description} Master practical AI skills for career professionals through real-world case studies.`} />
+        <meta name="twitter:image" content="/ai%20jedi%20class.png" />
+      </Helmet>
       <Header />
       {/* Course Header */}
       <div className="bg-gradient-to-r from-primary/10 to-secondary/10 py-8 pt-24">
