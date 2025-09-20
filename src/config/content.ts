@@ -679,46 +679,82 @@ const englishContent: Content = {
     },
     "ai-for-healthcare-professionals": {
       title: "AI for Healthcare Professionals",
-      description: "Optimize patient care, streamline documentation, and improve healthcare operations with AI.",
+      description: "This beginner-friendly course explains how AI is transforming healthcare and gives professionals a hands-on look at three leading tools they can explore right away: Keragon (AI automation for workflows), Aidoc (AI radiology), and PathAI (AI pathology). In under two hours, you'll learn how AI is applied in diagnostics, operations, and patient care — plus how to evaluate tools safely and ethically.",
       instructor: "Cho-Nan Tsai",
       rating: 4.6,
       ratingNum: 743,
       students: 743,
-      duration: "2.5 hours",
+      duration: "2 hours",
       level: "Beginner",
       price: "$179",
       originalPrice: "$359",
       lastUpdated: "December 2024",
       language: "English",
       features: [
-        "No coding experience required",
-        "Hands-on projects included",
-        "Certificate of completion",
-        "Lifetime access",
-        "Mobile and desktop access"
+        "Beginner-friendly approach to AI in healthcare",
+        "Hands-on demos of three leading AI healthcare tools: Keragon, Aidoc, PathAI",
+        "HIPAA, GDPR compliance and ethical AI guidelines",
+        "Real-world case studies and practical exercises",
+        "30-day action plan for implementing AI in your practice",
+        "Certificate of completion for healthcare professionals"
       ],
       whatYouWillLearn: [
-        "Automate HR document creation",
-        "Streamline recruitment processes",
-        "Build employee communication systems",
-        "Create policy templates",
-        "Implement HR analytics"
+        "Understand key AI concepts relevant to healthcare",
+        "Recognize practical AI applications in clinical, administrative, and patient experience contexts",
+        "Identify ethical and regulatory considerations",
+        "Evaluate three leading AI healthcare tools: Keragon, Aidoc, PathAI",
+        "Build a personal plan for incorporating AI into their professional practice"
       ],
       curriculum: [
         {
-          section: "HR Automation Basics",
+          section: "Module 1: Introduction to AI in Healthcare",
           lessons: [
-            { title: "AI for HR Documentation", duration: "15 min", type: "video" },
-            { title: "Recruitment Process Automation", duration: "20 min", type: "video" },
-            { title: "Employee Communication Tools", duration: "25 min", type: "video" }
+            { title: "What AI Means for Healthcare Professionals", duration: "8 min", type: "video" },
+            { title: "Core Concepts: Machine Learning, NLP, Predictive Analytics", duration: "10 min", type: "video" },
+            { title: "Real-World Examples Across Clinical and Administrative Settings", duration: "12 min", type: "video" },
+            { title: "Exercise: Identify one area in your work where AI could help", duration: "8 min", type: "exercise" }
           ]
         },
         {
-          section: "Advanced HR Systems",
+          section: "Module 2: AI in Clinical Practice & Diagnostics",
           lessons: [
-            { title: "Policy Template Creation", duration: "30 min", type: "video" },
-            { title: "HR Analytics and Insights", duration: "25 min", type: "video" },
-            { title: "Project: Complete HR System", duration: "35 min", type: "project" }
+            { title: "Imaging and Radiology: How AI Prioritizes Critical Cases", duration: "12 min", type: "video" },
+            { title: "Pathology and Precision Medicine", duration: "10 min", type: "video" },
+            { title: "Exercise: Review a case study of AI-assisted diagnosis and list benefits & risks", duration: "10 min", type: "exercise" }
+          ]
+        },
+        {
+          section: "Module 3: AI in Operations & Patient Experience",
+          lessons: [
+            { title: "Automating Administrative Tasks (intake, insurance, scheduling)", duration: "10 min", type: "video" },
+            { title: "AI-Powered Chatbots and Remote Patient Monitoring", duration: "8 min", type: "video" },
+            { title: "Exercise: Map a simple workflow in your department that could be automated", duration: "8 min", type: "exercise" }
+          ]
+        },
+        {
+          section: "Module 4: Data, Privacy, and Ethics",
+          lessons: [
+            { title: "HIPAA, GDPR and Patient Data Security in AI Systems", duration: "10 min", type: "video" },
+            { title: "Bias, Fairness, and Transparency in Healthcare AI", duration: "8 min", type: "video" },
+            { title: "Building Trust with Patients and Stakeholders", duration: "8 min", type: "video" },
+            { title: "Exercise: Draft three guidelines for responsible AI use in your organization", duration: "8 min", type: "exercise" }
+          ]
+        },
+        {
+          section: "Module 5: Hands-On With Leading AI Tools",
+          lessons: [
+            { title: "Keragon – HIPAA-compliant AI automation for clinical/operational workflows", duration: "8 min", type: "video" },
+            { title: "Aidoc – AI radiology for urgent findings in CT imaging", duration: "8 min", type: "video" },
+            { title: "PathAI – Deep learning to improve pathology accuracy (esp. cancer)", duration: "8 min", type: "video" },
+            { title: "Exercise: Pick one of these tools, explore its website/demo, and outline how it could fit into your workflow", duration: "12 min", type: "exercise" }
+          ]
+        },
+        {
+          section: "Module 6: Preparing for the Future of AI in Healthcare",
+          lessons: [
+            { title: "Emerging Trends: Digital Twins, Personalized Medicine, Model Context Protocol", duration: "10 min", type: "video" },
+            { title: "Upskilling Yourself and Your Team", duration: "8 min", type: "video" },
+            { title: "Final Reflection: Create a 30-day action plan for applying AI in your role", duration: "10 min", type: "exercise" }
           ]
         }
       ],
@@ -726,32 +762,32 @@ const englishContent: Content = {
         {
           name: "Patricia Davis",
           rating: 5,
-          comment: "Perfect for HR professionals! This course streamlined our entire recruitment process. The AI-powered candidate screening saves us 15 hours per position. Our hiring quality has improved significantly.",
+          comment: "Perfect for healthcare professionals! This course demystified AI for our clinical team. The hands-on demos of Keragon, Aidoc, and PathAI showed real applications we could implement. Our workflow automation project is already saving 2 hours daily.",
           timeAgo: "2 weeks ago"
         },
         {
           name: "Steven Miller",
           rating: 4,
-          comment: "Great practical HR applications. The policy drafting templates are incredibly useful - what used to take days now takes hours. The employee communication automation is a game-changer for our team.",
+          comment: "Excellent overview of AI in healthcare. The HIPAA compliance section was particularly valuable. As a radiologist, I'm now confident in evaluating AI tools like Aidoc for our department. The ethical considerations were eye-opening.",
           timeAgo: "1 month ago"
         },
         {
           name: "Diana Lopez",
           rating: 5,
-          comment: "As an HR director at a growing startup, this course was exactly what I needed. The automated onboarding workflows and performance review templates scaled our HR operations beautifully.",
+          comment: "As a nurse manager, this course was exactly what I needed to understand AI's potential in patient care. The 30-day action plan helped me identify specific areas where AI could improve our operations and patient outcomes.",
           timeAgo: "3 weeks ago"
         },
         {
           name: "Brian Taylor",
           rating: 4,
-          comment: "Solid foundation for HR automation. The analytics section helped us identify retention patterns we never noticed before. Implementation was straightforward even for non-technical HR staff.",
+          comment: "Great beginner-friendly approach to healthcare AI. The case studies were relevant and practical. I'm now exploring PathAI for our pathology department. The course gave me the confidence to lead AI initiatives in our hospital.",
           timeAgo: "1 week ago"
         }
       ]
     },
     "ai-for-product-managers-vibe-coding-101": {
       title: "AI for Product Managers - Vibe Coding 101",
-      description: "Build product prototypes and automations by describing what you want—no coding required.",
+      description: "Transform your product ideas into reality in just 6 hours using Lovable, Cursor, v0, and Bolt. This hands-on course shows non-technical professionals exactly how to build marketing websites, landing pages, and SaaS MVPs by simply describing what you want. You'll walk away with ready-to-use prompt templates, a deployed project, and the confidence to prototype any idea instantly.",
       instructor: "Cho-Nan Tsai",
       rating: 4.9,
       ratingNum: 2156,
@@ -763,34 +799,78 @@ const englishContent: Content = {
       lastUpdated: "December 2024",
       language: "English",
       features: [
-        "No coding experience required",
-        "Hands-on projects included",
-        "Certificate of completion",
-        "Lifetime access",
-        "Mobile and desktop access"
+        "No coding experience required - perfect for non-technical professionals",
+        "Hands-on experience with top AI tools: Cursor, Lovable, v0, Bolt",
+        "Step-by-step guidance through individual projects",
+        "Ready-to-use prompt templates for landing pages and web apps",
+        "Complete project deployment and presentation experience",
+        "Certificate of completion in Vibe Coding"
       ],
       whatYouWillLearn: [
-        "Build web applications with natural language",
-        "Create automation workflows",
-        "Develop simple mobile apps",
-        "Integrate APIs and services",
-        "Deploy applications to the cloud"
+        "How to use Vibe Coding tools to build websites without coding",
+        "Writing effective natural language prompts to communicate with AI",
+        "Navigating user-friendly interfaces of popular Vibe Coding platforms",
+        "Using prompt templates to speed up app and webpage creation",
+        "Rapid prototyping, building and deploying MVPs independently",
+        "Creating marketing websites, landing pages, and internal tools"
       ],
       curriculum: [
         {
-          section: "Vibe Coding Fundamentals",
+          section: "Introduction to Vibe Coding for non-coders",
           lessons: [
-            { title: "Introduction to Vibe Coding", duration: "30 min", type: "video" },
-            { title: "Natural Language to Code", duration: "35 min", type: "video" },
-            { title: "Building Your First App", duration: "40 min", type: "video" }
+            { title: "What is vibe coding?", duration: "20 min", type: "video" },
+            { title: "Vibe coding for startups vs. larger companies", duration: "15 min", type: "video" },
+            { title: "Comparison of top AI tools: Cursor, Lovable, v0, Bolt", duration: "25 min", type: "video" }
           ]
         },
         {
-          section: "Advanced Applications",
+          section: "Mastering Prompts for Vibe Coding",
           lessons: [
-            { title: "API Integration and Automation", duration: "45 min", type: "video" },
-            { title: "Mobile App Development", duration: "50 min", type: "video" },
-            { title: "Project: Complete Web Application", duration: "60 min", type: "project" }
+            { title: "How to write great prompts?", duration: "20 min", type: "video" },
+            { title: "Prompt templates you can steal for making landing page, web apps quickly", duration: "30 min", type: "video" }
+          ]
+        },
+        {
+          section: "Vibe Coding Best Practices",
+          lessons: [
+            { title: "Best use cases of vibe coding", duration: "15 min", type: "video" },
+            { title: "Dangers of vibe coding", duration: "10 min", type: "video" },
+            { title: "Do's and Don'ts", duration: "15 min", type: "video" }
+          ]
+        },
+        {
+          section: "Using Lovable AI",
+          lessons: [
+            { title: "What is Lovable?", duration: "10 min", type: "video" },
+            { title: "Lovable UI overview", duration: "15 min", type: "video" },
+            { title: "Best Lovable prompt templates", duration: "20 min", type: "video" },
+            { title: "Building on Lovable without a developer", duration: "25 min", type: "exercise" },
+            { title: "Creating marketing websites and landing pages", duration: "30 min", type: "exercise" }
+          ]
+        },
+        {
+          section: "Using Supabase",
+          lessons: [
+            { title: "What is Supabase?", duration: "10 min", type: "video" },
+            { title: "Authentication setup", duration: "15 min", type: "video" },
+            { title: "Database setup", duration: "20 min", type: "video" },
+            { title: "Building Software-As-A-Service software MVP using Lovable and Supabase", duration: "45 min", type: "project" }
+          ]
+        },
+        {
+          section: "Step-by-step Vibe Coding Your Own Project",
+          lessons: [
+            { title: "Creating a Product Requirement Document with AI", duration: "20 min", type: "video" },
+            { title: "Instructor guiding students through individual projects", duration: "40 min", type: "exercise" },
+            { title: "Iterating through your software", duration: "30 min", type: "exercise" },
+            { title: "Deploying your project online", duration: "25 min", type: "video" }
+          ]
+        },
+        {
+          section: "Project Presentation",
+          lessons: [
+            { title: "Each group presents their project", duration: "30 min", type: "project" },
+            { title: "Conclusion and networking", duration: "15 min", type: "video" }
           ]
         }
       ],
@@ -798,25 +878,25 @@ const englishContent: Content = {
         {
           name: "Amanda Foster",
           rating: 5,
-          comment: "Mind-blowing course! I built my first web app in just 2 hours without writing a single line of code. The natural language approach makes app development accessible to everyone. This is the future!",
+          comment: "Mind-blowing course! Using Lovable and the prompt templates, I built a complete landing page for my startup in just 2 hours. The step-by-step guidance through individual projects was invaluable. This is the future of product development!",
           timeAgo: "1 week ago"
         },
         {
           name: "James Rodriguez",
           rating: 5,
-          comment: "As a non-technical founder, this course was a revelation. I can now prototype ideas instantly and build functional apps for my business. The API integration section opened up endless possibilities.",
+          comment: "As a non-technical founder, this course was a revelation. The comparison of Cursor, Lovable, v0, and Bolt helped me choose the right tools. I now prototype ideas instantly and built a functional SaaS MVP using Lovable and Supabase.",
           timeAgo: "2 weeks ago"
         },
         {
           name: "Sophie Chen",
           rating: 4,
-          comment: "Incredible technology! The course makes app development feel like having a conversation. I created automation tools that save my team hours daily. Some advanced features could be explained more clearly.",
+          comment: "Excellent hands-on approach! The prompt templates for web apps are pure gold. I created multiple marketing websites for clients using vibe coding. The project presentation aspect really helped solidify my learning.",
           timeAgo: "3 weeks ago"
         },
         {
           name: "Michael Johnson",
           rating: 5,
-          comment: "Revolutionary approach to coding! I went from idea to deployed application in one weekend. The mobile app development section was particularly impressive. This democratizes software development.",
+          comment: "Revolutionary approach to building software! The course taught me to communicate effectively with AI tools. I went from idea to deployed application in one weekend using the techniques learned. Perfect for product managers!",
           timeAgo: "1 month ago"
         }
       ]
