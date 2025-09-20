@@ -1160,6 +1160,624 @@ const zhContent: Content = {
     ]
   },
 
+  courses: {
+    "ai-for-finance-professionals": {
+      ...englishContent.courses["ai-for-finance-professionals"],
+      title: "AI 金融專業課程",
+      description: "了解 AI 如何改變你的財務工作流程，無需編寫任何程式碼。本課程為財務專業人士介紹預測、報告和自動化中的實用 AI 應用。學習如何運用現成的 AI 工具節省時間、減少錯誤並做出更明智的決策。",
+      instructor: "蔡卓南",
+      duration: "2 小時",
+      level: "初學者",
+      language: "繁體中文",
+      features: [
+        "4-8 分鐘課程，輕鬆學習",
+        "每個主要模組後的測驗",
+        "可下載資源：工作流程檢查清單、提示庫、AI 工具指南",
+        "完成證書：AI 就緒財務專業人士",
+        "無需程式設計或技術背景"
+      ],
+      whatYouWillLearn: [
+        "了解 AI、機器學習和生成式 AI 的基礎知識",
+        "識別可用 AI 自動化的財務任務",
+        "使用簡單的 AI 工具進行預測、報告撰寫和分析",
+        "與 AI 或數據團隊有效溝通",
+        "立即在你的角色中應用實用的 AI 技能"
+      ],
+      curriculum: [
+        {
+          section: "模組 1：金融 AI 介紹",
+          lessons: [
+            { title: "什麼是 AI？", duration: "5 分鐘", type: "video" },
+            { title: "為什麼 AI 對金融很重要", duration: "5 分鐘", type: "video" },
+            { title: "真實案例：財務規劃與分析、報告和詐欺檢測", duration: "5 分鐘", type: "video" }
+          ]
+        },
+        {
+          section: "模組 2：財務專業人士的 AI 基礎",
+          lessons: [
+            { title: "核心概念：模型、預測和數據", duration: "6 分鐘", type: "video" },
+            { title: "AI vs 傳統分析", duration: "5 分鐘", type: "video" },
+            { title: "倫理、合規和偏見", duration: "6 分鐘", type: "video" },
+            { title: "測驗：識別 AI 使用案例", duration: "4 分鐘", type: "quiz" }
+          ]
+        },
+        {
+          section: "模組 3：自動化重複性財務任務",
+          lessons: [
+            { title: "識別可自動化的任務", duration: "5 分鐘", type: "video" },
+            { title: "使用 AI 進行發票處理和對帳", duration: "6 分鐘", type: "video" },
+            { title: "自動化報告和儀表板", duration: "6 分鐘", type: "video" },
+            { title: "實作練習：規劃一個你可以自動化的任務", duration: "7 分鐘", type: "exercise" },
+            { title: "快速獲勝回顧", duration: "6 分鐘", type: "video" }
+          ]
+        },
+        {
+          section: "模組 4：預測與分析的 AI",
+          lessons: [
+            { title: "AI 預測介紹", duration: "6 分鐘", type: "video" },
+            { title: "使用無程式碼 AI 工具進行情境分析", duration: "6 分鐘", type: "video" },
+            { title: "解釋結果和儀表板", duration: "6 分鐘", type: "video" },
+            { title: "練習：從你自己的數據建立簡單預測", duration: "7 分鐘", type: "exercise" },
+            { title: "可行洞察的提示", duration: "5 分鐘", type: "video" }
+          ]
+        },
+        {
+          section: "模組 5：溝通與報告的 AI",
+          lessons: [
+            { title: "起草董事會簡報和投資者備忘錄", duration: "5 分鐘", type: "video" },
+            { title: "使用 AI 總結財務報告", duration: "5 分鐘", type: "video" },
+            { title: "實作練習：將原始數據轉化為敘述", duration: "6 分鐘", type: "exercise" },
+            { title: "回顧與下一步", duration: "4 分鐘", type: "video" }
+          ]
+        },
+        {
+          section: "最終評估 / 總結",
+          lessons: [
+            { title: "迷你專案：識別你角色中 2 個可受益於 AI 的財務任務", duration: "5 分鐘", type: "project" },
+            { title: "課程總結和建議的下一步", duration: "5 分鐘", type: "video" }
+          ]
+        }
+      ],
+      reviews: [
+        {
+          name: "Sarah Martinez",
+          rating: 5,
+          comment: "這門課程徹底改變了我對財務中 AI 的看法。我現在使用 AI 工具自動化月度報告，節省了數小時的工作時間。實用性極高！",
+          timeAgo: "1 週前"
+        },
+        {
+          name: "David Kim",
+          rating: 4,
+          comment: "作為財務分析師，這門課程為我提供了在日常工作中應用 AI 的實用策略。預測模組特別有價值。",
+          timeAgo: "2 週前"
+        },
+        {
+          name: "Lisa Chen",
+          rating: 5,
+          comment: "無需技術背景就能學習 AI 在財務中的應用，這門課程做得很好。我已經開始在預算規劃中使用所學的技能。",
+          timeAgo: "3 週前"
+        },
+        {
+          name: "Robert Johnson",
+          rating: 4,
+          comment: "課程結構清晰，實用性強。我特別喜歡關於合規和倫理的討論，這在財務領域非常重要。",
+          timeAgo: "1 個月前"
+        }
+      ]
+    },
+    "ai-for-marketing-professionals": {
+      ...englishContent.courses["ai-for-marketing-professionals"],
+      title: "AI 行銷專業課程",
+      description: "掌握 AI 驅動的行銷策略和工具，提升你的行銷效果。本課程涵蓋內容創作、客戶分析、廣告優化和自動化行銷流程，讓你成為 AI 時代的行銷專家。",
+      instructor: "蔡卓南",
+      duration: "2.5 小時",
+      level: "初學者",
+      language: "繁體中文",
+      features: [
+        "學習最新的 AI 行銷工具和平台",
+        "實作內容創作和廣告優化",
+        "客戶分析和個人化行銷策略",
+        "行銷自動化工作流程設計",
+        "完成證書：AI 行銷專家"
+      ],
+      whatYouWillLearn: [
+        "使用 AI 工具進行內容創作和優化",
+        "實施 AI 驅動的客戶分析",
+        "自動化行銷活動和電子郵件序列",
+        "優化廣告投放和 ROI",
+        "建立個人化的客戶體驗"
+      ],
+      curriculum: [
+        {
+          section: "模組 1：AI 行銷基礎",
+          lessons: [
+            { title: "AI 如何改變行銷格局", duration: "10 分鐘", type: "video" },
+            { title: "關鍵 AI 行銷工具概覽", duration: "15 分鐘", type: "video" },
+            { title: "行銷中的 AI 倫理考量", duration: "10 分鐘", type: "video" }
+          ]
+        },
+        {
+          section: "模組 2：AI 內容創作",
+          lessons: [
+            { title: "AI 文案寫作工具", duration: "15 分鐘", type: "video" },
+            { title: "視覺內容生成", duration: "20 分鐘", type: "video" },
+            { title: "內容優化和 A/B 測試", duration: "15 分鐘", type: "exercise" }
+          ]
+        },
+        {
+          section: "模組 3：客戶分析與個人化",
+          lessons: [
+            { title: "AI 客戶細分", duration: "15 分鐘", type: "video" },
+            { title: "預測客戶行為", duration: "15 分鐘", type: "video" },
+            { title: "個人化行銷策略", duration: "20 分鐘", type: "exercise" }
+          ]
+        },
+        {
+          section: "模組 4：廣告與 ROI 優化",
+          lessons: [
+            { title: "AI 廣告投放優化", duration: "15 分鐘", type: "video" },
+            { title: "預測廣告效果", duration: "15 分鐘", type: "video" },
+            { title: "ROI 測量和優化", duration: "15 分鐘", type: "exercise" }
+          ]
+        }
+      ],
+      reviews: [
+        {
+          name: "Emily Wang",
+          rating: 5,
+          comment: "這門課程幫助我大幅提升了內容創作的效率。AI 工具讓我能快速生成高品質的行銷材料，效果驚人！",
+          timeAgo: "1 週前"
+        },
+        {
+          name: "Mark Thompson",
+          rating: 4,
+          comment: "客戶分析模組特別實用。我現在能更好地了解客戶行為並制定更有效的行銷策略。",
+          timeAgo: "2 週前"
+        },
+        {
+          name: "Jennifer Liu",
+          rating: 5,
+          comment: "廣告優化部分改變了我的遊戲規則。使用 AI 工具後，我的廣告 ROI 提升了 40%。",
+          timeAgo: "3 週前"
+        },
+        {
+          name: "Alex Chen",
+          rating: 4,
+          comment: "課程內容實用且易於理解。即使沒有技術背景，也能輕鬆掌握 AI 行銷工具的使用。",
+          timeAgo: "1 個月前"
+        }
+      ]
+    },
+    "ai-for-software-developers": {
+      ...englishContent.courses["ai-for-software-developers"],
+      title: "AI 軟體開發課程",
+      description: "學習如何將 AI 整合到你的軟體開發工作流程中，無需成為數據科學家。本實用課程向開發者展示如何使用現代 AI 工具、API 和平台來提升生產力、增強應用程式並在 AI 驅動的未來中保持領先。",
+      instructor: "蔡卓南",
+      duration: "2 小時",
+      level: "初學者",
+      language: "繁體中文",
+      features: [
+        "學習流行的 AI API 和 SDK",
+        "使用 AI 工具加速編碼、測試和文檔",
+        "從零開始規劃和建構 AI 驅動專案",
+        "理解和應用模型上下文協議",
+        "完成證書：AI 原生軟體開發者"
+      ],
+      whatYouWillLearn: [
+        "了解與軟體開發相關的關鍵 AI 概念",
+        "使用流行的 AI API 和 SDK 為應用程式添加功能",
+        "利用 AI 工具加速編碼、測試和文檔",
+        "從零開始規劃和建構小型 AI 驅動專案",
+        "理解和應用模型上下文協議以簡化 AI 整合"
+      ],
+      curriculum: [
+        {
+          section: "模組 1：開發者的 AI 介紹",
+          lessons: [
+            { title: "對軟體開發者而言什麼是 AI（以及什麼不是）", duration: "10 分鐘", type: "video" },
+            { title: "應用程式和服務中 AI 的真實案例", duration: "15 分鐘", type: "video" },
+            { title: "流行 AI 平台、API 和工具概覽", duration: "15 分鐘", type: "video" }
+          ]
+        },
+        {
+          section: "模組 2：開發者的 AI 基礎",
+          lessons: [
+            { title: "核心概念：模型、訓練、推理、數據", duration: "15 分鐘", type: "video" },
+            { title: "AI vs 傳統算法", duration: "10 分鐘", type: "video" },
+            { title: "在軟體中使用 AI 的關鍵倫理和合規考量", duration: "15 分鐘", type: "video" }
+          ]
+        },
+        {
+          section: "模組 3：使用 AI 工具提升開發者生產力",
+          lessons: [
+            { title: "AI 編碼輔助（代碼完成、重構、文檔）", duration: "15 分鐘", type: "video" },
+            { title: "AI 自動化測試和錯誤檢測", duration: "15 分鐘", type: "video" },
+            { title: "實作：在你的 IDE 中使用代碼輔助工具", duration: "20 分鐘", type: "exercise" }
+          ]
+        },
+        {
+          section: "模組 4：將 AI API 整合到應用程式中",
+          lessons: [
+            { title: "文本、圖像和語音 API 概覽", duration: "15 分鐘", type: "video" },
+            { title: "實作：從簡單應用程式調用 AI API", duration: "20 分鐘", type: "exercise" },
+            { title: "處理身份驗證、速率限制和數據隱私", duration: "15 分鐘", type: "video" },
+            { title: "錯誤處理和模型更新的最佳實踐", duration: "15 分鐘", type: "video" }
+          ]
+        },
+        {
+          section: "模組 5：使用模型上下文協議",
+          lessons: [
+            { title: "什麼是模型上下文協議以及為什麼重要", duration: "15 分鐘", type: "video" },
+            { title: "MCP 如何改善模型和應用程式之間的上下文共享", duration: "15 分鐘", type: "video" },
+            { title: "實作：實現簡單的 MCP 啟用整合", duration: "20 分鐘", type: "exercise" },
+            { title: "安全和高效上下文交換的最佳實踐", duration: "15 分鐘", type: "video" }
+          ]
+        },
+        {
+          section: "模組 6：從零開始建構 AI 驅動功能",
+          lessons: [
+            { title: "選擇用例（聊天機器人、摘要器、推薦器等）", duration: "15 分鐘", type: "video" },
+            { title: "設計功能架構", duration: "15 分鐘", type: "video" },
+            { title: "實作：使用無程式碼或低程式碼 SDK 實現最小 AI 功能", duration: "25 分鐘", type: "exercise" },
+            { title: "測試和部署你的 AI 驅動功能", duration: "15 分鐘", type: "video" }
+          ]
+        },
+        {
+          section: "模組 7：規劃你作為開發者的 AI 旅程",
+          lessons: [
+            { title: "識別 AI 可以在你的專案中添加價值的地方", duration: "15 分鐘", type: "video" },
+            { title: "在建構 vs 購買 vs 整合之間選擇", duration: "15 分鐘", type: "video" },
+            { title: "跟上 AI 趨勢和工具", duration: "10 分鐘", type: "video" },
+            { title: "課程總結和下一步", duration: "10 分鐘", type: "video" }
+          ]
+        }
+      ],
+      reviews: [
+        {
+          name: "Kevin Zhang",
+          rating: 5,
+          comment: "這門課程完美地展示了如何將 AI 整合到現有的開發工作流程中。API 整合部分特別實用，我已經開始在專案中使用這些技術。",
+          timeAgo: "1 週前"
+        },
+        {
+          name: "Rachel Park",
+          rating: 4,
+          comment: "作為一名資深開發者，我學到了很多關於 AI 工具的新知識。代碼輔助工具的使用讓我大幅提升了開發效率。",
+          timeAgo: "2 週前"
+        },
+        {
+          name: "Tom Wilson",
+          rating: 5,
+          comment: "模型上下文協議的部分讓我大開眼界。這將徹底改變我們如何設計和建構 AI 驅動的應用程式。",
+          timeAgo: "3 週前"
+        },
+        {
+          name: "Sandra Lee",
+          rating: 4,
+          comment: "課程結構清晰，實作練習很有價值。我特別喜歡從零開始建構 AI 功能的部分，讓我對 AI 開發有了更深的理解。",
+          timeAgo: "1 個月前"
+        }
+      ]
+    },
+    "ai-for-business-leaders": {
+      ...englishContent.courses["ai-for-business-leaders"],
+      title: "AI 企業領導課程",
+      description: "本課程向非技術企業領導者介紹人工智慧、其在策略和營運中的應用，以及在組織內負責任地開始使用 AI 的實用方法。它將簡潔的講座與實作練習和真實案例相結合，讓學習者能夠立即將洞察應用到自己的情境中。",
+      instructor: "蔡卓南",
+      duration: "2 小時",
+      level: "初學者",
+      language: "繁體中文",
+      video: "intro.mp4",
+      features: [
+        "了解 AI 及其戰略價值",
+        "將 AI 整合到業務策略中",
+        "管理 AI 專案和團隊",
+        "導航 AI 部署的倫理、法律和風險考量",
+        "完成證書：AI 就緒企業領導者"
+      ],
+      whatYouWillLearn: [
+        "了解與業務領導相關的核心 AI 概念",
+        "識別並優先考慮與業務策略一致的 AI 機會",
+        "更有效地管理 AI 計劃和團隊",
+        "導航 AI 部署的倫理、法律和風險考量",
+        "親手實驗無程式碼 AI 工具以獲得即時生產力提升"
+      ],
+      curriculum: [
+        {
+          section: "模組 1：了解 AI 及其戰略價值",
+          lessons: [
+            { title: "對企業而言什麼是 AI（以及什麼不是）", duration: "10 分鐘", type: "video" },
+            { title: "每位領導者都應該知道的關鍵 AI 概念", duration: "15 分鐘", type: "video" },
+            { title: "AI 的競爭優勢：跨行業案例研究", duration: "15 分鐘", type: "video" },
+            { title: "練習：識別你組織中的 AI 機會", duration: "10 分鐘", type: "exercise" }
+          ]
+        },
+        {
+          section: "模組 2：將 AI 整合到業務策略中",
+          lessons: [
+            { title: "AI 和數位轉型 - 與業務目標對齊", duration: "15 分鐘", type: "video" },
+            { title: "建立數據驅動文化", duration: "15 分鐘", type: "video" },
+            { title: "選擇正確的 AI 用例：成本、ROI 和風險", duration: "15 分鐘", type: "video" },
+            { title: "練習：為你的公司起草簡單的 AI 機會矩陣", duration: "10 分鐘", type: "exercise" }
+          ]
+        },
+        {
+          section: "模組 3：管理 AI 專案和團隊",
+          lessons: [
+            { title: "AI 專案與傳統 IT 專案的差異", duration: "15 分鐘", type: "video" },
+            { title: "與數據科學家和供應商合作", duration: "15 分鐘", type: "video" },
+            { title: "AI 計劃的預算和時間線基礎", duration: "15 分鐘", type: "video" },
+            { title: "練習：為假設的 AI 計劃映射利益相關者", duration: "10 分鐘", type: "exercise" }
+          ]
+        },
+        {
+          section: "模組 4：倫理、法律和風險考量",
+          lessons: [
+            { title: "負責任的 AI：偏見、公平性和透明度", duration: "15 分鐘", type: "video" },
+            { title: "監管環境和治理（GDPR、AI 法案等）", duration: "15 分鐘", type: "video" },
+            { title: "建立內部 AI 政策或框架", duration: "15 分鐘", type: "video" },
+            { title: "練習：為你的公司起草 3 個關鍵原則", duration: "10 分鐘", type: "exercise" }
+          ]
+        },
+        {
+          section: "模組 5：領導者使用 AI 工具的實作",
+          lessons: [
+            { title: "無程式碼 AI 工具的快速演示", duration: "15 分鐘", type: "video" },
+            { title: "領導者的提示工程基礎", duration: "15 分鐘", type: "video" },
+            { title: "練習：使用無程式碼 AI 工具總結報告或建立快速洞察", duration: "10 分鐘", type: "exercise" }
+          ]
+        },
+        {
+          section: "模組 6：業務領導中 AI 的未來",
+          lessons: [
+            { title: "新興趨勢（代理 AI、模型上下文協議、自主決策）", duration: "15 分鐘", type: "video" },
+            { title: "建立長期 AI 準備和能力", duration: "10 分鐘", type: "video" },
+            { title: "最終反思：你的 30 天 AI 領導行動計劃", duration: "10 分鐘", type: "exercise" }
+          ]
+        }
+      ],
+      reviews: [
+        {
+          name: "Michael Chen",
+          rating: 5,
+          comment: "這門課程為我提供了領導 AI 轉型所需的所有工具。策略模組特別有價值，幫助我為公司制定了清晰的 AI 路線圖。",
+          timeAgo: "1 週前"
+        },
+        {
+          name: "Sarah Johnson",
+          rating: 4,
+          comment: "作為非技術領導者，這門課程讓我對 AI 有了更深入的理解。倫理考量部分讓我能夠做出更負責任的決策。",
+          timeAgo: "2 週前"
+        },
+        {
+          name: "David Liu",
+          rating: 5,
+          comment: "實作練習讓我親身體驗了 AI 工具的能力。我現在對如何在我的組織中實施 AI 有了更清晰的願景。",
+          timeAgo: "3 週前"
+        },
+        {
+          name: "Jennifer Wang",
+          rating: 4,
+          comment: "課程內容全面且實用。我特別喜歡關於管理 AI 專案和團隊的部分，這對我作為 CIO 來說非常有價值。",
+          timeAgo: "1 個月前"
+        }
+      ]
+    },
+    "ai-for-healthcare-professionals": {
+      ...englishContent.courses["ai-for-healthcare-professionals"],
+      title: "AI 醫療專業課程",
+      description: "這門初學者友善的課程解釋 AI 如何改變醫療保健，並讓專業人士親身體驗三種領先工具：Keragon（工作流程的 AI 自動化）、Aidoc（AI 放射學）和 PathAI（AI 病理學）。在不到兩小時內，你將學習 AI 如何應用於診斷、營運和患者護理，以及如何安全且合乎倫理地評估工具。",
+      instructor: "蔡卓南",
+      duration: "2 小時",
+      level: "初學者",
+      language: "繁體中文",
+      features: [
+        "了解醫療保健中的關鍵 AI 概念",
+        "識別臨床、行政和患者體驗情境中的實用 AI 應用",
+        "識別倫理和監管考量",
+        "評估三種領先的 AI 醫療工具：Keragon、Aidoc、PathAI",
+        "完成證書：AI 就緒醫療專業人士"
+      ],
+      whatYouWillLearn: [
+        "了解與醫療保健相關的關鍵 AI 概念",
+        "識別臨床、行政和患者體驗情境中的實用 AI 應用",
+        "識別倫理和監管考量",
+        "評估三種領先的 AI 醫療工具：Keragon、Aidoc、PathAI",
+        "建立將 AI 融入專業實踐的個人計劃"
+      ],
+      curriculum: [
+        {
+          section: "模組 1：醫療保健中的 AI 介紹",
+          lessons: [
+            { title: "AI 對醫療保健專業人士的意義", duration: "10 分鐘", type: "video" },
+            { title: "核心概念：機器學習、NLP、預測分析", duration: "15 分鐘", type: "video" },
+            { title: "臨床和行政環境中的真實案例", duration: "15 分鐘", type: "video" },
+            { title: "練習：識別你工作中 AI 可以幫助的一個領域", duration: "10 分鐘", type: "exercise" }
+          ]
+        },
+        {
+          section: "模組 2：臨床實踐和診斷中的 AI",
+          lessons: [
+            { title: "影像和放射學：AI 如何優先處理關鍵案例", duration: "15 分鐘", type: "video" },
+            { title: "病理學和精準醫學", duration: "15 分鐘", type: "video" },
+            { title: "練習：回顧 AI 輔助診斷的案例研究並列出好處和風險", duration: "10 分鐘", type: "exercise" }
+          ]
+        },
+        {
+          section: "模組 3：營運和患者體驗中的 AI",
+          lessons: [
+            { title: "自動化行政任務（登記、保險、排程）", duration: "15 分鐘", type: "video" },
+            { title: "AI 驅動的聊天機器人和遠程患者監測", duration: "15 分鐘", type: "video" },
+            { title: "練習：映射你部門中一個可以自動化的簡單工作流程", duration: "10 分鐘", type: "exercise" }
+          ]
+        },
+        {
+          section: "模組 4：數據、隱私和倫理",
+          lessons: [
+            { title: "HIPAA、GDPR 和 AI 系統中的患者數據安全", duration: "15 分鐘", type: "video" },
+            { title: "醫療保健 AI 中的偏見、公平性和透明度", duration: "15 分鐘", type: "video" },
+            { title: "與患者和利益相關者建立信任", duration: "15 分鐘", type: "video" },
+            { title: "練習：為你的組織起草三項負責任 AI 使用指南", duration: "10 分鐘", type: "exercise" }
+          ]
+        },
+        {
+          section: "模組 5：領先 AI 工具的實作",
+          lessons: [
+            { title: "Keragon - 臨床/營運工作流程的 HIPAA 合規 AI 自動化", duration: "15 分鐘", type: "video" },
+            { title: "Aidoc - CT 影像中緊急發現的 AI 放射學", duration: "15 分鐘", type: "video" },
+            { title: "PathAI - 改善病理學準確性的深度學習", duration: "15 分鐘", type: "video" },
+            { title: "練習：選擇其中一個工具，探索其網站/演示，並概述它如何融入你的工作流程", duration: "15 分鐘", type: "exercise" }
+          ]
+        },
+        {
+          section: "模組 6：為醫療保健 AI 的未來做準備",
+          lessons: [
+            { title: "新興趨勢：數位雙胞胎、個人化醫學、模型上下文協議", duration: "15 分鐘", type: "video" },
+            { title: "提升你自己和你的團隊", duration: "10 分鐘", type: "video" },
+            { title: "最終反思：建立將 AI 融入你角色的 30 天行動計劃", duration: "10 分鐘", type: "exercise" }
+          ]
+        }
+      ],
+      reviews: [
+        {
+          name: "Dr. Anna Wu",
+          rating: 5,
+          comment: "這門課程為我提供了在醫療實踐中實施 AI 所需的所有基礎知識。工具演示特別有價值，讓我對可用的選項有了清晰的了解。",
+          timeAgo: "1 週前"
+        },
+        {
+          name: "Dr. James Lin",
+          rating: 4,
+          comment: "作為放射科醫師，我對 Aidoc 的演示印象深刻。這門課程幫助我了解如何在我們的實踐中評估和實施 AI 工具。",
+          timeAgo: "2 週前"
+        },
+        {
+          name: "Nurse Sarah Chen",
+          rating: 5,
+          comment: "倫理考量部分讓我能夠更好地理解在患者護理中使用 AI 的責任。這門課程對所有醫療專業人士都很有價值。",
+          timeAgo: "3 週前"
+        },
+        {
+          name: "Dr. Michael Park",
+          rating: 4,
+          comment: "實用性強，易於理解。我特別喜歡關於數據隱私和合規的部分，這在醫療保健中至關重要。",
+          timeAgo: "1 個月前"
+        }
+      ]
+    },
+    "ai-for-product-managers-vibe-coding-101": {
+      ...englishContent.courses["ai-for-product-managers-vibe-coding-101"],
+      title: "AI 產品經理課程 - Vibe Coding 101",
+      description: "使用 Lovable、Cursor、v0 和 Bolt 在短短 6 小時內將你的產品想法轉化為現實。這門實作課程向非技術專業人士展示如何通過簡單描述你想要的內容來建構行銷網站、登陸頁面和 SaaS MVP。你將帶著現成的提示範本、已部署的專案以及立即原型化任何想法的信心離開。",
+      instructor: "蔡卓南",
+      duration: "6 小時",
+      level: "初學者",
+      language: "繁體中文",
+      features: [
+        "無需程式設計經驗 - 完美適合非技術專業人士",
+        "頂級 AI 工具的實作經驗：Cursor、Lovable、v0、Bolt",
+        "個人專案的逐步指導",
+        "登陸頁面和 Web 應用的現成提示範本",
+        "完整的專案部署和演示體驗",
+        "Vibe Coding 完成證書"
+      ],
+      whatYouWillLearn: [
+        "如何使用 Vibe Coding 工具建構無需程式設計的網站",
+        "撰寫有效的自然語言提示與 AI 溝通",
+        "導航流行 Vibe Coding 平台的用戶友善界面",
+        "使用提示範本加速應用程式和網頁創建",
+        "獨立進行快速原型設計、建構和部署 MVP",
+        "創建行銷網站、登陸頁面和內部工具"
+      ],
+      curriculum: [
+        {
+          section: "非程式設計師的 Vibe Coding 介紹",
+          lessons: [
+            { title: "什麼是 vibe coding？", duration: "20 分鐘", type: "video" },
+            { title: "新創公司 vs 大型公司的 Vibe Coding", duration: "15 分鐘", type: "video" },
+            { title: "頂級 AI 工具比較：Cursor、Lovable、v0、Bolt", duration: "25 分鐘", type: "video" }
+          ]
+        },
+        {
+          section: "掌握 Vibe Coding 的提示",
+          lessons: [
+            { title: "如何撰寫出色的提示？", duration: "20 分鐘", type: "video" },
+            { title: "你可以偷用的提示範本，快速製作登陸頁面、Web 應用", duration: "30 分鐘", type: "video" }
+          ]
+        },
+        {
+          section: "Vibe Coding 最佳實踐",
+          lessons: [
+            { title: "Vibe Coding 的最佳用例", duration: "15 分鐘", type: "video" },
+            { title: "Vibe Coding 的危險", duration: "10 分鐘", type: "video" },
+            { title: "該做和不該做的事", duration: "15 分鐘", type: "video" }
+          ]
+        },
+        {
+          section: "使用 Lovable AI",
+          lessons: [
+            { title: "什麼是 Lovable？", duration: "10 分鐘", type: "video" },
+            { title: "Lovable UI 概覽", duration: "15 分鐘", type: "video" },
+            { title: "最佳 Lovable 提示範本", duration: "20 分鐘", type: "video" },
+            { title: "無需開發者在 Lovable 上建構", duration: "25 分鐘", type: "exercise" },
+            { title: "創建行銷網站和登陸頁面", duration: "30 分鐘", type: "exercise" }
+          ]
+        },
+        {
+          section: "使用 Supabase",
+          lessons: [
+            { title: "什麼是 Supabase？", duration: "10 分鐘", type: "video" },
+            { title: "身份驗證設置", duration: "15 分鐘", type: "video" },
+            { title: "數據庫設置", duration: "20 分鐘", type: "video" },
+            { title: "使用 Lovable 和 Supabase 建構軟體即服務軟體 MVP", duration: "45 分鐘", type: "project" }
+          ]
+        },
+        {
+          section: "逐步 Vibe Coding 你自己的專案",
+          lessons: [
+            { title: "使用 AI 創建產品需求文件", duration: "20 分鐘", type: "video" },
+            { title: "講師指導學生完成個人專案", duration: "40 分鐘", type: "exercise" },
+            { title: "迭代你的軟體", duration: "30 分鐘", type: "exercise" },
+            { title: "線上部署你的專案", duration: "25 分鐘", type: "video" }
+          ]
+        },
+        {
+          section: "專案演示",
+          lessons: [
+            { title: "每組演示他們的專案", duration: "30 分鐘", type: "project" },
+            { title: "結論和網路交流", duration: "15 分鐘", type: "video" }
+          ]
+        }
+      ],
+      reviews: [
+        {
+          name: "Amanda Foster",
+          rating: 5,
+          comment: "令人驚嘆的課程！使用 Lovable 和提示範本，我在短短 2 小時內為我的新創公司建構了一個完整的登陸頁面。個人專案的逐步指導非常寶貴。這就是產品開發的未來！",
+          timeAgo: "1 週前"
+        },
+        {
+          name: "James Rodriguez",
+          rating: 5,
+          comment: "作為非技術創始人，這門課程是一個啟示。Cursor、Lovable、v0 和 Bolt 的比較幫助我選擇了正確的工具。我現在可以立即原型化想法，並使用 Lovable 和 Supabase 建構了一個功能性的 SaaS MVP。",
+          timeAgo: "2 週前"
+        },
+        {
+          name: "Sophie Chen",
+          rating: 4,
+          comment: "優秀的實作方法！Web 應用的提示範本是純金。我使用 vibe coding 為客戶創建了多個行銷網站。專案演示方面確實有助於鞏固我的學習。",
+          timeAgo: "3 週前"
+        },
+        {
+          name: "Michael Johnson",
+          rating: 5,
+          comment: "建構軟體的革命性方法！這門課程教會我如何與 AI 工具有效溝通。我使用所學的技術在一個週末內從想法到部署應用程式。對產品經理來說完美！",
+          timeAgo: "1 個月前"
+        }
+      ]
+    }
+  },
+
   faq: {
     ...englishContent.faq,
     title: "常見問題",
@@ -1222,6 +1840,9 @@ const zhContent: Content = {
     }
   }
 } as const;
+
+// Export static content objects for testing
+export { englishContent, zhContent };
 
 // Export the appropriate content based on the URL locale prefix
 export const content: Content =
