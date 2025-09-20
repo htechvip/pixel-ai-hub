@@ -211,11 +211,11 @@ const englishContent: Content = {
       },
       {
         title: "AI for Marketing Professionals",
-        description: "Produce on-brand copy, visuals, and campaigns faster with review-ready outputs."
+        description: "Learn to automate marketing tasks and create compelling campaigns using practical AI tools."
       },
       {
         title: "AI for Software Developers",
-        description: "Streamline development workflows, automate testing, and accelerate code delivery."
+        description: "Learn to integrate AI APIs, use coding assistants, and build AI-powered features without becoming a data scientist."
       },
       {
         title: "AI for Business Leaders",
@@ -344,119 +344,200 @@ const englishContent: Content = {
       ]
     },
     "ai-for-marketing-professionals": {
-      title: "AI for Marketing Professionals",
-      description: "Produce on-brand copy, visuals, and campaigns faster with review-ready outputs.",
+      title: "AI for Marketing Professionals: A Beginner's Hands-On Guide",
+      description: "Transform your marketing workflow in just 2 hours using ChatGPT, Canva, and HubSpot AI. This hands-on course shows you exactly how to automate social media posts, optimize email subject lines, create content calendars, and build predictive models for lead scoring — all without writing a single line of code. You'll walk away with ready-to-use prompts, automation templates, and a complete AI-enhanced marketing process you can implement immediately.",
       instructor: "Cho-Nan Tsai",
       rating: 4.8,
       ratingNum: 892,
       students: 892,
-      duration: "3 hours",
+      duration: "2 hours",
       level: "Beginner",
       price: "$199",
       originalPrice: "$399",
       lastUpdated: "December 2024",
       language: "English",
       features: [
-        "No coding experience required",
-        "Hands-on projects included",
-        "Certificate of completion",
-        "Lifetime access",
-        "Mobile and desktop access"
+        "All lessons are short and focused (4–8 minutes each)",
+        "Hands-on demos with free or freemium AI tools (ChatGPT, Jasper, Canva, Zapier, HubSpot AI features, etc.)",
+        "Quizzes after each major module",
+        "Downloadable resources: AI prompt library for marketing, automation checklist, recommended tools list",
+        "Certificate of Completion: AI-Ready Marketing Professional"
       ],
       whatYouWillLearn: [
-        "Create compelling marketing copy with AI",
-        "Generate visual content and graphics",
-        "Develop campaign strategies",
-        "Automate content workflows",
-        "Maintain brand consistency"
+        "Understand core AI concepts relevant to marketing",
+        "Identify repetitive marketing tasks you can automate with AI",
+        "Use AI tools to create content, analyze campaigns, and personalize customer experiences",
+        "Build a simple AI-enhanced workflow for your own marketing tasks",
+        "Apply practical AI experience quickly to real campaigns"
       ],
       curriculum: [
         {
-          section: "Content Creation Basics",
+          section: "Module 1: Introduction to AI in Marketing",
           lessons: [
-            { title: "AI Writing Tools Overview", duration: "15 min", type: "video" },
-            { title: "Brand Voice and Tone", duration: "20 min", type: "video" },
-            { title: "Creating Effective Prompts", duration: "25 min", type: "video" }
+            { title: "What is AI and why marketers should care", duration: "6 min", type: "video" },
+            { title: "Real-world examples of AI in marketing: personalization, chatbots, content", duration: "8 min", type: "video" },
+            { title: "Overview of no-code AI tools for marketers", duration: "6 min", type: "video" }
           ]
         },
-          {
-            section: "Visual Content & Campaigns",
-            lessons: [
-              { title: "Image Generation with DALL-E", duration: "30 min", type: "video" },
-              { title: "Campaign Strategy Development", duration: "35 min", type: "video" },
-              { title: "Project: Complete Marketing Campaign", duration: "40 min", type: "project" }
-            ]
-          }
-        ],
+        {
+          section: "Module 2: AI Fundamentals for Marketers",
+          lessons: [
+            { title: "How AI \"thinks\": models, data, predictions", duration: "7 min", type: "video" },
+            { title: "AI vs traditional analytics in marketing", duration: "6 min", type: "video" },
+            { title: "Privacy, ethics, and compliance in AI marketing", duration: "7 min", type: "video" },
+            { title: "Quiz: Spot the AI use case", duration: "4 min", type: "quiz" }
+          ]
+        },
+        {
+          section: "Module 3: Automating Marketing Tasks with AI",
+          lessons: [
+            { title: "Identifying tasks to automate", duration: "5 min", type: "video" },
+            { title: "Hands-on: Using AI to create social media posts", duration: "8 min", type: "exercise" },
+            { title: "Hands-on: AI-driven email subject line & copy optimization", duration: "8 min", type: "exercise" },
+            { title: "Hands-on: Automating ad campaign reporting", duration: "7 min", type: "exercise" },
+            { title: "Recap: Quick wins for your marketing workflow", duration: "5 min", type: "video" }
+          ]
+        },
+        {
+          section: "Module 4: AI for Content Creation & Personalization",
+          lessons: [
+            { title: "Generative AI for blog posts, captions, and ads", duration: "8 min", type: "video" },
+            { title: "Hands-on: Build a content calendar with an AI tool", duration: "10 min", type: "exercise" },
+            { title: "Personalizing email campaigns using AI segmentation", duration: "7 min", type: "video" },
+            { title: "Hands-on: Creating a customer journey map with AI", duration: "8 min", type: "exercise" },
+            { title: "Tips to keep brand voice consistent with AI tools", duration: "6 min", type: "video" }
+          ]
+        },
+        {
+          section: "Module 5: AI Analytics for Marketers",
+          lessons: [
+            { title: "Using AI to analyze campaign performance", duration: "7 min", type: "video" },
+            { title: "Hands-on: Set up a simple predictive model for lead scoring or churn", duration: "10 min", type: "exercise" },
+            { title: "Recap & next steps", duration: "5 min", type: "video" }
+          ]
+        },
+        {
+          section: "Final Assessment / Wrap-Up",
+          lessons: [
+            { title: "Mini-project: Pick one marketing process you run today and redesign it with at least one AI tool", duration: "8 min", type: "project" },
+            { title: "Course summary & recommended next steps", duration: "4 min", type: "video" }
+          ]
+        }
+      ],
         reviews: [
           {
             name: "Jessica Wu",
             rating: 5,
-            comment: "Amazing course for marketers! I went from spending days on campaign copy to creating compelling content in hours. The brand voice consistency techniques are game-changing. Our engagement rates increased by 60%.",
+            comment: "Perfect for marketing beginners! The hands-on exercises with ChatGPT and Canva were incredibly practical. I immediately started using AI for our social media posts and email campaigns. Our engagement rates increased by 45%.",
             timeAgo: "1 week ago"
           },
           {
             name: "Alex Thompson",
             rating: 5,
-            comment: "As a small business owner, I couldn't afford a marketing team. This course taught me to create professional-quality visuals and copy using AI. My social media following grew 200% in just 2 months!",
+            comment: "As a small business owner, I couldn't afford a marketing team. This course taught me to automate repetitive tasks and create professional campaigns using free AI tools. My lead generation improved by 150%!",
             timeAgo: "3 weeks ago"
           },
           {
             name: "Maria Santos",
             rating: 4,
-            comment: "Excellent practical approach to AI marketing. The DALL-E section was incredibly useful for creating unique visuals. Only wish there was more content on video marketing with AI tools.",
+            comment: "Excellent hands-on approach! The content calendar exercise with AI tools was a game-changer. I love how the course focuses on practical applications rather than theory. The prompt library is incredibly useful.",
             timeAgo: "2 weeks ago"
           },
           {
             name: "Tom Wilson",
             rating: 5,
-            comment: "This course paid for itself in the first week! The automated content workflows I built save me 20 hours monthly. My clients love the consistent, high-quality output I can now deliver.",
+            comment: "This course paid for itself in the first week! The AI-driven email optimization and automated reporting saved me 15 hours weekly. The mini-project helped me redesign our entire lead nurturing process.",
             timeAgo: "1 month ago"
           }
         ]
       },
     "ai-for-software-developers": {
-      title: "AI for Software Developers",
-      description: "Streamline development workflows, automate testing, and accelerate code delivery.",
+      title: "AI for Software Developers: A Hands-On Beginner's Guide",
+      description: "Master AI integration as a software developer using GitHub Copilot, OpenAI APIs, and Model Context Protocol. This hands-on course shows you exactly how to add intelligent features to your applications, automate coding tasks, and build AI-powered functionality using practical APIs and SDKs. You'll walk away with working code examples, integration templates, and a complete AI-enhanced development workflow you can implement immediately.",
       instructor: "Cho-Nan Tsai",
       rating: 4.9,
       ratingNum: 634,
       students: 634,
-      duration: "5 hours",
-      level: "Advanced",
+      duration: "2 hours",
+      level: "Beginner",
       price: "$399",
       originalPrice: "$799",
       lastUpdated: "December 2024",
       language: "English",
       features: [
-        "No coding experience required",
-        "Hands-on projects included",
-        "Certificate of completion",
-        "Lifetime access",
-        "Mobile and desktop access"
+        "All lessons are short, focused, and practical",
+        "Hands-on demos with widely used AI APIs, coding assistants, and MCP integration",
+        "Downloadable resources: sample code, API cheat sheets, prompt library for developers",
+        "Quizzes at the end of each module to reinforce learning",
+        "Final mini-project to apply what you've learned",
+        "Certificate of Completion: AI-Native Software Developer"
       ],
       whatYouWillLearn: [
-        "Build intelligent workflow automations",
-        "Create SOP (Standard Operating Procedure) agents",
-        "Develop forecasting models",
-        "Optimize business processes",
-        "Implement predictive analytics"
+        "Understand the key AI concepts relevant to software development",
+        "Use popular AI APIs and SDKs to add features to your apps",
+        "Leverage AI tools to speed up coding, testing, and documentation",
+        "Plan and build a small AI-powered project from scratch",
+        "Understand and apply Model Context Protocol to streamline AI integrations"
       ],
       curriculum: [
         {
-          section: "Operations Intelligence",
+          section: "Module 1: Introduction to AI for Developers",
           lessons: [
-            { title: "AI for Process Optimization", duration: "25 min", type: "video" },
-            { title: "Building SOP Agents", duration: "30 min", type: "video" },
-            { title: "Workflow Automation Design", duration: "35 min", type: "video" }
+            { title: "What AI is (and isn't) for software developers", duration: "8 min", type: "video" },
+            { title: "Real-world examples of AI in apps and services", duration: "10 min", type: "video" },
+            { title: "Overview of popular AI platforms, APIs, and tools", duration: "8 min", type: "video" }
           ]
         },
         {
-          section: "Forecasting & Analytics",
+          section: "Module 2: AI Fundamentals for Developers",
           lessons: [
-            { title: "Predictive Analytics with AI", duration: "40 min", type: "video" },
-            { title: "Data Visualization and Insights", duration: "35 min", type: "video" },
-            { title: "Project: Complete Operations Dashboard", duration: "50 min", type: "project" }
+            { title: "Core concepts: models, training, inference, data", duration: "10 min", type: "video" },
+            { title: "AI vs traditional algorithms", duration: "8 min", type: "video" },
+            { title: "Key ethical and compliance considerations when using AI in software", duration: "7 min", type: "video" }
+          ]
+        },
+        {
+          section: "Module 3: Using AI Tools to Boost Developer Productivity",
+          lessons: [
+            { title: "Coding assistance with AI (code completion, refactoring, documentation)", duration: "10 min", type: "video" },
+            { title: "AI for automated testing and bug detection", duration: "8 min", type: "video" },
+            { title: "Hands-on: Using a code assistant tool in your IDE", duration: "12 min", type: "exercise" }
+          ]
+        },
+        {
+          section: "Module 4: Integrating AI APIs into Applications",
+          lessons: [
+            { title: "Overview of text, image, and speech APIs", duration: "8 min", type: "video" },
+            { title: "Hands-on: Calling an AI API from a simple app", duration: "15 min", type: "exercise" },
+            { title: "Handling authentication, rate limits, and data privacy", duration: "8 min", type: "video" },
+            { title: "Best practices for error handling and model updates", duration: "7 min", type: "video" }
+          ]
+        },
+        {
+          section: "Module 5: Working with Model Context Protocol (MCP)",
+          lessons: [
+            { title: "What Model Context Protocol is and why it matters", duration: "8 min", type: "video" },
+            { title: "How MCP improves context sharing between models and applications", duration: "10 min", type: "video" },
+            { title: "Hands-on: Implementing a simple MCP-enabled integration", duration: "15 min", type: "exercise" },
+            { title: "Best practices for secure and efficient context exchange", duration: "7 min", type: "video" }
+          ]
+        },
+        {
+          section: "Module 6: Building an AI-Powered Feature from Scratch",
+          lessons: [
+            { title: "Selecting a use case (chatbot, summarizer, recommender, etc.)", duration: "6 min", type: "video" },
+            { title: "Designing the feature architecture", duration: "8 min", type: "video" },
+            { title: "Hands-on: Implementing a minimal AI feature using a no-code or low-code SDK", duration: "20 min", type: "exercise" },
+            { title: "Testing and deploying your AI-powered feature", duration: "10 min", type: "video" }
+          ]
+        },
+        {
+          section: "Module 7: Planning Your AI Journey as a Developer",
+          lessons: [
+            { title: "Identifying where AI can add value in your projects", duration: "8 min", type: "video" },
+            { title: "Choosing between build vs. buy vs. integrate", duration: "7 min", type: "video" },
+            { title: "Staying up to date with AI trends and tools", duration: "5 min", type: "video" },
+            { title: "Course wrap-up and next steps", duration: "5 min", type: "video" }
           ]
         }
       ],
@@ -464,25 +545,25 @@ const englishContent: Content = {
         {
           name: "Robert Johnson",
           rating: 5,
-          comment: "This advanced course revolutionized our supply chain operations. The SOP agents we built reduced manual processes by 70%. The forecasting models helped us avoid $200K in inventory waste this quarter.",
+          comment: "Perfect introduction to AI for developers! The hands-on API integration exercises were incredibly practical. I immediately started using GitHub Copilot and integrated OpenAI's API into our customer support chatbot. Development time reduced by 40%.",
           timeAgo: "2 weeks ago"
         },
         {
           name: "Linda Chang",
-          rating: 5,
-          comment: "As an operations director, I was skeptical about AI forecasting. This course proved me wrong! Our demand prediction accuracy improved from 65% to 92%. The ROI was immediate and substantial.",
+          rating: 4,
+          comment: "Excellent practical approach to AI development. The Model Context Protocol section was eye-opening - I had no idea how much context sharing could improve AI integrations. The sample code repository is incredibly useful.",
           timeAgo: "1 month ago"
         },
         {
           name: "Carlos Rivera",
-          rating: 4,
-          comment: "Comprehensive coverage of operations AI. The workflow automation section saved our team countless hours. The predictive analytics models are sophisticated yet easy to implement. Challenging but rewarding.",
+          rating: 5,
+          comment: "Great beginner-friendly course! As a backend developer, I was intimidated by AI, but this course made it accessible. Built my first AI-powered feature (document summarizer) in just one weekend using the techniques learned.",
           timeAgo: "3 weeks ago"
         },
         {
           name: "Anna Petrov",
           rating: 5,
-          comment: "Best investment for operations professionals! The SOP agents handle routine decisions automatically, freeing up my team for strategic work. Our operational efficiency increased by 45%.",
+          comment: "Best investment for developers wanting to stay current! The coding assistant demos alone saved me hours weekly. The mini-project helped me add intelligent search to our app. Clients love the new AI features!",
           timeAgo: "1 week ago"
         }
       ]

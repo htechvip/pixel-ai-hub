@@ -227,14 +227,8 @@ const Course = () => {
               </CardHeader>
               <CardContent>
                 <div className="prose prose-lg dark:prose-invert max-w-none">
-                  <p className="text-muted-foreground mb-4">
-                    This comprehensive course is designed for professionals who want to leverage AI to transform their work processes and boost productivity. Whether you're in customer service, marketing, operations, data analysis, HR, or simply want to build custom solutions, this course provides the practical skills you need.
-                  </p>
-                  <p className="text-muted-foreground mb-4">
-                    You'll learn to use cutting-edge AI tools to automate repetitive tasks, generate high-quality content, analyze data, and create workflows that save you hours every week. Our hands-on approach ensures you'll build real, working solutions you can implement immediately in your job or business.
-                  </p>
                   <p className="text-muted-foreground">
-                    By the end of this course, you'll have the confidence and skills to use AI as your personal productivity assistant, making you more efficient and valuable in your professional role.
+                    {courseData.description}
                   </p>
                 </div>
               </CardContent>
