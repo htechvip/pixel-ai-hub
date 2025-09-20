@@ -958,35 +958,39 @@ const englishContent: Content = {
 
   faq: {
     title: "Frequently Asked Questions",
-    subtitle: "Everything you need to know about the AI Jedi program",
+    subtitle: "Everything you need to know about our AI training programs",
     questions: [
       {
-        question: "Who should take this course?",
-        answer: "This course is perfect for anyone eager to create and launch real web applications quickly, whether you're a complete beginner or a product professional with no coding background."
+        question: "Who are these courses designed for?",
+        answer: "Our courses are designed for working professionals across various industries - finance, marketing, healthcare, software development, and business leadership. No technical background required, just a desire to leverage AI in your career."
       },
       {
-        question: "Do I need programming knowledge?",
-        answer: "Not at all! We've built this course specifically for people starting from zero. AI tools will guide your learning process as you create your projects."
+        question: "Do I need coding or technical experience?",
+        answer: "Not at all! All our courses are designed for non-technical professionals. We focus on practical, no-code AI tools and applications that you can use immediately in your current role."
       },
       {
-        question: "What kind of project will I create?",
-        answer: "You'll develop and launch a fully functional, professional-grade web application that you can proudly showcase. Previous participants have created diverse projects ranging from interactive learning games to AI-enhanced product demonstrations."
+        question: "What will I learn in these courses?",
+        answer: "You'll learn to use industry-leading AI tools relevant to your profession - from ChatGPT and GitHub Copilot for developers, to Keragon and PathAI for healthcare professionals, to Lovable and Cursor for product managers. Each course includes hands-on exercises and real-world case studies."
       },
       {
-        question: "How is the course delivered?",
-        answer: "We offer both formats! Currently running hands-on workshops in Los Angeles and Taipei, with an online version launching soon. Sign up for our waitlist to get priority access."
+        question: "How are the courses structured?",
+        answer: "Each course is 2-6 hours of focused, practical training with short 4-8 minute lessons, hands-on exercises, and downloadable resources. You'll complete real projects and receive certificates of completion."
       },
       {
-        question: "Which technologies and platforms do you cover?",
-        answer: "We focus on practical skills for transforming concepts, prompts, or product requirements into working applications using modern tools like Lovable and Cursor. Your final project will be built with vibe coding tools."
+        question: "What AI tools and platforms will I use?",
+        answer: "Depending on your course, you'll work with tools like ChatGPT, GitHub Copilot, Canva, HubSpot AI, Keragon, Aidoc, PathAI, Lovable, Cursor, v0, Bolt, and Supabase. All tools are chosen for their practical business applications."
       },
       {
-        question: "What support is available if I encounter problems?",
-        answer: "You'll receive personalized guidance from our instructors plus support from fellow participants. Our approach emphasizes hands-on problem-solving and successful deployment, not passive learning."
+        question: "Will I get support during the course?",
+        answer: "Yes! Each course includes instructor guidance, practical exercises, and comprehensive resources like prompt libraries, templates, and implementation checklists. Our focus is on immediate, practical application."
+      },
+      {
+        question: "How do I choose the right course for me?",
+        answer: "Browse our course catalog and select the one that matches your professional role: Finance Professionals, Marketing Professionals, Software Developers, Business Leaders, Healthcare Professionals, or Product Managers. Each course is tailored to specific industry needs."
       },
       {
         question: "How can I enroll?",
-        answer: "Simply click on Sign Up for Cohort. We'll send you enrollment details!"
+        answer: "Simply click 'Start Course' on any course page or 'Learn AI Online' to browse all available courses. You can start learning immediately!"
       }
     ]
   },
