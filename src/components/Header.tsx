@@ -61,8 +61,18 @@ const Header = () => {
                             {item.children.map((child) => {
                               // For AI Courses, generate course page URLs
                               let childLink;
-                              if (item.label === "AI Courses") {
-                                const courseId = child.label.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
+                              if (item.label === "AI Courses" || item.label === "AI 課程") {
+                                // Map Chinese course labels to English course IDs
+                                const chineseCourseMap: { [key: string]: string } = {
+                                  "AI 金融專業課程": "ai-for-finance-professionals",
+                                  "AI 行銷專業課程": "ai-for-marketing-professionals", 
+                                  "AI 軟體開發課程": "ai-for-software-developers",
+                                  "AI 企業領導課程": "ai-for-business-leaders",
+                                  "AI 醫療專業課程": "ai-for-healthcare-professionals",
+                                  "AI 產品經理課程 - Vibe Coding 101": "ai-for-product-managers-vibe-coding-101"
+                                };
+                                
+                                const courseId = chineseCourseMap[child.label] || child.label.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
                                 childLink = `${basePath}/course/${courseId}`;
                               } else {
                                 // For hash links, always go to main page with hash

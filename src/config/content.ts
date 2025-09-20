@@ -1025,7 +1025,18 @@ const zhContent: Content = {
     logo: "AI Jedi",
     navigation: [
       { href: "#why-join", label: "為何加入" },
-      { href: "#program", label: "你將學到什麼" },
+      {
+        href: "#online-courses",
+        label: "AI 課程",
+        children: [
+          { href: "#courses-finance-professionals", label: "AI 金融專業課程" },
+          { href: "#courses-marketing-professionals", label: "AI 行銷專業課程" },
+          { href: "#courses-software-developers", label: "AI 軟體開發課程" },
+          { href: "#courses-business-leaders", label: "AI 企業領導課程" },
+          { href: "#courses-healthcare-professionals", label: "AI 醫療專業課程" },
+          { href: "#courses-product-managers", label: "AI 產品經理課程 - Vibe Coding 101" }
+        ]
+      },
       { href: "#instructor", label: "講師" },
       { href: "#showcase", label: "成功案例" },
       { href: "#faq", label: "常見問題" }
