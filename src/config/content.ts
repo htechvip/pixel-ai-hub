@@ -172,7 +172,7 @@ const englishContent: Content = {
   },
 
   whyJoin: {
-    title: "Why Join Our AI Career Accelerator",
+    title: "Why Join AI Jedi",
     subtitle: "Empowering the next generation of professionals to thrive with AI",
     mainText: [
       "You don't need a computer science degree to start using AI at work. With today's powerful no-code AI tools, you can automate tasks, streamline workflows, and create new opportunities — even without a technical background. If you can describe what you want, you can make it happen.",
