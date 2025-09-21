@@ -286,7 +286,7 @@ const Course = () => {
                        // Map reviewer names to unique Unsplash photos
                        const reviewerAvatars: { [key: string]: string } = {
                          // Finance Professionals
-                         'Sarah Martinez': 'https://images.unsplash.com/photo-1494790108755-2616b612b786?w=100&h=100&fit=crop&crop=face&auto=format&q=80',
+                         'Sarah Martinez': 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=100&h=100&fit=crop&crop=face&auto=format&q=80',
                          'Mike Chen': 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face&auto=format&q=80',
                          'Emily Rodriguez': 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&crop=face&auto=format&q=80',
                          'David Kim': 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face&auto=format&q=80',
@@ -299,7 +299,7 @@ const Course = () => {
                          'Tom Wilson': 'https://images.unsplash.com/photo-1633332755192-727a05c4013d?w=100&h=100&fit=crop&crop=face&auto=format&q=80',
                          'Emily Wang': 'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=100&h=100&fit=crop&crop=face&auto=format&q=80',
                          'Mark Thompson': 'https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=100&h=100&fit=crop&crop=face&auto=format&q=80',
-                         'Jennifer Liu': 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=100&h=100&fit=crop&crop=face&auto=format&q=80',
+                         'Jennifer Liu': 'https://ui-avatars.com/api/?name=Jennifer+Liu&size=100&background=6366f1&color=ffffff',
                          'Alex Chen': 'https://images.unsplash.com/photo-1580894732444-8ecded7900cd?w=100&h=100&fit=crop&crop=face&auto=format&q=80',
                          
                          // Software Developers
@@ -310,7 +310,6 @@ const Course = () => {
                          'Kevin Zhang': 'https://images.unsplash.com/photo-1614289371518-722f2615943d?w=100&h=100&fit=crop&crop=face&auto=format&q=80',
                          'Rachel Park': 'https://images.unsplash.com/photo-1541101767792-f9b2b1c4f127?w=100&h=100&fit=crop&crop=face&auto=format&q=80',
                          'Sandra Lee': 'https://images.unsplash.com/photo-1590650516494-0c8e4a4dd67e?w=100&h=100&fit=crop&crop=face&auto=format&q=80',
-                         'Tom Wilson': 'https://images.unsplash.com/photo-1425421669292-0c3da3b8f529?w=100&h=100&fit=crop&crop=face&auto=format&q=80',
                          
                          // Business Leaders
                          'Jennifer Adams': 'https://images.unsplash.com/photo-1491336477066-31156b5e4f35?w=100&h=100&fit=crop&crop=face&auto=format&q=80',

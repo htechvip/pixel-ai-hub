@@ -112,7 +112,7 @@ const Header = () => {
               <a href={togglePath}>{isZh ? "EN" : "中文"}</a>
             </Button>
             <Button asChild className="mr-2 sm:mr-0">
-              <Link to={signupPath}>{content.hero.buttons.primary}</Link>
+              <a href="#online-courses">{content.hero.buttons.primary}</a>
             </Button>
           </div>
         </div>
