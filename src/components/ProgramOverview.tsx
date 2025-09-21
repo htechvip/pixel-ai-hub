@@ -57,9 +57,30 @@ const ProgramOverview = ({ minimal = false }: ProgramOverviewProps) => {
                   <CardTitle className="text-xl">{feature.title}</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <CardDescription className="text-center">
+                  <CardDescription className="text-center mb-4">
                     {feature.description}
                   </CardDescription>
+                  {/* Mobile visible Start Course button */}
+                  <div className="text-center md:hidden">
+                    <Button asChild variant="hero" size="sm">
+                      <Link to={(() => {
+                        const basePath = window.location.pathname.startsWith("/zh-tw") ? "/zh-tw" : "";
+                        // Map Chinese course titles to English course IDs (same as Header component)
+                        const chineseCourseMap: { [key: string]: string } = {
+                          "AI 金融專業課程": "ai-for-finance-professionals",
+                          "AI 行銷專業課程": "ai-for-marketing-professionals", 
+                          "AI 軟體開發課程": "ai-for-software-developers",
+                          "AI 企業領導課程": "ai-for-business-leaders",
+                          "AI 醫療專業課程": "ai-for-healthcare-professionals",
+                          "AI 產品經理課程 - Vibe Coding 101": "ai-for-product-managers-vibe-coding-101"
+                        };
+                        const courseId = chineseCourseMap[feature.title] || feature.title.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
+                        return `${basePath}/course/${courseId}`;
+                      })()}>
+                        {window.location.pathname.startsWith("/zh-tw") ? "開始課程" : "Start Course"}
+                      </Link>
+                    </Button>
+                  </div>
                 </CardContent>
 
                 {/* Desktop hover overlay */}
