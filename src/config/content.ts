@@ -1045,11 +1045,11 @@ const zhContent: Content = {
 
   hero: {
     ...englishContent.hero,
-    title: "從想法到產品只需數小時",
-    description: "跳過數月的開發痛苦。我們的密集工作坊可在數小時內將你的想法轉化為可運作的原型、MVP 與真實產品，完全不需要程式背景。",
+    title: "透過實作案例研究掌握 AI",
+    description: "為職場專業人士設計的實作線上課程。學習如何使用 AI 工具自動化任務、做出更好的決策，並推動業務成果——無需程式設計。",
     buttons: {
-      primary: "報名梯次",
-      secondary: "加入候補名單"
+      primary: "線上學習 AI",
+      secondary: "實體學習 AI"
     }
   },
 
