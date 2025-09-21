@@ -67,7 +67,20 @@ const ProgramOverview = ({ minimal = false }: ProgramOverviewProps) => {
                   <div className="p-6 text-center space-y-4 max-w-xs">
                     <p className="text-sm text-muted-foreground">{feature.description}</p>
                     <Button asChild variant="hero">
-                      <Link to={`${window.location.pathname.startsWith("/zh-tw") ? "/zh-tw" : ""}/course/${feature.title.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "")}`}>
+                      <Link to={(() => {
+                        const basePath = window.location.pathname.startsWith("/zh-tw") ? "/zh-tw" : "";
+                        // Map Chinese course titles to English course IDs (same as Header component)
+                        const chineseCourseMap: { [key: string]: string } = {
+                          "AI 金融專業課程": "ai-for-finance-professionals",
+                          "AI 行銷專業課程": "ai-for-marketing-professionals", 
+                          "AI 軟體開發課程": "ai-for-software-developers",
+                          "AI 企業領導課程": "ai-for-business-leaders",
+                          "AI 醫療專業課程": "ai-for-healthcare-professionals",
+                          "AI 產品經理課程 - Vibe Coding 101": "ai-for-product-managers-vibe-coding-101"
+                        };
+                        const courseId = chineseCourseMap[feature.title] || feature.title.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
+                        return `${basePath}/course/${courseId}`;
+                      })()}>
                         Start Course
                       </Link>
                     </Button>

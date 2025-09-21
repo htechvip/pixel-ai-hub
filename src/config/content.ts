@@ -1083,24 +1083,32 @@ const zhContent: Content = {
 
   program: {
     ...englishContent.program,
-    title: "你將學到什麼",
-    subtitle: "從想法到產品的最快途徑。以下是你在一個週末將學到的內容：",
+    title: "探索 AI 課程",
+    subtitle: "實用、無程式碼的 AI 課程，專為商業影響而設計。",
     features: [
       {
-        title: "運用 AI 迅速原型開發",
-        description: "直接進入實作。了解每款 vibe coding 工具的優缺點，專注於業界最佳解。"
+        title: "AI 金融專業課程",
+        description: "使用 AI 驅動的工具自動化財務分析、報告和決策制定。"
       },
       {
-        title: "全端 AI 開發",
-        description: "從零開始，使用 vibe coding 工具建置並部署完整的 Web App，前後端一次搞定，確實交付可用作品。"
+        title: "AI 行銷專業課程",
+        description: "學習使用實用的 AI 工具自動化行銷任務並創建引人入勝的活動。"
       },
       {
-        title: "推出真實產品",
-        description: "以 AI 解決真實世界問題並推出產品。"
+        title: "AI 軟體開發課程",
+        description: "學習整合 AI API、使用編程助手，並在不成為數據科學家的情況下建構 AI 驅動的功能。"
       },
       {
-        title: "產業專案",
-        description: "與企業合作的真實 AI 專案，建立能助你就業的作品集。"
+        title: "AI 企業領導課程",
+        description: "將複雜數據轉化為戰略洞察，並充滿信心地做出數據驅動的決策。"
+      },
+      {
+        title: "AI 醫療專業課程",
+        description: "使用 AI 優化患者護理、簡化文檔並改善醫療保健營運。"
+      },
+      {
+        title: "AI 產品經理課程 - Vibe Coding 101",
+        description: "通過描述你想要的內容來建構產品原型和自動化——無需程式設計。"
       }
     ]
   },
