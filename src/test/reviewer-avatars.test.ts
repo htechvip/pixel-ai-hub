@@ -1,6 +1,8 @@
 import { describe, it, expect } from 'vitest'
 import { checkMultipleImages, isValidUrl } from './utils/url-checker'
 import { englishContent, zhContent } from '../config/content'
+// Import Course component to trigger test re-runs when Course.tsx changes
+import '../pages/Course'
 
 /**
  * Test suite for reviewer avatar URLs

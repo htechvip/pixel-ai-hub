@@ -391,7 +391,13 @@ const Course = () => {
                 </div>
 
                 <Button asChild className="w-full mb-4" size="lg">
-                  <Link to={signupPath}>Enroll Now</Link>
+                  {courseId === 'ai-for-finance-professionals' ? (
+                    <a href="https://buy.stripe.com/bJefZic1deuXe32b3U2kw04?prefilled_promo_code=halfoff" target="_blank" rel="noopener noreferrer">
+                      Enroll Now
+                    </a>
+                  ) : (
+                    <Link to={signupPath}>Enroll Now</Link>
+                  )}
                 </Button>
 
                 <div className="text-center text-sm text-muted-foreground mb-4">
