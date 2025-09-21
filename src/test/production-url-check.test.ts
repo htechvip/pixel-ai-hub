@@ -24,11 +24,11 @@ describe('Production URL Checks', () => {
     it('should verify all critical reviewer avatars are accessible', async () => {
       // List of critical reviewer avatars that must be working
       const criticalAvatars = [
-        'https://images.unsplash.com/photo-1517841905240-472988babdf9?w=100&h=100&fit=crop&crop=face&auto=format&q=80', // Jennifer Liu (fixed)
+        'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=100&h=100&fit=crop&crop=face&auto=format&q=80', // Jennifer Liu (updated)
         'https://images.unsplash.com/photo-1494790108755-2616b612b786?w=100&h=100&fit=crop&crop=face&auto=format&q=80', // Sarah Martinez
         'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face&auto=format&q=80', // Mike Chen
         'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&h=100&fit=crop&crop=face&auto=format&q=80', // Jessica Wu
-        'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop&crop=face&auto=format&q=80', // Alex Thompson
+        'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=100&h=100&fit=crop&crop=face&auto=format&q=80', // Alex Thompson (updated)
       ];
       
       const results = await Promise.all(

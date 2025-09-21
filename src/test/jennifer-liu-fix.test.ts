@@ -8,7 +8,7 @@ import { checkImageUrl } from './utils/url-checker'
 describe('Jennifer Liu Avatar Fix', () => {
   it('should have a working avatar URL for Jennifer Liu in Marketing Professionals', async () => {
     // The specific URL that was broken and has been fixed
-    const jenniferLiuUrl = 'https://images.unsplash.com/photo-1517841905240-472988babdf9?w=100&h=100&fit=crop&crop=face&auto=format&q=80';
+    const jenniferLiuUrl = 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=100&h=100&fit=crop&crop=face&auto=format&q=80';
     
     // Check if the URL is valid
     expect(jenniferLiuUrl).toMatch(/^https:\/\/images\.unsplash\.com\/photo-\d+-\w+\?w=100&h=100&fit=crop&crop=face&auto=format&q=80$/);
@@ -26,14 +26,14 @@ describe('Jennifer Liu Avatar Fix', () => {
     
     // This URL should not be used anywhere in our avatar mappings
     // We'll check this by ensuring our current URL is different
-    const currentUrl = 'https://images.unsplash.com/photo-1517841905240-472988babdf9?w=100&h=100&fit=crop&crop=face&auto=format&q=80';
+    const currentUrl = 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=100&h=100&fit=crop&crop=face&auto=format&q=80';
     
     expect(currentUrl).not.toContain('photo-1594824388853-8e1b5d4e8e8a');
-    expect(currentUrl).toContain('photo-1517841905240-472988babdf9');
+    expect(currentUrl).toContain('photo-1573496359142-b8d87734a5a2');
   });
 
   it('should have proper Unsplash optimization parameters', () => {
-    const jenniferLiuUrl = 'https://images.unsplash.com/photo-1517841905240-472988babdf9?w=100&h=100&fit=crop&crop=face&auto=format&q=80';
+    const jenniferLiuUrl = 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=100&h=100&fit=crop&crop=face&auto=format&q=80';
     
     // Check for optimization parameters
     expect(jenniferLiuUrl).toContain('w=100');
