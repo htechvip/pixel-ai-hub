@@ -39,27 +39,33 @@ const AITipsGuide = () => {
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
                   <div className="text-center">
                     <div className="w-16 h-16 bg-white rounded-xl flex items-center justify-center mx-auto mb-4 shadow-lg border border-gray-200">
-                      <div className="w-12 h-12 bg-green-500 rounded-lg flex items-center justify-center">
-                        <span className="text-white font-bold text-lg">GPT</span>
-                      </div>
+                      <img 
+                        src="/logos/chatgpt_logo.jpeg" 
+                        alt="ChatGPT Logo" 
+                        className="w-12 h-12 rounded-lg object-cover"
+                      />
                     </div>
                     <h3 className="font-semibold mb-2">ChatGPT Tips</h3>
                     <p className="text-sm text-muted-foreground">Professional prompts and workflows</p>
                   </div>
                   <div className="text-center">
                     <div className="w-16 h-16 bg-white rounded-xl flex items-center justify-center mx-auto mb-4 shadow-lg border border-gray-200">
-                      <div className="w-12 h-12 bg-orange-500 rounded-lg flex items-center justify-center">
-                        <span className="text-white font-bold text-sm">Claude</span>
-                      </div>
+                      <img 
+                        src="/logos/claude_logo.jpeg" 
+                        alt="Claude Logo" 
+                        className="w-12 h-12 rounded-lg object-cover"
+                      />
                     </div>
                     <h3 className="font-semibold mb-2">Claude Strategies</h3>
                     <p className="text-sm text-muted-foreground">Advanced reasoning and analysis</p>
                   </div>
                   <div className="text-center">
                     <div className="w-16 h-16 bg-white rounded-xl flex items-center justify-center mx-auto mb-4 shadow-lg border border-gray-200">
-                      <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center">
-                        <span className="text-white font-bold text-xs">Perplexity</span>
-                      </div>
+                      <img 
+                        src="/logos/perplexity_ai_logo.jpeg" 
+                        alt="Perplexity AI Logo" 
+                        className="w-12 h-12 rounded-lg object-cover"
+                      />
                     </div>
                     <h3 className="font-semibold mb-2">Perplexity Research</h3>
                     <p className="text-sm text-muted-foreground">Efficient information gathering</p>

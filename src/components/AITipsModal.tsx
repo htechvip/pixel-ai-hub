@@ -132,20 +132,32 @@ const AITipsModal = ({ isOpen, onClose }: AITipsModalProps) => {
           {/* Features Preview */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             <div className="text-center">
-              <div className="w-12 h-12 bg-green-500 rounded-lg flex items-center justify-center mx-auto mb-2">
-                <span className="text-white font-bold text-sm">GPT</span>
+              <div className="w-12 h-12 bg-white rounded-lg flex items-center justify-center mx-auto mb-2 shadow-sm border border-gray-200">
+                <img 
+                  src="/logos/chatgpt_logo.jpeg" 
+                  alt="ChatGPT Logo" 
+                  className="w-10 h-10 rounded object-cover"
+                />
               </div>
               <p className="text-sm text-muted-foreground">ChatGPT Tips</p>
             </div>
             <div className="text-center">
-              <div className="w-12 h-12 bg-orange-500 rounded-lg flex items-center justify-center mx-auto mb-2">
-                <span className="text-white font-bold text-xs">Claude</span>
+              <div className="w-12 h-12 bg-white rounded-lg flex items-center justify-center mx-auto mb-2 shadow-sm border border-gray-200">
+                <img 
+                  src="/logos/claude_logo.jpeg" 
+                  alt="Claude Logo" 
+                  className="w-10 h-10 rounded object-cover"
+                />
               </div>
               <p className="text-sm text-muted-foreground">Claude Strategies</p>
             </div>
             <div className="text-center">
-              <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mx-auto mb-2">
-                <span className="text-white font-bold text-xs">Perplexity</span>
+              <div className="w-12 h-12 bg-white rounded-lg flex items-center justify-center mx-auto mb-2 shadow-sm border border-gray-200">
+                <img 
+                  src="/logos/perplexity_ai_logo.jpeg" 
+                  alt="Perplexity AI Logo" 
+                  className="w-10 h-10 rounded object-cover"
+                />
               </div>
               <p className="text-sm text-muted-foreground">Perplexity Research</p>
             </div>
