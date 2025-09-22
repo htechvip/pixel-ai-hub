@@ -17,6 +17,26 @@ const AITipsModal = ({ isOpen, onClose }: AITipsModalProps) => {
   const [isSuccess, setIsSuccess] = useState(false);
   const [error, setError] = useState("");
 
+  // Locale detection for Chinese page
+  const isZh = typeof window !== "undefined" && window.location.pathname.startsWith("/zh-tw");
+
+  const t = {
+    title: isZh ? "免費取得 AI 技巧指南" : "Get Your Free AI Tips Guide",
+    featureChatGPT: isZh ? "ChatGPT 祕訣" : "ChatGPT Tips",
+    featureClaude: isZh ? "Claude 策略" : "Claude Strategies",
+    featurePerplexity: isZh ? "Perplexity 搜尋" : "Perplexity Research",
+    emailLabel: isZh ? "電子郵件" : "Email Address",
+    firstNameLabel: isZh ? "名字" : "First Name",
+    submit: isZh ? "寄給我指南" : "Send me the guide",
+    sending: isZh ? "傳送中..." : "Sending...",
+    successTitle: isZh ? "成功！" : "Success!",
+    successMsg: isZh
+      ? "請至您的信箱確認訂閱，即可收到免費 AI 技巧指南。"
+      : "Check your email to confirm your subscription and get your free AI tips guide.",
+    privacy: isZh ? "我們重視您的隱私。可隨時取消訂閱。" : "We respect your privacy. Unsubscribe at anytime.",
+    networkError: isZh ? "網路錯誤，請稍後再試。" : "Network error. Please check your connection and try again.",
+  } as const;
+
   // Fix scrollbar shift when modal opens/closes
   useEffect(() => {
     const handleScrollbarCompensation = () => {
@@ -109,10 +129,8 @@ const AITipsModal = ({ isOpen, onClose }: AITipsModalProps) => {
             <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
               <Sparkles className="w-8 h-8 text-green-600" />
             </div>
-            <h3 className="text-lg font-semibold mb-2">Success!</h3>
-            <p className="text-muted-foreground">
-              Check your email to confirm your subscription and get your free AI tips guide.
-            </p>
+            <h3 className="text-lg font-semibold mb-2">{t.successTitle}</h3>
+            <p className="text-muted-foreground">{t.successMsg}</p>
           </div>
         </DialogContent>
       </Dialog>
@@ -123,9 +141,7 @@ const AITipsModal = ({ isOpen, onClose }: AITipsModalProps) => {
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent className="sm:max-w-lg">
         <DialogHeader>
-          <DialogTitle className="text-center text-2xl font-bold">
-            Get Your Free AI Tips Guide
-          </DialogTitle>
+          <DialogTitle className="text-center text-2xl font-bold">{t.title}</DialogTitle>
         </DialogHeader>
         
         <div className="space-y-6">
@@ -139,7 +155,7 @@ const AITipsModal = ({ isOpen, onClose }: AITipsModalProps) => {
                   className="w-10 h-10 rounded object-cover"
                 />
               </div>
-              <p className="text-sm text-muted-foreground">ChatGPT Tips</p>
+              <p className="text-sm text-muted-foreground">{t.featureChatGPT}</p>
             </div>
             <div className="text-center">
               <div className="w-12 h-12 bg-white rounded-lg flex items-center justify-center mx-auto mb-2 shadow-sm border border-gray-200">
@@ -149,7 +165,7 @@ const AITipsModal = ({ isOpen, onClose }: AITipsModalProps) => {
                   className="w-10 h-10 rounded object-cover"
                 />
               </div>
-              <p className="text-sm text-muted-foreground">Claude Strategies</p>
+              <p className="text-sm text-muted-foreground">{t.featureClaude}</p>
             </div>
             <div className="text-center">
               <div className="w-12 h-12 bg-white rounded-lg flex items-center justify-center mx-auto mb-2 shadow-sm border border-gray-200">
@@ -159,17 +175,17 @@ const AITipsModal = ({ isOpen, onClose }: AITipsModalProps) => {
                   className="w-10 h-10 rounded object-cover"
                 />
               </div>
-              <p className="text-sm text-muted-foreground">Perplexity Research</p>
+              <p className="text-sm text-muted-foreground">{t.featurePerplexity}</p>
             </div>
           </div>
 
           <form onSubmit={handleSubmit} className="space-y-4">
             <div className="space-y-2">
-              <Label htmlFor="email">Email Address</Label>
+              <Label htmlFor="email">{t.emailLabel}</Label>
               <Input
                 id="email"
                 type="email"
-                placeholder="Enter your email"
+                placeholder={isZh ? "請輸入您的電子郵件" : "Enter your email"}
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
@@ -178,11 +194,11 @@ const AITipsModal = ({ isOpen, onClose }: AITipsModalProps) => {
             </div>
             
             <div className="space-y-2">
-              <Label htmlFor="firstName">First Name</Label>
+              <Label htmlFor="firstName">{t.firstNameLabel}</Label>
               <Input
                 id="firstName"
                 type="text"
-                placeholder="Enter your first name"
+                placeholder={isZh ? "請輸入您的名字" : "Enter your first name"}
                 value={firstName}
                 onChange={(e) => setFirstName(e.target.value)}
                 disabled={isSubmitting}
@@ -203,20 +219,18 @@ const AITipsModal = ({ isOpen, onClose }: AITipsModalProps) => {
               {isSubmitting ? (
                 <>
                   <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin mr-2" />
-                  Sending...
+                  {t.sending}
                 </>
               ) : (
                 <>
                   <Download className="w-4 h-4 mr-2" />
-                  Send me the guide
+                  {t.submit}
                 </>
               )}
             </Button>
           </form>
 
-          <p className="text-xs text-center text-muted-foreground">
-            We respect your privacy. Unsubscribe at anytime.
-          </p>
+          <p className="text-xs text-center text-muted-foreground">{t.privacy}</p>
         </div>
       </DialogContent>
     </Dialog>

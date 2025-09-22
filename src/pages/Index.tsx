@@ -3,6 +3,7 @@ import Hero from "@/components/Hero";
 import WhyJoinSection from "@/components/WhyJoinSection";
 import ProgramOverview from "@/components/ProgramOverview";
 import AITipsGuide from "@/components/AITipsGuide";
+import AITipsGuideZh from "@/components/AITipsGuideZh";
 import AIToolsSection from "@/components/AIToolsSection";
 import VibeCodingWebApps from "@/components/VibeCodingWebApps";
 import InstructorSection from "@/components/InstructorSection";
@@ -32,6 +33,8 @@ const Index = () => {
     }
   }, []);
 
+  const isZh = typeof window !== "undefined" && window.location.pathname.startsWith("/zh-tw");
+
   return (
     <div className="min-h-screen">
       <Header />
@@ -45,7 +48,7 @@ const Index = () => {
       <StudentShowcase />
       <CallToAction />
       <FAQSection />
-      <AITipsGuide />
+      {isZh ? <AITipsGuideZh /> : <AITipsGuide />}
       <Footer />
     </div>
   );
