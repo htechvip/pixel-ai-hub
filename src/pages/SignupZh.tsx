@@ -281,6 +281,204 @@ const SignupZh = () => {
           </div>
         </Card>
 
+        {/* ---------------- 十月梯次 ---------------- */}
+
+        {/* October Badge */}
+        <div className="flex justify-center mt-24 mb-6">
+          <Badge className="px-4 py-2 text-sm font-medium" variant="secondary">
+            <div className="flex items-center gap-2">
+              <CalendarDays className="w-4 h-4" />
+              2024 年 10 月梯次
+            </div>
+          </Badge>
+        </div>
+
+        {/* October Heading */}
+        <h2 className="text-center text-4xl md:text-5xl font-extrabold mb-4">
+          2024 年 10 月梯次 - 台北 & 洛杉磯
+        </h2>
+
+        {/* October Stats Row */}
+        <div className="flex flex-wrap justify-center gap-6 mb-12 text-muted-foreground">
+          <div className="flex items-center gap-2">
+            <Clock className="w-5 h-5" />
+            <span>2 天密集課程</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <MapPin className="w-5 h-5" />
+            <span>實體工作坊</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <Users className="w-5 h-5" />
+            <span>所有名額已滿</span>
+          </div>
+        </div>
+
+        {/* October Cohort 1 - Taipei */}
+        <Card className="max-w-3xl mx-auto p-8 relative">
+          <span className="absolute top-4 right-4 bg-primary text-primary-foreground w-8 h-8 flex items-center justify-center rounded-full text-sm font-semibold">
+            5
+          </span>
+          <h2 className="text-2xl font-bold mb-1">週末密集班 - 台北</h2>
+
+          <div className="space-y-4 text-muted-foreground">
+            <div className="flex items-center gap-3">
+              <CalendarDays className="w-5 h-5" />
+              2024/10/5-6
+            </div>
+            <div className="flex items-center gap-3">
+              <Clock className="w-5 h-5" />
+              週六 & 週日, 9:30 AM – 1:30 PM
+            </div>
+            <div className="flex items-center gap-3">
+              <MapPin className="w-5 h-5" />
+              實體工作坊（地點待定）
+            </div>
+          </div>
+
+          <div className="mt-8 flex items-center gap-4">
+            <span className="text-destructive font-medium flex items-center gap-2">
+              <Users className="w-4 h-4" /> 已售罄
+            </span>
+          </div>
+
+          <Button disabled variant="secondary" size="lg" className="mt-4 w-full cursor-not-allowed">
+            名額已滿
+          </Button>
+        </Card>
+
+        {/* October Cohort 2 - Los Angeles */}
+        <Card className="max-w-3xl mx-auto p-8 relative mt-12">
+          <span className="absolute top-4 right-4 bg-primary text-primary-foreground w-8 h-8 flex items-center justify-center rounded-full text-sm font-semibold">
+            6
+          </span>
+          <h2 className="text-2xl font-bold mb-1">週末密集班 - 洛杉磯</h2>
+
+          <div className="space-y-4 text-muted-foreground">
+            <div className="flex items-center gap-3">
+              <CalendarDays className="w-5 h-5" />
+              2024/10/19-20
+            </div>
+            <div className="flex items-center gap-3">
+              <Clock className="w-5 h-5" />
+              週六 & 週日, 9:30 AM – 1:30 PM
+            </div>
+            <div className="flex items-center gap-3">
+              <MapPin className="w-5 h-5" />
+              實體工作坊（地點待定）
+            </div>
+          </div>
+
+          <div className="mt-8 flex items-center gap-4">
+            <span className="text-destructive font-medium flex items-center gap-2">
+              <Users className="w-4 h-4" /> 已售罄
+            </span>
+          </div>
+
+          <Button disabled variant="secondary" size="lg" className="mt-4 w-full cursor-not-allowed">
+            名額已滿
+          </Button>
+        </Card>
+
+        {/* ---------------- 十一月梯次 ---------------- */}
+
+        {/* November Badge */}
+        <div className="flex justify-center mt-24 mb-6">
+          <Badge className="px-4 py-2 text-sm font-medium" variant="secondary">
+            <div className="flex items-center gap-2">
+              <CalendarDays className="w-4 h-4" />
+              2024 年 11 月梯次
+            </div>
+          </Badge>
+        </div>
+
+        {/* November Heading */}
+        <h2 className="text-center text-4xl md:text-5xl font-extrabold mb-4">
+          2024 年 11 月梯次 - 台北 & 洛杉磯
+        </h2>
+
+        {/* November Stats Row */}
+        <div className="flex flex-wrap justify-center gap-6 mb-12 text-muted-foreground">
+          <div className="flex items-center gap-2">
+            <Clock className="w-5 h-5" />
+            <span>2 天密集課程</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <MapPin className="w-5 h-5" />
+            <span>實體工作坊</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <Users className="w-5 h-5" />
+            <span>所有名額已滿</span>
+          </div>
+        </div>
+
+        {/* November Cohort 1 - Taipei */}
+        <Card className="max-w-3xl mx-auto p-8 relative">
+          <span className="absolute top-4 right-4 bg-primary text-primary-foreground w-8 h-8 flex items-center justify-center rounded-full text-sm font-semibold">
+            7
+          </span>
+          <h2 className="text-2xl font-bold mb-1">週末密集班 - 台北</h2>
+
+          <div className="space-y-4 text-muted-foreground">
+            <div className="flex items-center gap-3">
+              <CalendarDays className="w-5 h-5" />
+              2024/11/2-3
+            </div>
+            <div className="flex items-center gap-3">
+              <Clock className="w-5 h-5" />
+              週六 & 週日, 9:30 AM – 1:30 PM
+            </div>
+            <div className="flex items-center gap-3">
+              <MapPin className="w-5 h-5" />
+              實體工作坊（地點待定）
+            </div>
+          </div>
+
+          <div className="mt-8 flex items-center gap-4">
+            <span className="text-destructive font-medium flex items-center gap-2">
+              <Users className="w-4 h-4" /> 已售罄
+            </span>
+          </div>
+
+          <Button disabled variant="secondary" size="lg" className="mt-4 w-full cursor-not-allowed">
+            名額已滿
+          </Button>
+        </Card>
+
+        {/* November Cohort 2 - Los Angeles */}
+        <Card className="max-w-3xl mx-auto p-8 relative mt-12">
+          <span className="absolute top-4 right-4 bg-primary text-primary-foreground w-8 h-8 flex items-center justify-center rounded-full text-sm font-semibold">
+            8
+          </span>
+          <h2 className="text-2xl font-bold mb-1">週末密集班 - 洛杉磯</h2>
+
+          <div className="space-y-4 text-muted-foreground">
+            <div className="flex items-center gap-3">
+              <CalendarDays className="w-5 h-5" />
+              2024/11/16-17
+            </div>
+            <div className="flex items-center gap-3">
+              <Clock className="w-5 h-5" />
+              週六 & 週日, 9:30 AM – 1:30 PM
+            </div>
+            <div className="flex items-center gap-3">
+              <MapPin className="w-5 h-5" />
+              實體工作坊（地點待定）
+            </div>
+          </div>
+
+          <div className="mt-8 flex items-center gap-4">
+            <span className="text-destructive font-medium flex items-center gap-2">
+              <Users className="w-4 h-4" /> 已售罄
+            </span>
+          </div>
+
+          <Button disabled variant="secondary" size="lg" className="mt-4 w-full cursor-not-allowed">
+            名額已滿
+          </Button>
+        </Card>
+
         {/* What You Will Learn */}
         <div className="mt-24 max-w-3xl mx-auto">
           <ProgramOverview minimal />

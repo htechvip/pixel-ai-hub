@@ -111,8 +111,15 @@ const Header = () => {
             <Button variant="ghost" size="sm" asChild>
               <a href={togglePath}>{isZh ? "EN" : "中文"}</a>
             </Button>
-            <Button asChild className="mr-2 sm:mr-0">
-              <a href="#online-courses">{content.hero.buttons.primary}</a>
+            <Button 
+              className="mr-2 sm:mr-0 min-w-0 px-3 py-2 text-sm sm:px-4 sm:py-2 sm:text-base whitespace-nowrap"
+              onClick={() => {
+                // Always go to main page first, then scroll to courses section
+                const mainPageUrl = isZh ? "/zh-tw#online-courses" : "/#online-courses";
+                window.location.assign(mainPageUrl);
+              }}
+            >
+              {content.hero.buttons.primary}
             </Button>
           </div>
         </div>
