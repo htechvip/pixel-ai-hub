@@ -122,3 +122,16 @@ All colors MUST be HSL.
     }
   }
 }
+
+/* Fix for modal scrollbar shift issue */
+@layer base {
+  /* Prevent layout shift when modal opens by reserving scrollbar space */
+  html {
+    scrollbar-gutter: stable;
+  }
+  
+  /* Alternative approach: Compensate for scrollbar width when body scroll is locked */
+  body[data-scroll-locked] {
+    padding-right: var(--scrollbar-width, 0px);
+  }
+}

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -16,6 +16,37 @@ const AITipsModal = ({ isOpen, onClose }: AITipsModalProps) => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
   const [error, setError] = useState("");
+
+  // Fix scrollbar shift when modal opens/closes
+  useEffect(() => {
+    const handleScrollbarCompensation = () => {
+      if (isOpen) {
+        // Calculate scrollbar width
+        const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
+        
+        // Set CSS custom property for scrollbar width
+        document.documentElement.style.setProperty('--scrollbar-width', `${scrollbarWidth}px`);
+        
+        // Add data attribute for CSS targeting
+        document.body.setAttribute('data-scroll-locked', 'true');
+      } else {
+        // Remove compensation when modal closes
+        document.documentElement.style.removeProperty('--scrollbar-width');
+        document.body.removeAttribute('data-scroll-locked');
+      }
+    };
+
+    // Use a small delay to ensure Radix UI has processed the modal state
+    const timeoutId = setTimeout(handleScrollbarCompensation, 0);
+
+    return () => {
+      clearTimeout(timeoutId);
+      // Cleanup on unmount
+      document.documentElement.style.removeProperty('--scrollbar-width');
+      document.body.removeAttribute('data-scroll-locked');
+    };
+  }, [isOpen]);
+
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
