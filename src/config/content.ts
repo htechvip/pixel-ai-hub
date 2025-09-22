@@ -246,7 +246,7 @@ const englishContent: Content = {
       originalPrice: "$198",
       lastUpdated: "December 2024",
       language: "English",
-      video: "intro.mp4",
+      video: "financepro.mp4",
       features: [
         "4-8 minute lessons for easy learning",
         "Quizzes after each major module",
@@ -356,6 +356,7 @@ const englishContent: Content = {
       originalPrice: "$198",
       lastUpdated: "December 2024",
       language: "English",
+      video: "marketingpro.mp4",
       features: [
         "All lessons are short and focused (4–8 minutes each)",
         "Hands-on demos with free or freemium AI tools (ChatGPT, Jasper, Canva, Zapier, HubSpot AI features, etc.)",
@@ -464,6 +465,7 @@ const englishContent: Content = {
       originalPrice: "$198",
       lastUpdated: "December 2024",
       language: "English",
+      video: "developerpro.mp4",
       features: [
         "All lessons are short, focused, and practical",
         "Hands-on demos with widely used AI APIs, coding assistants, and MCP integration",
@@ -581,6 +583,7 @@ const englishContent: Content = {
       originalPrice: "$198",
       lastUpdated: "December 2024",
       language: "English",
+      video: "intro.mp4",
       features: [
         "Concise lectures with hands-on exercises and real-world examples",
         "No-code AI tools demonstrations and practice sessions",
@@ -690,6 +693,7 @@ const englishContent: Content = {
       originalPrice: "$198",
       lastUpdated: "December 2024",
       language: "English",
+      video: "healthcarepro.mp4",
       features: [
         "Beginner-friendly approach to AI in healthcare",
         "Hands-on demos of three leading AI healthcare tools: Keragon, Aidoc, PathAI",
@@ -798,6 +802,7 @@ const englishContent: Content = {
       originalPrice: "$198",
       lastUpdated: "December 2024",
       language: "English",
+      video: "vibecoding.mp4",
       features: [
         "No coding experience required - perfect for non-technical professionals",
         "Hands-on experience with top AI tools: Cursor, Lovable, v0, Bolt",
@@ -1478,7 +1483,6 @@ const zhContent: Content = {
       duration: "2 小時",
       level: "初學者",
       language: "繁體中文",
-      video: "intro.mp4",
       features: [
         "了解 AI 及其戰略價值",
         "將 AI 整合到業務策略中",

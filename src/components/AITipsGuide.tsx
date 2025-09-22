@@ -25,12 +25,12 @@ const AITipsGuide = () => {
                 <div className="text-center md:text-left">
                   {/* Heading */}
                   <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-primary bg-clip-text text-transparent">
-                    Master AI Tools Like a Pro
+                    Discover How Easy It Is to Master AI Tools Like a Pro
                   </h2>
                   
                   {/* Description */}
                   <p className="text-lg md:text-xl text-muted-foreground mb-8 md:mb-6 max-w-2xl md:max-w-none mx-auto md:mx-0">
-                    Discover how easy it is to master AI with AI Jedi. Download a free tips guide for general tips on using ChatGPT, Claude and Perplexity for any career professionals.
+                    Looking for superior AI training that will differentiate you in a crowded job market? Download a free tips guide for general tips on using ChatGPT, Claude and Perplexity for any career professionals.
                   </p>
                   
                   {/* Features with AI Tool Logos */}
