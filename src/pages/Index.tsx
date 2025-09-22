@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import WhyJoinSection from "@/components/WhyJoinSection";
 import ProgramOverview from "@/components/ProgramOverview";
+import AITipsGuide from "@/components/AITipsGuide";
 import AIToolsSection from "@/components/AIToolsSection";
 import VibeCodingWebApps from "@/components/VibeCodingWebApps";
 import InstructorSection from "@/components/InstructorSection";
@@ -44,6 +45,7 @@ const Index = () => {
       <StudentShowcase />
       <CallToAction />
       <FAQSection />
+      <AITipsGuide />
       <Footer />
     </div>
   );
