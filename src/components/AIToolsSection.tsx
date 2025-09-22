@@ -75,7 +75,7 @@ const AIToolsSection = () => {
             <CardContent className="p-8">
               <h3 className="text-2xl font-bold mb-4">Ready to Master These Tools?</h3>
               <p className="text-lg text-muted-foreground mb-6">
-                Join our hands-on courses and learn to use these AI tools to transform your work and boost your productivity.
+                Join our real-world courses and learn to use these AI tools to transform your work and boost your productivity.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a 

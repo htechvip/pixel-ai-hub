@@ -147,12 +147,12 @@ const englishContent: Content = {
         href: "#online-courses",
         label: "AI Courses",
         children: [
-          { href: "#courses-finance-professionals", label: "AI for Finance Professionals" },
+          { href: "#courses-product-managers", label: "AI for Product Managers - Vibe Coding 101" },
           { href: "#courses-marketing-professionals", label: "AI for Marketing Professionals" },
           { href: "#courses-software-developers", label: "AI for Software Developers" },
           { href: "#courses-business-leaders", label: "AI for Business Leaders" },
           { href: "#courses-healthcare-professionals", label: "AI for Healthcare Professionals" },
-          { href: "#courses-product-managers", label: "AI for Product Managers - Vibe Coding 101" }
+          { href: "#courses-finance-professionals", label: "AI for Finance Professionals" }
         ]
       },
       { href: "#instructor", label: "Instructor" },
@@ -206,8 +206,8 @@ const englishContent: Content = {
     subtitle: "Practical, no‑code AI tracks designed for business impact.",
     features: [
       {
-        title: "AI for Finance Professionals",
-        description: "Automate financial analysis, reporting, and decision-making with AI-powered tools."
+        title: "AI for Product Managers - Vibe Coding 101",
+        description: "Build product prototypes and automations by describing what you want—no coding required."
       },
       {
         title: "AI for Marketing Professionals",
@@ -226,8 +226,8 @@ const englishContent: Content = {
         description: "Optimize patient care, streamline documentation, and improve healthcare operations with AI."
       },
       {
-        title: "AI for Product Managers - Vibe Coding 101",
-        description: "Build product prototypes and automations by describing what you want—no coding required."
+        title: "AI for Finance Professionals",
+        description: "Automate financial analysis, reporting, and decision-making with AI-powered tools."
       }
     ]
   },
@@ -1034,12 +1034,12 @@ const zhContent: Content = {
         href: "#online-courses",
         label: "AI 課程",
         children: [
-          { href: "#courses-finance-professionals", label: "AI 金融專業課程" },
+          { href: "#courses-product-managers", label: "AI 產品經理課程 - Vibe Coding 101" },
           { href: "#courses-marketing-professionals", label: "AI 行銷專業課程" },
           { href: "#courses-software-developers", label: "AI 軟體開發課程" },
           { href: "#courses-business-leaders", label: "AI 企業領導課程" },
           { href: "#courses-healthcare-professionals", label: "AI 醫療專業課程" },
-          { href: "#courses-product-managers", label: "AI 產品經理課程 - Vibe Coding 101" }
+          { href: "#courses-finance-professionals", label: "AI 金融專業課程" }
         ]
       },
       { href: "#instructor", label: "講師" },
@@ -1095,8 +1095,8 @@ const zhContent: Content = {
     subtitle: "實用、無程式碼的 AI 課程，專為商業影響而設計。",
     features: [
       {
-        title: "AI 金融專業課程",
-        description: "使用 AI 驅動的工具自動化財務分析、報告和決策制定。"
+        title: "AI 產品經理課程 - Vibe Coding 101",
+        description: "通過描述你想要的內容來建構產品原型和自動化——無需程式設計。"
       },
       {
         title: "AI 行銷專業課程",
@@ -1115,8 +1115,8 @@ const zhContent: Content = {
         description: "使用 AI 優化患者護理、簡化文檔並改善醫療保健營運。"
       },
       {
-        title: "AI 產品經理課程 - Vibe Coding 101",
-        description: "通過描述你想要的內容來建構產品原型和自動化——無需程式設計。"
+        title: "AI 金融專業課程",
+        description: "使用 AI 驅動的工具自動化財務分析、報告和決策制定。"
       }
     ]
   },
