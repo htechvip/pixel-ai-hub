@@ -1,4 +1,6 @@
 import LandingHeader from "@/components/LandingHeader";
+import { useState } from "react";
+import AITipsModal from "@/components/AITipsModal";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { ArrowRight, TrendingUp, Users, CheckCircle, AlertTriangle, Target, Zap } from "lucide-react";
@@ -7,6 +9,7 @@ import uscLecture from "@/assets/usc ai lecture.png";
 import columbiaWorkshop from "@/assets/columbia venture community tech founder workshop.png";
 
 const CareerAIAdvantage = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
   return (
     <div className="min-h-screen bg-background theme-career">
       <LandingHeader />
@@ -72,7 +75,7 @@ const CareerAIAdvantage = () => {
             </div>
             
             <div className="text-center mt-8">
-              <Button size="lg" className="text-lg px-8 py-4 bg-primary hover:bg-primary/90 animate-pulse">
+              <Button size="lg" className="text-lg px-8 py-4 bg-primary hover:bg-primary/90 animate-pulse" onClick={() => setIsModalOpen(true)}>
                 Get the free AI career guide now
               </Button>
             </div>
@@ -487,7 +490,7 @@ const CareerAIAdvantage = () => {
             </h2>
             
             <div className="space-y-6 mb-8">
-              <Button size="lg" className="text-lg px-8 py-4 mr-4">
+              <Button size="lg" className="text-lg px-8 py-4 mr-4" onClick={() => setIsModalOpen(true)}>
                 Send me the free AI career guide
               </Button>
               <Button variant="outline" size="lg" className="text-lg px-8 py-4">
@@ -574,6 +577,7 @@ const CareerAIAdvantage = () => {
           </div>
         </div>
       </section>
+      <AITipsModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
     </div>
   );
 };
