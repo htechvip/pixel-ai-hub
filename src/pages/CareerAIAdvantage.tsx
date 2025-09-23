@@ -3,10 +3,12 @@ import { useState } from "react";
 import AITipsModal from "@/components/AITipsModal";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { ArrowRight, TrendingUp, Users, CheckCircle, AlertTriangle, Target, Zap } from "lucide-react";
+import { ArrowRight, TrendingUp, Users, CheckCircle, AlertTriangle } from "lucide-react";
 import aiTalkVilla from "@/assets/ai talk villa.jpeg";
 import uscLecture from "@/assets/usc ai lecture.png";
 import columbiaWorkshop from "@/assets/columbia venture community tech founder workshop.png";
+import wonderingImg from "@/assets/wondering.png";
+import evolutionImg from "@/assets/evolution.jpg";
 
 const CareerAIAdvantage = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -37,7 +39,7 @@ const CareerAIAdvantage = () => {
                 </p>
               </div>
               
-              <div className="flex justify-center lg:justify-end">
+              <div className="flex justify-center lg:justify-end mb-6 sm:mb-8">
                 <div className="relative">
                   <img 
                     src={aiTalkVilla} 
@@ -53,20 +55,20 @@ const CareerAIAdvantage = () => {
             </div>
             
             {/* Professional split-screen visual */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-              <Card className="bg-slate-50 border-slate-200 hover:shadow-lg transition-shadow">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12 mt-6 sm:mt-10">
+              <Card className="bg-slate-50 border-slate-200 hover:shadow-lg transition-shadow mt-4">
                 <CardContent className="p-8 text-center">
-                  <div className="w-16 h-16 bg-slate-200 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Target className="w-8 h-8 text-slate-600" />
+                  <div className="w-24 h-24 md:w-28 md:h-28 bg-slate-200 rounded-full flex items-center justify-center mx-auto mb-6 overflow-hidden">
+                    <img src={wonderingImg} alt="Wondering professional" className="w-full h-full object-cover" />
                   </div>
                   <h3 className="text-2xl font-bold text-slate-700 mb-2">You're here</h3>
                   <p className="text-slate-600">Still debating whether AI matters for your career</p>
                 </CardContent>
               </Card>
-              <Card className="bg-blue-50 border-blue-200 hover:shadow-lg transition-shadow">
+              <Card className="bg-blue-50 border-blue-200 hover:shadow-lg transition-shadow mt-2">
                 <CardContent className="p-8 text-center">
-                  <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Zap className="w-8 h-8 text-blue-600" />
+                  <div className="w-24 h-24 md:w-28 md:h-28 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6 overflow-hidden">
+                    <img src={evolutionImg} alt="Evolution forward" className="w-full h-full object-cover" />
                   </div>
                   <h3 className="text-2xl font-bold text-blue-700 mb-2">Where everyone else will be in 12 months</h3>
                   <p className="text-blue-600">Already implementing AI strategies that make them indispensable</p>
@@ -75,7 +77,11 @@ const CareerAIAdvantage = () => {
             </div>
             
             <div className="text-center mt-8">
-              <Button size="lg" className="text-lg px-8 py-4 bg-primary hover:bg-primary/90 animate-pulse" onClick={() => setIsModalOpen(true)}>
+              <Button
+                size="lg"
+                className="text-lg px-8 py-5 rounded-lg bg-primary hover:bg-primary/90 text-primary-foreground shadow-glow ring-2 ring-primary/40 hover:ring-primary transition-all duration-300 hover:scale-[1.02]"
+                onClick={() => setIsModalOpen(true)}
+              >
                 Get the free AI career guide now
               </Button>
             </div>
@@ -490,13 +496,17 @@ const CareerAIAdvantage = () => {
             </h2>
             
             <div className="space-y-6 mb-8">
-              <Button size="lg" className="text-lg px-8 py-4 mr-4" onClick={() => setIsModalOpen(true)}>
+              <Button
+                size="lg"
+                className="text-lg px-8 py-5 mr-4 rounded-lg bg-primary hover:bg-primary/90 text-primary-foreground shadow-glow ring-2 ring-primary/40 hover:ring-primary transition-all duration-300 hover:scale-[1.02]"
+                onClick={() => setIsModalOpen(true)}
+              >
                 Send me the free AI career guide
               </Button>
               <Button
                 variant="outline"
                 size="lg"
-                className="text-lg px-8 py-4"
+                className="text-lg px-8 py-5 rounded-lg border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground shadow-glow/50 transition-all duration-300 hover:scale-[1.02]"
                 onClick={() => window.location.assign("/")}
               >
                 Tell me about advanced training
@@ -582,6 +592,15 @@ const CareerAIAdvantage = () => {
               <p className="text-xl font-semibold">
                 The choice is yours.
               </p>
+              <div className="pt-4">
+                <Button
+                  size="lg"
+                  className="text-lg px-8 py-5 rounded-lg bg-primary hover:bg-primary/90 text-primary-foreground shadow-glow ring-2 ring-primary/40 hover:ring-primary transition-all duration-300 hover:scale-[1.02]"
+                  onClick={() => setIsModalOpen(true)}
+                >
+                  Download AI Guide Now
+                </Button>
+              </div>
             </div>
           </div>
         </div>
