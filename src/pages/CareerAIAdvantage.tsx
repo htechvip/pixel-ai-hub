@@ -8,7 +8,7 @@ import columbiaWorkshop from "@/assets/columbia venture community tech founder w
 
 const CareerAIAdvantage = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background theme-career">
       <LandingHeader />
       
       {/* Hero Section */}

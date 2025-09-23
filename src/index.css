@@ -67,6 +67,40 @@ All colors MUST be HSL.
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
+  /* Page-scoped theme for Career AI Advantage landing page */
+  .theme-career {
+    --background: 166 33% 86.5%; /* #D1E8E2 */
+    --foreground: 153 9% 19%;   /* #2C3531 */
+
+    --card: 166 33% 96%;
+    --card-foreground: 153 9% 19%;
+
+    --popover: 166 33% 96%;
+    --popover-foreground: 153 9% 19%;
+
+    --primary: 181 71% 23%;            /* #116466 */
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 29 100% 80%;          /* #FFCB9A */
+    --secondary-foreground: 153 9% 19%;
+
+    --muted: 28 50% 85%;               /* softened #D9B08C */
+    --muted-foreground: 153 9% 30%;
+
+    --accent: 28 50% 70%;              /* #D9B08C */
+    --accent-foreground: 153 9% 19%;
+
+    --destructive: 3 74% 49%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 166 20% 78%;
+    --input: 166 20% 78%;
+    --ring: 181 71% 23%;
+
+    --gradient-primary: linear-gradient(135deg, hsl(181 71% 18%), hsl(153 9% 19%));
+    --gradient-secondary: linear-gradient(135deg, hsl(166 33% 92%), hsl(166 33% 86.5%));
+    --gradient-hero: linear-gradient(135deg, hsl(166 33% 92%), hsl(29 100% 90%));
+  }
   .dark {
     --background: 0 0% 3.9%;
     --foreground: 0 0% 98%;
