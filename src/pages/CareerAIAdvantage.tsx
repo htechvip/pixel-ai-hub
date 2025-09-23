@@ -493,7 +493,12 @@ const CareerAIAdvantage = () => {
               <Button size="lg" className="text-lg px-8 py-4 mr-4" onClick={() => setIsModalOpen(true)}>
                 Send me the free AI career guide
               </Button>
-              <Button variant="outline" size="lg" className="text-lg px-8 py-4">
+              <Button
+                variant="outline"
+                size="lg"
+                className="text-lg px-8 py-4"
+                onClick={() => window.location.assign("/")}
+              >
                 Tell me about advanced training
               </Button>
             </div>
@@ -518,10 +523,14 @@ const CareerAIAdvantage = () => {
                 </h2>
                 
                 <div className="space-y-6 text-lg leading-relaxed">
-                  <p>I've been helping professionals navigate career transitions for over 27 years</p>
+                  <p>I've been helping professionals navigate career transitions for over decades. I am now teaching at USC and helping more students along the way.</p>
                   
-                  <p>I've seen what happens when people get ahead of technology shifts—and what happens when they don't</p>
+                  <p>I've seen what happens when people get ahead of technology shifts—and what happens when they don't.</p>
                   
+                  <p>I've mentored countless engineers and technologists, and I've advised CEOs and business leaders on how to leverage AI strategically across their organizations.</p>
+
+                  <p>I know exactly how AI accelerates a person's career—from the first real projects to the promotions that follow. Now I want to share these playbooks with everyone so more people can become truly capable with AI, not just familiar with the buzzwords.</p>
+
                   <div className="bg-slate-50 border border-slate-200 p-4 rounded">
                     <p className="font-semibold text-slate-700">Whether you end up working with me or not, please don't sleep on this opportunity</p>
                   </div>
