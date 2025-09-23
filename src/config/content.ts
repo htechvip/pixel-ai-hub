@@ -162,7 +162,7 @@ const englishContent: Content = {
   },
 
   hero: {
-    title: "Master AI through hands-on case studies",
+    title: "Master AI through real-world case studies",
     description: "Hands-on online courses designed for career professionals. Learn how to use AI tools to automate tasks, make better decisions, and drive business results — no coding required.",
     
     buttons: {
@@ -177,7 +177,7 @@ const englishContent: Content = {
     mainText: [
       "You don't need a computer science degree to start using AI at work. With today's powerful no-code AI tools, you can automate tasks, streamline workflows, and create new opportunities — even without a technical background. If you can describe what you want, you can make it happen.",
       "But here's what you won't find anywhere else: This program is built on nearly three decades of real-world AI implementations across Fortune 200 companies and startups that got acquired. Every example, every workflow, every strategy comes from actual business battles — not theoretical classroom scenarios.",
-      "This hands-on program is designed for non-technical professionals who want to advance their careers by applying AI that actually works in the real world. Zero passive learning. You'll be building with battle-tested frameworks from day one, using the exact same approaches that drove millions in revenue and operational savings at major corporations.",
+      "This real-world program is designed for non-technical professionals who want to advance their careers by applying AI that actually works in the real world. Zero passive learning. You'll be building with battle-tested frameworks from day one, using the exact same approaches that drove millions in revenue and operational savings at major corporations.",
       "In just one weekend, you'll design and implement AI workflows you can immediately deploy in your job or business — workflows proven in high-stakes corporate environments. We guide you step-by-step with the no-code tools and cutting-edge AI practices that survived the crucible of Fortune 200 boardrooms and startup scaling challenges.",
       "The bottom line: You're not just learning AI — you're learning AI that's been forged in the real world and proven to deliver results where it matters most."
     ],
@@ -332,7 +332,7 @@ const englishContent: Content = {
         {
           name: "Emily Rodriguez",
           rating: 4,
-          comment: "The hands-on exercises were excellent. I implemented the automated reporting system and my team loves the real-time dashboards. The course material is well-structured and easy to follow.",
+          comment: "The real-world exercises were excellent. I implemented the automated reporting system and my team loves the real-time dashboards. The course material is well-structured and easy to follow.",
           timeAgo: "3 weeks ago"
         },
         {
@@ -345,7 +345,7 @@ const englishContent: Content = {
     },
     "ai-for-marketing-professionals": {
       title: "AI for Marketing Professionals: A Beginner's Hands-On Guide",
-      description: "Transform your marketing workflow in just 2 hours using ChatGPT, Canva, and HubSpot AI. This hands-on course shows you exactly how to automate social media posts, optimize email subject lines, create content calendars, and build predictive models for lead scoring — all without writing a single line of code. You'll walk away with ready-to-use prompts, automation templates, and a complete AI-enhanced marketing process you can implement immediately.",
+      description: "Transform your marketing workflow in just 2 hours using ChatGPT, Canva, and HubSpot AI. This real-world course shows you exactly how to automate social media posts, optimize email subject lines, create content calendars, and build predictive models for lead scoring — all without writing a single line of code. You'll walk away with ready-to-use prompts, automation templates, and a complete AI-enhanced marketing process you can implement immediately.",
       instructor: "Cho-Nan Tsai",
       rating: 4.8,
       ratingNum: 892,
@@ -429,7 +429,7 @@ const englishContent: Content = {
           {
             name: "Jessica Wu",
             rating: 5,
-            comment: "Perfect for marketing beginners! The hands-on exercises with ChatGPT and Canva were incredibly practical. I immediately started using AI for our social media posts and email campaigns. Our engagement rates increased by 45%.",
+            comment: "Perfect for marketing beginners! The real-world exercises with ChatGPT and Canva were incredibly practical. I immediately started using AI for our social media posts and email campaigns. Our engagement rates increased by 45%.",
             timeAgo: "1 week ago"
           },
           {
@@ -441,7 +441,7 @@ const englishContent: Content = {
           {
             name: "Maria Santos",
             rating: 4,
-            comment: "Excellent hands-on approach! The content calendar exercise with AI tools was a game-changer. I love how the course focuses on practical applications rather than theory. The prompt library is incredibly useful.",
+            comment: "Excellent real-world approach! The content calendar exercise with AI tools was a game-changer. I love how the course focuses on practical applications rather than theory. The prompt library is incredibly useful.",
             timeAgo: "2 weeks ago"
           },
           {
@@ -454,7 +454,7 @@ const englishContent: Content = {
       },
     "ai-for-software-developers": {
       title: "AI for Software Developers: A Hands-On Beginner's Guide",
-      description: "Master AI integration as a software developer using GitHub Copilot, OpenAI APIs, and Model Context Protocol. This hands-on course shows you exactly how to add intelligent features to your applications, automate coding tasks, and build AI-powered functionality using practical APIs and SDKs. You'll walk away with working code examples, integration templates, and a complete AI-enhanced development workflow you can implement immediately.",
+      description: "Master AI integration as a software developer using GitHub Copilot, OpenAI APIs, and Model Context Protocol. This real-world course shows you exactly how to add intelligent features to your applications, automate coding tasks, and build AI-powered functionality using practical APIs and SDKs. You'll walk away with working code examples, integration templates, and a complete AI-enhanced development workflow you can implement immediately.",
       instructor: "Cho-Nan Tsai",
       rating: 4.9,
       ratingNum: 634,
@@ -547,7 +547,7 @@ const englishContent: Content = {
         {
           name: "Robert Johnson",
           rating: 5,
-          comment: "Perfect introduction to AI for developers! The hands-on API integration exercises were incredibly practical. I immediately started using GitHub Copilot and integrated OpenAI's API into our customer support chatbot. Development time reduced by 40%.",
+          comment: "Perfect introduction to AI for developers! The real-world API integration exercises were incredibly practical. I immediately started using GitHub Copilot and integrated OpenAI's API into our customer support chatbot. Development time reduced by 40%.",
           timeAgo: "2 weeks ago"
         },
         {
@@ -572,7 +572,7 @@ const englishContent: Content = {
     },
     "ai-for-business-leaders": {
       title: "AI for Business Leaders",
-      description: "This course introduces non-technical business leaders to artificial intelligence, its applications in strategy and operations, and practical ways to start using AI responsibly within an organization. It blends concise lectures with hands-on exercises and real-world examples so learners can immediately apply insights to their own context.",
+      description: "This course introduces non-technical business leaders to artificial intelligence, its applications in strategy and operations, and practical ways to start using AI responsibly within an organization. It blends concise lectures with real-world exercises and real-world examples so learners can immediately apply insights to their own context.",
       instructor: "Cho-Nan Tsai",
       rating: 4.7,
       ratingNum: 1156,
@@ -585,7 +585,7 @@ const englishContent: Content = {
       language: "English",
       video: "intro.mp4",
       features: [
-        "Concise lectures with hands-on exercises and real-world examples",
+        "Concise lectures with real-world exercises and real-world examples",
         "No-code AI tools demonstrations and practice sessions",
         "Strategic frameworks and templates for AI implementation",
         "Ethical AI guidelines and policy templates",
@@ -597,7 +597,7 @@ const englishContent: Content = {
         "Identify and prioritize AI opportunities aligned with business strategy",
         "Manage AI initiatives and teams more effectively",
         "Navigate ethical, legal, and risk considerations of AI deployment",
-        "Experiment hands-on with no-code AI tools for immediate productivity gains"
+        "Experiment real-world with no-code AI tools for immediate productivity gains"
       ],
       curriculum: [
         {
@@ -669,7 +669,7 @@ const englishContent: Content = {
         {
           name: "Rachel Green",
           rating: 5,
-          comment: "As a CEO, this course was invaluable for understanding AI's business impact. The hands-on exercises with no-code tools showed immediate productivity gains. My 30-day action plan is already delivering results.",
+          comment: "As a CEO, this course was invaluable for understanding AI's business impact. The real-world exercises with no-code tools showed immediate productivity gains. My 30-day action plan is already delivering results.",
           timeAgo: "3 weeks ago"
         },
         {
@@ -682,7 +682,7 @@ const englishContent: Content = {
     },
     "ai-for-healthcare-professionals": {
       title: "AI for Healthcare Professionals",
-      description: "This beginner-friendly course explains how AI is transforming healthcare and gives professionals a hands-on look at three leading tools they can explore right away: Keragon (AI automation for workflows), Aidoc (AI radiology), and PathAI (AI pathology). In under two hours, you'll learn how AI is applied in diagnostics, operations, and patient care — plus how to evaluate tools safely and ethically.",
+      description: "This beginner-friendly course explains how AI is transforming healthcare and gives professionals a real-world look at three leading tools they can explore right away: Keragon (AI automation for workflows), Aidoc (AI radiology), and PathAI (AI pathology). In under two hours, you'll learn how AI is applied in diagnostics, operations, and patient care — plus how to evaluate tools safely and ethically.",
       instructor: "Cho-Nan Tsai",
       rating: 4.6,
       ratingNum: 743,
@@ -766,7 +766,7 @@ const englishContent: Content = {
         {
           name: "Patricia Davis",
           rating: 5,
-          comment: "Perfect for healthcare professionals! This course demystified AI for our clinical team. The hands-on demos of Keragon, Aidoc, and PathAI showed real applications we could implement. Our workflow automation project is already saving 2 hours daily.",
+          comment: "Perfect for healthcare professionals! This course demystified AI for our clinical team. The real-world demos of Keragon, Aidoc, and PathAI showed real applications we could implement. Our workflow automation project is already saving 2 hours daily.",
           timeAgo: "2 weeks ago"
         },
         {
@@ -791,7 +791,7 @@ const englishContent: Content = {
     },
     "ai-for-product-managers-vibe-coding-101": {
       title: "AI for Product Managers - Vibe Coding 101",
-      description: "Transform your product ideas into reality in just 6 hours using Lovable, Cursor, v0, and Bolt. This hands-on course shows non-technical professionals exactly how to build marketing websites, landing pages, and SaaS MVPs by simply describing what you want. You'll walk away with ready-to-use prompt templates, a deployed project, and the confidence to prototype any idea instantly.",
+      description: "Transform your product ideas into reality in just 6 hours using Lovable, Cursor, v0, and Bolt. This real-world course shows non-technical professionals exactly how to build marketing websites, landing pages, and SaaS MVPs by simply describing what you want. You'll walk away with ready-to-use prompt templates, a deployed project, and the confidence to prototype any idea instantly.",
       instructor: "Cho-Nan Tsai",
       rating: 4.9,
       ratingNum: 2156,
@@ -895,7 +895,7 @@ const englishContent: Content = {
         {
           name: "Sophie Chen",
           rating: 4,
-          comment: "Excellent hands-on approach! The prompt templates for web apps are pure gold. I created multiple marketing websites for clients using vibe coding. The project presentation aspect really helped solidify my learning.",
+          comment: "Excellent real-world approach! The prompt templates for web apps are pure gold. I created multiple marketing websites for clients using vibe coding. The project presentation aspect really helped solidify my learning.",
           timeAgo: "3 weeks ago"
         },
         {
@@ -915,7 +915,7 @@ const englishContent: Content = {
     bio: [
       "Cho-Nan Tsai is a technology entrepreneur and educator with over two decades of experience in AI, machine learning, and fintech. He currently serves as an adjunct professor teaching AI at USC and as CEO of Hyperionsoft, an AI consulting firm.",
       "Cho-Nan has served as founding CTO three times and successfully raised millions for multiple startups, scaling them exponentially through innovative AI solutions. His corporate experience includes managing tech projects at Fortune 500 companies such as Sony, Ricoh, and McKinsey & Company. He has developed and deployed AI solutions impacting millions of users across data analytics, digital advertising, and lending platforms.",
-      "As founder of AI Jedi, Cho-Nan has designed curriculum combining hands-on experience with cutting-edge AI tools and methodologies. His teaching philosophy centers on building real-world applications while ensuring students grasp fundamental AI concepts, driven by his belief that AI should be accessible to all learners.",
+      "As founder of AI Jedi, Cho-Nan has designed curriculum combining real-world experience with cutting-edge AI tools and methodologies. His teaching philosophy centers on building real-world applications while ensuring students grasp fundamental AI concepts, driven by his belief that AI should be accessible to all learners.",
       "He holds a B.S. in Computer Engineering from Columbia University and an M.S. in Computer Science from UCLA."      
     ],
     stats: [
@@ -951,7 +951,7 @@ const englishContent: Content = {
       {
         name: "Saravana Moorthi",
         role: "Software Engineering Lead at Federal Reserve Bank of San Francisco",
-        quote: "The hands-on projects and industry mentorship made all the difference in my learning journey."
+        quote: "The real-world projects and industry mentorship made all the difference in my learning journey."
       },
       {
         name: "Supratik Mukherjee",
@@ -975,11 +975,11 @@ const englishContent: Content = {
       },
       {
         question: "What will I learn in these courses?",
-        answer: "You'll learn to use industry-leading AI tools relevant to your profession - from ChatGPT and GitHub Copilot for developers, to Keragon and PathAI for healthcare professionals, to Lovable and Cursor for product managers. Each course includes hands-on exercises and real-world case studies."
+        answer: "You'll learn to use industry-leading AI tools relevant to your profession - from ChatGPT and GitHub Copilot for developers, to Keragon and PathAI for healthcare professionals, to Lovable and Cursor for product managers. Each course includes real-world exercises and real-world case studies."
       },
       {
         question: "How are the courses structured?",
-        answer: "Each course is 2-6 hours of focused, practical training with short 4-8 minute lessons, hands-on exercises, and downloadable resources. You'll complete real projects and receive certificates of completion."
+        answer: "Each course is 2-6 hours of focused, practical training with short 4-8 minute lessons, real-world exercises, and downloadable resources. You'll complete real projects and receive certificates of completion."
       },
       {
         question: "What AI tools and platforms will I use?",

@@ -7,6 +7,7 @@ import Index from "./pages/Index";
 import Signup from "./pages/Signup";
 import SignupZh from "./pages/SignupZh";
 import Course from "./pages/Course";
+import CareerAIAdvantage from "./pages/CareerAIAdvantage";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -26,6 +27,7 @@ const App = () => {
             <Route path="/" element={<Index />} />
             <Route path="/signup" element={<Signup />} />
             <Route path="/course/:courseId" element={<Course />} />
+            <Route path="/career-ai-advantage" element={<CareerAIAdvantage />} />
             {/* Traditional Chinese routes */}
             <Route path="/zh-tw" element={<Index />} />
             <Route path="/zh-tw/signup" element={<SignupZh />} />
