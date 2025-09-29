@@ -995,7 +995,7 @@ const englishContent: Content = {
       },
       {
         question: "How can I enroll?",
-        answer: "Simply click 'Start Course' on any course page or 'Learn AI Online' to browse all available courses. You can start learning immediately!"
+        answer: "Simply click 'Start Course' on any course page or 'Learn AI' to browse all available courses."
       }
     ]
   },
@@ -1005,7 +1005,7 @@ const englishContent: Content = {
     subtitle: "Join the next cohort of AI professionals.",
     buttons: {
       primary: {
-        text: "Learn AI Online",
+        text: "Learn AI",
         variant: "hero"
       }
     }
