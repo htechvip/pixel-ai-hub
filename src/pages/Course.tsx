@@ -386,20 +386,11 @@ const Course = () => {
               <CardContent className="p-6">
                 <div className="text-center mb-6">
                   <div className="text-3xl font-bold text-primary mb-2">{courseData.price}</div>
-                  <div className="text-lg text-muted-foreground line-through mb-2">{courseData.originalPrice}</div>
-                  <Badge variant="destructive" className="mb-4">50% OFF</Badge>
                 </div>
 
                 <Button asChild className="w-full mb-4" size="lg">
                   {(() => {
-                    const stripeLinks: { [key: string]: string } = {
-                      'ai-for-finance-professionals': 'https://buy.stripe.com/bJefZic1deuXe32b3U2kw04?prefilled_promo_code=halfoff',
-                      'ai-for-marketing-professionals': 'https://buy.stripe.com/9B6aEYfdpeuXf761tk2kw09?prefilled_promo_code=halfoff',
-                      'ai-for-software-developers': 'https://buy.stripe.com/6oU00k6GTcmP1gg4Fw2kw08?prefilled_promo_code=halfoff',
-                      'ai-for-business-leaders': 'https://buy.stripe.com/7sYeVe3uH9aD5ww3Bs2kw07?prefilled_promo_code=halfoff',
-                      'ai-for-healthcare-professionals': 'https://buy.stripe.com/00weVed5h5Yr2kk7RI2kw06?prefilled_promo_code=halfoff',
-                      'ai-for-product-managers-vibe-coding-101': 'https://buy.stripe.com/28E28se9ldqTgbab3U2kw05?prefilled_promo_code=halfoff'
-                    };
+                    const stripeLinks: { [key: string]: string } = {};
                     
                     const stripeLink = stripeLinks[courseId as string];
                     
@@ -413,9 +404,7 @@ const Course = () => {
                   })()}
                 </Button>
 
-                <div className="text-center text-sm text-muted-foreground mb-4">
-                  30-Day Money-Back Guarantee
-                </div>
+                {/* Guarantee removed per request */}
 
                 <Separator className="my-4" />
 

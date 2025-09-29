@@ -29,11 +29,7 @@ const Hero = () => {
                   {content.hero.buttons.primary}
                 </a>
               </Button>
-              <Button variant="outline" size="lg" className="text-lg px-8 py-4 animate-fade-in" asChild>
-                <Link to={signupPath}>
-                  {content.hero.buttons.secondary}
-                </Link>
-              </Button>
+              {/* Secondary in-person CTA removed per request */}
             </div>
           </div>
 
