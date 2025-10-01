@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { content } from "@/config/content";
 import htechLogo from "@/assets/logo-htech-whitebg.png";
@@ -10,8 +11,17 @@ import {
   NavigationMenuContent,
   NavigationMenuLink,
 } from "@/components/ui/navigation-menu";
+import {
+  Sheet,
+  SheetContent,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet";
+import { Menu, X } from "lucide-react";
 
 const Header = () => {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const location = useLocation();
   const { pathname, search, hash } = location;
 
@@ -106,21 +116,106 @@ const Header = () => {
             </NavigationMenu>
           </div>
           
-          {/* CTA & Language Switch */}
+          {/* Mobile Menu & CTA & Language Switch */}
           <div className="flex items-center gap-2">
+            {/* Language Toggle */}
             <Button variant="ghost" size="sm" asChild>
               <a href={togglePath}>{isZh ? "EN" : "中文"}</a>
             </Button>
+
+            {/* Desktop CTA */}
             <Button 
-              className="mr-2 sm:mr-0 min-w-0 px-3 py-2 text-sm sm:px-4 sm:py-2 sm:text-base whitespace-nowrap"
+              className="hidden md:inline-flex min-w-0 px-4 py-2 text-base whitespace-nowrap"
               onClick={() => {
-                // Always go to main page first, then scroll to courses section
                 const mainPageUrl = isZh ? "/zh-tw#online-courses" : "/#online-courses";
                 window.location.assign(mainPageUrl);
               }}
             >
               {content.hero.buttons.primary}
             </Button>
+
+            {/* Mobile Hamburger Menu */}
+            <Sheet open={mobileMenuOpen} onOpenChange={setMobileMenuOpen}>
+              <SheetTrigger asChild className="md:hidden">
+                <Button variant="ghost" size="icon">
+                  <Menu className="h-6 w-6" />
+                  <span className="sr-only">Toggle menu</span>
+                </Button>
+              </SheetTrigger>
+              <SheetContent side="right" className="w-[300px] sm:w-[400px]">
+                <SheetHeader>
+                  <SheetTitle>{content.header.logo}</SheetTitle>
+                </SheetHeader>
+                
+                <div className="mt-8 flex flex-col gap-6">
+                  {/* Mobile Navigation Items */}
+                  {content.header.navigation.map((item) => {
+                    const link = item.href.startsWith("#") ? `${isZh ? "/zh-tw" : "/"}${item.href}` : item.href;
+                    
+                    if (item.children && item.children.length > 0) {
+                      return (
+                        <div key={item.label} className="space-y-2">
+                          <div className="font-semibold text-lg">{item.label}</div>
+                          <div className="pl-4 space-y-2">
+                            {item.children.map((child) => {
+                              let childLink;
+                              if (item.label === "AI Courses" || item.label === "AI 課程") {
+                                const chineseCourseMap: { [key: string]: string } = {
+                                  "AI 金融專業課程": "ai-for-finance-professionals",
+                                  "AI 行銷專業課程": "ai-for-marketing-professionals", 
+                                  "AI 軟體開發課程": "ai-for-software-developers",
+                                  "AI 企業領導課程": "ai-for-business-leaders",
+                                  "AI 醫療專業課程": "ai-for-healthcare-professionals",
+                                  "AI 產品經理課程 - Vibe Coding 101": "ai-for-product-managers-vibe-coding-101"
+                                };
+                                const courseId = chineseCourseMap[child.label] || child.label.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
+                                childLink = `${basePath}/course/${courseId}`;
+                              } else {
+                                childLink = child.href.startsWith("#") ? `${isZh ? "/zh-tw" : "/"}${child.href}` : child.href;
+                              }
+                              
+                              return (
+                                <a
+                                  key={child.label}
+                                  href={childLink}
+                                  className="block text-sm text-muted-foreground hover:text-foreground py-2"
+                                  onClick={() => setMobileMenuOpen(false)}
+                                >
+                                  {child.label}
+                                </a>
+                              );
+                            })}
+                          </div>
+                        </div>
+                      );
+                    }
+                    
+                    return (
+                      <a
+                        key={item.label}
+                        href={link}
+                        className="text-lg font-medium hover:text-primary"
+                        onClick={() => setMobileMenuOpen(false)}
+                      >
+                        {item.label}
+                      </a>
+                    );
+                  })}
+
+                  {/* Mobile CTA Button */}
+                  <Button 
+                    className="w-full mt-4"
+                    onClick={() => {
+                      const mainPageUrl = isZh ? "/zh-tw#online-courses" : "/#online-courses";
+                      window.location.assign(mainPageUrl);
+                      setMobileMenuOpen(false);
+                    }}
+                  >
+                    {content.hero.buttons.primary}
+                  </Button>
+                </div>
+              </SheetContent>
+            </Sheet>
           </div>
         </div>
       </div>
