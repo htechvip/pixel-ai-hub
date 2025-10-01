@@ -16,6 +16,16 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    title: "What I Learned About Hiring at a Startup",
+    slug: "what-i-learned-about-hiring-at-a-startup",
+    date: "2025-01-30",
+    author: "Cho-Nan Tsai",
+    excerpt: "Building a startup team taught me that the best hires aren't Ivy League pedigrees or 10x engineers. They're self-starters, learners, and people who lift the whole team. Here's what I learned while hiring at Camino Financial.",
+    category: "Career Growth",
+    tags: ["Hiring", "Startup", "Leadership"],
+    image: aiTalkVilla
+  },
+  {
     title: "The AI Career Transformation Roadmap: From $50K to $500K in 18 Months",
     slug: "ai-career-transformation-roadmap",
     date: "2025-01-25",
