@@ -155,6 +155,7 @@ const englishContent: Content = {
           { href: "#courses-finance-professionals", label: "AI for Finance Professionals" }
         ]
       },
+      { href: "/blog", label: "Blog" },
       { href: "#instructor", label: "Instructor" },
       { href: "#showcase", label: "Success Stories" },
       { href: "#faq", label: "FAQ" }
@@ -1042,6 +1043,7 @@ const zhContent: Content = {
           { href: "#courses-finance-professionals", label: "AI 金融專業課程" }
         ]
       },
+      { href: "/zh-tw/blog", label: "部落格" },
       { href: "#instructor", label: "講師" },
       { href: "#showcase", label: "成功案例" },
       { href: "#faq", label: "常見問題" }

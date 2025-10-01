@@ -8,6 +8,8 @@ import Signup from "./pages/Signup";
 import SignupZh from "./pages/SignupZh";
 import Course from "./pages/Course";
 import CareerAIAdvantage from "./pages/CareerAIAdvantage";
+import Blog from "./pages/Blog";
+import BlogPost from "./pages/BlogPost";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -28,10 +30,14 @@ const App = () => {
             <Route path="/signup" element={<Signup />} />
             <Route path="/course/:courseId" element={<Course />} />
             <Route path="/career-ai-advantage" element={<CareerAIAdvantage />} />
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/blog/:slug" element={<BlogPost />} />
             {/* Traditional Chinese routes */}
             <Route path="/zh-tw" element={<Index />} />
             <Route path="/zh-tw/signup" element={<SignupZh />} />
             <Route path="/zh-tw/course/:courseId" element={<Course />} />
+            <Route path="/zh-tw/blog" element={<Blog />} />
+            <Route path="/zh-tw/blog/:slug" element={<BlogPost />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
