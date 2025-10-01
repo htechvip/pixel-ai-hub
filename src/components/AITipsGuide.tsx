@@ -1,8 +1,8 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Download } from "lucide-react";
+import { Download, CheckCircle } from "lucide-react";
 import { useState } from "react";
-import talkImage from "@/assets/ai talk sm.jpg";
+import bookCover from "@/assets/career growth book cover sm.jpg";
 import AITipsModal from "./AITipsModal";
 
 const AITipsGuide = () => {
@@ -15,87 +15,70 @@ const AITipsGuide = () => {
   }
 
   return (
-    <section className="py-20 bg-gradient-to-b from-muted/20 to-background">
+    <section className="py-20 bg-gradient-secondary">
       <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto">
-          <Card className="bg-gradient-to-r from-primary/10 to-secondary/10 border-primary/20 overflow-hidden">
-            <CardContent className="p-8 md:p-12">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
-                {/* Left: Text + Logos */}
-                <div className="text-center md:text-left">
-                  {/* Heading */}
-                  <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-primary bg-clip-text text-transparent">
-                    Discover How Easy It Is to Master AI Tools Like a Pro
-                  </h2>
-                  
-                  {/* Description */}
-                  <p className="text-lg md:text-xl text-muted-foreground mb-8 md:mb-6 max-w-2xl md:max-w-none mx-auto md:mx-0">
-                    Looking for superior AI training that will differentiate you in a crowded job market? Download a free tips guide for general tips on using ChatGPT, Claude and Perplexity for any career professionals.
-                  </p>
-                  
-                  {/* Features with AI Tool Logos */}
-                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-8 md:mb-6">
-                    <div className="text-center">
-                    <div className="w-16 h-16 bg-white rounded-xl flex items-center justify-center mx-auto mb-4 shadow-lg border border-gray-200">
-                      <img 
-                        src="/logos/chatgpt_logo.jpeg" 
-                        alt="ChatGPT Logo" 
-                        className="w-12 h-12 rounded-lg object-cover"
-                      />
-                    </div>
-                    <h3 className="font-semibold mb-2">ChatGPT Tips</h3>
-                    <p className="text-sm text-muted-foreground">Professional prompts and workflows</p>
-                    </div>
-                    <div className="text-center">
-                    <div className="w-16 h-16 bg-white rounded-xl flex items-center justify-center mx-auto mb-4 shadow-lg border border-gray-200">
-                      <img 
-                        src="/logos/claude_logo.jpeg" 
-                        alt="Claude Logo" 
-                        className="w-12 h-12 rounded-lg object-cover"
-                      />
-                    </div>
-                    <h3 className="font-semibold mb-2">Claude Strategies</h3>
-                    <p className="text-sm text-muted-foreground">Advanced reasoning and analysis</p>
-                    </div>
-                    <div className="text-center">
-                    <div className="w-16 h-16 bg-white rounded-xl flex items-center justify-center mx-auto mb-4 shadow-lg border border-gray-200">
-                      <img 
-                        src="/logos/perplexity_ai_logo.jpeg" 
-                        alt="Perplexity AI Logo" 
-                        className="w-12 h-12 rounded-lg object-cover"
-                      />
-                    </div>
-                    <h3 className="font-semibold mb-2">Perplexity Research</h3>
-                    <p className="text-sm text-muted-foreground">Efficient information gathering</p>
-                    </div>
-                  </div>
-                  
-                  {/* CTA Button */}
-                  <Button 
-                    onClick={() => setIsModalOpen(true)}
-                    className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-primary-foreground bg-gradient-primary hover:bg-gradient-primary/90 rounded-lg transition-colors"
-                  >
-                    <Download className="w-5 h-5 mr-2" />
-                    Start Now
-                  </Button>
-                  
-                  {/* Subtext */}
-                  <p className="text-sm text-muted-foreground mt-4">
-                    Free download • Instant access
-                  </p>
-                </div>
-                
-                {/* Right: Image */}
-                <div className="order-first md:order-last">
-                  <img 
-                    src={talkImage} 
-                    alt="AI Jedi talk"
-                    className="w-full h-auto rounded-xl shadow-lg object-cover"
-                  />
-                </div>
+        <div className="max-w-4xl mx-auto text-center">
+          <div className="mb-12">
+            <h3 className="text-base md:text-lg font-semibold text-primary mb-2">
+              Download Your Free Copy
+            </h3>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+              $50K to $500K: The AI Career Blueprint for Explosive Professional Growth
+            </h2>
+          </div>
+          
+          <div className="max-w-5xl mx-auto mb-12">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+              <div className="text-left">
+                <p className="text-lg font-semibold text-foreground mb-6">Inside this book, you'll discover:</p>
+                <ul className="space-y-4 text-base md:text-lg text-muted-foreground">
+                  <li className="flex items-start">
+                    <CheckCircle className="w-5 h-5 text-primary mt-1 mr-3 flex-shrink-0" />
+                    <span>AI Champion Playbook</span>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="w-5 h-5 text-primary mt-1 mr-3 flex-shrink-0" />
+                    <span>Role-Specific AI Tools</span>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="w-5 h-5 text-primary mt-1 mr-3 flex-shrink-0" />
+                    <span>Real Career Transformations</span>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="w-5 h-5 text-primary mt-1 mr-3 flex-shrink-0" />
+                    <span>Internal Promotion Strategies</span>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="w-5 h-5 text-primary mt-1 mr-3 flex-shrink-0" />
+                    <span>Workflow Systems Blueprint</span>
+                  </li>
+                </ul>
               </div>
-            </CardContent>
-          </Card>
+              
+              <div className="flex justify-center">
+                <img 
+                  src={bookCover} 
+                  alt="AI Career Blueprint Book Cover"
+                  className="w-full max-w-sm h-auto rounded-xl shadow-lg object-cover"
+                />
+              </div>
+            </div>
+          </div>
+          <div className="flex justify-center items-center">
+            <Button 
+              onClick={() => setIsModalOpen(true)}
+              variant="hero"
+              size="lg"
+              className="text-lg px-8 py-4 animate-fade-in"
+            >
+              <Download className="w-5 h-5 mr-2" />
+              Download Free Book
+            </Button>
+          </div>
+          
+          <p className="text-base text-muted-foreground mt-6 max-w-2xl mx-auto">
+            No credit card required. Instant access. Perfect for corporate professionals ready to accelerate their careers.
+          </p>
         </div>
       </div>
       

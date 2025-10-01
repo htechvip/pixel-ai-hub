@@ -3,7 +3,7 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/u
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { Sparkles, Download, X } from "lucide-react";
+import { Sparkles, Download, CheckCircle } from "lucide-react";
 
 interface AITipsModalProps {
   isOpen: boolean;
@@ -21,18 +21,21 @@ const AITipsModal = ({ isOpen, onClose }: AITipsModalProps) => {
   const isZh = typeof window !== "undefined" && window.location.pathname.startsWith("/zh-tw");
 
   const t = {
-    title: isZh ? "免費取得 AI 技巧指南" : "Get Your Free AI Tips Guide",
-    featureChatGPT: isZh ? "ChatGPT 祕訣" : "ChatGPT Tips",
-    featureClaude: isZh ? "Claude 策略" : "Claude Strategies",
-    featurePerplexity: isZh ? "Perplexity 搜尋" : "Perplexity Research",
+    title: isZh ? "免費取得 AI 職涯藍圖" : "$50K to $500K: The AI Career Blueprint",
+    subtitle: isZh ? "爆發性專業成長" : "For Explosive Professional Growth",
+    feature1: isZh ? "AI 冠軍手冊" : "AI Champion Playbook",
+    feature2: isZh ? "角色專用 AI 工具" : "Role-Specific AI Tools",
+    feature3: isZh ? "真實職涯轉型" : "Real Career Transformations",
+    feature4: isZh ? "內部升遷策略" : "Internal Promotion Strategies",
+    feature5: isZh ? "工作流程系統藍圖" : "Workflow Systems Blueprint",
     emailLabel: isZh ? "電子郵件" : "Email Address",
     firstNameLabel: isZh ? "名字" : "First Name",
-    submit: isZh ? "寄給我指南" : "Send me the guide",
+    submit: isZh ? "下載免費書籍" : "Download Free Book",
     sending: isZh ? "傳送中..." : "Sending...",
     successTitle: isZh ? "成功！" : "Success!",
     successMsg: isZh
-      ? "請至您的信箱確認訂閱，即可收到免費 AI 技巧指南。"
-      : "Check your email to confirm your subscription and get your free AI tips guide.",
+      ? "請至您的信箱確認訂閱，即可收到免費 AI 職涯藍圖。"
+      : "Check your email to confirm your subscription and get your free AI Career Blueprint.",
     privacy: isZh ? "我們重視您的隱私。可隨時取消訂閱。" : "We respect your privacy. Unsubscribe at anytime.",
     networkError: isZh ? "網路錯誤，請稍後再試。" : "Network error. Please check your connection and try again.",
   } as const;
@@ -141,45 +144,45 @@ const AITipsModal = ({ isOpen, onClose }: AITipsModalProps) => {
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent className="sm:max-w-lg">
         <DialogHeader>
-          <DialogTitle className="text-center text-2xl font-bold">{t.title}</DialogTitle>
+          <DialogTitle className="text-center text-2xl font-bold mb-1">{t.title}</DialogTitle>
+          <p className="text-center text-2xl font-bold text-foreground">{t.subtitle}</p>
         </DialogHeader>
         
         <div className="space-y-6">
           {/* Features Preview */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <div className="text-center">
-              <div className="w-12 h-12 bg-white rounded-lg flex items-center justify-center mx-auto mb-2 shadow-sm border border-gray-200">
-                <img 
-                  src="/logos/chatgpt_logo.jpeg" 
-                  alt="ChatGPT Logo" 
-                  className="w-10 h-10 rounded object-cover"
-                />
-              </div>
-              <p className="text-sm text-muted-foreground">{t.featureChatGPT}</p>
-            </div>
-            <div className="text-center">
-              <div className="w-12 h-12 bg-white rounded-lg flex items-center justify-center mx-auto mb-2 shadow-sm border border-gray-200">
-                <img 
-                  src="/logos/claude_logo.jpeg" 
-                  alt="Claude Logo" 
-                  className="w-10 h-10 rounded object-cover"
-                />
-              </div>
-              <p className="text-sm text-muted-foreground">{t.featureClaude}</p>
-            </div>
-            <div className="text-center">
-              <div className="w-12 h-12 bg-white rounded-lg flex items-center justify-center mx-auto mb-2 shadow-sm border border-gray-200">
-                <img 
-                  src="/logos/perplexity_ai_logo.jpeg" 
-                  alt="Perplexity AI Logo" 
-                  className="w-10 h-10 rounded object-cover"
-                />
-              </div>
-              <p className="text-sm text-muted-foreground">{t.featurePerplexity}</p>
-            </div>
+          <div className="space-y-2 text-left">
+            <p className="text-sm font-semibold text-foreground">Inside this book:</p>
+            <ul className="space-y-2 text-sm text-muted-foreground">
+              <li className="flex items-start">
+                <CheckCircle className="w-4 h-4 text-primary mt-0.5 mr-2 flex-shrink-0" />
+                <span>{t.feature1}</span>
+              </li>
+              <li className="flex items-start">
+                <CheckCircle className="w-4 h-4 text-primary mt-0.5 mr-2 flex-shrink-0" />
+                <span>{t.feature2}</span>
+              </li>
+              <li className="flex items-start">
+                <CheckCircle className="w-4 h-4 text-primary mt-0.5 mr-2 flex-shrink-0" />
+                <span>{t.feature3}</span>
+              </li>
+              <li className="flex items-start">
+                <CheckCircle className="w-4 h-4 text-primary mt-0.5 mr-2 flex-shrink-0" />
+                <span>{t.feature4}</span>
+              </li>
+              <li className="flex items-start">
+                <CheckCircle className="w-4 h-4 text-primary mt-0.5 mr-2 flex-shrink-0" />
+                <span>{t.feature5}</span>
+              </li>
+            </ul>
           </div>
 
           <form onSubmit={handleSubmit} className="space-y-4">
+            <p className="text-sm text-center text-muted-foreground font-medium">
+              {isZh 
+                ? "加入 9,432 名訂閱我免費電子報的員工，立即收到此書……" 
+                : "Join 9,432 employees reading my free newsletter and receive the book instantly…"}
+            </p>
+            
             <div className="space-y-2">
               <Label htmlFor="email">{t.emailLabel}</Label>
               <Input

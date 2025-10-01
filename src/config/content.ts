@@ -162,7 +162,7 @@ const englishContent: Content = {
   },
 
   hero: {
-    title: "Master AI through real-world case studies",
+    title: "Master AI. Become Indispensable.",
     description: "Hands-on online courses designed for career professionals. Learn how to use AI tools to automate tasks, make better decisions, and drive business results — no coding required.",
     
     buttons: {
@@ -1012,7 +1012,7 @@ const englishContent: Content = {
   },
 
   footer: {
-    description: "Transform your career with our intensive AI program. Learn machine learning, deep learning, and cutting-edge AI technologies from industry experts.",
+    description: "Transform your career with our intensive AI program. No coding or technical experience required.",
     location: "📍 Taipei & Los Angeles",
     copyright: "© 2025 AI Jedi. All rights reserved.",
     links: {
