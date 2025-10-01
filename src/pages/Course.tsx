@@ -19,6 +19,8 @@ import { content } from "@/config/content";
 import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import AITipsGuide from "@/components/AITipsGuide";
+import AITipsGuideZh from "@/components/AITipsGuideZh";
 import cntColor from "@/assets/cnt-color.jpeg";
 import { Helmet } from "react-helmet";
 
@@ -425,6 +427,7 @@ const Course = () => {
           </div>
         </div>
       </div>
+      {isZh ? <AITipsGuideZh /> : <AITipsGuide />}
       <Footer />
     </div>
   );
