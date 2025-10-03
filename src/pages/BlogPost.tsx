@@ -22,6 +22,9 @@ const BlogPost = () => {
   const post = blogPosts.find(p => p.slug === slug);
 
   useEffect(() => {
+    // Scroll to top when navigating to a new blog post
+    window.scrollTo(0, 0);
+    
     if (slug) {
       // Dynamically import the markdown file
       import(`../content/blog/${slug}.md?raw`)

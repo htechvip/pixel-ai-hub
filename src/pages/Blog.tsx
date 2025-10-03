@@ -61,11 +61,11 @@ const Blog = () => {
               >
                 <Card className="h-full overflow-hidden hover:shadow-lg transition-all duration-300">
                   {/* Featured Image */}
-                  <div className="relative h-48 overflow-hidden">
+                  <div className="relative h-60 md:h-64 overflow-hidden">
                     <img
                       src={post.image}
                       alt={post.title}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                      className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-300"
                     />
                     <div className="absolute top-4 right-4">
                       <Badge variant="secondary">{post.category}</Badge>

@@ -1,6 +1,9 @@
 import pasadenaCohort from "@/assets/pasadenacohort.jpg";
 import uscLecture from "@/assets/usc ai lecture.png";
 import aiTalkVilla from "@/assets/ai talk villa.jpeg";
+import aiTalkSm from "@/assets/ai talk sm.jpg";
+import cableCoTalk from "@/assets/cable co talk.jpg";
+import chonantsai30 from "@/assets/chonantsai_30.jpeg";
 
 export interface BlogPost {
   title: string;
@@ -16,9 +19,41 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    title: "The $10 Million Lesson: What Fortune 500s and Startups Get Wrong About AI",
+    slug: "the-10-million-lesson-what-fortune-500s-and-startups-get-wrong-about-ai",
+    date: "2025-10-03",
+    author: "Cho-Nan Tsai",
+    excerpt: "",
+    category: "AI Tools",
+    tags: ["General"],
+    image: chonantsai30
+  },
+
+  {
+    title: "Why Non-Technical People Are Better at AI Than They Think",
+    slug: "why-non-technical-people-are-better-at-ai-than-they-think",
+    date: "2025-09-01",
+    author: "Cho-Nan Tsai",
+    excerpt: "Non-technical people are often underestimated in their ability to use AI. Here's why they're actually better at it than they think.",
+    category: "Career Growth",
+    tags: ["General"],
+    image: uscLecture
+  },
+
+  {
+    title: "Explaining Machine Learning vs Deep Learning to Non-Technical Students",
+    slug: "machine-learning-vs-deep-learning-explained",
+    date: "2025-10-01",
+    author: "Cho-Nan Tsai",
+    excerpt: "Teaching AI can be tricky for students without a CS background. Here's how I explained the difference between machine learning and deep learning using simple examples.",
+    category: "AI Tools",
+    tags: ["Machine Learning", "Deep Learning", "AI Education", "Neural Networks"],
+    image: aiTalkSm
+  },
+  {
     title: "What I Learned About Hiring at a Startup",
     slug: "what-i-learned-about-hiring-at-a-startup",
-    date: "2025-01-30",
+    date: "2025-09-30",
     author: "Cho-Nan Tsai",
     excerpt: "Building a startup team taught me that the best hires aren't Ivy League pedigrees or 10x engineers. They're self-starters, learners, and people who lift the whole team. Here's what I learned while hiring at Camino Financial.",
     category: "Career Growth",
