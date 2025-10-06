@@ -19,7 +19,12 @@
     "test:broken-images": "vitest run src/test/images.test.ts",
     "test:reviewer-avatars": "vitest run src/test/reviewer-avatars.test.ts",
     "test:jennifer-liu": "vitest run src/test/jennifer-liu-fix.test.ts",
-    "test:production-urls": "NODE_ENV=production vitest run src/test/production-url-check.test.ts"
+    "test:production-urls": "NODE_ENV=production vitest run src/test/production-url-check.test.ts",
+    "test:header-footer": "vitest run src/test/header-footer.test.tsx",
+    "test:e2e": "playwright test",
+    "test:e2e:ui": "playwright test --ui",
+    "test:e2e:headed": "playwright test --headed",
+    "test:e2e:mobile": "playwright test --project='Mobile Chrome' --project='Mobile Safari'"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.0",
@@ -79,6 +84,7 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.9.0",
+    "@playwright/test": "^1.55.1",
     "@tailwindcss/typography": "^0.5.19",
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.0.1",

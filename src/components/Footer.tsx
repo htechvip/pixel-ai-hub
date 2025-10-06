@@ -38,18 +38,31 @@ const Footer = () => {
           <div className="grid grid-cols-1 gap-4">
             <nav className="flex flex-col gap-2">
               {content.header.navigation.map((item) => {
-                // Always link to main page sections, never current page
-                const link = `${mainPagePath}${item.href}`;
+                // For hash links, use href. For page routes, use Link
+                const isHashLink = item.href.startsWith("#");
+                const link = isHashLink ? `${mainPagePath}${item.href}` : item.href;
                 
-                return (
-                  <a
-                    key={item.href}
-                    href={link}
-                    className="text-muted-foreground hover:text-primary transition-colors"
-                  >
-                    {item.label}
-                  </a>
-                );
+                if (isHashLink) {
+                  return (
+                    <a
+                      key={item.href}
+                      href={link}
+                      className="text-muted-foreground hover:text-primary transition-colors"
+                    >
+                      {item.label}
+                    </a>
+                  );
+                } else {
+                  return (
+                    <Link
+                      key={item.href}
+                      to={link}
+                      className="text-muted-foreground hover:text-primary transition-colors"
+                    >
+                      {item.label}
+                    </Link>
+                  );
+                }
               })}
             </nav>
           </div>

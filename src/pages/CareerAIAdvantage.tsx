@@ -1,6 +1,5 @@
 import LandingHeader from "@/components/LandingHeader";
-import { useState } from "react";
-import AITipsModal from "@/components/AITipsModal";
+import AITipsInlineForm from "@/components/AITipsInlineForm";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { ArrowRight, TrendingUp, Users, CheckCircle, AlertTriangle } from "lucide-react";
@@ -11,7 +10,6 @@ import wonderingImg from "@/assets/wondering.png";
 import evolutionImg from "@/assets/evolution.jpg";
 
 const CareerAIAdvantage = () => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
   return (
     <div className="min-h-screen bg-background theme-career">
       <LandingHeader />
@@ -77,13 +75,9 @@ const CareerAIAdvantage = () => {
             </div>
             
             <div className="text-center mt-8">
-              <Button
-                size="lg"
-                className="text-lg px-8 py-5 rounded-lg bg-primary hover:bg-primary/90 text-primary-foreground shadow-glow ring-2 ring-primary/40 hover:ring-primary transition-all duration-300 hover:scale-[1.02]"
-                onClick={() => setIsModalOpen(true)}
-              >
-                Get the free AI career guide now
-              </Button>
+              <div className="max-w-md mx-auto">
+                <AITipsInlineForm />
+              </div>
             </div>
           </div>
         </div>
@@ -496,13 +490,9 @@ const CareerAIAdvantage = () => {
             </h2>
             
             <div className="space-y-6 mb-8">
-              <Button
-                size="lg"
-                className="text-lg px-8 py-5 mr-4 rounded-lg bg-primary hover:bg-primary/90 text-primary-foreground shadow-glow ring-2 ring-primary/40 hover:ring-primary transition-all duration-300 hover:scale-[1.02]"
-                onClick={() => setIsModalOpen(true)}
-              >
-                Send me the free AI career guide
-              </Button>
+              <div className="max-w-md mr-4">
+                <AITipsInlineForm />
+              </div>
               <Button
                 variant="outline"
                 size="lg"
@@ -593,19 +583,14 @@ const CareerAIAdvantage = () => {
                 The choice is yours.
               </p>
               <div className="pt-4">
-                <Button
-                  size="lg"
-                  className="text-lg px-8 py-5 rounded-lg bg-primary hover:bg-primary/90 text-primary-foreground shadow-glow ring-2 ring-primary/40 hover:ring-primary transition-all duration-300 hover:scale-[1.02]"
-                  onClick={() => setIsModalOpen(true)}
-                >
-                  Download AI Guide Now
-                </Button>
+                <div className="max-w-md mx-auto">
+                  <AITipsInlineForm />
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
-      <AITipsModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
     </div>
   );
 };

@@ -40,6 +40,7 @@ const App = () => {
             <Route path="/zh-tw/course/:courseId" element={<Course />} />
             <Route path="/zh-tw/blog" element={<Blog />} />
             <Route path="/zh-tw/blog/:slug" element={<BlogPost />} />
+            <Route path="/zh-tw/newsletter" element={<Newsletter />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>

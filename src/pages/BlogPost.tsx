@@ -192,7 +192,7 @@ const BlogPost = () => {
                 <div>
                   <div className="text-lg font-semibold text-slate-900 mb-1">Written by {post.author}</div>
                   <p className="text-base text-slate-600 leading-relaxed">
-                    Cho-Nan Tsai teaches AI at USC and has spent 27+ years implementing AI solutions across Fortune 200 companies. 
+                    Cho-Nan Tsai teaches AI at USC and has spent 3 decades implementing AI solutions across Fortune 200 companies. 
                     He's helped thousands of professionals leverage AI for career acceleration.
                   </p>
                 </div>

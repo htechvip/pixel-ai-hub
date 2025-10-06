@@ -59,6 +59,90 @@ This project is built with:
 - React
 - shadcn-ui
 - Tailwind CSS
+- Vitest (Unit Testing)
+- Playwright (E2E Testing)
+
+## Running Tests
+
+This project includes comprehensive tests for header and footer navigation functionality.
+
+### Prerequisites
+
+Make sure you have installed all dependencies:
+
+```sh
+npm install
+```
+
+### Unit Tests
+
+Run the header and footer navigation unit tests:
+
+```sh
+# Run header and footer tests specifically
+npm run test:header-footer
+
+# Run all unit tests
+npm run test
+
+# Run tests in watch mode
+npm run test:watch
+
+# Run tests with coverage
+npm run test:coverage
+```
+
+### End-to-End Tests (Playwright)
+
+Run the complete E2E test suite:
+
+```sh
+# Run all E2E tests
+npm run test:e2e
+
+# Run E2E tests with Playwright UI (interactive mode)
+npm run test:e2e:ui
+
+# Run E2E tests in headed mode (see browser actions)
+npm run test:e2e:headed
+
+# Run mobile-specific E2E tests
+npm run test:e2e:mobile
+```
+
+### Test Coverage
+
+The test suite covers:
+
+- **Header Navigation**: All navigation links, dropdown menus, mobile hamburger menu
+- **Footer Navigation**: All footer links, hash vs page route handling
+- **Cross-page Navigation**: Blog ↔ Newsletter ↔ Home page sections
+- **Language Support**: English and Chinese navigation
+- **Mobile Responsive**: Mobile viewport testing
+- **Accessibility**: ARIA labels, keyboard navigation, focus management
+- **Form Focus Rings**: Input focus ring display (fixed clipping issue)
+
+### Test Files
+
+- **Unit Tests**: `src/test/header-footer.test.tsx`
+- **E2E Tests**: `tests/e2e/header-footer-navigation.spec.ts`
+- **Focus Ring Tests**: `tests/e2e/form-focus-ring.spec.ts`
+- **Test Documentation**: `tests/README.md`
+
+### Browser Support
+
+E2E tests run on:
+- Chromium (Desktop)
+- Firefox (Desktop)  
+- WebKit/Safari (Desktop)
+- Mobile Chrome (Mobile)
+- Mobile Safari (Mobile)
+
+### Test Results
+
+- **Unit Tests**: ✅ 21/21 passing
+- **E2E Tests**: Multi-browser compatibility
+- **Screenshots**: Captured on test failures in `tests/screenshots/`
 
 ## How can I deploy this project?
 

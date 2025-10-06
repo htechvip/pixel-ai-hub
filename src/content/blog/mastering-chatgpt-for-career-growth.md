@@ -100,5 +100,5 @@ Want the complete list of 15 prompts plus industry-specific variations? Download
 
 **About the Author**
 
-Cho-Nan Tsai teaches AI at USC and has spent 27+ years implementing AI solutions across Fortune 200 companies. He's helped thousands of professionals leverage AI for career acceleration.
+Cho-Nan Tsai teaches AI at USC and has spent 3 decades implementing AI solutions across Fortune 200 companies. He's helped thousands of professionals leverage AI for career acceleration.
 

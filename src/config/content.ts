@@ -1045,7 +1045,7 @@ const zhContent: Content = {
         ]
       },
       { href: "/zh-tw/blog", label: "部落格" },
-      { href: "/newsletter", label: "電子報" },
+      { href: "/zh-tw/newsletter", label: "電子報" },
       { href: "#instructor", label: "講師" },
       { href: "#showcase", label: "成功案例" },
       { href: "#faq", label: "常見問題" }
