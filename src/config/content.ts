@@ -156,6 +156,7 @@ const englishContent: Content = {
         ]
       },
       { href: "/blog", label: "Blog" },
+      { href: "/newsletter", label: "Newsletter" },
       { href: "#instructor", label: "Instructor" },
       { href: "#showcase", label: "Success Stories" },
       { href: "#faq", label: "FAQ" }
@@ -1044,6 +1045,7 @@ const zhContent: Content = {
         ]
       },
       { href: "/zh-tw/blog", label: "部落格" },
+      { href: "/newsletter", label: "電子報" },
       { href: "#instructor", label: "講師" },
       { href: "#showcase", label: "成功案例" },
       { href: "#faq", label: "常見問題" }

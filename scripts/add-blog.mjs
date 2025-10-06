@@ -70,37 +70,22 @@ async function main() {
   fs.writeFileSync(mdPath, mdFrontmatter);
   console.log(`✓ Created ${path.relative(root, mdPath)}`);
 
-  // 2) Update blog config to register post
-  let blogConfig = fs.readFileSync(blogConfigPath, 'utf8');
-
-  // Ensure image import exists
-  const importLine = `import ${imageImportName} from "@/assets/${imageName}";`;
-  if (!blogConfig.includes(importLine)) {
-    const importInsertPos = blogConfig.indexOf('\n\nexport interface BlogPost');
-    blogConfig = blogConfig.slice(0, importInsertPos) + `\n${importLine}` + blogConfig.slice(importInsertPos);
-  }
-
-  const newEntry = `  {\n` +
-    `    title: "${title}",\n` +
-    `    slug: "${slug}",\n` +
-    `    date: "${date}",\n` +
-    `    author: "${author}",\n` +
-    `    excerpt: "${excerpt.replace(/"/g, '\\"')}",\n` +
-    `    category: "${category}",\n` +
-    `    tags: [${tags.map((t) => `"${t}"`).join(', ')}],\n` +
-    `    image: ${imageImportName}\n` +
-    `  },\n`;
-
-  // Insert at top of blogPosts array
-  blogConfig = blogConfig.replace(
-    /export const blogPosts: BlogPost\[] = \[/,
-    (m) => `${m}\n${newEntry}`
-  );
-
-  fs.writeFileSync(blogConfigPath, blogConfig);
-  console.log(`✓ Updated ${path.relative(root, blogConfigPath)} with new post entry`);
-
-  console.log('\nDone! Visit /blog to see the post listed.');
+  console.log('✓ Blog post created! Updating blog config...');
+  
+  // Run the update script to regenerate blog.ts
+  const { spawn } = await import('child_process');
+  const updateScript = spawn('node', [path.join(root, 'scripts', 'update-blog-config.mjs')], {
+    stdio: 'inherit'
+  });
+  
+  updateScript.on('close', (code) => {
+    if (code === 0) {
+      console.log('✅ Blog config updated successfully!');
+      console.log('\nDone! Visit /blog to see the post listed.');
+    } else {
+      console.error('❌ Failed to update blog config. Please run: node scripts/update-blog-config.mjs');
+    }
+  });
 }
 
 main().catch((err) => {

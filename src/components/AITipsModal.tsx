@@ -142,17 +142,17 @@ const AITipsModal = ({ isOpen, onClose }: AITipsModalProps) => {
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="sm:max-w-lg">
-        <DialogHeader>
-          <DialogTitle className="text-center text-2xl font-bold mb-1">{t.title}</DialogTitle>
-          <p className="text-center text-2xl font-bold text-foreground">{t.subtitle}</p>
+      <DialogContent className="w-[95vw] max-w-lg mx-auto my-4 max-h-[90vh] overflow-y-auto">
+        <DialogHeader className="space-y-4 pb-2">
+          <DialogTitle className="text-center text-xl sm:text-2xl font-bold leading-tight">{t.title}</DialogTitle>
+          <p className="text-center text-lg sm:text-xl font-bold text-foreground leading-tight">{t.subtitle}</p>
         </DialogHeader>
         
-        <div className="space-y-6">
+        <div className="space-y-6 px-1">
           {/* Features Preview */}
-          <div className="space-y-2 text-left">
+          <div className="space-y-3 text-left">
             <p className="text-sm font-semibold text-foreground">Inside this book:</p>
-            <ul className="space-y-2 text-sm text-muted-foreground">
+            <ul className="space-y-3 text-sm text-muted-foreground">
               <li className="flex items-start">
                 <CheckCircle className="w-4 h-4 text-primary mt-0.5 mr-2 flex-shrink-0" />
                 <span>{t.feature1}</span>
@@ -176,15 +176,15 @@ const AITipsModal = ({ isOpen, onClose }: AITipsModalProps) => {
             </ul>
           </div>
 
-          <form onSubmit={handleSubmit} className="space-y-4">
-            <p className="text-sm text-center text-muted-foreground font-medium">
+          <form onSubmit={handleSubmit} className="space-y-5">
+            <p className="text-sm text-center text-muted-foreground font-medium leading-relaxed px-2">
               {isZh 
                 ? "加入 9,432 名訂閱我免費電子報的員工，立即收到此書……" 
                 : "Join 9,432 employees reading my free newsletter and receive the book instantly…"}
             </p>
             
-            <div className="space-y-2">
-              <Label htmlFor="email">{t.emailLabel}</Label>
+            <div className="space-y-3">
+              <Label htmlFor="email" className="text-sm font-medium">{t.emailLabel}</Label>
               <Input
                 id="email"
                 type="email"
@@ -193,11 +193,12 @@ const AITipsModal = ({ isOpen, onClose }: AITipsModalProps) => {
                 onChange={(e) => setEmail(e.target.value)}
                 required
                 disabled={isSubmitting}
+                className="h-11 text-base"
               />
             </div>
             
-            <div className="space-y-2">
-              <Label htmlFor="firstName">{t.firstNameLabel}</Label>
+            <div className="space-y-3">
+              <Label htmlFor="firstName" className="text-sm font-medium">{t.firstNameLabel}</Label>
               <Input
                 id="firstName"
                 type="text"
@@ -205,6 +206,7 @@ const AITipsModal = ({ isOpen, onClose }: AITipsModalProps) => {
                 value={firstName}
                 onChange={(e) => setFirstName(e.target.value)}
                 disabled={isSubmitting}
+                className="h-11 text-base"
               />
             </div>
 
@@ -216,7 +218,7 @@ const AITipsModal = ({ isOpen, onClose }: AITipsModalProps) => {
 
             <Button 
               type="submit" 
-              className="w-full" 
+              className="w-full h-12 text-base font-semibold mt-4" 
               disabled={isSubmitting || !email}
             >
               {isSubmitting ? (
@@ -233,7 +235,7 @@ const AITipsModal = ({ isOpen, onClose }: AITipsModalProps) => {
             </Button>
           </form>
 
-          <p className="text-xs text-center text-muted-foreground">{t.privacy}</p>
+          <p className="text-xs text-center text-muted-foreground leading-relaxed px-2 pt-2">{t.privacy}</p>
         </div>
       </DialogContent>
     </Dialog>

@@ -6,7 +6,7 @@ author: "Cho-Nan Tsai"
 excerpt: "Learn the 15 essential ChatGPT prompts that executives use to accelerate their careers, automate workflows, and make smarter decisions."
 category: "AI Tools"
 tags: ["ChatGPT", "Career Growth", "Productivity"]
-image: "/assets/ai talk villa.jpeg"
+image: "/assets/chonantsai_35.jpeg"
 ---
 
 # Mastering ChatGPT for Career Growth: 15 Prompts Every Professional Needs

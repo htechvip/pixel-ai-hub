@@ -10,6 +10,7 @@ import Course from "./pages/Course";
 import CareerAIAdvantage from "./pages/CareerAIAdvantage";
 import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
+import Newsletter from "./pages/Newsletter";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -30,6 +31,7 @@ const App = () => {
             <Route path="/signup" element={<Signup />} />
             <Route path="/course/:courseId" element={<Course />} />
             <Route path="/career-ai-advantage" element={<CareerAIAdvantage />} />
+            <Route path="/newsletter" element={<Newsletter />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/blog/:slug" element={<BlogPost />} />
             {/* Traditional Chinese routes */}

@@ -1,12 +1,12 @@
 ---
 title: "Why Non-Technical People Are Better at AI Than They Think"
-slug: "non-technical-advantage-in-ai"
+slug: "why-non-technical-people-are-better-at-ai-than-they-think"
 date: "2025-10-01"
 author: "Cho-Nan Tsai"
 excerpt: "Non-technical professionals often underestimate their ability to leverage AI. Here’s why understanding the business and big picture makes them powerful AI users."
 category: "AI Tools"
 tags: ["Career Growth"]
-image: "/assets/cable co talk.jpg"
+image: "/assets/chonantsai_2.jpg"
 ---
 
 # Why Non-Technical People Are Better at AI Than They Think  

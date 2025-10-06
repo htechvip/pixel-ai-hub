@@ -13,6 +13,51 @@ import { Helmet } from "react-helmet";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 
+const RelatedPosts = ({ slug, basePath }: { slug: string; basePath: string }) => {
+  const related = blogPosts
+    .filter(p => p.slug !== slug)
+    .slice(0, 3);
+
+  return (
+    <div className="mt-16 pt-12 border-t border-slate-200">
+      <h3 className="text-2xl font-serif font-bold mb-8 text-slate-900">More from AI Jedi</h3>
+      <div className="space-y-8">
+        {related.map((relatedPost) => (
+          <Link
+            key={relatedPost.slug}
+            to={`${basePath}/blog/${relatedPost.slug}`}
+            className="group block"
+          >
+            <div className="flex gap-6 pb-8 border-b border-slate-200 hover:border-slate-300 transition-colors">
+              <div className="flex-1">
+                <div className="flex items-center gap-2 mb-2">
+                  <span className="text-xs font-semibold text-slate-600 uppercase tracking-wide">{relatedPost.category}</span>
+                </div>
+                <h4 className="text-xl font-bold mb-2 group-hover:text-slate-600 transition-colors text-slate-900">
+                  {relatedPost.title}
+                </h4>
+                <p className="text-base text-slate-600 line-clamp-2 mb-3">
+                  {relatedPost.excerpt}
+                </p>
+                <div className="text-sm text-slate-500">
+                  {new Date(relatedPost.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric' })} · {Math.ceil(relatedPost.excerpt.split(' ').length / 200)} min read
+                </div>
+              </div>
+              <div className="w-32 h-32 flex-shrink-0 hidden sm:block">
+                <img
+                  src={relatedPost.image}
+                  alt={relatedPost.title}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+          </Link>
+        ))}
+      </div>
+    </div>
+  );
+};
+
 const BlogPost = () => {
   const { slug } = useParams<{ slug: string }>();
   const [markdownContent, setMarkdownContent] = useState("");
@@ -155,45 +200,7 @@ const BlogPost = () => {
             </div>
 
             {/* Related Posts - Medium style */}
-            <div className="mt-16 pt-12 border-t border-slate-200">
-              <h3 className="text-2xl font-serif font-bold mb-8 text-slate-900">More from AI Jedi</h3>
-              <div className="space-y-8">
-                {blogPosts
-                  .filter(p => p.slug !== slug)
-                  .slice(0, 3)
-                  .map((relatedPost) => (
-                    <Link
-                      key={relatedPost.slug}
-                      to={`${basePath}/blog/${relatedPost.slug}`}
-                      className="group block"
-                    >
-                      <div className="flex gap-6 pb-8 border-b border-slate-200 hover:border-slate-300 transition-colors">
-                        <div className="flex-1">
-                          <div className="flex items-center gap-2 mb-2">
-                            <span className="text-xs font-semibold text-slate-600 uppercase tracking-wide">{relatedPost.category}</span>
-                          </div>
-                          <h4 className="text-xl font-bold mb-2 group-hover:text-slate-600 transition-colors text-slate-900">
-                            {relatedPost.title}
-                          </h4>
-                          <p className="text-base text-slate-600 line-clamp-2 mb-3">
-                            {relatedPost.excerpt}
-                          </p>
-                          <div className="text-sm text-slate-500">
-                            {new Date(relatedPost.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric' })} · {Math.ceil(relatedPost.excerpt.split(' ').length / 200)} min read
-                          </div>
-                        </div>
-                        <div className="w-32 h-32 flex-shrink-0 hidden sm:block">
-                          <img
-                            src={relatedPost.image}
-                            alt={relatedPost.title}
-                            className="w-full h-full object-cover"
-                          />
-                        </div>
-                      </div>
-                    </Link>
-                  ))}
-              </div>
-            </div>
+            <RelatedPosts slug={slug} basePath={basePath} />
           </article>
         </div>
       </div>
