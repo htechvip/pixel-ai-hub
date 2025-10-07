@@ -38,36 +38,38 @@ const AITipsInlineForm = ({ isZh = false }: AITipsInlineFormProps) => {
     setError("");
 
     try {
-      // Get API credentials from environment variables
-      const apiKey = import.meta.env.VITE_CONVERTKIT_API_KEY;
-      const formId = import.meta.env.VITE_CONVERTKIT_FORM_ID || '8586312';
-      
+      // MailerLite API credentials
+      const apiKey = import.meta.env.VITE_MAILERLITE_API_KEY as string | undefined;
+      const groupId = import.meta.env.VITE_MAILERLITE_GROUP_ID as string | undefined;
+
       if (!apiKey) {
-        throw new Error('ConvertKit API key not configured');
+        throw new Error("MailerLite API key not configured");
+      }
+      if (!groupId) {
+        throw new Error("MailerLite group ID not configured");
       }
 
-      console.log("Submitting to ConvertKit with API key and form ID:", formId);
-      console.log("Form data being sent:", { email, firstName, formId });
-      
-      // Submit to ConvertKit API using the proper endpoint
-      const response = await fetch(`https://api.convertkit.com/v3/forms/${formId}/subscribe`, {
+      console.log("Submitting to MailerLite group:", groupId);
+      console.log("Form data being sent:", { email, firstName, groupId });
+
+      // Create/subscribe subscriber and add to group in one call (with double opt-in)
+      const response = await fetch("https://connect.mailerlite.com/api/subscribers", {
         method: "POST",
         headers: {
+          Authorization: `Bearer ${apiKey}`,
           "Content-Type": "application/json",
+          Accept: "application/json",
         },
         body: JSON.stringify({
-          api_key: apiKey,
-          email: email,
-          first_name: firstName,
-          fields: {
-            subscription_date: new Date().toISOString().split('T')[0], // YYYY-MM-DD format
-            subscription_timestamp: new Date().toISOString()
-          }
+          email,
+          fields: { name: firstName, subscription_date: new Date().toISOString().split("T")[0] },
+          groups: [groupId],
+          status: "unconfirmed",
         }),
       });
 
-      const responseData = await response.json();
-      console.log("ConvertKit API Response:", responseData);
+      const responseData = await response.json().catch(() => ({}));
+      console.log("MailerLite API Response:", responseData);
       console.log("Response status:", response.status);
       console.log("Response headers:", Object.fromEntries(response.headers.entries()));
 
@@ -80,12 +82,12 @@ const AITipsInlineForm = ({ isZh = false }: AITipsInlineFormProps) => {
           setFirstName("");
         }, 5000);
       } else {
-        console.error("ConvertKit API Error:", responseData);
-        setError(`Error: ${responseData.message || "Something went wrong. Please try again."}`);
+        console.error("MailerLite API Error:", responseData);
+        setError(`Error: ${responseData?.message || "Something went wrong. Please try again."}`);
       }
     } catch (err) {
       console.error("Form submission error:", err);
-      setError("Network error. Please check your connection and try again.");
+      setError("Network error or configuration issue. Please try again.");
     } finally {
       setIsSubmitting(false);
     }
