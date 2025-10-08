@@ -2,12 +2,12 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import SEO from "@/components/SEO";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { blogPosts, categories } from "@/config/blog";
 import { Calendar, User, ArrowRight } from "lucide-react";
-import { Helmet } from "react-helmet";
 import AITipsInlineForm from "@/components/AITipsInlineForm";
 
 const Blog = () => {
@@ -24,12 +24,44 @@ const Blog = () => {
     ? blogPosts 
     : blogPosts.filter(post => post.category === selectedCategory);
 
+  // Blog listing page structured data
+  const blogStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "name": "AI Jedi Blog",
+    "description": "Expert insights on AI tools, career growth, and professional development for professionals.",
+    "url": `https://aijedi.hyperionsoft.com${basePath}/blog`,
+    "publisher": {
+      "@type": "Organization",
+      "name": "AI Jedi",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://aijedi.hyperionsoft.com/favicon.ico"
+      }
+    },
+    "blogPost": blogPosts.slice(0, 10).map(post => ({
+      "@type": "BlogPosting",
+      "headline": post.title,
+      "description": post.excerpt,
+      "datePublished": new Date(post.date).toISOString(),
+      "author": {
+        "@type": "Person",
+        "name": post.author
+      },
+      "url": `https://aijedi.hyperionsoft.com${basePath}/blog/${post.slug}`
+    }))
+  };
+
   return (
     <div className="min-h-screen bg-background">
-      <Helmet>
-        <title>AI Career Blog - AI Jedi</title>
-        <meta name="description" content="Expert insights on AI tools, career growth, and professional development. Learn how to leverage AI for career acceleration." />
-      </Helmet>
+      <SEO
+        title={isZh ? "AI 職涯部落格 | AI Jedi" : "AI Career Blog | AI Jedi"}
+        description={isZh 
+          ? "關於 AI 工具、職涯成長和專業發展的專業見解。學習如何利用 AI 加速職涯發展。"
+          : "Expert insights on AI tools, career growth, and professional development. Learn how to leverage AI for career acceleration."}
+        canonical={`${basePath}/blog`}
+        structuredData={blogStructuredData}
+      />
 
       <Header />
       

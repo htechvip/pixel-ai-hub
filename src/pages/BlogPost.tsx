@@ -4,12 +4,12 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import AITipsGuide from "@/components/AITipsGuide";
 import AITipsGuideZh from "@/components/AITipsGuideZh";
+import SEO from "@/components/SEO";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { blogPosts } from "@/config/blog";
 import { Calendar, User, ArrowLeft, Clock } from "lucide-react";
-import { Helmet } from "react-helmet";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 
@@ -104,16 +104,55 @@ const BlogPost = () => {
 
   const readingTime = Math.ceil(markdownContent.split(/\s+/).length / 200);
 
+  // Article structured data for SEO
+  const articleStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": post.title,
+    "description": post.excerpt,
+    "image": `https://aijedi.hyperionsoft.com${post.image}`,
+    "datePublished": new Date(post.date).toISOString(),
+    "dateModified": new Date(post.date).toISOString(),
+    "author": {
+      "@type": "Person",
+      "name": post.author,
+      "url": "https://aijedi.hyperionsoft.com",
+      "description": "Cho-Nan Tsai teaches AI at USC and has spent 3 decades implementing AI solutions across Fortune 200 companies."
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "AI Jedi",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://aijedi.hyperionsoft.com/favicon.ico"
+      }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": `https://aijedi.hyperionsoft.com${basePath}/blog/${slug}`
+    },
+    "keywords": post.tags.join(", "),
+    "articleSection": post.category,
+    "wordCount": markdownContent.split(/\s+/).length,
+    "timeRequired": `PT${readingTime}M`
+  };
+
   return (
     <div className="min-h-screen bg-background">
-      <Helmet>
-        <title>{post.title} - AI Jedi Blog</title>
-        <meta name="description" content={post.excerpt} />
-        <meta property="og:title" content={post.title} />
-        <meta property="og:description" content={post.excerpt} />
-        <meta property="og:image" content={post.image} />
-        <meta property="og:type" content="article" />
-      </Helmet>
+      <SEO
+        title={`${post.title} | AI Jedi Blog`}
+        description={post.excerpt}
+        canonical={`${basePath}/blog/${slug}`}
+        ogType="article"
+        ogImage={post.image}
+        article={{
+          publishedTime: new Date(post.date).toISOString(),
+          modifiedTime: new Date(post.date).toISOString(),
+          author: post.author,
+          tags: post.tags
+        }}
+        structuredData={articleStructuredData}
+      />
 
       <Header />
       

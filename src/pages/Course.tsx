@@ -21,8 +21,8 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import AITipsGuide from "@/components/AITipsGuide";
 import AITipsGuideZh from "@/components/AITipsGuideZh";
+import SEO from "@/components/SEO";
 import cntColor from "@/assets/cnt-color.jpeg";
-import { Helmet } from "react-helmet";
 
 const Course = () => {
   const { courseId } = useParams();
@@ -50,21 +50,53 @@ const Course = () => {
     );
   }
 
+  // Course structured data for SEO
+  const courseStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "Course",
+    "name": courseData.title,
+    "description": courseData.description,
+    "provider": {
+      "@type": "EducationalOrganization",
+      "name": "AI Jedi",
+      "sameAs": "https://aijedi.hyperionsoft.com"
+    },
+    "instructor": {
+      "@type": "Person",
+      "name": content.instructor.name,
+      "description": content.instructor.role,
+      "image": "https://aijedi.hyperionsoft.com/assets/cnt-color.jpeg"
+    },
+    "courseLevel": courseData.level,
+    "timeRequired": courseData.duration,
+    "numberOfCredits": courseData.curriculum.length,
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": courseData.rating.toString(),
+      "ratingCount": courseData.ratingNum,
+      "bestRating": "5",
+      "worstRating": "1"
+    },
+    "offers": {
+      "@type": "Offer",
+      "category": "Educational Course",
+      "availability": "https://schema.org/InStock"
+    },
+    "hasCourseInstance": {
+      "@type": "CourseInstance",
+      "courseMode": "Online",
+      "courseWorkload": courseData.duration
+    }
+  };
+
   return (
     <div className="min-h-screen bg-background">
-      <Helmet>
-        <title>{courseData.title} – Learn AI Through Hands-On Case Studies</title>
-        <meta name="description" content={`${courseData.description} Master practical AI skills for career professionals through real-world case studies.`} />
-        <link rel="canonical" href={`https://aijedi.hyperionsoft.com${isZh ? '/zh-tw' : ''}/course/${courseId}`} />
-        <meta property="og:title" content={`${courseData.title} – Learn AI Through Hands-On Case Studies`} />
-        <meta property="og:description" content={`${courseData.description} Master practical AI skills for career professionals through real-world case studies.`} />
-        <meta property="og:url" content={`https://aijedi.hyperionsoft.com${isZh ? '/zh-tw' : ''}/course/${courseId}`} />
-        <meta property="og:image" content="/ai%20jedi%20class.png" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={`${courseData.title} – Learn AI Through Hands-On Case Studies`} />
-        <meta name="twitter:description" content={`${courseData.description} Master practical AI skills for career professionals through real-world case studies.`} />
-        <meta name="twitter:image" content="/ai%20jedi%20class.png" />
-      </Helmet>
+      <SEO
+        title={`${courseData.title} – Learn AI Through Real-World Case Studies | AI Jedi`}
+        description={`${courseData.description} Master practical AI skills for career professionals through real-world case studies. ${courseData.level} level • ${courseData.duration} • Rated ${courseData.rating}/5 by ${courseData.ratingNum.toLocaleString()} students.`}
+        canonical={`${isZh ? '/zh-tw' : ''}/course/${courseId}`}
+        structuredData={courseStructuredData}
+      />
       <Header />
       {/* Course Header */}
       <div className="bg-gradient-to-r from-primary/10 to-secondary/10 py-8 pt-24">
