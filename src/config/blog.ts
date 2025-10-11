@@ -1,6 +1,7 @@
 import Aitalkvillajpeg from "@/assets/ai talk villa.jpeg";
 import Chonantsai13jpg from "@/assets/chonantsai_13.jpg";
 import Chonantsai1jpg from "@/assets/chonantsai_1.jpg";
+import Chonantsai24jpg from "@/assets/chonantsai_24.jpg";
 import Chonantsai2jpg from "@/assets/chonantsai_2.jpg";
 import Chonantsai30jpeg from "@/assets/chonantsai_30.jpeg";
 import Chonantsai35jpeg from "@/assets/chonantsai_35.jpeg";
@@ -20,6 +21,17 @@ export interface BlogPost {
 }
 
 export const blogPosts: BlogPost[] = [
+  {
+    title: "The Scenic Route to Success: A Career Journey Nobody Planned | My Story",
+    slug: "the-scenic-route-to-success-a-career-journey-nobody-planned-my-story",
+    date: "2025-10-09",
+    author: "Cho-Nan Tsai",
+    excerpt: "Here is a small piece of writing that sums up my 3 decades worth of career. Read on!",
+    category: "Career Growth",
+    tags: ["General"],
+    image: Chonantsai24jpg
+  },
+
   {
     title: "I Just Fired Myself (And Set People Free)",
     slug: "i-just-fired-myself-and-set-10-000-people-free",

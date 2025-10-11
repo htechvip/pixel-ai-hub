@@ -164,8 +164,8 @@ const englishContent: Content = {
   },
 
   hero: {
-    title: "Master AI. Become Indispensable.",
-    description: "Hands-on online courses designed for career professionals. Learn how to use AI tools to automate tasks, make better decisions, and drive business results — no coding required.",
+    title: "Master AI Through Real Case Studies.",
+    description: "Hands-on online courses designed for career professionals. Learn how to use AI tools to automate tasks, make better decisions, and drive business results - all using real-world case studies. Best part - no coding required.",
     
     buttons: {
       primary: "Learn AI",

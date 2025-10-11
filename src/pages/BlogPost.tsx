@@ -85,7 +85,7 @@ const BlogPost = () => {
     }
   }, [slug]);
 
-  if (!post) {
+  if (!post || !slug) {
     return (
       <div className="min-h-screen bg-background">
         <Header />
