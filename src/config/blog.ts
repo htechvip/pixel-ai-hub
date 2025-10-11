@@ -1,9 +1,11 @@
 import Aitalkvillajpeg from "@/assets/ai talk villa.jpeg";
 import Chonantsai13jpg from "@/assets/chonantsai_13.jpg";
 import Chonantsai1jpg from "@/assets/chonantsai_1.jpg";
+import Chonantsai22jpg from "@/assets/chonantsai_22.jpg";
 import Chonantsai24jpg from "@/assets/chonantsai_24.jpg";
 import Chonantsai2jpg from "@/assets/chonantsai_2.jpg";
 import Chonantsai30jpeg from "@/assets/chonantsai_30.jpeg";
+import Chonantsai31jpeg from "@/assets/chonantsai_31.jpeg";
 import Chonantsai35jpeg from "@/assets/chonantsai_35.jpeg";
 import Chonantsai49png from "@/assets/chonantsai_49.png";
 import aiTalkSm from "@/assets/ai talk sm.jpg";
@@ -21,6 +23,17 @@ export interface BlogPost {
 }
 
 export const blogPosts: BlogPost[] = [
+  {
+    title: "From $55K to $180K in 18 Months: How Jessica Used AI to Transform Her Career in Financial Services",
+    slug: "from-55k-to-180k-in-18-months-how-jessica-used-ai-to-transform-her-career-in-financial-services",
+    date: "2025-10-11",
+    author: "Cho-Nan Tsai",
+    excerpt: "A year and a half ago, she was making $55K, stuck in the same cubicle, quietly doing great work while louder coworkers got the spotlight. Fast forward 18 months — she’s at $180K. Same company. Different league.",
+    category: "Career Growth",
+    tags: ["General"],
+    image: Chonantsai22jpg
+  },
+
   {
     title: "The Scenic Route to Success: A Career Journey Nobody Planned | My Story",
     slug: "the-scenic-route-to-success-a-career-journey-nobody-planned-my-story",
@@ -73,7 +86,7 @@ export const blogPosts: BlogPost[] = [
     excerpt: "After 20+ years in both Fortune 500s and startups, I've learned that both assume the other has figured out AI. Here's the $10 million lesson about what they're both getting wrong.",
     category: "AI Tools",
     tags: ["General"],
-    image: Chonantsai30jpeg
+    image: Chonantsai31jpeg
   },
 
   {

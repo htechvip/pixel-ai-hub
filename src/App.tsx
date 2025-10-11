@@ -11,6 +11,7 @@ import CareerAIAdvantage from "./pages/CareerAIAdvantage";
 import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
 import Newsletter from "./pages/Newsletter";
+import AIQuiz from "./pages/AIQuiz";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -31,6 +32,7 @@ const App = () => {
             <Route path="/signup" element={<Signup />} />
             <Route path="/course/:courseId" element={<Course />} />
             <Route path="/career-ai-advantage" element={<CareerAIAdvantage />} />
+            <Route path="/ai-quiz" element={<AIQuiz />} />
             <Route path="/newsletter" element={<Newsletter />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/blog/:slug" element={<BlogPost />} />

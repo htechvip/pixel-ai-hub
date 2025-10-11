@@ -6,7 +6,7 @@ author: "Cho-Nan Tsai"
 excerpt: "After 20+ years in both Fortune 500s and startups, I've learned that both assume the other has figured out AI. Here's the $10 million lesson about what they're both getting wrong."
 category: "AI Tools"
 tags: ["General"]
-image: "/assets/chonantsai_30.jpeg"
+image: "/assets/chonantsai_31.jpeg"
 ---
 
 # The $10 Million Lesson: What Fortune 500s and Startups Get Wrong About AI

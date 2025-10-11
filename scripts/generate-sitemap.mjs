@@ -16,6 +16,7 @@ const staticRoutes = [
   { path: '/', priority: '1.0', changefreq: 'weekly' },
   { path: '/blog', priority: '0.9', changefreq: 'daily' },
   { path: '/newsletter', priority: '0.8', changefreq: 'monthly' },
+  { path: '/ai-quiz', priority: '0.9', changefreq: 'monthly' },
   { path: '/career-ai-advantage', priority: '0.8', changefreq: 'monthly' },
   { path: '/zh-tw', priority: '0.9', changefreq: 'weekly' },
   { path: '/zh-tw/blog', priority: '0.8', changefreq: 'daily' },
