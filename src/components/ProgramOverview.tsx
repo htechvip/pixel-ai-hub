@@ -4,6 +4,12 @@ import { content } from "@/config/content";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
+// Helper function to get course title from course ID
+const getCourseTitle = (courseId: string): string => {
+  const courseData = content.courses[courseId as keyof typeof content.courses];
+  return courseData?.title || courseId;
+};
+
 interface ProgramOverviewProps {
   minimal?: boolean;
 }
@@ -20,6 +26,19 @@ const ProgramOverview = ({ minimal = false }: ProgramOverviewProps) => {
     "Data Insights": Brain,
     "Human Resources": Users,
     "Vibe Coding": Code,
+  };
+
+  // Helper function to track course clicks
+  const trackCourseClick = (courseId: string, courseTitle: string) => {
+    if (typeof window !== 'undefined' && (window as any).gtag) {
+      (window as any).gtag('event', 'course_click', {
+        event_category: 'Course Navigation',
+        event_label: courseTitle,
+        course_id: courseId,
+        course_title: courseTitle,
+        value: 1
+      });
+    }
   };
 
   return (
@@ -76,7 +95,19 @@ const ProgramOverview = ({ minimal = false }: ProgramOverviewProps) => {
                         };
                         const courseId = chineseCourseMap[feature.title] || feature.title.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
                         return `${basePath}/course/${courseId}`;
-                      })()}>
+                      })()} onClick={() => {
+                        const chineseCourseMap: { [key: string]: string } = {
+                          "AI 金融專業課程": "ai-for-finance-professionals",
+                          "AI 行銷專業課程": "ai-for-marketing-professionals", 
+                          "AI 軟體開發課程": "ai-for-software-developers",
+                          "AI 企業領導課程": "ai-for-business-leaders",
+                          "AI 醫療專業課程": "ai-for-healthcare-professionals",
+                          "AI 產品經理課程 - Vibe Coding 101": "ai-for-product-managers-vibe-coding-101"
+                        };
+                        const courseId = chineseCourseMap[feature.title] || feature.title.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
+                        const courseTitle = getCourseTitle(courseId);
+                        trackCourseClick(courseId, courseTitle);
+                      }}>
                         {window.location.pathname.startsWith("/zh-tw") ? "開始課程" : "Start Course"}
                       </Link>
                     </Button>
@@ -101,7 +132,19 @@ const ProgramOverview = ({ minimal = false }: ProgramOverviewProps) => {
                         };
                         const courseId = chineseCourseMap[feature.title] || feature.title.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
                         return `${basePath}/course/${courseId}`;
-                      })()}>
+                      })()} onClick={() => {
+                        const chineseCourseMap: { [key: string]: string } = {
+                          "AI 金融專業課程": "ai-for-finance-professionals",
+                          "AI 行銷專業課程": "ai-for-marketing-professionals", 
+                          "AI 軟體開發課程": "ai-for-software-developers",
+                          "AI 企業領導課程": "ai-for-business-leaders",
+                          "AI 醫療專業課程": "ai-for-healthcare-professionals",
+                          "AI 產品經理課程 - Vibe Coding 101": "ai-for-product-managers-vibe-coding-101"
+                        };
+                        const courseId = chineseCourseMap[feature.title] || feature.title.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
+                        const courseTitle = getCourseTitle(courseId);
+                        trackCourseClick(courseId, courseTitle);
+                      }}>
                         Start Course
                       </Link>
                     </Button>

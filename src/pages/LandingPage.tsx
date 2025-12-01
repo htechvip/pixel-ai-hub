@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -22,10 +22,29 @@ const LandingPage = () => {
   const { courseId } = useParams();
   const isZh = window.location.pathname.startsWith("/zh-tw");
   const signupPath = isZh ? "/zh-tw/signup" : "/signup";
+  const [showStickyButton, setShowStickyButton] = useState(false);
 
   // Scroll to top when component mounts
   useEffect(() => {
     window.scrollTo(0, 0);
+  }, []);
+
+  // Track scroll position to show/hide sticky button
+  useEffect(() => {
+    const handleScroll = () => {
+      // Get the position of the enroll button section
+      const enrollSection = document.getElementById('mobile-enroll-section');
+      if (enrollSection) {
+        const rect = enrollSection.getBoundingClientRect();
+        // Show sticky button when the original section has scrolled past the viewport
+        setShowStickyButton(rect.bottom < 0);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    handleScroll(); // Check initial position
+
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   // Find the course from the courses data
@@ -161,6 +180,108 @@ const LandingPage = () => {
         <div className="max-w-4xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Main Content */}
           <div className="lg:col-span-2 space-y-8">
+            {/* Mobile Enroll Button - After Video, Before What You'll Learn */}
+            <div id="mobile-enroll-section" className="lg:hidden">
+              <Card>
+                <CardContent className="p-4">
+                  <div className="text-center mb-4">
+                    <div className="text-2xl font-bold text-primary mb-2">{courseData.price}</div>
+                  </div>
+                  <Button asChild className="w-full" size="lg">
+                    {(() => {
+                      const stripeLinks: { [key: string]: string } = {
+                        "ai-for-product-managers-vibe-coding-101": "https://buy.stripe.com/6oU00kfdpeuX5wwdc22kw0b"
+                      };
+                      
+                      const stripeLink = stripeLinks[courseId as string];
+                      
+                      const handleEnrollClick = () => {
+                        // Track GA4 event
+                        if (typeof window !== 'undefined' && (window as any).gtag) {
+                          (window as any).gtag('event', 'enroll_button_click', {
+                            event_category: 'Course Enrollment',
+                            event_label: courseData.title,
+                            course_id: courseId,
+                            course_title: courseData.title,
+                            page_type: 'landing_page',
+                            value: 1
+                          });
+                        }
+                      };
+                      
+                      return stripeLink ? (
+                        <a 
+                          href={stripeLink} 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          onClick={handleEnrollClick}
+                        >
+                          Enroll Now
+                        </a>
+                      ) : (
+                        <Link to={signupPath} onClick={handleEnrollClick}>
+                          Enroll Now
+                        </Link>
+                      );
+                    })()}
+                  </Button>
+                </CardContent>
+              </Card>
+            </div>
+
+            {/* Sticky Floating Button - Shows after scrolling past the original button */}
+            {showStickyButton && (
+              <div className="lg:hidden fixed bottom-0 left-0 right-0 z-50 p-4 bg-background/95 backdrop-blur-sm border-t border-border shadow-lg">
+                <Card className="shadow-lg">
+                  <CardContent className="p-4">
+                    <div className="flex items-center justify-between gap-4">
+                      <div>
+                        <div className="text-xl font-bold text-primary">{courseData.price}</div>
+                      </div>
+                      <Button asChild className="flex-1" size="lg">
+                        {(() => {
+                          const stripeLinks: { [key: string]: string } = {
+                            "ai-for-product-managers-vibe-coding-101": "https://buy.stripe.com/6oU00kfdpeuX5wwdc22kw0b"
+                          };
+                          
+                          const stripeLink = stripeLinks[courseId as string];
+                          
+                          const handleEnrollClick = () => {
+                            // Track GA4 event
+                            if (typeof window !== 'undefined' && (window as any).gtag) {
+                              (window as any).gtag('event', 'enroll_button_click', {
+                                event_category: 'Course Enrollment',
+                                event_label: courseData.title,
+                                course_id: courseId,
+                                course_title: courseData.title,
+                                page_type: 'landing_page',
+                                value: 1
+                              });
+                            }
+                          };
+                          
+                          return stripeLink ? (
+                            <a 
+                              href={stripeLink} 
+                              target="_blank" 
+                              rel="noopener noreferrer"
+                              onClick={handleEnrollClick}
+                            >
+                              Enroll Now
+                            </a>
+                          ) : (
+                            <Link to={signupPath} onClick={handleEnrollClick}>
+                              Enroll Now
+                            </Link>
+                          );
+                        })()}
+                      </Button>
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
+            )}
+
             {/* Course Overview */}
             <Card>
               <CardHeader>
@@ -396,7 +517,7 @@ const LandingPage = () => {
           </div>
 
           {/* Sidebar */}
-          <div className="space-y-6">
+          <div className="hidden lg:block space-y-6">
             {/* Course Card */}
             <Card className="sticky top-24">
               <CardContent className="p-6">
@@ -420,6 +541,7 @@ const LandingPage = () => {
                           event_label: courseData.title,
                           course_id: courseId,
                           course_title: courseData.title,
+                          page_type: 'landing_page',
                           value: 1
                         });
                       }

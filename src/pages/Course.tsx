@@ -428,12 +428,33 @@ const Course = () => {
                     
                     const stripeLink = stripeLinks[courseId as string];
                     
+                    const handleEnrollClick = () => {
+                      // Track GA4 event
+                      if (typeof window !== 'undefined' && (window as any).gtag) {
+                        (window as any).gtag('event', 'enroll_button_click', {
+                          event_category: 'Course Enrollment',
+                          event_label: courseData.title,
+                          course_id: courseId,
+                          course_title: courseData.title,
+                          page_type: 'course_page',
+                          value: 1
+                        });
+                      }
+                    };
+                    
                     return stripeLink ? (
-                      <a href={stripeLink} target="_blank" rel="noopener noreferrer">
+                      <a 
+                        href={stripeLink} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        onClick={handleEnrollClick}
+                      >
                         Enroll Now
                       </a>
                     ) : (
-                      <Link to={signupPath}>Enroll Now</Link>
+                      <Link to={signupPath} onClick={handleEnrollClick}>
+                        Enroll Now
+                      </Link>
                     );
                   })()}
                 </Button>
