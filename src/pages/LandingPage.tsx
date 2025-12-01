@@ -181,7 +181,7 @@ const LandingPage = () => {
           {/* Main Content */}
           <div className="lg:col-span-2 space-y-8">
             {/* Mobile Enroll Button - After Video, Before What You'll Learn */}
-            <div id="mobile-enroll-section" className="lg:hidden">
+            <div id="mobile-enroll-section" className="lg:hidden mb-8">
               <Card>
                 <CardContent className="p-4">
                   <div className="text-center mb-4">
@@ -231,7 +231,7 @@ const LandingPage = () => {
 
             {/* Sticky Floating Button - Shows after scrolling past the original button */}
             {showStickyButton && (
-              <div className="lg:hidden fixed bottom-0 left-0 right-0 z-50 p-4 bg-background/95 backdrop-blur-sm border-t border-border shadow-lg">
+              <div className="lg:hidden fixed bottom-0 left-0 right-0 z-50 pb-12 pt-4 px-4 bg-background/95 backdrop-blur-sm border-t border-border shadow-lg">
                 <Card className="shadow-lg">
                   <CardContent className="p-4">
                     <div className="flex items-center justify-between gap-4">
