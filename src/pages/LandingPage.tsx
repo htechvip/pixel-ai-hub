@@ -1,0 +1,469 @@
+import { useParams } from "react-router-dom";
+import { useEffect } from "react";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Separator } from "@/components/ui/separator";
+import { 
+  Clock, 
+  Users, 
+  Star, 
+  CheckCircle, 
+  PlayCircle, 
+  Target,
+} from "lucide-react";
+import { content } from "@/config/content";
+import { Link } from "react-router-dom";
+import LandingHeader from "@/components/LandingHeader";
+import SEO from "@/components/SEO";
+import cntColor from "@/assets/cnt-color.jpeg";
+
+const LandingPage = () => {
+  const { courseId } = useParams();
+  const isZh = window.location.pathname.startsWith("/zh-tw");
+  const signupPath = isZh ? "/zh-tw/signup" : "/signup";
+
+  // Scroll to top when component mounts
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  // Find the course from the courses data
+  const courseData = content.courses[courseId as keyof typeof content.courses];
+
+  if (!courseData) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-2xl font-bold mb-4">Course Not Found</h1>
+          <Link to={isZh ? "/zh-tw" : "/"}>
+            <Button>Back to Home</Button>
+          </Link>
+        </div>
+      </div>
+    );
+  }
+
+  // Course structured data for SEO
+  const courseStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "Course",
+    "name": courseData.title,
+    "description": courseData.description,
+    "provider": {
+      "@type": "EducationalOrganization",
+      "name": "AI Jedi",
+      "sameAs": "https://aijedi.hyperionsoft.com"
+    },
+    "instructor": {
+      "@type": "Person",
+      "name": content.instructor.name,
+      "description": content.instructor.role,
+      "image": "https://aijedi.hyperionsoft.com/assets/cnt-color.jpeg"
+    },
+    "courseLevel": courseData.level,
+    "timeRequired": courseData.duration,
+    "numberOfCredits": courseData.curriculum.length,
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": courseData.rating.toString(),
+      "ratingCount": courseData.ratingNum,
+      "bestRating": "5",
+      "worstRating": "1"
+    },
+    "offers": {
+      "@type": "Offer",
+      "category": "Educational Course",
+      "availability": "https://schema.org/InStock"
+    },
+    "hasCourseInstance": {
+      "@type": "CourseInstance",
+      "courseMode": "Online",
+      "courseWorkload": courseData.duration
+    }
+  };
+
+  return (
+    <div className="min-h-screen bg-background">
+      <SEO
+        title={`${courseData.title} – Learn AI Through Real-World Case Studies | AI Jedi`}
+        description={`${courseData.description} Master practical AI skills for career professionals through real-world case studies. ${courseData.level} level • ${courseData.duration} • Rated ${courseData.rating}/5 by ${courseData.ratingNum.toLocaleString()} students.`}
+        canonical={`${isZh ? '/zh-tw' : ''}/lp/${courseId}`}
+        structuredData={courseStructuredData}
+      />
+      <LandingHeader />
+      {/* Course Header */}
+      <div className="bg-gradient-to-r from-primary/10 to-secondary/10 py-8 pt-24">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+              {/* Left side - Course Info */}
+              <div>
+                <h1 className="text-4xl md:text-5xl font-bold mb-4">{courseData.title}</h1>
+                <p className="text-xl text-muted-foreground mb-6">{courseData.description}</p>
+                
+                <div className="flex flex-wrap items-center gap-4 mb-6">
+                  <div className="flex items-center gap-1">
+                    <Star className="w-5 h-5 fill-yellow-400 text-yellow-400" />
+                    <span className="font-semibold">{courseData.rating}</span>
+                    <span className="text-muted-foreground">({courseData.ratingNum.toLocaleString()} ratings)</span>
+                  </div>
+                  <div className="flex items-center gap-1">
+                    <Users className="w-5 h-5 text-muted-foreground" />
+                    <span>{courseData.students.toLocaleString()} students</span>
+                  </div>
+                  <div className="flex items-center gap-1">
+                    <Clock className="w-5 h-5 text-muted-foreground" />
+                    <span>{courseData.duration}</span>
+                  </div>
+                  <Badge variant="secondary">{courseData.level}</Badge>
+                </div>
+              </div>
+
+              {/* Right side - Video Preview */}
+              <div className="relative">
+                <div className="aspect-video bg-muted rounded-lg overflow-hidden shadow-lg">
+                  {courseData.video ? (
+                    <video 
+                      controls 
+                      className="w-full h-full object-cover"
+                    >
+                      <source src={`/${courseData.video}`} type="video/mp4" />
+                      Your browser does not support the video tag.
+                    </video>
+                  ) : (
+                    <div className="w-full h-full bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center">
+                      <div className="text-center">
+                        <div className="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                          <PlayCircle className="w-8 h-8 text-primary" />
+                        </div>
+                        <h3 className="text-lg font-semibold mb-2">Course Preview</h3>
+                        <p className="text-sm text-muted-foreground">Watch this video to see what you'll learn</p>
+                      </div>
+                    </div>
+                  )}
+                </div>
+                {!courseData.video && (
+                  <div className="absolute inset-0 bg-black/20 rounded-lg flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
+                    <Button size="lg" className="bg-white/90 text-black hover:bg-white">
+                      <PlayCircle className="w-5 h-5 mr-2" />
+                      Play Preview
+                    </Button>
+                  </div>
+                )}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="container mx-auto px-4 py-8">
+        <div className="max-w-4xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-8">
+          {/* Main Content */}
+          <div className="lg:col-span-2 space-y-8">
+            {/* Course Overview */}
+            <Card>
+              <CardHeader>
+                <CardTitle>What you'll learn</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <ul className="space-y-2">
+                  {courseData.whatYouWillLearn.map((item, index) => (
+                    <li key={index} className="flex items-start gap-2">
+                      <CheckCircle className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </CardContent>
+            </Card>
+
+            {/* Curriculum */}
+            <Card>
+              <CardHeader>
+                <CardTitle>Course curriculum</CardTitle>
+                <CardDescription>{courseData.curriculum.length} sections • {courseData.curriculum.reduce((acc, section) => acc + section.lessons.length, 0)} lessons • {courseData.duration} total</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <div className="space-y-4">
+                  {courseData.curriculum.map((section, sectionIndex) => (
+                    <div key={sectionIndex}>
+                      <h4 className="font-semibold mb-2">{section.section}</h4>
+                      <div className="space-y-2">
+                        {section.lessons.map((lesson, lessonIndex) => (
+                          <div key={lessonIndex} className="flex items-center p-3 bg-muted/50 rounded-lg">
+                            <div className="flex items-center gap-3">
+                              {lesson.type === 'video' ? (
+                                <PlayCircle className="w-5 h-5 text-primary" />
+                              ) : (
+                                <Target className="w-5 h-5 text-orange-500" />
+                              )}
+                              <span>{lesson.title}</span>
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Requirements */}
+            <Card>
+              <CardHeader>
+                <CardTitle>Requirements</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <ul className="space-y-2">
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" />
+                    <span>No prior AI experience required</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" />
+                    <span>Basic computer skills (email, web browsing, Excel)</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" />
+                    <span>Access to a computer with internet connection</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" />
+                    <span>Willingness to learn and experiment with AI tools</span>
+                  </li>
+                </ul>
+              </CardContent>
+            </Card>
+
+            {/* Description */}
+            <Card>
+              <CardHeader>
+                <CardTitle>Description</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="prose prose-lg dark:prose-invert max-w-none">
+                  <p className="text-muted-foreground">
+                    {courseData.description}
+                  </p>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Instructor */}
+            <Card>
+              <CardHeader>
+                <CardTitle>Instructor</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="flex items-start gap-4">
+                  <img 
+                    src={cntColor} 
+                    alt={content.instructor.name} 
+                    className="w-16 h-16 rounded-full object-cover"
+                  />
+                  <div>
+                    <h4 className="font-semibold text-lg">{content.instructor.name}</h4>
+                    <p className="text-muted-foreground mb-2">{content.instructor.role}</p>
+                    <p className="text-sm">{content.instructor.bio[0]}</p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Course Reviews */}
+            <Card>
+              <CardHeader>
+                <CardTitle>Student Reviews</CardTitle>
+                <div className="flex items-center gap-4 mb-4">
+                  <div className="flex items-center gap-2">
+                    <div className="flex items-center">
+                      {[1, 2, 3, 4, 5].map((star) => (
+                        <Star
+                          key={star}
+                          className={`w-5 h-5 ${
+                            star <= Math.floor(courseData.rating)
+                              ? "fill-yellow-400 text-yellow-400"
+                              : "text-gray-300"
+                          }`}
+                        />
+                      ))}
+                    </div>
+                    <span className="text-2xl font-bold">{courseData.rating}</span>
+                    <span className="text-muted-foreground">({courseData.ratingNum.toLocaleString()} ratings)</span>
+                  </div>
+                </div>
+              </CardHeader>
+              <CardContent>
+                <div className="space-y-6">
+                  {courseData.reviews?.map((review, index) => {
+                     // Simple reviewer avatar mapping using photo filenames as keys
+                     const getAvatarUrl = (name: string) => {
+                       // Map reviewer names to unique Unsplash photos
+                       const reviewerAvatars: { [key: string]: string } = {
+                         // Finance Professionals
+                         'Sarah Martinez': 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=100&h=100&fit=crop&crop=face&auto=format&q=80',
+                         'Mike Chen': 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face&auto=format&q=80',
+                         'Emily Rodriguez': 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&crop=face&auto=format&q=80',
+                         'David Kim': 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face&auto=format&q=80',
+                         'Lisa Chen': 'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=100&h=100&fit=crop&crop=face&auto=format&q=80',
+                         
+                         // Marketing Professionals
+                         'Jessica Wu': 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&h=100&fit=crop&crop=face&auto=format&q=80',
+                         'Alex Thompson': 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=100&h=100&fit=crop&crop=face&auto=format&q=80',
+                         'Maria Santos': 'https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=100&h=100&fit=crop&crop=face&auto=format&q=80',
+                         'Tom Wilson': 'https://images.unsplash.com/photo-1633332755192-727a05c4013d?w=100&h=100&fit=crop&crop=face&auto=format&q=80',
+                         'Emily Wang': 'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=100&h=100&fit=crop&crop=face&auto=format&q=80',
+                         'Mark Thompson': 'https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=100&h=100&fit=crop&crop=face&auto=format&q=80',
+                         'Jennifer Liu': 'https://ui-avatars.com/api/?name=Jennifer+Liu&size=100&background=6366f1&color=ffffff',
+                         'Alex Chen': 'https://images.unsplash.com/photo-1580894732444-8ecded7900cd?w=100&h=100&fit=crop&crop=face&auto=format&q=80',
+                         
+                         // Software Developers
+                         'Robert Johnson': 'https://images.unsplash.com/photo-1560250097-0b93528c311a?w=100&h=100&fit=crop&crop=face&auto=format&q=80',
+                         'Linda Chang': 'https://images.unsplash.com/photo-1600275669439-14e40452d20b?w=100&h=100&fit=crop&crop=face&auto=format&q=80',
+                         'Carlos Rivera': 'https://images.unsplash.com/photo-1629425733761-caae3b5f2e50?w=100&h=100&fit=crop&crop=face&auto=format&q=80',
+                         'Anna Petrov': 'https://images.unsplash.com/photo-1556157382-97eda2d62296?w=100&h=100&fit=crop&crop=face&auto=format&q=80',
+                         'Kevin Zhang': 'https://images.unsplash.com/photo-1614289371518-722f2615943d?w=100&h=100&fit=crop&crop=face&auto=format&q=80',
+                         'Rachel Park': 'https://images.unsplash.com/photo-1541101767792-f9b2b1c4f127?w=100&h=100&fit=crop&crop=face&auto=format&q=80',
+                         'Sandra Lee': 'https://images.unsplash.com/photo-1590650516494-0c8e4a4dd67e?w=100&h=100&fit=crop&crop=face&auto=format&q=80',
+                         
+                         // Business Leaders
+                         'Jennifer Adams': 'https://images.unsplash.com/photo-1491336477066-31156b5e4f35?w=100&h=100&fit=crop&crop=face&auto=format&q=80',
+                         'Marcus Brown': 'https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?w=100&h=100&fit=crop&crop=face&auto=format&q=80',
+                         'Rachel Green': 'https://images.unsplash.com/photo-1547425260-76bcadfb4f2c?w=100&h=100&fit=crop&crop=face&auto=format&q=80',
+                         'Kevin Park': 'https://images.unsplash.com/photo-1619946794135-5bc917a27793?w=100&h=100&fit=crop&crop=face&auto=format&q=80',
+                         'Michael Chen': 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=100&h=100&fit=crop&crop=face&auto=format&q=80',
+                         'Sarah Johnson': 'https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?w=100&h=100&fit=crop&crop=face&auto=format&q=80',
+                         'David Liu': 'https://images.unsplash.com/photo-1552058544-f2b08422138a?w=100&h=100&fit=crop&crop=face&auto=format&q=80',
+                         'Jennifer Wang': 'https://images.unsplash.com/photo-1601455763557-db1bea8a9a5a?w=100&h=100&fit=crop&crop=face&auto=format&q=80',
+                         
+                         // Healthcare Professionals
+                         'Patricia Davis': 'https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?w=100&h=100&fit=crop&crop=face&auto=format&q=80',
+                         'Steven Miller': 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=100&h=100&fit=crop&crop=face&auto=format&q=80',
+                         'Diana Lopez': 'https://images.unsplash.com/photo-1599566150163-29194dcaad36?w=100&h=100&fit=crop&crop=face&auto=format&q=80',
+                         'Brian Taylor': 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=100&h=100&fit=crop&crop=face&auto=format&q=80',
+                         'Dr. Anna Wu': 'https://images.unsplash.com/photo-1583394838336-acd977736f90?w=100&h=100&fit=crop&crop=face&auto=format&q=80',
+                         'Dr. James Lin': 'https://images.unsplash.com/photo-1513530534585-c7b1394c6d51?w=100&h=100&fit=crop&crop=face&auto=format&q=80',
+                         'Nurse Sarah Chen': 'https://images.unsplash.com/photo-1521511189395-b82252213754?w=100&h=100&fit=crop&crop=face&auto=format&q=80',
+                         'Dr. Michael Park': 'https://images.unsplash.com/photo-1543269865-96ae30571b5a?w=100&h=100&fit=crop&crop=face&auto=format&q=80',
+                         
+                         // Product Managers - Vibe Coding
+                         'Amanda Foster': 'https://images.unsplash.com/photo-1551836022-deb4988cc6c0?w=100&h=100&fit=crop&crop=face&auto=format&q=80',
+                         'James Rodriguez': 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=100&h=100&fit=crop&crop=face&auto=format&q=80',
+                         'Sophie Chen': 'https://images.unsplash.com/photo-1590650046871-92c887180603?w=100&h=100&fit=crop&crop=face&auto=format&q=80',
+                         'Michael Johnson': 'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=100&h=100&fit=crop&crop=face&auto=format&q=80'
+                       };
+                       
+                       return reviewerAvatars[name] || 'https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=100&h=100&fit=crop&crop=face&auto=format&q=80'; // fallback
+                     };
+
+                    return (
+                    <div key={index} className={index < courseData.reviews!.length - 1 ? "border-b border-border pb-4" : ""}>
+                      <div className="flex items-start justify-between mb-2">
+                        <div className="flex items-center gap-3">
+                          <img 
+                            src={getAvatarUrl(review.name)} 
+                            alt={review.name} 
+                            className="w-10 h-10 rounded-full object-cover"
+                          />
+                          <div>
+                            <h4 className="font-semibold">{review.name}</h4>
+                            <div className="flex items-center gap-1">
+                              {[1, 2, 3, 4, 5].map((star) => (
+                                <Star
+                                  key={star}
+                                  className={`w-4 h-4 ${
+                                    star <= review.rating
+                                      ? "fill-yellow-400 text-yellow-400"
+                                      : "text-gray-300"
+                                  }`}
+                                />
+                              ))}
+                            </div>
+                          </div>
+                        </div>
+                        <span className="text-sm text-muted-foreground">{review.timeAgo}</span>
+                      </div>
+                      <p className="text-muted-foreground">
+                        "{review.comment}"
+                      </p>
+                    </div>
+                    );
+                  })}
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+
+          {/* Sidebar */}
+          <div className="space-y-6">
+            {/* Course Card */}
+            <Card className="sticky top-24">
+              <CardContent className="p-6">
+                <div className="text-center mb-6">
+                  <div className="text-3xl font-bold text-primary mb-2">{courseData.price}</div>
+                </div>
+
+                <Button asChild className="w-full mb-4" size="lg">
+                  {(() => {
+                    const stripeLinks: { [key: string]: string } = {
+                      "ai-for-product-managers-vibe-coding-101": "https://buy.stripe.com/6oU00kfdpeuX5wwdc22kw0b"
+                    };
+                    
+                    const stripeLink = stripeLinks[courseId as string];
+                    
+                    const handleEnrollClick = () => {
+                      // Track GA4 event
+                      if (typeof window !== 'undefined' && (window as any).gtag) {
+                        (window as any).gtag('event', 'enroll_button_click', {
+                          event_category: 'Course Enrollment',
+                          event_label: courseData.title,
+                          course_id: courseId,
+                          course_title: courseData.title,
+                          value: 1
+                        });
+                      }
+                    };
+                    
+                    return stripeLink ? (
+                      <a 
+                        href={stripeLink} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        onClick={handleEnrollClick}
+                      >
+                        Enroll Now
+                      </a>
+                    ) : (
+                      <Link to={signupPath} onClick={handleEnrollClick}>
+                        Enroll Now
+                      </Link>
+                    );
+                  })()}
+                </Button>
+
+                <Separator className="my-4" />
+
+                <div className="space-y-3">
+                  <h4 className="font-semibold">This course includes:</h4>
+                  <ul className="space-y-2 text-sm">
+                    {courseData.features.map((feature, index) => (
+                      <li key={index} className="flex items-center gap-2">
+                        <CheckCircle className="w-4 h-4 text-green-500" />
+                        <span>{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default LandingPage;
+
