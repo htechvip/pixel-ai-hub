@@ -8,6 +8,9 @@ import Signup from "./pages/Signup";
 import SignupZh from "./pages/SignupZh";
 import Course from "./pages/Course";
 import LandingPage from "./pages/LandingPage";
+import CuriousLP from "./pages/CuriousLP";
+import OverwhelmedLP from "./pages/OverwhelmedLP";
+import GuidanceLP from "./pages/GuidanceLP";
 import CareerAIAdvantage from "./pages/CareerAIAdvantage";
 import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
@@ -33,6 +36,9 @@ const App = () => {
             <Route path="/signup" element={<Signup />} />
             <Route path="/course/:courseId" element={<Course />} />
             <Route path="/lp/:courseId" element={<LandingPage />} />
+            <Route path="/lp/curious" element={<CuriousLP />} />
+            <Route path="/lp/overwhelmed" element={<OverwhelmedLP />} />
+            <Route path="/lp/guidance" element={<GuidanceLP />} />
             <Route path="/career-ai-advantage" element={<CareerAIAdvantage />} />
             <Route path="/ai-quiz" element={<AIQuiz />} />
             <Route path="/newsletter" element={<Newsletter />} />
@@ -43,6 +49,9 @@ const App = () => {
             <Route path="/zh-tw/signup" element={<SignupZh />} />
             <Route path="/zh-tw/course/:courseId" element={<Course />} />
             <Route path="/zh-tw/lp/:courseId" element={<LandingPage />} />
+            <Route path="/zh-tw/lp/curious" element={<CuriousLP />} />
+            <Route path="/zh-tw/lp/overwhelmed" element={<OverwhelmedLP />} />
+            <Route path="/zh-tw/lp/guidance" element={<GuidanceLP />} />
             <Route path="/zh-tw/blog" element={<Blog />} />
             <Route path="/zh-tw/blog/:slug" element={<BlogPost />} />
             <Route path="/zh-tw/newsletter" element={<Newsletter />} />
